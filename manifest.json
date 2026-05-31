@@ -1,0 +1,28 @@
+{
+  "name": "Traité des Ouvertures d'Échecs",
+  "short_name": "Ouvertures",
+  "description": "Traité interactif des ouvertures d'échecs — 13 ouvertures, 34 variantes, parties annotées avec moteur Stockfish. Par Vu-Hung Quan.",
+  "start_url": "/Chess/index.html",
+  "scope": "/Chess/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#1a1208",
+  "theme_color": "#1a1208",
+  "lang": "fr",
+  "categories": ["education", "games"],
+  "icons": [
+    {
+      "src": "./icon192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "prefer_related_applications": false
+}

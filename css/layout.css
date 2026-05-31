@@ -1,0 +1,186 @@
+/* ══════════════════════════════════════════════
+   LAYOUT — Header, container, chapter cards
+   ══════════════════════════════════════════════ */
+
+/* ── HEADER ── */
+header {
+  background: var(--ink);
+  color: var(--parchment);
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+header::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 40px,
+    rgba(184,134,11,0.04) 40px,
+    rgba(184,134,11,0.04) 42px
+  );
+  pointer-events: none;
+}
+.header-ornament { color: var(--gold); font-size: 2rem; letter-spacing: 12px; margin-bottom: 1rem; }
+header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(184,134,11,0.3);
+}
+header p {
+  margin-top: 0.75rem;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--border);
+  font-weight: 300;
+}
+.header-line {
+  width: 80px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 1.2rem auto 0;
+}
+
+/* ── LANG SELECTOR ── */
+.lang-selector {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 4px;
+  z-index: 10;
+}
+.lang-btn {
+  background: rgba(255,255,255,0.10);
+  color: var(--border);
+  border: 1px solid rgba(200,184,154,0.35);
+  border-radius: 4px;
+  padding: 4px 11px;
+  font-size: 0.78rem;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+.lang-btn:hover {
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  border-color: var(--gold);
+}
+.lang-btn.active {
+  background: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+  font-weight: 700;
+}
+
+/* ── CONTAINER ── */
+.container { max-width: 1180px; margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+
+.part-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--border);
+  padding: 0.9rem 1rem;
+  margin: 3.5rem 0 0.5rem;
+  background: linear-gradient(90deg, rgba(184,134,11,0.06), transparent);
+  letter-spacing: 0.04em;
+}
+.part-desc {
+  font-size: 0.97rem;
+  font-style: italic;
+  color: #5a4a30;
+  padding: 0 0.5rem 1.5rem;
+  border-bottom: 1px dashed var(--border);
+  margin-bottom: 2rem;
+}
+
+/* ── CHAPTER CARD ── */
+.chapter-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 2.5rem;
+  padding: 1.75rem;
+  box-shadow: 0 4px 20px var(--shadow);
+  position: relative;
+}
+.chapter-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: linear-gradient(180deg, var(--gold), var(--rust));
+  border-radius: 4px 0 0 4px;
+}
+.chapter-header {
+  padding-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.chapter-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ── FLEX LAYOUT 2 COLONNES ── */
+.flex-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+/* Colonne gauche : échiquier fixe */
+.board-container {
+  flex: 0 0 360px;
+  width: 360px;
+  position: sticky;
+  top: 1rem;
+  align-self: flex-start;
+}
+
+/* Colonne droite : texte scrollable */
+.content-container {
+  flex: 1 1 0;
+  min-width: 0;
+  max-height: 620px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.content-container::-webkit-scrollbar { width: 5px; }
+.content-container::-webkit-scrollbar-track { background: transparent; }
+.content-container::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+/* ── CONCLUSION ── */
+.conclusion-card {
+  margin-top: 4rem;
+  background: var(--ink);
+  color: var(--parchment);
+  border-radius: 4px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 30px var(--shadow);
+}
+.conclusion-card .subtitle-h4 { color: var(--gold); border-color: var(--gold); }
+.conclusion-card .text-p { color: #d4c9b0; }
+.conclusion-card blockquote {
+  border-left: 3px solid var(--gold);
+  padding: 0.8rem 1rem;
+  margin-top: 1.5rem;
+  background: rgba(184,134,11,0.06);
+  font-style: italic; font-size: 1.02rem;
+  color: var(--parchment);
+}

@@ -1,0 +1,257 @@
+/* ══════════════════════════════════════════════
+   i18n.js — Language detection, translations, setLang()
+   To add a new language: add a new key to I18N following the 'fr' pattern.
+   ══════════════════════════════════════════════ */
+
+var LANG = 'fr';
+
+/* ── Notation converter FR → EN ── */
+function lineToEN(lineStr) {
+  return lineStr.replace(/\b([CFDT])(?=[a-hx1-8O])/g, function(m, p) {
+    return {C:'N', F:'B', D:'Q', T:'R'}[p] || p;
+  });
+}
+function getLine(lineStr) {
+  return LANG === 'en' ? lineToEN(lineStr) : lineStr;
+}
+
+/* ── DB field helper: pick EN if available, else FR ── */
+function dField(d, key) {
+  return (LANG === 'en' && d[key + '_en']) ? d[key + '_en'] : (d[key] || '');
+}
+
+/* ── i18n dictionary ── */
+var I18N = {
+  fr: {
+    title:        "Traité Complet des Ouvertures d'Échecs",
+    subtitle:     "13 ouvertures · 34 variantes · Histoire &amp; contexte · Commentaires coup par coup · Parties de référence annotées",
+    by:           "par",
+    prev:         "◀ Reculer",
+    next:         "Avancer ▶",
+    part1_title:  "PARTIE I — Les Parties Ouvertes (1.e4 e5)",
+    part1_desc:   "Lorsque les deux camps jouent leur pion du roi d'emblée, la partie s'ouvre symétriquement. Le centre est disputé de façon directe et le jeu devient immédiatement tactique.",
+    part2_title:  "PARTIE II — Les Parties Semi-Ouvertes (1.e4 …)",
+    part2_desc:   "Les Noirs rompent la symétrie dès le premier coup, acceptant un léger retard d'espace pour une structure asymétrique dynamique et combative.",
+    part3_title:  "PARTIE III — Les Parties Fermées &amp; Semi-Fermées (1.d4)",
+    part3_desc:   "Guerres d'usure positionnelles sous 1.d4 ou 1.c4. Le centre reste verrouillé, déplaçant le combat sur la maîtrise géométrique des flancs et les structures de pions à long terme.",
+    ch1:  "1. La Partie Espagnole (Ruy Lopez)",
+    ch2:  "2. La Partie Italienne",
+    ch3:  "3. Le Gambit du Roi",
+    ch4:  "4. La Défense Philidor &amp; Petrov",
+    ch5:  "5. La Défense Sicilienne",
+    ch6:  "6. La Défense Française",
+    ch7:  "7. La Défense Caro-Kann",
+    ch8:  "8. La Défense Alekhine, Pirc &amp; Scandinave",
+    ch9:  "9. Le Gambit de la Dame Décliné (QGD) &amp; Slave",
+    ch10: "10. La Défense Nimzo-Indienne",
+    ch11: "11. La Défense Indienne du Roi (KID)",
+    ch12: "12. La Défense Grünfeld",
+    ch13: "13. L'Ouverture Anglaise",
+    var_chigorin:    "Variante Fermée",
+    var_ouverte:     "Variante Ouverte",
+    var_echange:     "Variante de l'Échange",
+    var_marshall:    "Attaque Marshall",
+    var_berlin:      "Défense Berlin",
+    var_giuoco:      "Giuoco Piano",
+    var_pianissimo:  "Giuoco Pianissimo",
+    var_deux_cav:    "Deux Cavaliers",
+    var_evans:       "Gambit Evans",
+    var_accepte:     "Gambit Accepté",
+    var_muzio:       "Gambit Muzio",
+    var_fischer:     "Défense Fischer",
+    var_falkbeer:    "Contre-Gambit Falkbeer",
+    var_hanham:      "Variante Hanham",
+    var_moderne:     "Variante Moderne",
+    var_petrov:      "Défense Petrov",
+    var_najdorf:     "Variante Najdorf",
+    var_dragon:      "Variante du Dragon",
+    var_maroczy:     "Étau de Maroczy",
+    var_classique:   "Variante Classique",
+    var_winawer:     "Variante Winawer",
+    var_avance:      "Variante d'Avance",
+    var_panov:       "Attaque Panov",
+    var_alekhine:    "Attaque des 4 Pions",
+    var_pirc:        "Défense Pirc",
+    var_scandinave:  "Défense Scandinave",
+    var_qgd_exch:    "QGD — Variante de l'Échange",
+    var_slave:       "Défense Slave",
+    var_rubinstein:  "Variante Rubinstein",
+    var_samisch:     "Variante Sämisch",
+    var_kid_class:   "Variante Classique",
+    var_samisch_kid: "Variante Sämisch KID",
+    var_exchange_gru:"Variante d'Échange",
+    var_russe_gru:   "Système Russe",
+    var_reversed:    "Sicilienne Renversée",
+    var_symmetric:   "Anglaise Symétrique",
+    render_stats_default:  "Ligne Encyclopédique Majeure",
+    render_history:        "&#128220; Histoire &amp; Contexte",
+    render_idea:           "Idée fondamentale &amp; Analyse stratégique",
+    render_comments:       "Commentaires coup par coup",
+    render_adv:            "&#9812; Avantages",
+    render_disadv:         "&#9818; Inconvénients",
+    render_wplans:         "&#9812; Plans Blancs",
+    render_bplans:         "&#9818; Plans Noirs",
+    render_keysq:          "Cases clés :",
+    render_ending:         "Transition vers la finale :",
+    render_trap:           "&#9888; Pièges &amp; Erreurs à éviter",
+    render_trap_default:   "Pas de piège grossier répertorié, mais ouverture de haute précision.",
+    render_game:           "&#9823; Partie de référence",
+    render_back:           "Variante",
+    tooltip_back_var:      "Retour à la variante",
+    tooltip_play_here:     "Jouer jusqu'ici",
+    tooltip_see_board:     "Voir sur l'échiquier",
+    render_move_counter_game:  "Partie · Coup ",
+    render_move_counter_var:   "Variante · Coup ",
+    render_move_counter_basic: "Coup ",
+    render_move_sep:           " / ",
+    render_adv_default:        "Jeu dynamique, plans ouverts.",
+    render_disadv_default:     "Exige une grande précision tactique.",
+    render_wplans_default:     "S'emparer de l'espace central.",
+    render_bplans_default:     "Contre-attaquer et activer les pièces.",
+    render_cases_default:      "Tension centrale.",
+    render_finale_default:     "Milieu de jeu dynamique.",
+    concl_title:  "Conclusion — Choisir Votre Répertoire",
+    concl_h1:     "Ce que révèlent les statistiques",
+    concl_p1:     "Le QGD présente le taux de nulle le plus élevé de la théorie moderne (44%), s'affirmant comme l'ouverture la plus solide. À l'opposé, le Gambit du Roi concède un taux de victoire de 45% aux Noirs. La Sicilienne (Dragon et Najdorf) est la plus équilibrée avec ~35–36% de gains pour chaque camp.",
+    concl_h2:     "L'idée unificatrice du milieu de jeu",
+    concl_p2:     "Quelle que soit l'ouverture choisie, le milieu de jeu se joue invariablement autour de trois interrogations fondamentales : (1) Où se situent les failles structurelles adverses ? (2) Quelles sont les cases clés à occuper pour mes pièces mineures ? (3) Mon attaque de flanc est-elle plus rapide que celle de mon adversaire ?",
+    concl_h3:     "La règle d'or",
+    concl_p3:     "Ne mémorisez pas des variantes — comprenez les idées. Si vous savez pourquoi chaque coup est joué, vous pourrez improviser face à des nouveautés sans vous perdre.",
+    concl_quote:  "« L'ouverture prépare le milieu de jeu. Comprendre l'idée stratégique derrière chaque ouverture, c'est déjà savoir comment jouer les 20 coups suivants. »"
+  },
+  en: {
+    title:        "Complete Chess Openings Treatise",
+    subtitle:     "13 openings · 34 variations · History &amp; context · Move-by-move commentary · Annotated reference games",
+    by:           "by",
+    prev:         "◀ Back",
+    next:         "Forward ▶",
+    part1_title:  "PART I — Open Games (1.e4 e5)",
+    part1_desc:   "When both sides immediately advance the king's pawn, the position opens symmetrically. The center is contested directly and the game becomes immediately tactical.",
+    part2_title:  "PART II — Semi-Open Games (1.e4 …)",
+    part2_desc:   "Black breaks the symmetry on move one, accepting a slight space deficit for a dynamic, combative asymmetric structure.",
+    part3_title:  "PART III — Closed &amp; Semi-Closed Games (1.d4)",
+    part3_desc:   "Positional warfare under 1.d4 or 1.c4. The center stays locked, shifting the battle to geometric mastery of the flanks and long-term pawn structures.",
+    ch1:  "1. The Spanish Game (Ruy Lopez)",
+    ch2:  "2. The Italian Game",
+    ch3:  "3. The King's Gambit",
+    ch4:  "4. The Philidor &amp; Petrov Defense",
+    ch5:  "5. The Sicilian Defense",
+    ch6:  "6. The French Defense",
+    ch7:  "7. The Caro-Kann Defense",
+    ch8:  "8. The Alekhine, Pirc &amp; Scandinavian Defense",
+    ch9:  "9. The Queen's Gambit Declined (QGD) &amp; Slav",
+    ch10: "10. The Nimzo-Indian Defense",
+    ch11: "11. The King's Indian Defense (KID)",
+    ch12: "12. The Grünfeld Defense",
+    ch13: "13. The English Opening",
+    var_chigorin:    "Closed Variation",
+    var_ouverte:     "Open Variation",
+    var_echange:     "Exchange Variation",
+    var_marshall:    "Marshall Attack",
+    var_berlin:      "Berlin Defense",
+    var_giuoco:      "Giuoco Piano",
+    var_pianissimo:  "Giuoco Pianissimo",
+    var_deux_cav:    "Two Knights",
+    var_evans:       "Evans Gambit",
+    var_accepte:     "Gambit Accepted",
+    var_muzio:       "Muzio Gambit",
+    var_fischer:     "Fischer Defense",
+    var_falkbeer:    "Falkbeer Counter-Gambit",
+    var_hanham:      "Hanham Variation",
+    var_moderne:     "Modern Variation",
+    var_petrov:      "Petrov Defense",
+    var_najdorf:     "Najdorf Variation",
+    var_dragon:      "Dragon Variation",
+    var_maroczy:     "Maroczy Bind",
+    var_classique:   "Classical Variation",
+    var_winawer:     "Winawer Variation",
+    var_avance:      "Advance Variation",
+    var_panov:       "Panov Attack",
+    var_alekhine:    "Four Pawns Attack",
+    var_pirc:        "Pirc Defense",
+    var_scandinave:  "Scandinavian Defense",
+    var_qgd_exch:    "QGD — Exchange Variation",
+    var_slave:       "Slav Defense",
+    var_rubinstein:  "Rubinstein Variation",
+    var_samisch:     "Sämisch Variation",
+    var_kid_class:   "Classical Variation",
+    var_samisch_kid: "Sämisch KID Variation",
+    var_exchange_gru:"Exchange Variation",
+    var_russe_gru:   "Russian System",
+    var_reversed:    "Reversed Sicilian",
+    var_symmetric:   "Symmetrical English",
+    render_stats_default:  "Major Encyclopedic Line",
+    render_history:        "&#128220; History &amp; Context",
+    render_idea:           "Core Idea &amp; Strategic Analysis",
+    render_comments:       "Move-by-move Commentary",
+    render_adv:            "&#9812; Advantages",
+    render_disadv:         "&#9818; Disadvantages",
+    render_wplans:         "&#9812; White's Plans",
+    render_bplans:         "&#9818; Black's Plans",
+    render_keysq:          "Key squares:",
+    render_ending:         "Transition to the endgame:",
+    render_trap:           "&#9888; Traps &amp; Mistakes to Avoid",
+    render_trap_default:   "No crude trap on record, but a high-precision opening.",
+    render_game:           "&#9823; Reference Game",
+    render_back:           "Variation",
+    tooltip_back_var:      "Back to variation",
+    tooltip_play_here:     "Play to here",
+    tooltip_see_board:     "Show on board",
+    render_move_counter_game:  "Game · Move ",
+    render_move_counter_var:   "Variation · Move ",
+    render_move_counter_basic: "Move ",
+    render_move_sep:           " / ",
+    render_adv_default:        "Dynamic play, open plans.",
+    render_disadv_default:     "Requires great tactical precision.",
+    render_wplans_default:     "Seize central space.",
+    render_bplans_default:     "Counter-attack and activate pieces.",
+    render_cases_default:      "Central tension.",
+    render_finale_default:     "Dynamic middlegame.",
+    concl_title:  "Conclusion — Building Your Repertoire",
+    concl_h1:     "What the statistics reveal",
+    concl_p1:     "The QGD has the highest draw rate in modern theory (44%), making it the most solid opening. At the opposite end, the King's Gambit concedes a 45% win rate to Black. The Sicilian (Dragon and Najdorf) is the most balanced with ~35-36% wins for each side.",
+    concl_h2:     "The unifying middlegame idea",
+    concl_p2:     "Whatever opening is chosen, the middlegame always revolves around three fundamental questions: (1) Where are the opponent's structural weaknesses? (2) Which key squares should my minor pieces occupy? (3) Is my flank attack faster than my opponent's?",
+    concl_h3:     "The golden rule",
+    concl_p3:     "Don't memorize variations — understand the ideas. If you know why each move is played, you can improvise against novelties without getting lost.",
+    concl_quote:  "\"The opening prepares the middlegame. Understanding the strategic idea behind each opening is already knowing how to play the next 20 moves.\""
+  }
+};
+
+function t(key) {
+  var lang = I18N[LANG] || I18N['fr'];
+  return (lang[key] !== undefined) ? lang[key] : (I18N['fr'][key] || key);
+}
+
+/* ── Language selector ── */
+function setLang(l) {
+  LANG = l;
+  document.getElementById('btn-fr').classList.toggle('active', l === 'fr');
+  document.getElementById('btn-en').classList.toggle('active', l === 'en');
+  refreshAllContent();
+}
+
+/* ── Refresh all UI content ── */
+function refreshAllContent() {
+  // Static elements with data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    el.innerHTML = t(el.getAttribute('data-i18n'));
+  });
+  // Meta tags & title (step 8)
+  var titles = { fr: "Traité des Ouvertures d'Échecs — Vu-Hung Quan",
+                 en: "Chess Openings Treatise — Vu-Hung Quan" };
+  var descs  = { fr: "Traité interactif des ouvertures d'échecs — 13 ouvertures, 34 variantes, parties annotées.",
+                 en: "Interactive chess openings treatise — 13 openings, 34 variations, annotated games." };
+  var apples = { fr: "Ouvertures", en: "Openings" };
+  document.title = titles[LANG] || titles['fr'];
+  var md = document.getElementById('meta-desc');
+  if (md) md.setAttribute('content', descs[LANG] || descs['fr']);
+  var ma = document.getElementById('meta-apple-title');
+  if (ma) ma.setAttribute('content', apples[LANG] || apples['fr']);
+  document.documentElement.lang = LANG;
+  // Re-render all active chapter panels
+  Object.keys(activeVariants).forEach(function(chapId) {
+    var vk = activeVariants[chapId];
+    if (vk) renderText(parseInt(chapId), vk);
+  });
+}
