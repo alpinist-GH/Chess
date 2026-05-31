@@ -5,7 +5,7 @@
  */
 
 /* ─── Version du cache — incrémenter à chaque déploiement ─── */
-var CACHE_NAME = 'chessbook-v3';
+var CACHE_NAME = 'chessbook-v4';
 
 /* ─── Fichiers à mettre en cache lors de l'installation ─── */
 var PRECACHE_URLS = [
