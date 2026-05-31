@@ -9,8 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run Claude Code Review
-        run: npx @anthropic-ai/claude-code --print "Review this PR and provide feedback" --from-pr ${{ github.event.pull_request.html_url }}
+      - uses: anthropics/claude-code-action@beta
+        with:
+          use_bedrock: false
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
