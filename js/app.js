@@ -121,10 +121,28 @@ document.addEventListener('click', function(e){
 
 /* ══════════════════════════════════════════════
    INIT
-   CORRECTION : activeButton défini dans l'HTML (class active sur btn-var initial).
-   On s'assure que le rendu initial est synchrone.
    ══════════════════════════════════════════════ */
 window.addEventListener('DOMContentLoaded', function() {
+  /* Patch DB[46]: the entry was built without line:/moves: — add them now */
+  if (DB && DB[46]) {
+    if (DB[46].reversed && !DB[46].reversed.line) {
+      DB[46].reversed.line = '1.c4 e5 2.Cc3 Cf6 3.g3 d5 4.cxd5 Cxd5 5.Fg2';
+      DB[46].reversed.moves = [
+        {from:'c2',to:'c4'},{from:'e7',to:'e5'},{from:'b1',to:'c3'},
+        {from:'g8',to:'f6'},{from:'g2',to:'g3'},{from:'d7',to:'d5'},
+        {from:'c4',to:'d5'},{from:'f6',to:'d5'},{from:'f1',to:'g2'}
+      ];
+    }
+    if (DB[46].symmetric && !DB[46].symmetric.line) {
+      DB[46].symmetric.line = '1.c4 c5 2.Cc3 Cc6 3.g3 g6 4.Fg2 Fg7';
+      DB[46].symmetric.moves = [
+        {from:'c2',to:'c4'},{from:'c7',to:'c5'},{from:'b1',to:'c3'},
+        {from:'b8',to:'c6'},{from:'g2',to:'g3'},{from:'g7',to:'g6'},
+        {from:'f1',to:'g2'},{from:'f8',to:'g7'}
+      ];
+    }
+  }
+
   maxChap = Object.keys(DB).length;
   for (var id = 1; id <= maxChap; id++) {
     if (!DB[id]) continue;
@@ -331,4 +349,3 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
-
