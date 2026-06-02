@@ -1,4 +1,4 @@
-﻿/* ══════════════════════════════════════════════
+﻿﻿/* ══════════════════════════════════════════════
    openings.js — All opening data: DB (46 openings, 71 variants) + ENRICH (44 chapitres enrichis : histoire, annotations, parties)
    To add a new opening: add a new numbered key to DB following the same pattern.
    ══════════════════════════════════════════════ */
@@ -1845,7 +1845,7 @@ var ENRICH = {
      result:"1-0 â€” Adams gagne par abandon â€” le Moulin (Windmill)",
      analysis:"Le Moulin â€” une des parties les plus extraordinaires ! 18.De6!! pi&egrave;ge la Dame noire. Suit le cycle infernal Tg7+ Rf8 Txh7+ Rg8 Tg7+ : la Tour prend des pi&egrave;ces en alternant avec des &eacute;checs.",
      result_en:"1-0 â€” Adams wins by resignation â€” The Windmill",
-     analysis_en:""The Windmill" â€” one of the most extraordinary games! 18.Qe6!! traps the Black Queen. The infernal cycle Rg7+ Kf8 Rxh7+ Kg8 Rg7+ follows."
+     analysis_en:"'The Windmill' â€” one of the most extraordinary games! 18.Qe6!! traps the Black Queen. The infernal cycle Rg7+ Kf8 Rxh7+ Kg8 Rg7+ follows."
     }
   },
   moderne:{
@@ -1864,7 +1864,7 @@ var ENRICH = {
      result:"1-0 â€” Adams gagne â€” le Moulin illustre les dangers de la Philidor passive",
      analysis:"Le Moulin illustre les dangers de la Philidor passive. Apr&egrave;s 18.De6!, le centre blanc domine. La Tour en g7 d&eacute;roule un cycle infernal en r&eacute;cup&eacute;rant toutes les pi&egrave;ces noires.",
      result_en:"1-0 â€” Adams wins â€” The Windmill illustrates passive Philidor's dangers",
-     analysis_en:""The Windmill" illustrates passive Philidor's dangers. After 18.Qe6!, the White center dominates. The g7 Rook executes an infernal cycle capturing all Black's pieces."
+     analysis_en:"'The Windmill' illustrates passive Philidor's dangers. After 18.Qe6!, the White center dominates. The g7 Rook executes an infernal cycle capturing all Black's pieces."
     }
   },
   petrov:{
@@ -1884,7 +1884,7 @@ var ENRICH = {
      result:"1-0 â€” Capablanca gagne en 86 coups â€” ma&icirc;trise technique de la Petrov",
      analysis:"D&eacute;monstration magistrale de technique ! Capablanca exploite un avantage minuscule dans la Petrov pendant 86 coups gr&acirc;ce &agrave; une pression continue. La progression m&eacute;thodique illustre pourquoi Capablanca fut surnomm&eacute; la machine d'&eacute;checs.",
      result_en:"1-0 â€” Capablanca wins in 86 moves â€” technical mastery of the Petrov",
-     analysis_en:"A masterful endgame technique demonstration! Capablanca exploits a tiny advantage in the Petrov for 86 moves through continuous pressure. The methodical advance illustrates why Capablanca was called "the chess machine.""
+     analysis_en:"A masterful endgame technique demonstration! Capablanca exploits a tiny advantage in the Petrov for 86 moves through continuous pressure. The methodical advance illustrates why Capablanca was called 'the chess machine.'"
     }
   }
  },
