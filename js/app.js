@@ -124,7 +124,7 @@ document.addEventListener('click', function(e){
    ══════════════════════════════════════════════ */
 window.addEventListener('DOMContentLoaded', function() {
 
-maxChap = Object.keys(DB).length;
+maxChap = Math.max.apply(null, Object.keys(DB).map(Number));
   for (var id = 1; id <= maxChap; id++) {
     if (!DB[id]) continue;
     engines[id]        = ChessEngine();
