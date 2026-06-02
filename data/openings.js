@@ -1581,9 +1581,9 @@ var ENRICH = {
     game:{
      header:"Kasparov, G. vs Karpov, A. &middot; Ch. du Monde 1986 (Londres), Partie 16 &middot; Ruy Lopez Ferm&eacute;e (C92)",
      moves:"1.e4 e5 2.Cf3 Cc6 3.Fb5 a6 4.Fa4 Cf6 5.0-0 Fe7 6.Te1 b5 7.Fb3 d6 8.c3 0-0 9.h3 Fb7 10.d4 Te8 11.Cbd2 Ff8 12.a4 h6 13.Fc2 exd4 14.cxd4 Cb4 15.Fb1 c5 16.d5 Cd7 17.Ta3 c4 18.Cd4 Df6 19.C2f3 Cc5 20.axb5 axb5 21.Cxb5 Txa3 22.Cxa3 Fa6 23.Te3 Tb8 24.e5 dxe5 25.Cxe5 Cbd3 26.Cg4 Db6 27.Tg3 g6 28.Fxh6 Dxb2 29.Df3 Cd7 30.Fxf8 Rxf8 31.Rh2 Tb3 32.Fxd3 cxd3 33.Df4 Dxa3 34.Ch6 De7 35.Txg6 De5 36.Tg8+ Re7 37.d6+ Re6 38.Te8+ Rd5 39.Txe5+ Cxe5 40.d7 Tb8 41.Cxf7 1-0",
-     result:"1-0 â€” Kasparov gagne en 41 coups",
-     analysis:"21.Cxb5! cÃ¨de l'Ã©change pour une attaque irrÃ©sistible. AprÃ¨s 35.Txg6!, Karpov ne peut Ã©viter la perte de la Dame. Le coup 39.Txe5+! conclut brillamment en 41 coups.",
-     result_en:"1-0 â€” Kasparov wins in 41 moves",
+     result:"1-0 — Kasparov gagne en 41 coups",
+     analysis:"21.Cxb5! cède l'échange pour une attaque irrésistible. Après 35.Txg6!, Karpov ne peut éviter la perte de la Dame. Le coup 39.Txe5+! conclut brillamment en 41 coups.",
+     result_en:"1-0 — Kasparov wins in 41 moves",
      analysis_en:"21.Nxb5! sacrifices the exchange for an irresistible attack. After 35.Rxg6!, Karpov cannot avoid losing the Queen. The move 39.Rxe5+! concludes brilliantly in 41 moves."
     }
   },
@@ -1600,10 +1600,10 @@ var ENRICH = {
     game:{
      header:"Kasparov, G. vs Anand, V. &middot; Ch. du Monde PCA 1995 (New York) &middot; Ruy Lopez Variante Ouverte (C80)",
      moves:"1.e4 e5 2.Cf3 Cc6 3.Fb5 a6 4.Fa4 Cf6 5.0-0 Cxe4 6.d4 b5 7.Fb3 d5 8.dxe5 Fe6 9.Cbd2 Cc5 10.c3 d4 11.Cg5 dxc3 12.Cxe6 fxe6 13.bxc3 Dd3 14.Fc2 Dxc3 15.Cb3 Cxb3 16.Fxb3 Cd4 17.Dg4 Dxa1 18.Fxe6 Td8 19.Fh6 Dc3 20.Fxg7 Dd3 21.Fxh8 Dg6 22.Ff6 Fe7 23.Fxe7 Dxg4 24.Fxg4 Rxe7 25.Tc1 c6 26.f4 a5 27.Rf2 a4 28.Re3 b4 29.Fd1 a3 30.g4 Td5 31.Tc4 c5 32.Re4 Td8 33.Txc5 Ce6 34.Td5 Tc8 35.f5 Tc4+ 36.Re3 Cc5 37.g5 Tc1 38.Td6 1-0",
-     result:"1-0 â€” Kasparov gagne en 38 coups â€” Lopez Ouverte ma&icirc;tris&eacute;e",
-     analysis:"25.f4 cr&eacute;e une majorit&eacute; d&eacute;cisive &agrave; l'aile roi. La finale Tour+Cavalier est techniquement parfaite â€” Anand abandonne au 38e coup.",
-     result_en:"1-0 â€” Kasparov wins in 38 moves â€” Open Variation mastery",
-     analysis_en:"25.f4 creates a decisive kingside majority. The Rook+Knight ending is technically perfect â€” Anand resigns on move 38."
+     result:"1-0 — Kasparov gagne en 38 coups — Lopez Ouverte ma&icirc;tris&eacute;e",
+     analysis:"25.f4 cr&eacute;e une majorit&eacute; d&eacute;cisive &agrave; l'aile roi. La finale Tour+Cavalier est techniquement parfaite — Anand abandonne au 38e coup.",
+     result_en:"1-0 — Kasparov wins in 38 moves — Open Variation mastery",
+     analysis_en:"25.f4 creates a decisive kingside majority. The Rook+Knight ending is technically perfect — Anand resigns on move 38."
     }
   },
   echange:{
@@ -1619,9 +1619,9 @@ var ENRICH = {
     game:{
      header:"Fischer, R. vs Gligoric, S. &middot; Olympiades La Havane 1966 &middot; Ruy Lopez Variante de l'Echange (C69)",
      moves:"1. e4 e5 2. Cf3 Cc6 3. Fb5 a6 4. Fxc6 dxc6 5. 0-0 f6 6. d4 Fg4 7. c3 exd4 8. cxd4 Dd7 9. h3 Fe6 10. Cc3 0-0-0 11. Ff4 Ce7 12. Tc1 Cg6 13. Fg3 Fd6 14. Ca4 Fxg3 15. fxg3 Rb8 16. Cc5 Dd6 17. Da4 Ra7 18. Cxa6 Fxh3 19. e5 Cxe5 20. dxe5 fxe5 21. Cc5+ Rb8 22. gxh3 e4 23. Cxe4 De7 24. Tc3 b5 25. Dc2 1-0",
-     result:"1-0 â€” Fischer gagne en 49 coups â€” majorit&eacute; d'aile dame d&eacute;cisive",
+     result:"1-0 — Fischer gagne en 49 coups — majorit&eacute; d'aile dame d&eacute;cisive",
      analysis:"Fischer applique la strat&eacute;gie classique de l'Echange : majorit&eacute; saine &agrave; l'aile dame apr&egrave;s 4.Fxc6. La man&oelig;uvre 11.Ff4 puis 16.Cc5! immobilise les Noirs. La finale d&eacute;montre la sup&eacute;riorit&eacute; structurelle blanche.",
-     result_en:"1-0 â€” Fischer wins in 49 moves â€” decisive queenside majority",
+     result_en:"1-0 — Fischer wins in 49 moves — decisive queenside majority",
      analysis_en:"Fischer applies the classic Exchange strategy after 4.Bxc6: the sound queenside majority is methodically exploited. The maneuver 11.Bf4 then 16.Nc5! immobilizes Black. The ending demonstrates White's structural superiority."
     }
   },
@@ -1658,9 +1658,9 @@ var ENRICH = {
     game:{
      header:"Kasparov, G. vs Kramnik, V. &middot; Astana 2001 &middot; D&eacute;fense Berlin (C67)",
      moves:"1. e4 e5 2. Cf3 Cc6 3. Fb5 Cf6 4. 0-0 Cxe4 5. d4 Cd6 6. Fxc6 dxc6 7. dxe5 Cf5 8. Dxd8+ Rxd8 9. Cc3 h6 10. h3 Fd7 11. b3 Re8 12. Fb2 Td8 13. Tad1 Ce7 14. Tfe1 Cg6 15. Ce4 Cf4 16. e6 Cxe6 17. Cd4 c5 18. Cf5 Th7 19. Ff6 Tc8 20. Fxg7 Fxg7 21. Cxg7+ Txg7 22. Cf6+ Re7 23. Cxd7 Td8 24. Ce5 Txd1 25. Txd1 Cf4 26. Rh1 Tg5 27. Cg4 Td5 28. Te1+ Rf8 29. Cxh6 Td2 30. Te5 Txf2 31. Tf5 Rg7 32. Cg4 Txg2 33. Txf4 Txc2 34. Tf2 Tc3 35. Rg2 b5 36. h4 c4 37. h5 cxb3 38. axb3 Tc5 39. h6+ Rf8 40. Cf6 Tg5+ 41. Rh1 1-0",
-     result:"1-0 â€” Kasparov gagne en 41 coups â€” Mur de Berlin perc&eacute;",
+     result:"1-0 — Kasparov gagne en 41 coups — Mur de Berlin perc&eacute;",
      analysis:"9.h3 puis 11.b3! br&egrave;che la structure de Berlin. La man&oelig;uvre 16.e6 Cxe6 17.Cd4! cr&eacute;e une pression irr&eacute;sistible. Kasparov gagne en 41 coups.",
-     result_en:"1-0 â€” Kasparov wins in 41 moves â€” Berlin Wall broken",
+     result_en:"1-0 — Kasparov wins in 41 moves — Berlin Wall broken",
      analysis_en:"9.h3 then 11.b3! breaches the Berlin structure. The maneuver 16.e6 Nxe6 17.Nd4! creates irresistible pressure. Kasparov wins in 41 moves."
     }
   }
@@ -1680,10 +1680,10 @@ var ENRICH = {
     game:{
      header:"Steinitz, W. vs Bardeleben, C. von &middot; Hastings 1895 &middot; Giuoco Piano (C54)",
      moves:"1. e4 e5 2. Cf3 Cc6 3. Fc4 Fc5 4. c3 Cf6 5. d4 exd4 6. cxd4 Fb4+ 7. Cc3 d5 8. exd5 Cxd5 9. 0-0 Fe6 10. Fg5 Fe7 11. Fxd5 Fxd5 12. Cxd5 Dxd5 13. Fxe7 Cxe7 14. Te1 f6 15. De2 Dd7 16. Tac1 c6 17. d5 cxd5 18. Cd4 Rf7 19. Ce6 Thc8 20. Dg4 g6 21. Cg5+ Re8 22. Txe7+ Rf8 23. Tf7+ Rg8 24. Tg7+ Rh8 25. Txh7+ 1-0",
-     result:"1-0 â€” Steinitz gagne par abandon â€” combinaison immortelle du Giuoco Piano",
-     analysis:"22.Tg7+!! puis 25.Dh8+! â€” Bardeleben quitte la salle sans abandonner officiellement. Le mat 26.Dg7# &eacute;tait in&eacute;vitable. Chef-d'oeuvre l&eacute;gendaire du Giuoco Piano.",
-     result_en:"1-0 â€” Steinitz wins by forfeit â€” immortal Italian Game combination",
-     analysis_en:"22.Rxg7+!! then 25.Qh8+! â€” Bardeleben leaves the room without resigning. Checkmate 26.Qg7# was inevitable. A legendary Italian Game masterpiece."
+     result:"1-0 — Steinitz gagne par abandon — combinaison immortelle du Giuoco Piano",
+     analysis:"22.Tg7+!! puis 25.Dh8+! — Bardeleben quitte la salle sans abandonner officiellement. Le mat 26.Dg7# &eacute;tait in&eacute;vitable. Chef-d'oeuvre l&eacute;gendaire du Giuoco Piano.",
+     result_en:"1-0 — Steinitz wins by forfeit — immortal Italian Game combination",
+     analysis_en:"22.Rxg7+!! then 25.Qh8+! — Bardeleben leaves the room without resigning. Checkmate 26.Qg7# was inevitable. A legendary Italian Game masterpiece."
     }
   },
   pianissimo:{
@@ -1697,12 +1697,12 @@ var ENRICH = {
     {move:"6...a6",move_en:"6...a6",comment:"Les Noirs préparent ...b5 et ...d5 pour contre-attaquer. La position reste équilibrée mais riche en idées stratégiques.",comment_en:"Black prepares ...b5 and ...d5 to counterattack. The position stays balanced but rich in strategic ideas."}
    ],
     game:{
-     header:"Capablanca, J.R. vs NN &middot; New York 1918 &middot; Giuoco Piano â€” Miniature (C50)",
+     header:"Capablanca, J.R. vs NN &middot; New York 1918 &middot; Giuoco Piano — Miniature (C50)",
      moves:"1. e4 e5 2. Cf3 Cc6 3. Cc3 Cf6 4. Fc4 Fc5 5. 0-0 0-0 6. d3 d6 7. Fg5 Fg4 8. Cd5 Cd4 9. Dd2 Dd7 10. Fxf6 Fxf3 11. Ce7+ Rh8 12. Fxg7+ Rxg7 13. Dg5+ Rh8 14. Df6# 1-0",
-     result:"1-0 â€” Capablanca gagne par mat en 14 coups â€” le&ccedil;on de d&eacute;veloppement",
-     analysis:"Miniature instructive : 11.Ce7+ Rh8 12.Fxg7+! Rxg7 13.Dg5+ Rh8 14.Df6# â€” mat en 14 coups. Le&ccedil;on fondamentale : dans l'Italienne, le retard de d&eacute;veloppement est fatal.",
-     result_en:"1-0 â€” Capablanca wins by checkmate in 14 moves â€” development lesson",
-     analysis_en:"Instructive Italian miniature: 11.Ne7+ Kh8 12.Bxg7+! Kxg7 13.Qg5+ Kh8 14.Qf6# â€” mate in 14 moves. Fundamental lesson: in the Italian, slow development is fatal."
+     result:"1-0 — Capablanca gagne par mat en 14 coups — le&ccedil;on de d&eacute;veloppement",
+     analysis:"Miniature instructive : 11.Ce7+ Rh8 12.Fxg7+! Rxg7 13.Dg5+ Rh8 14.Df6# — mat en 14 coups. Le&ccedil;on fondamentale : dans l'Italienne, le retard de d&eacute;veloppement est fatal.",
+     result_en:"1-0 — Capablanca wins by checkmate in 14 moves — development lesson",
+     analysis_en:"Instructive Italian miniature: 11.Ne7+ Kh8 12.Bxg7+! Kxg7 13.Qg5+ Kh8 14.Qf6# — mate in 14 moves. Fundamental lesson: in the Italian, slow development is fatal."
     }
   },
   deux_cavaliers:{
@@ -1718,9 +1718,9 @@ var ENRICH = {
     game:{
      header:"Estrin, Ya. vs Berliner, H. &middot; 5e Ch. du Monde par Correspondance 1965 &middot; D&eacute;fense des Deux Cavaliers (C57)",
      moves:"1.e4 e5 2.Cf3 Cc6 3.Fc4 Cf6 4.Cg5 d5 5.exd5 b5 6.Ff1 Cd4 7.c3 Cxd5 8.Ce4 Dh4 9.Cg3 Fg4 10.f3 e4 11.cxd4 Fd6 12.Fxb5+ Rd8 13.0-0 exf3 14.Txf3 Tb8 15.Fe2 Fxf3 16.Fxf3 Dxd4+ 17.Rh1 Fxg3 18.hxg3 Tb6 19.d3 Ce3 20.Fxe3 Dxe3 21.Fg4 h5 22.Fh3 g5 23.Cd2 g4 24.Cc4 Dxg3 25.Cxb6 gxh3 26.Df3 hxg2+ 27.Dxg2 Dxg2+ 28.Rxg2 cxb6 29.Tf1 Re7 30.Te1+ Rd6 31.Tf1 Tc8 32.Txf7 Tc7 33.Tf2 Re5 34.a4 Rd4 35.a5 Rxd3 36.Tf3+ Rc2 37.b4 b5 38.a6 Tc4 39.Tf7 Txb4 40.Tb7 Tg4+ 41.Rf3 b4 42.Txa7 b3 0-1",
-     result:"0-1 â€” Berliner gagne en 42 coups â€” le Fried Liver r&eacute;fut&eacute;",
+     result:"0-1 — Berliner gagne en 42 coups — le Fried Liver r&eacute;fut&eacute;",
      analysis:"Partie de correspondance historique ! Estrin tente le Fried Liver Attack mais Berliner r&eacute;fute avec 6.Ff1! Cd4! La suite tactique explosive d&eacute;montre que 5...Ca5! est th&eacute;oriquement correct.",
-     result_en:"0-1 â€” Berliner wins in 42 moves â€” Fried Liver refuted",
+     result_en:"0-1 — Berliner wins in 42 moves — Fried Liver refuted",
      analysis_en:"Historic correspondence game! Estrin attempts the Fried Liver Attack but Berliner refutes with 6.Bf1! Nd4! The explosive tactical sequence proves that 5...Na5! is theoretically correct."
     }
   },
@@ -1736,11 +1736,11 @@ var ENRICH = {
     {move:"6.d4",move_en:"6.d4",comment:"Centre maximal ! Le Fou b3 et le Cavalier f3 visent directement le point faible f7.",comment_en:"Maximum center! The Bb3 and Nf3 directly target the weak f7 square."}
    ],
     game:{
-     header:"Anderssen, A. vs Dufresne, J. &middot; Berlin 1852 &middot; Gambit Evans â€” La Partie Evergreen (C52)",
+     header:"Anderssen, A. vs Dufresne, J. &middot; Berlin 1852 &middot; Gambit Evans — La Partie Evergreen (C52)",
      moves:"1.e4 e5 2.Cf3 Cc6 3.Fc4 Fc5 4.b4 Fxb4 5.c3 Fa5 6.d4 exd4 7.0-0 d3 8.Db3 Df6 9.e5 Dg6 10.Te1 Cge7 11.Fa3 b5 12.Dxb5 Tb8 13.Da4 Fb6 14.Cbd2 Fb7 15.Ce4 Df5 16.Fxd3 Dh5 17.Cf6+ gxf6 18.exf6 Tg8 19.Tad1 Dxf3 20.Txe7+ Cxe7 1-0",
-     result:"1-0 â€” Anderssen gagne en 20 coups â€” la Partie Evergreen",
-     analysis:"La Partie Evergreen ! Le sacrifice 17.Cxf7!! puis 19.Txd7+!! Rxd7 20.Dxb7+! est stupÃ©fiant. Tchigorin appela cette partie la plus belle d'Anderssen.",
-     result_en:"1-0 â€” Anderssen wins in 20 moves â€” The Evergreen Game",
+     result:"1-0 — Anderssen gagne en 20 coups — la Partie Evergreen",
+     analysis:"La Partie Evergreen ! Le sacrifice 17.Cxf7!! puis 19.Txd7+!! Rxd7 20.Dxb7+! est stupéfiant. Tchigorin appela cette partie la plus belle d'Anderssen.",
+     result_en:"1-0 — Anderssen wins in 20 moves — The Evergreen Game",
      analysis_en:"The Evergreen Game! The sacrifice 17.Nxf7!! then 19.Rxd7+!! Kxd7 20.Qxb7+! is stunning. Chigorin called it Anderssen's most beautiful game."
     }
   }
@@ -1758,11 +1758,11 @@ var ENRICH = {
     {move:"4.h4",move_en:"4.h4 g4",comment:"Attaque immédiate de la chaîne de pions noirs.",comment_en:"White attacks the g5 pawn and Black advances to g4, forcing the Knight to move."}
    ],
     game:{
-     header:"Anderssen, A. vs Kieseritzky, L. &middot; Londres 1851 &middot; L'Immortelle â€” Gambit du Roi Accept&eacute; (C33)",
+     header:"Anderssen, A. vs Kieseritzky, L. &middot; Londres 1851 &middot; L'Immortelle — Gambit du Roi Accept&eacute; (C33)",
      moves:"1.e4 e5 2.f4 exf4 3.Fc4 Dh4+ 4.Rf1 b5 5.Fxb5 Cf6 6.Cf3 Dh6 7.d3 Ch5 8.Ch4 Dg5 9.Cf5 c6 10.g4 Cf6 11.Tg1 cxb5 12.h4 Dg6 13.h5 Dg5 14.Df3 Cg8 15.Fxf4 Df6 16.Cc3 Fc5 17.Cd5 Dxb2 18.Fd6 Fxg1 19. e5 Dxa1+ 20. Re2 Ca6 21.Cxg7+ Rd8 22.Df6+ Cxf6 23.Fe7# 1-0",
-     result:"1-0 â€” Anderssen gagne par mat en 23 coups â€” L'Immortelle",
-     analysis:"L'Immortelle d'Anderssen : sacrifice de Tour (11.Tg1!), de Fou (18.Fd6!) et des deux Tours pour donner mat. La combinaison finale Cxg7+ Rd8 Df6+ Cxf6 Fe7# est stupÃ©fiante.",
-     result_en:"1-0 â€” Anderssen wins by checkmate in 23 moves â€” The Immortal Game",
+     result:"1-0 — Anderssen gagne par mat en 23 coups — L'Immortelle",
+     analysis:"L'Immortelle d'Anderssen : sacrifice de Tour (11.Tg1!), de Fou (18.Fd6!) et des deux Tours pour donner mat. La combinaison finale Cxg7+ Rd8 Df6+ Cxf6 Fe7# est stupéfiante.",
+     result_en:"1-0 — Anderssen wins by checkmate in 23 moves — The Immortal Game",
      analysis_en:"Anderssen's Immortal Game: sacrifice of Rook (11.Rg1!), Bishop (18.Bd6!) and both Rooks for a mating attack. The final combination Nxg7+ Kd8 Qf6+ Nxf6 Be7# is stunning."
     }
   },
@@ -1780,9 +1780,9 @@ var ENRICH = {
     game:{
      header:"Anderssen, A. vs Zukertort, J. &middot; Breslau 1865 &middot; Gambit Muzio (C37)",
      moves:"1.e4 e5 2.f4 exf4 3.Cf3 g5 4.Fc4 g4 5.0-0 De7 6.Cc3 gxf3 7.d4 d6 8.Cd5 Dd7 9.Dxf3 Cc6 10.Dxf4 Cd8 11.Dg3 c6 12.Dxg8 Txg8 13.Cf6+ Re7 14.Cxg8+ Re8 15.Cf6+ Re7 16.Cxd7 Fxd7 17.Fg5+ 1-0",
-     result:"1-0 â€” Anderssen gagne en 17 coups â€” sacrifice de Cavalier foudroyant",
+     result:"1-0 — Anderssen gagne en 17 coups — sacrifice de Cavalier foudroyant",
      analysis:"Le Gambit Muzio dans toute sa splendeur : 4.Fc4 g4 5.0-0! sacrifie le Cavalier pour un d&eacute;veloppement foudroyant. La combinaison 13.Cd5! puis 16.Cxg8+!! d&eacute;molit la position noire en 17 coups.",
-     result_en:"1-0 â€” Anderssen wins in 17 moves â€” thunderous Knight sacrifice",
+     result_en:"1-0 — Anderssen wins in 17 moves — thunderous Knight sacrifice",
      analysis_en:"The Muzio Gambit in full glory: 4.Bc4 g4 5.O-O! sacrifices the Knight for blazing development. The combination 13.Nd5! then 16.Nxg8+!! demolishes Black in 17 moves."
     }
   },
@@ -1798,11 +1798,11 @@ var ENRICH = {
     {move:"5...d5",move_en:"5...d5",comment:"Coup libérateur — les Noirs égalisent complètement. La structure est maintenant symétrique et équilibrée.",comment_en:"Black challenges the center — a key move to prevent White from gaining too much space."}
    ],
     game:{
-     header:"Spassky, B. vs Bronstein, D. &middot; Championnat d'URSS 1960 &middot; Gambit du Roi Accept&eacute; â€” Variante Moderne (C36)",
+     header:"Spassky, B. vs Bronstein, D. &middot; Championnat d'URSS 1960 &middot; Gambit du Roi Accept&eacute; — Variante Moderne (C36)",
      moves:"1. e4 e5 2. f4 exf4 3. Cf3 d5 4. exd5 Fd6 5. Cc3 Ce7 6. d4 0-0 7. Fd3 Cd7 8. 0-0 h6 9. Ce4 Cxd5 10. c4 Ce3 11. Fxe3 fxe3 12. c5 Fe7 13. Fc2 Te8 14. Dd3 e2 15. Cd6 Cf8 16. Cxf7 exf1=Q+ 17. Txf1 Ff5 18. Dxf5 Dd7 19. Df4 Ff6 20. C3e5 De7 21. Fb3 Fxe5 22. Cxe5+ Rh7 23. De4+ 1-0",
-     result:"1-0 â€” Spassky gagne en 23 coups â€” g&eacute;nie du Gambit du Roi",
+     result:"1-0 — Spassky gagne en 23 coups — g&eacute;nie du Gambit du Roi",
      analysis:"Chef-d'oeuvre de Spassky ! La rupture 10.Ce4! suivi de 11.Fxe3 fxe3 12.c5! cr&eacute;e une tornade tactique. Apr&egrave;s 16.Cxf7! le mat est in&eacute;vitable.",
-     result_en:"1-0 â€” Spassky wins in 23 moves â€” King's Gambit genius",
+     result_en:"1-0 — Spassky wins in 23 moves — King's Gambit genius",
      analysis_en:"Spassky masterpiece! The break 10.Ne4! followed by 11.Bxe3 fxe3 12.c5! creates a tactical tornado. After 16.Nxf7! checkmate is inevitable."
     }
   },
@@ -1820,9 +1820,9 @@ var ENRICH = {
     game:{
      header:"Schulten, J.W. vs Morphy, P. &middot; New York 1857 &middot; Contre-Gambit Falkbeer (C31)",
      moves:"1. e4 e5 2. f4 d5 3. exd5 e4 4. Cc3 Cf6 5. d3 Fb4 6. Fd2 e3 7. Fxe3 0-0 8. Fd2 Te8+ 9. Fe2 Fxc3 10. bxc3 Fg4 11. c4 c6 12. dxc6 Cxc6 13. Rf1 Txe2 14. Cxe2 Cd4 15. Db1 Fxe2+ 16. Rf2 Cg4+ 17. Rg1 Cf3+ 18. gxf3 Dd4+ 19. Rg2 Df2+ 20. Rh3 Dxf3+ 21. Rh4 Ce3 22. Tg1 Cf5+ 23. Rg5 Dh5# 0-1",
-     result:"0-1 â€” Morphy gagne par mat en 23 coups â€” le Falkbeer vengeur",
+     result:"0-1 — Morphy gagne par mat en 23 coups — le Falkbeer vengeur",
      analysis:"Morphy d&eacute;montre la puissance du Contre-Gambit Falkbeer ! Apr&egrave;s 2...d5 3.exd5 e4!, le pion e4 &eacute;touffe les Blancs. La combinaison finale Cf3+ Rxh4 Ce5# est spectaculaire.",
-     result_en:"0-1 â€” Morphy wins by checkmate in 23 moves â€” the vengeful Falkbeer",
+     result_en:"0-1 — Morphy wins by checkmate in 23 moves — the vengeful Falkbeer",
      analysis_en:"Morphy demonstrates the Falkbeer Counter-Gambit's power! After 2...d5 3.exd5 e4!, the e4 pawn strangles White. The final combination Nf3+ Kxh4 Ne5# is spectacular."
     }
   }
@@ -1840,12 +1840,12 @@ var ENRICH = {
     {move:"6...Fe7",move_en:"6...Be7",comment:"Développement thématique et solide — les Noirs préparent le roque en conservant leur structure.",comment_en:"Thematic and solid development — Black prepares castling while maintaining their structure."}
    ],
     game:{
-     header:"Adams, E.Z. vs Torre, C. &middot; La Nouvelle-Orl&eacute;ans 1920 &middot; D&eacute;fense Philidor â€” Le Moulin (C41)",
+     header:"Adams, E.Z. vs Torre, C. &middot; La Nouvelle-Orl&eacute;ans 1920 &middot; D&eacute;fense Philidor — Le Moulin (C41)",
      moves:"1. e4 e5 2. Cf3 d6 3. d4 exd4 4. Dxd4 Cc6 5. Fb5 Fd7 6. Fxc6 Fxc6 7. Cc3 Cf6 8. 0-0 Fe7 9. Cd5 Fxd5 10. exd5 0-0 11. Fg5 c6 12. c4 cxd5 13. cxd5 Te8 14. Tfe1 a5 15. Te2 Tc8 16. Tae1 Dd7 17. Fxf6 Fxf6 18. Dg4 Db5 19. Dc4 Dd7 20. Dc7 Db5 21. a4 Dxa4 22. Te4 Db5 23. Dxb7 1-0",
-     result:"1-0 â€” Adams gagne par abandon â€” le Moulin (Windmill)",
-     analysis:"Le Moulin â€” une des parties les plus extraordinaires ! 18.De6!! pi&egrave;ge la Dame noire. Suit le cycle infernal Tg7+ Rf8 Txh7+ Rg8 Tg7+ : la Tour prend des pi&egrave;ces en alternant avec des &eacute;checs.",
-     result_en:"1-0 â€” Adams wins by resignation â€” The Windmill",
-     analysis_en:"'The Windmill' â€” one of the most extraordinary games! 18.Qe6!! traps the Black Queen. The infernal cycle Rg7+ Kf8 Rxh7+ Kg8 Rg7+ follows."
+     result:"1-0 — Adams gagne par abandon — le Moulin (Windmill)",
+     analysis:"Le Moulin — une des parties les plus extraordinaires ! 18.De6!! pi&egrave;ge la Dame noire. Suit le cycle infernal Tg7+ Rf8 Txh7+ Rg8 Tg7+ : la Tour prend des pi&egrave;ces en alternant avec des &eacute;checs.",
+     result_en:"1-0 — Adams wins by resignation — The Windmill",
+     analysis_en:"'The Windmill' — one of the most extraordinary games! 18.Qe6!! traps the Black Queen. The infernal cycle Rg7+ Kf8 Rxh7+ Kg8 Rg7+ follows."
     }
   },
   moderne:{
@@ -1859,11 +1859,11 @@ var ENRICH = {
     {move:"5...Cfd7",move_en:"5...Nfd7",comment:"Maintien de la pression sur d4 par le Cavalier qui pourra s'activer via c5 ou f6.",comment_en:"Maintaining pressure on d4 via the Knight, which will activate via c5 or f6."}
    ],
     game:{
-     header:"Adams, E.Z. vs Torre, C. &middot; La Nouvelle-Orl&eacute;ans 1920 &middot; D&eacute;fense Philidor Moderne â€” Le Moulin (C41)",
+     header:"Adams, E.Z. vs Torre, C. &middot; La Nouvelle-Orl&eacute;ans 1920 &middot; D&eacute;fense Philidor Moderne — Le Moulin (C41)",
      moves:"1. e4 e5 2. Cf3 d6 3. d4 exd4 4. Dxd4 Cc6 5. Fb5 Fd7 6. Fxc6 Fxc6 7. Cc3 Cf6 8. 0-0 Fe7 9. Cd5 Fxd5 10. exd5 0-0 11. Fg5 c6 12. c4 cxd5 13. cxd5 Te8 14. Tfe1 a5 15. Te2 Tc8 16. Tae1 Dd7 17. Fxf6 Fxf6 18. Dg4 Db5 19. Dc4 Dd7 20. Dc7 Db5 21. a4 Dxa4 22. Te4 Db5 23. Dxb7 1-0",
-     result:"1-0 â€” Adams gagne â€” le Moulin illustre les dangers de la Philidor passive",
+     result:"1-0 — Adams gagne — le Moulin illustre les dangers de la Philidor passive",
      analysis:"Le Moulin illustre les dangers de la Philidor passive. Apr&egrave;s 18.De6!, le centre blanc domine. La Tour en g7 d&eacute;roule un cycle infernal en r&eacute;cup&eacute;rant toutes les pi&egrave;ces noires.",
-     result_en:"1-0 â€” Adams wins â€” The Windmill illustrates passive Philidor's dangers",
+     result_en:"1-0 — Adams wins — The Windmill illustrates passive Philidor's dangers",
      analysis_en:"'The Windmill' illustrates passive Philidor's dangers. After 18.Qe6!, the White center dominates. The g7 Rook executes an infernal cycle capturing all Black's pieces."
     }
   },
@@ -1881,9 +1881,9 @@ var ENRICH = {
     game:{
      header:"Capablanca, J.R. vs Kostic, B. &middot; La Havane 1919 &middot; D&eacute;fense Petrov (C42)",
      moves:"1. e4 e5 2. Cf3 Cf6 3. Cxe5 d6 4. Cf3 Cxe4 5. De2 De7 6. d3 Cf6 7. Fg5 Dxe2+ 8. Fxe2 Fe7 9. Cc3 Fd7 10. 0-0 0-0 11. Tfe1 Cc6 12. d4 Tfe8 13. Fb5 a6 14. Fa4 b5 15. Fb3 Ca5 16. Te3 c6 17. Tae1 Rf8 18. Ff4 Cb7 19. h3 h6 20. Fh2 Fd8 21. Txe8+ Fxe8 22. a4 c5 23. Ce4 Cxe4 24. Fd5 Ta7 25. Fxe4 Fe7 26. axb5 axb5 27. dxc5 dxc5 28. Fb8 Ta8 29. Fg3 Ta7 30. Fb8 Ta8 31. Fg3 Ta7 32. Ce5 Cd8 33. b3 Ce6 34. Fd5 Cd4 35. c3 Cf5 36. Fh2 b4 37. g4 Cd6 38. c4 Ta3 39. Te3 Cc8 40. Fb7 Ca7 41. Fd5 f6 42. Cf3 Cc6 43. Ch4 Cd4 44. Cf5 Cxf5 45. gxf5 Fd7 46. Fe4 Ta6 47. Td3 Fc6 48. Fxc6 Txc6 49. Rg2 Ta6 50. Rf3 Ta2 51. Fg3 Re8 52. Ff4 Ta6 53. Fe3 Ta1 54. Rg4 Ta7 55. Rh5 Rf7 56. Td5 Ta3 57. Td7 Re8 58. Td3 Rf7 59. h4 Ta7 60. Td5 Ta5 61. Td7 Re8 62. Td3 Rf7 63. Td5 Ta3 64. Fxc5 Fxc5 65. Txc5 Txb3 66. Tc7+ Rf8 67. Rg6 Tf3 68. Tf7+ Re8 69. Txg7 Tf4 70. h5 Txc4 71. Rxh6 Rf8 72. Tb7 Tg4 73. f3 Tg5 74. Txb4 Rf7 75. Tg4 Txf5 76. f4 Ta5 77. Tg7+ Rf8 78. Tb7 f5 79. Rg6 Ta6+ 80. Rxf5 Ta5+ 81. Rg4 Ta6 82. Rg5 Tc6 83. f5 Rg8 84. f6 Tc1 85. Tg7+ Rf8 86. h6 1-0",
-     result:"1-0 â€” Capablanca gagne en 86 coups â€” ma&icirc;trise technique de la Petrov",
+     result:"1-0 — Capablanca gagne en 86 coups — ma&icirc;trise technique de la Petrov",
      analysis:"D&eacute;monstration magistrale de technique ! Capablanca exploite un avantage minuscule dans la Petrov pendant 86 coups gr&acirc;ce &agrave; une pression continue. La progression m&eacute;thodique illustre pourquoi Capablanca fut surnomm&eacute; la machine d'&eacute;checs.",
-     result_en:"1-0 â€” Capablanca wins in 86 moves â€” technical mastery of the Petrov",
+     result_en:"1-0 — Capablanca wins in 86 moves — technical mastery of the Petrov",
      analysis_en:"A masterful endgame technique demonstration! Capablanca exploits a tiny advantage in the Petrov for 86 moves through continuous pressure. The methodical advance illustrates why Capablanca was called 'the chess machine.'"
     }
   }
@@ -1923,9 +1923,9 @@ var ENRICH = {
     game:{
      header:"Rauzer, V. vs Botvinnik, M. &middot; Championnat d'URSS 1933 (Leningrad) &middot; Sicilienne Dragon (B74)",
      moves:"1.e4 c5 2.Cf3 Cc6 3.d4 cxd4 4.Cxd4 Cf6 5.Cc3 d6 6.Fe2 g6 7.Fe3 Fg7 8.Cb3 Fe6 9.f4 0-0 10.0-0 Ca5 11.Cxa5 Dxa5 12.Ff3 Fc4 13.Te1 Tfd8 14.Dd2 Dc7 15.Tac1 e5 16.b3 d5 17.exd5 e4 18.bxc4 exf3 19.c5 Da5 20.Ted1 Cg4 21.Fd4 f2 22.Rf1 Da6+ 23.De2 Fxd4 24.Txd4 Df6 25.Tcd1 Dh4 26.Dd3 Te8 27.Te4 f5 28.Te6 Cxh2+ 29.Re2 Dxf4 0-1",
-     result:"0-1 â€” Botvinnik gagne en 29 coups â€” le Dragon foudroyant",
+     result:"0-1 — Botvinnik gagne en 29 coups — le Dragon foudroyant",
      analysis:"Partie fondatrice de la th&eacute;orie du Dragon ! Botvinnik illustre la puissance du Fou g7. Apr&egrave;s 16...Cxb2!! Rauzer ne peut r&eacute;sister. Les Noirs exploitent la colonne c ouverte pour gagner en 29 coups.",
-     result_en:"0-1 â€” Botvinnik wins in 29 moves â€” the thunderous Dragon",
+     result_en:"0-1 — Botvinnik wins in 29 moves — the thunderous Dragon",
      analysis_en:"Foundational Dragon theory game! Botvinnik illustrates the g7 Bishop's power. After 16...Nxb2!! Rauzer cannot resist. Black exploits the open c-file to win in 29 moves."
     }
   },
@@ -1940,11 +1940,11 @@ var ENRICH = {
     {move:"7.Fe3",move_en:"7.Be3",comment:"Développement harmonieux — les Blancs contrôlent la diagonale et empêchent ...Cg4.",comment_en:"Harmonious development — White controls the diagonal and prevents ...d5 immediately."}
    ],
     game:{
-     header:"Smyslov, V. vs Tal, M. &middot; 4e Coupe d'URSS par Equipes 1964 &middot; Sicilienne â€” Etau de Maroczy (A36)",
+     header:"Smyslov, V. vs Tal, M. &middot; 4e Coupe d'URSS par Equipes 1964 &middot; Sicilienne — Etau de Maroczy (A36)",
      moves:"1. c4 g6 2. Cc3 Fg7 3. g3 c5 4. Fg2 Cc6 5. b3 e6 6. Fb2 Cge7 7. Ca4 Fxb2 8. Cxb2 0-0 9. e3 d5 10. Cf3 Cf5 11. 0-0 b6 12. Ca4 Fb7 13. cxd5 exd5 14. d3 Df6 15. Dd2 Tad8 16. Tfd1 Tfe8 17. Tab1 Cd6 18. Ce1 d4 19. e4 De7 20. Cc2 f5 21. exf5 Ce5 22. f4 Cf3+ 23. Fxf3 Fxf3 24. Te1 De2 25. Txe2 Txe2 26. Dxe2 Fxe2 27. Cb2 gxf5 28. Te1 Fh5 29. Cc4 Cxc4 30. bxc4 Te8 31. Rf2 Txe1 32. Rxe1 Rf8 33. Rd2 Re7 34. Ce1 a6 35. a4 a5 36. Rc2 Fe8 37. Rb3 Fc6 38. Ra3 Rf6 39. Rb3 Rg6 40. Ra3 Rh5 41. h3 Rg6 42. Rb3 Rg7 43. Ra3 Rf6 44. Rb3 Fe8 45. Cg2 Fh5 46. Rc2 Fe2 47. Ce1 Ff1 48. Cf3 Fxh3 49. Cg5 Fg2 50. Cxh7+ Rg7 51. Cg5 Rg6 52. Rd2 Fc6 53. Rc1 Fg2 54. Rd2 Rh5 55. Ce6 Rg4 56. Cc7 Fc6 57. Cd5 Rxg3 58. Ce7 Fd7 59. Cd5 Fxa4 60. Cxb6 Fe8 61. Cd5 Rf3 62. Cc7 Fc6 63. Ce6 a4 64. Cxc5 a3 65. Cb3 a2 66. Rc1 Rxf4 67. Rb2 Re3 68. Ca5 Fe8 69. c5 f4 70. c6 Fxc6 71. Cxc6 f3 72. Ce5 f2 0-1",
-     result:"0-1 â€” Tal gagne en 72 coups â€” l'Etau bris&eacute; par l'imagination de Tal",
+     result:"0-1 — Tal gagne en 72 coups — l'Etau bris&eacute; par l'imagination de Tal",
      analysis:"Tal d&eacute;montre comment briser l'Etau de Maroczy ! La man&oelig;uvre ...Cf5 puis ...Cd4 cr&eacute;e des complications irr&eacute;sistibles. Malgr&eacute; l'&eacute;tau c4-e4, Tal gagne en 72 coups.",
-     result_en:"0-1 â€” Tal wins in 72 moves â€” Maroczy Bind broken by Tal's imagination",
+     result_en:"0-1 — Tal wins in 72 moves — Maroczy Bind broken by Tal's imagination",
      analysis_en:"Tal demonstrates how to break the Maroczy Bind! The maneuver ...Nf5 then ...Nd4 creates irresistible complications. Despite the c4-e4 bind, Tal wins in 72 moves."
     }
   }
@@ -1968,9 +1968,9 @@ var ENRICH = {
     game:{
      header:"Pillsbury, H.N. vs Lasker, E. &middot; Nuremberg 1896 &middot; D&eacute;fense Fran&ccedil;aise Variante Classique (C11)",
      moves:"1. e4 e6 2. d4 d5 3. Cc3 Cf6 4. e5 Cfd7 5. f4 c5 6. dxc5 Cc6 7. a3 Cxc5 8. b4 Cd7 9. Fd3 a5 10. b5 Ccb8 11. Cf3 Cc5 12. Fe3 Cbd7 13. 0-0 g6 14. Ce2 Fe7 15. De1 Cb6 16. Cfd4 Fd7 17. Df2 Cba4 18. Tab1 h5 19. b6 Cxd3 20. cxd3 Fxa3 21. f5 gxf5 22. Cf4 h4 23. Ta1 Fe7 24. Txa4 Fxa4 25. Cdxe6 fxe6 26. Cxe6 Fd7 27. Cxd8 Txd8 28. Fc5 Tc8 29. Fxe7 Rxe7 30. De3 Tc6 31. Dg5+ Rf7 32. Tc1 Txc1+ 33. Dxc1 Tc8 34. De1 h3 35. gxh3 Tg8+ 36. Rf2 a4 37. Db4 Tg6 38. Rf3 a3 39. Dxa3 Txb6 40. Dc5 Te6 41. Dc7 Re7 42. Rf4 b6 43. h4 Tc6 44. Db8 Fe8 45. Rxf5 Th6 46. Dc7+ Rf8 47. Dd8 b5 48. e6 Th7 49. Re5 b4 50. Dd6+ 1-0",
-     result:"1-0 â€” Pillsbury gagne en 50 coups â€” ma&icirc;trise classique de la Fran&ccedil;aise",
+     result:"1-0 — Pillsbury gagne en 50 coups — ma&icirc;trise classique de la Fran&ccedil;aise",
      analysis:"Pillsbury illustre les plans blancs dans la Variante Classique : apr&egrave;s e5 et f4, la progression syst&eacute;matique cr&eacute;e une majorit&eacute; d&eacute;cisive. La man&oelig;uvre du Cavalier en e6 est th&eacute;matique.",
-     result_en:"1-0 â€” Pillsbury wins in 50 moves â€” classical mastery of the French",
+     result_en:"1-0 — Pillsbury wins in 50 moves — classical mastery of the French",
      analysis_en:"Pillsbury illustrates White's plans in the Classical Variation: after e5 and f4, systematic progression creates a decisive majority. The Knight maneuver to e6 is thematic."
     }
   },
@@ -1988,9 +1988,9 @@ var ENRICH = {
     game:{
      header:"Fischer, R. vs Tal, M. &middot; Olympiades Leipzig 1960 &middot; D&eacute;fense Fran&ccedil;aise Winawer (C18)",
      moves:"1. e4 e6 2. d4 d5 3. Cc3 Fb4 4. e5 c5 5. a3 Fa5 6. b4 cxd4 7. Dg4 Ce7 8. bxa5 dxc3 9. Dxg7 Tg8 10. Dxh7 Cbc6 11. Cf3 Dc7 12. Fb5 Fd7 13. 0-0 0-0-0 14. Fg5 Cxe5 15. Cxe5 Fxb5 16. Cxf7 Fxf1 17. Cxd8 Txg5 18. Cxe6 Txg2+ 19. Rh1 De5 20. Txf1 Dxe6 21. Rxg2 Dg4+ 1/2-1/2",
-     result:"1/2-1/2 â€” Nulle en 21 coups â€” duel de titans dans la Winawer",
+     result:"1/2-1/2 — Nulle en 21 coups — duel de titans dans la Winawer",
      analysis:"Duel spectaculaire entre Fischer et Tal dans la Winawer ! La complication extr&ecirc;me m&egrave;ne &agrave; une position parfaitement &eacute;quilibr&eacute;e apr&egrave;s 21 coups.",
-     result_en:"1/2-1/2 â€” Draw in 21 moves â€” titans duel in the Winawer",
+     result_en:"1/2-1/2 — Draw in 21 moves — titans duel in the Winawer",
      analysis_en:"Spectacular duel between Fischer and Tal in the Winawer! Extreme complication leads to a perfectly balanced position after 21 moves."
     }
   },
@@ -2007,9 +2007,9 @@ var ENRICH = {
     game:{
      header:"Nimzowitsch, A. vs Hakansson, A. &middot; Kristianstad 1922 &middot; D&eacute;fense Fran&ccedil;aise Variante d'Avance (C02)",
      moves:"1. e4 e6 2. d4 d5 3. e5 c5 4. Dg4 cxd4 5. Cf3 Cc6 6. Fd3 f5 7. Dg3 Cge7 8. 0-0 Cg6 9. h4 Dc7 10. Te1 Fd7 11. a3 0-0-0 12. b4 a6 13. h5 Cge7 14. Fd2 h6 15. a4 g5 16. b5 f4 17. Dg4 Cb8 18. c3 Te8 19. cxd4 Rd8 20. Tc1 Db6 21. a5 Da7 22. b6 Da8 23. Tc7 Cf5 24. Cc3 Fe7 25. Cxd5 Cxd4 26. Cxd4 exd5 27. Dxd7+ 1-0",
-     result:"1-0 â€” Nimzowitsch gagne en 27 coups â€” l'Avance triomphante",
+     result:"1-0 — Nimzowitsch gagne en 27 coups — l'Avance triomphante",
      analysis:"Nimzowitsch illustre les plans de l'Avance : apr&egrave;s e5, Db3! puis Cg5! attaquent b7 et f7 simultan&eacute;ment. La combinaison finale est d&eacute;cisive.",
-     result_en:"1-0 â€” Nimzowitsch wins in 27 moves â€” Advance Variation triumphant",
+     result_en:"1-0 — Nimzowitsch wins in 27 moves — Advance Variation triumphant",
      analysis_en:"Nimzowitsch illustrates Advance plans: after e5, Qb3! then Ng5! attack b7 and f7 simultaneously. The final combination is decisive."
     }
   }
@@ -2027,9 +2027,9 @@ var ENRICH = {
     game:{
      header:"Topalov, V. vs Anand, V. &middot; Linares 1999 &middot; Caro-Kann Variante d'Avance (B12)",
      moves:"1. e4 c6 2. d4 d5 3. e5 Ff5 4. Cc3 e6 5. g4 Fg6 6. Cge2 Ce7 7. Cf4 c5 8. h4 cxd4 9. Cb5 Cec6 10. h5 Fe4 11. f3 a6 12. Cd6+ Fxd6 13. exd6 g5 14. Ch3 h6 15. fxe4 dxe4 16. Fg2 f5 17. 0-0 0-0 18. c3 Dxd6 19. gxf5 exf5 20. Db3+ Rh8 21. Fxe4 fxe4 22. Txf8+ Dxf8 23. De6 Cd7 24. Dxd7 Td8 25. Dg4 e3 26. b3 Ce5 27. De4 Df6 28. Rg2 e2 29. Fxg5 hxg5 30. cxd4 Dc6 31. d5 Dxd5 32. Dxd5 Txd5 33. Te1 Td2 34. Rf2 Txa2 35. Txe2 Cd3+ 36. Re3 Txe2+ 37. Rxe2 g4 38. Cg5 Cc1+ 39. Re3 Cxb3 40. h6 a5 41. Rf4 Cd4 42. Rxg4 a4 43. Rh5 Cc6 0-1",
-     result:"0-1 â€” Anand gagne en 43 coups â€” contre-jeu d&eacute;cisif dans la Caro-Kann",
+     result:"0-1 — Anand gagne en 43 coups — contre-jeu d&eacute;cisif dans la Caro-Kann",
      analysis:"Anand d&eacute;montre le contre-jeu dans la Caro-Kann Avance ! La pression sur la cha&icirc;ne e5-d4 s'av&egrave;re d&eacute;cisive. La man&oelig;uvre finale ...d5! lib&egrave;re les pi&egrave;ces noires.",
-     result_en:"0-1 â€” Anand wins in 43 moves â€” decisive counterplay in the Caro-Kann",
+     result_en:"0-1 — Anand wins in 43 moves — decisive counterplay in the Caro-Kann",
      analysis_en:"Anand demonstrates counterplay in the Caro-Kann Advance! Pressure on the e5-d4 chain proves decisive. The final maneuver ...d5! liberates Black's pieces."
     }
   },
@@ -2046,9 +2046,9 @@ var ENRICH = {
     game:{
      header:"Botvinnik, M. vs Konstantinopolsky, A. &middot; Sverdlovsk 1943 &middot; Caro-Kann (B14)",
      moves:"1.e4 c6 2.d4 d5 3.exd5 cxd5 4.c4 Cf6 5.Cc3 e6 6.Cf3 Fe7 7.Fg5 0-0 8.Tc1 Cc6 9.c5 Ce4 10.Fxe7 Dxe7 11.Fe2 Fd7 12.a3 f5 13.Fb5 Cg5 14.Fxc6 Cxf3+ 15.Dxf3 bxc6 16.Df4 Tae8 17.0-0 e5 18.Dxe5 Dxe5 19.dxe5 Txe5 20.f4 Te7 21.Tfe1 Tfe8 22.Txe7 Txe7 23.Rf2 Rf7 24.Td1 Te8 25.Td2 h6 26.Te2 Tb8 27.Re3 Tb3 28.Rd4 Rf6 29.Ca2 Tb8 30.b4 g5 31.g3 gxf4 32.gxf4 a6 33.Cc3 Tg8 34.a4 Tg4 35.Tf2 Fe6 36.b5 axb5 37.axb5 cxb5 38.Cxb5 Tg1 39.Cc3 Rf7 40.Tb2 Tf1 41.Ce2 Te1 42.Re5 d4 43.Rxd4 Rg6 44.Cc3 Rh5 45.Te2 Txe2 46.Cxe2 Rg4 47.Re5 Fc8 48.Cd4 h5 49.Cxf5 Fd7 50.Cg7+ Fa4 51.f5 Rg5 52.Ce6+ 1-0",
-     result:"1-0 â€” Botvinnik gagne en 52 coups â€” ma&icirc;trise technique exemplaire",
+     result:"1-0 — Botvinnik gagne en 52 coups — ma&icirc;trise technique exemplaire",
      analysis:"Botvinnik illustre la ma&icirc;trise technique dans la Caro-Kann : la progression syst&eacute;matique en finale d&eacute;montre la sup&eacute;riorit&eacute; des Blancs. La man&oelig;uvre du Cavalier en b5-c7 est d&eacute;cisive.",
-     result_en:"1-0 â€” Botvinnik wins in 52 moves â€” exemplary technical mastery",
+     result_en:"1-0 — Botvinnik wins in 52 moves — exemplary technical mastery",
      analysis_en:"Botvinnik illustrates Caro-Kann technical mastery: systematic endgame progression demonstrates White's superiority. The Knight maneuver to b5-c7 is decisive."
     }
   }
@@ -2067,9 +2067,9 @@ var ENRICH = {
     game:{
      header:"Fischer, R. vs Berliner, H. &middot; Championnat des Etats-Unis 1960-61 (New York) &middot; D&eacute;fense Alekhine (B03)",
      moves:"1. e4 Cf6 2. e5 Cd5 3. d4 d6 4. c4 Cb6 5. exd6 cxd6 6. Cc3 g6 7. Fd3 Fg7 8. Cge2 Cc6 9. Fe3 0-0 10. 0-0 e5 11. d5 Ce7 12. b3 Cd7 13. Ce4 Cf5 14. Fg5 f6 15. Fd2 Cc5 16. Cxc5 dxc5 17. Fxf5 Fxf5 18. f4 exf4 19. Cxf4 Dd6 20. Ch5 Tae8 21. Cxg7 Rxg7 22. Ff4 Dd7 23. Dd2 Tf7 24. Fh6+ Rg8 25. Tae1 Tfe7 26. Txe7 Dxe7 27. h3 De4 28. Df2 De7 29. g4 Fd3 30. Td1 Fe4 31. d6 De5 32. Ff4 Dc3 33. d7 Td8 34. De2 Df3 35. Dxf3 Fxf3 36. Fc7 1-0",
-     result:"1-0 â€” Fischer gagne en 36 coups â€” l'Alekhine punie",
+     result:"1-0 — Fischer gagne en 36 coups — l'Alekhine punie",
      analysis:"Fischer exploite le manque de coordination des Noirs dans l'Alekhine avec les Quatre Pions : apr&egrave;s 5.f4 dxe5 6.fxe5, le centre blanc domine. La combinaison finale d'invasion est d&eacute;cisive.",
-     result_en:"1-0 â€” Fischer wins in 36 moves â€” Alekhine punished",
+     result_en:"1-0 — Fischer wins in 36 moves — Alekhine punished",
      analysis_en:"Fischer exploits Black's lack of coordination in the Alekhine with the Four Pawns Attack: after 5.f4 dxe5 6.fxe5, the White center dominates. The final invasion combination is decisive."
     }
   },
@@ -2105,9 +2105,9 @@ var ENRICH = {
     game:{
      header:"Anand, V. vs Lautier, J. &middot; Biel 1997 &middot; D&eacute;fense Scandinave (B01)",
      moves:"1.e4 d5 2.exd5 Dxd5 3.Cc3 Da5 4.d4 Cf6 5.Cf3 c6 6.Fc4 Ff5 7.Ce5 e6 8.g4 Fg6 9.h4 Cbd7 10.Cxd7 Cxd7 11.h5 Fe4 12.Th3 Fg2 13.Te3 Cb6 14.Fd3 Cd5 15.f3 Fb4 16.Rf2 Fxc3 17.bxc3 Dxc3 18.Tb1 Dxd4 19.Txb7 Td8 20.h6 gxh6 21.Fg6 Ce7 22.Dxd4 Txd4 23.Td3 Td8 24.Txd8+ Rxd8 25.Fd3 1-0",
-     result:"1-0 â€” Anand gagne en 25 coups â€” pi&egrave;ge dans la Scandinave",
+     result:"1-0 — Anand gagne en 25 coups — pi&egrave;ge dans la Scandinave",
      analysis:"Anand illustre les dangers de la Scandinave ! La pouss&eacute;e 6.Fc4! vise f7. La combinaison 21.Fxf7+ Rf8 22.Fxe6 conduit &agrave; un gain mat&eacute;riel d&eacute;cisif en 25 coups.",
-     result_en:"1-0 â€” Anand wins in 25 moves â€” Scandinavian trap",
+     result_en:"1-0 — Anand wins in 25 moves — Scandinavian trap",
      analysis_en:"Anand illustrates the Scandinavian's dangers! The push 6.Bc4! targets f7. The combination 21.Bxf7+ Kf8 22.Bxe6 leads to decisive material gain in 25 moves."
     }
   }
@@ -2125,11 +2125,11 @@ var ENRICH = {
     {move:"6.Ff4",move_en:"6.Bf4",comment:"Le Fou occupe la diagonale idéale c1-h6, préparant l'attaque minoritaire à l'aile dame.",comment_en:"The Bishop takes the ideal diagonal c1-h6, preparing the minority attack with b4-b5."}
    ],
     game:{
-     header:"Alekhine, A. vs Maroczy, G. &middot; Bled 1931 &middot; Gambit Dame Refus&eacute; â€” Variante de l'Echange (D63)",
+     header:"Alekhine, A. vs Maroczy, G. &middot; Bled 1931 &middot; Gambit Dame Refus&eacute; — Variante de l'Echange (D63)",
      moves:"1.d4 d5 2.c4 e6 3.Cc3 Cf6 4.Fg5 Fe7 5.e3 Cbd7 6.Cf3 0-0 7.Tc1 h6 8.Fh4 c6 9. Fd3 a6 10. 0-0 dxc4 11. Fxc4 c5 12. a4 Da5 13. De2 cxd4 14. exd4 Cb6 15. Fd3 Fd7 16. Ce5 Tfd8 17. f4 Fe8 18. Cg4 Txd4 19. Fxf6 Fxf6 20. Cxf6+ gxf6 21. Ce4 Tad8 22. Cxf6+ Rf8 23. Ch7+ Re7 24. f5 T8d6 25. b4 Dxb4 26. De5 Cd7 27. Dh8 Txd3 28. f6+ 1-0",
-     result:"1-0 â€” Alekhine gagne en 28 coups â€” combinaison finale brillante",
+     result:"1-0 — Alekhine gagne en 28 coups — combinaison finale brillante",
      analysis:"Alekhine illustre la strat&eacute;gie blanche dans le GDR Echange : apr&egrave;s l'Attaque Minoritaire b4-b5!, la faiblesse c6 devient d&eacute;cisive. La combinaison finale Cxd6! puis Cxe6! d&eacute;molit la position noire.",
-     result_en:"1-0 â€” Alekhine wins in 28 moves â€” brilliant final combination",
+     result_en:"1-0 — Alekhine wins in 28 moves — brilliant final combination",
      analysis_en:"Alekhine illustrates White's strategy in the QGD Exchange: after the Minority Attack b4-b5!, the c6 weakness becomes decisive. The final combination Nxd6! then Nxe6! demolishes Black."
     }
   },
@@ -2145,12 +2145,12 @@ var ENRICH = {
     {move:"6.Fd3 dxc4",move_en:"6.Bd3 dxc4",comment:"Les Noirs prennent le pion — dans la Mérane, ils vont maintenant chercher à conserver le pion c4 par ...b5.",comment_en:"Black takes the pawn — in the Meran, they will now try to hold it with ...b5."}
    ],
     game:{
-     header:"Polugaevsky, L. vs Torre, E. &middot; Moscou 1981 &middot; Semi-Slave â€” Syst&egrave;me Botvinnik (D44)",
+     header:"Polugaevsky, L. vs Torre, E. &middot; Moscou 1981 &middot; Semi-Slave — Syst&egrave;me Botvinnik (D44)",
      moves:"1.d4 d5 2.c4 c6 3.Cf3 Cf6 4.Cc3 e6 5.Fg5 dxc4 6.e4 b5 7.e5 h6 8.Fh4 g5 9.Cxg5 hxg5 10.Fxg5 Cbd7 11.exf6 Fb7 12.g3 c5 13.d5 Cb6 14.dxe6 Dxd1+ 15.Txd1 Fxh1 16.e7 a6 17.h4 Fh6 18.f4 b4 19.Td6 Tb8 20.Cd1 Fxg5 21.fxg5 Cd5 22.Fxc4 Cxe7 23.fxe7 Rxe7 24.Tf6 Thf8 25.Ce3 Fe4 26.Txa6 Tbd8 27.Tf6 Td6 28.Tf4 Td4 29.h5 Fd3 30.Cd5+ Rd6 31.Txd4 cxd4 32.Fb3 Fc2 33.Fxc2 Rxd5 34.Fb3+ Re5 35.g4 Rf4 36.g6 Re3 37.g7 Tc8 38.Rf1 d3 39.Rg2 Rf4 40.h6 1-0",
-     result:"1-0 â€” Polugaevsky gagne en 40 coups â€” Botvinnik sacrificiel",
-     analysis:"Partie explosive dans la Semi-Slave Botvinnik ! Le sacrifice 16.Cg5! puis h4-h5 lance une attaque irr&eacute;sistible. La man&oelig;uvre Cd1! lib&egrave;re la case d3 pour la Tour â€” typique du Syst&egrave;me Botvinnik.",
-     result_en:"1-0 â€” Polugaevsky wins in 40 moves â€” Botvinnik sacrificial system",
-     analysis_en:"Explosive game in the Botvinnik Semi-Slav! The sacrifice 16.Ng5! then h4-h5 launches an irresistible attack. The maneuver Nd1! frees the d3 square â€” typical Botvinnik System."
+     result:"1-0 — Polugaevsky gagne en 40 coups — Botvinnik sacrificiel",
+     analysis:"Partie explosive dans la Semi-Slave Botvinnik ! Le sacrifice 16.Cg5! puis h4-h5 lance une attaque irr&eacute;sistible. La man&oelig;uvre Cd1! lib&egrave;re la case d3 pour la Tour — typique du Syst&egrave;me Botvinnik.",
+     result_en:"1-0 — Polugaevsky wins in 40 moves — Botvinnik sacrificial system",
+     analysis_en:"Explosive game in the Botvinnik Semi-Slav! The sacrifice 16.Ng5! then h4-h5 launches an irresistible attack. The maneuver Nd1! frees the d3 square — typical Botvinnik System."
     }
   }
  },
@@ -2167,12 +2167,12 @@ var ENRICH = {
     {move:"5...d5",move_en:"5...d5",comment:"Rupture centrale — les Noirs contestent le centre blanc directement. Après Fxc3+, les Noirs obtiennent la paire de fous en échange des pions doublés blancs.",comment_en:"Black challenges the center — a key move to prevent White from gaining too much space."}
    ],
     game:{
-     header:"Botvinnik, M. vs Capablanca, J. &middot; AVRO 1938 &middot; Nimzo-Indienne â€” Syst&egrave;me de Capablanca (E40)",
+     header:"Botvinnik, M. vs Capablanca, J. &middot; AVRO 1938 &middot; Nimzo-Indienne — Syst&egrave;me de Capablanca (E40)",
      moves:"1.d4 Cf6 2.c4 e6 3.Cc3 Fb4 4.e3 d5 5.a3 Fxc3+ 6.bxc3 c5 7.cxd5 exd5 8.Fd3 0-0 9.Ce2 b6 10.0-0 Fa6 11.Fxa6 Cxa6 12.Fb2 Dd7 13.a4 Tfe8 14.Dd3 c4 15.Dc2 Cb8 16.Tae1 Cc6 17.Cg3 Ca5 18.f3 Cb3 19.e4 Dxa4 20.e5 Cd7 21.Df2 g6 22.f4 f5 23.exf6 Cxf6 24.f5 Txe1 25.Txe1 Te8 26.Te6 Txe6 27.fxe6 Rg7 28.Df4 De8 29.De5 De7 30.Fa3 Dxa3 31.Ch5+ gxh5 32.Dg5+ Rf8 33.Dxf6+ Rg8 34.e7 Dc1+ 35.Rf2 Dc2+ 36.Rg3 Dd3+ 37.Rh4 De4+ 38.Rxh5 De2+ 39.Rh4 De4+ 40.g4 De1+ 41.Rh5 1-0",
-     result:"1-0 â€” Botvinnik gagne en 41 coups â€” sacrifice de Dame l&eacute;gendaire",
-     analysis:"La m&ecirc;me partie l&eacute;gendaire de l'AVRO 1938 â€” analys&eacute;e sous l'angle du syst&egrave;me de Capablanca. La pr&eacute;paration approfondie de Botvinnik lui permet de trouver 31.Ch5+!! suivi du sacrifice de Dame.",
-     result_en:"1-0 â€” Botvinnik wins in 41 moves â€” legendary Queen sacrifice",
-     analysis_en:"The same legendary AVRO 1938 game â€” analyzed from the Capablanca system angle. Botvinnik's deep preparation allows him to find 31.Nh5+!! followed by the Queen sacrifice."
+     result:"1-0 — Botvinnik gagne en 41 coups — sacrifice de Dame l&eacute;gendaire",
+     analysis:"La m&ecirc;me partie l&eacute;gendaire de l'AVRO 1938 — analys&eacute;e sous l'angle du syst&egrave;me de Capablanca. La pr&eacute;paration approfondie de Botvinnik lui permet de trouver 31.Ch5+!! suivi du sacrifice de Dame.",
+     result_en:"1-0 — Botvinnik wins in 41 moves — legendary Queen sacrifice",
+     analysis_en:"The same legendary AVRO 1938 game — analyzed from the Capablanca system angle. Botvinnik's deep preparation allows him to find 31.Nh5+!! followed by the Queen sacrifice."
     }
   },
   samisch:{
@@ -2189,9 +2189,9 @@ var ENRICH = {
     game:{
      header:"Lilienthal, A. vs Capablanca, J.R. &middot; Hastings 1934-35 &middot; Nimzo-Indienne Variante S&auml;misch (E24)",
      moves:"1.d4 Cf6 2.c4 e6 3.Cc3 Fb4 4.a3 Fxc3+ 5.bxc3 b6 6.f3 d5 7.Fg5 h6 8.Fh4 Fa6 9.e4 Fxc4 10.Fxc4 dxc4 11.Da4+ Dd7 12.Dxc4 Dc6 13.Dd3 Cbd7 14.Ce2 Td8 15.0-0 a5 16.Dc2 Dc4 17.f4 Tc8 18.f5 e5 19.dxe5 Dxe4 20.exf6 Dxc2 21.fxg7 Tg8 22.Cd4 De4 23.Tae1 Cc5 24.Txe4+ Cxe4 25.Te1 Txg7 26.Txe4+ Rd7 1-0",
-     result:"1-0 â€” Lilienthal gagne en 26 coups â€” la S&auml;misch percutante",
+     result:"1-0 — Lilienthal gagne en 26 coups — la S&auml;misch percutante",
      analysis:"Lilienthal illustre la S&auml;misch contre Capablanca ! Apr&egrave;s 4.a3 Fxc3+ 5.bxc3, la paire de fous et le centre solide donnent l'avantage. La pouss&eacute;e 18.f5! lance une attaque irr&eacute;sistible.",
-     result_en:"1-0 â€” Lilienthal wins in 26 moves â€” the striking S&auml;misch",
+     result_en:"1-0 — Lilienthal wins in 26 moves — the striking S&auml;misch",
      analysis_en:"Lilienthal illustrates the Saemisch against Capablanca! After 4.a3 Bxc3+ 5.bxc3, the bishop pair and solid center give the advantage. The push 18.f5! launches an irresistible attack."
     }
   }
@@ -2207,11 +2207,11 @@ var ENRICH = {
     {move:"15.f4-f5",move_en:"15.f4-f5",comment:"Attaque blanche typique à l'aile roi. Les Blancs avancent à l'aile dame (c5, b4) pendant que les Noirs se préparent à l'aile roi (g5, g4, f4).",comment_en:"Typical White kingside attack. White advances on the queenside while Black storms the kingside."}
    ],
     game:{
-     header:"Kasparov, G. vs Smirin, I. &middot; 55e Championnat d'URSS 1988 &middot; King's Indian â€” Mar del Plata (E97)",
+     header:"Kasparov, G. vs Smirin, I. &middot; 55e Championnat d'URSS 1988 &middot; King's Indian — Mar del Plata (E97)",
      moves:"1.d4 Cf6 2.c4 g6 3.Cc3 Fg7 4.e4 d6 5.Cf3 0-0 6.Fe2 e5 7.0-0 Cc6 8.d5 Ce7 9.Cd2 a5 10.a3 Cd7 11.Tb1 f5 12.b4 b6 13.f3 f4 14.Ca4 axb4 15.axb4 g5 16.c5 Cf6 17.cxd6 cxd6 18.b5 Fd7 19.Cc4 Cc8 20.Fa3 Ce8 21.g4 fxg3 22.hxg3 g4 23.Fc1 gxf3 24.Fxf3 Cf6 25.Fg5 Ta7 26.Tf2 Tb7 27.Tb3 Ta7 28.Tb1 Tb7 29.Tb3 Ta7 30.Tb4 Rh8 31.Df1 Fxb5 32.Txb5 Txa4 33.Fg2 h6 34.Fh4 De8 35.Fxf6 Txf6 36.Txf6 Dxb5 37.Te6 Rg8 38.Fh3 Txc4 39.Txh6 Fxh6 40.Fe6+ Rh8 41.Df6+ 1-0",
-     result:"1-0 â€” Kasparov gagne en 41 coups â€” attaque &agrave; l'aile roi foudroyante",
+     result:"1-0 — Kasparov gagne en 41 coups — attaque &agrave; l'aile roi foudroyante",
      analysis:"Kasparov illustre la Variante Mar del Plata du KID ! Apr&egrave;s f5-g5 puis Ch5!, l'attaque &agrave; l'aile roi est fulminante. Kasparov calcule plus vite et gagne par 41.Df6+!",
-     result_en:"1-0 â€” Kasparov wins in 41 moves â€” thunderous kingside attack",
+     result_en:"1-0 — Kasparov wins in 41 moves — thunderous kingside attack",
      analysis_en:"Kasparov illustrates the KID Mar del Plata Variation! After f5-g5 then Nh5!, Black's kingside attack is thunderous. Kasparov calculates faster and wins with 41.Qf6+!"
     }
   },
@@ -2227,11 +2227,11 @@ var ENRICH = {
     {move:"7...c6",move_en:"7...c6",comment:"Les Noirs contre-attaquent à l'aile dame — telle est la 'Règle d'Or' de la Sämisch KID.",comment_en:"Black counter-attacks on the queenside — this is the 'Golden Rule' of the Sämisch KID."}
    ],
     game:{
-     header:"Beliavsky, A. vs Nunn, J. &middot; Wijk aan Zee 1985 &middot; King's Indian â€” Variante S&auml;misch (E81)",
+     header:"Beliavsky, A. vs Nunn, J. &middot; Wijk aan Zee 1985 &middot; King's Indian — Variante S&auml;misch (E81)",
      moves:"1.d4 Cf6 2.c4 g6 3.Cc3 Fg7 4.e4 d6 5.f3 0-0 6.Fe3 Cbd7 7.Dd2 c5 8.d5 Ce5 9.h3 Ch5 10.Ff2 f5 11.exf5 Txf5 12.g4 Txf3 13.gxh5 Df8 14.Ce4 Fh6 15.Dc2 Df4 16.Ce2 Txf2 17.Cxf2 Cf3+ 18.Rd1 Dh4 19.Cd3 Ff5 20.Cec1 Cd2 21.hxg6 hxg6 22.Fg2 Cxc4 23.Df2 Ce3+ 24.Re2 Dc4 25.Ff3 Tf8 26.Tg1 Cc2 27.Rd1 Fxd3 0-1",
-     result:"0-1 â€” Nunn gagne en 27 coups â€” le S&auml;misch KID an&eacute;anti",
+     result:"0-1 — Nunn gagne en 27 coups — le S&auml;misch KID an&eacute;anti",
      analysis:"Nunn d&eacute;montre comment briser la S&auml;misch KID ! Le sacrifice de qualit&eacute; 12...Txf3!! est le coup cl&eacute; : apr&egrave;s 13.gxf3 Cd4! l'initiative noire est irr&eacute;sistible.",
-     result_en:"0-1 â€” Nunn wins in 27 moves â€” Saemisch KID annihilated",
+     result_en:"0-1 — Nunn wins in 27 moves — Saemisch KID annihilated",
      analysis_en:"Nunn demonstrates how to break the Saemisch KID! The exchange sacrifice 12...Rxf3!! is the key: after 13.gxf3 Nd4! Black's initiative is irresistible."
     }
   }
@@ -2269,11 +2269,11 @@ var ENRICH = {
     {move:"7...Fg4!",move_en:"7...Bg4!",comment:"Pin du Cavalier f3 — les Noirs créent immédiatement une pression tactique sur le centre blanc.",comment_en:"Pin on the f3 Knight — Black immediately creates tactical pressure on White's center."}
    ],
      game:{
-     header:"Botvinnik, M. vs Yudovich, M. &middot; Championnat d'URSS 1933 (Leningrad) &middot; Gr&uuml;nfeld â€” Syst&egrave;me Russe (D96)",
+     header:"Botvinnik, M. vs Yudovich, M. &middot; Championnat d'URSS 1933 (Leningrad) &middot; Gr&uuml;nfeld — Syst&egrave;me Russe (D96)",
      moves:"1.c4 Cf6 2.d4 g6 3.Cc3 d5 4.Cf3 Fg7 5.Db3 c6 6.cxd5 Cxd5 7.Fd2 0-0 8.e4 Cb6 9.Td1 C8d7 10.a4 a5 11.Fe3 Dc7 12.Fe2 Dd6 13.Ca2 e6 14.0-0 h6 15.Tc1 f5 16.Cc3 Rh7 17.Tfd1 fxe4 18.Cxe4 Db4 19.Dc2 Dxa4 20.b3 Da3 21.Ch4 De7 22.Cxg6 Rxg6 23.Fh5+ 1-0",
-     result:"1-0 â€” Botvinnik gagne en 23 coups â€” le Syst&egrave;me Russe ma&icirc;tris&eacute;",
-     analysis:"Botvinnik illustre le Syst&egrave;me Russe de la Gr&uuml;nfeld ! Apr&egrave;s 5.Db3 dxc4 6.Dxc4 0-0 7.Fd2, la Dame blanche maintient la pression. La combinaison finale Cxg6! puis Fh5+ d&eacute;mantÃ¨le le roque noir.",
-     result_en:"1-0 â€” Botvinnik wins in 23 moves â€” Russian System mastered",
+     result:"1-0 — Botvinnik gagne en 23 coups — le Syst&egrave;me Russe ma&icirc;tris&eacute;",
+     analysis:"Botvinnik illustre le Syst&egrave;me Russe de la Gr&uuml;nfeld ! Apr&egrave;s 5.Db3 dxc4 6.Dxc4 0-0 7.Fd2, la Dame blanche maintient la pression. La combinaison finale Cxg6! puis Fh5+ d&eacute;mantèle le roque noir.",
+     result_en:"1-0 — Botvinnik wins in 23 moves — Russian System mastered",
      analysis_en:"Botvinnik illustrates the Grunfeld Russian System! After 5.Qb3 dxc4 6.Qxc4 0-0 7.Bd2, the White Queen maintains pressure. The final combination Nxg6! then Bh5+ dismantles Black's castled position."
     }
   }
@@ -2495,11 +2495,11 @@ var ENRICH = {
     {move:"4.exf6 Cxf6 5.Cf3",move_en:"4.exf6 Nxf6 5.Nf3",comment:"Noir récupère avec un développement actif — position dynamique et déséquilibrée.",comment_en:"Black recaptures with active development — dynamic and unbalanced position."}
    ],
    game:{
-     header:"Greco, G. vs NN &middot; Londres 1623 &middot; 1.e4 b6 â€” Combinaison classique (B00)",
+     header:"Greco, G. vs NN &middot; Londres 1623 &middot; 1.e4 b6 — Combinaison classique (B00)",
      moves:"1.e4 b6 2.d4 Fb7 3.Fd3 f5 4.exf5 Fxg2 5.Dh5+ g6 6.fxg6 Cf6 7.gxh7 Cxh5 8.Fg6# 1-0",
-     result:"1-0 â€” Greco gagne par mat en 8 coups â€” mat de Greco (1623)",
+     result:"1-0 — Greco gagne par mat en 8 coups — mat de Greco (1623)",
      analysis:"L'une des plus anciennes parties connues ! Greco d&eacute;montre la puissance du d&eacute;veloppement rapide contre 1...b6. La combinaison finale 4.exf5 Fxg2 5.Dh5+ g6 6.fxg6 Cf6 7.gxh7+ Cxh5 8.Fg6# est spectaculaire.",
-     result_en:"1-0 â€” Greco wins by checkmate in 8 moves â€” Greco's Mate (1623)",
+     result_en:"1-0 — Greco wins by checkmate in 8 moves — Greco's Mate (1623)",
      analysis_en:"One of the oldest known games! Greco demonstrates rapid development against 1...b6. The final combination 4.exf5 Bxg2 5.Qh5+ g6 6.fxg6 Nf6 7.gxh7+ Nxh5 8.Bg6# is spectacular."
     }
   }
@@ -2780,11 +2780,11 @@ var ENRICH = {
     {move:"8.Cbd2 cxd4 9.exd4",move_en:"8.Nbd2 cxd4 9.exd4",comment:"Setup Colle-Zukertort complet — les Blancs préparent Ce5 et le sacrifice classique Fxh7+.",comment_en:"Complete Colle-Zukertort setup — White prepares Ne5 and the classic sacrifice Bxh7+."}
    ],
    game:{
-     header:"Steinitz, W. vs Lasker, E. &middot; Saint-P&eacute;tersbourg 1895-96 &middot; GDR â€” Syst&egrave;me Colle-Zukertort (D35)",
+     header:"Steinitz, W. vs Lasker, E. &middot; Saint-P&eacute;tersbourg 1895-96 &middot; GDR — Syst&egrave;me Colle-Zukertort (D35)",
      moves:"1. d4 d5 2. c4 e6 3. Cc3 Cf6 4. Ff4 Fe7 5. e3 0-0 6. c5 Ce4 7. Cxe4 dxe4 8. Dc2 f5 9. Fc4 Cc6 10. a3 Ff6 11. 0-0-0 Rh8 12. f3 De7 13. Fg3 f4 14. Dxe4 fxg3 15. hxg3 g6 16. Dxg6 Fd7 17. f4 Tf7 18. g4 Tg7 19. Dh6 Txg4 20. Fd3 Tg7 21. Cf3 Df7 22. g4 Tag8 23. g5 Fd8 24. Th2 Tg6 25. Dh5 T6g7 26. Tdh1 Dxh5 27. Txh5 Tf8 28. Txh7+ Txh7 29. Txh7+ Rg8 30. Txd7 Tf7 31. Fc4 1-0",
-     result:"1-0 â€” Steinitz gagne en 31 coups â€” ma&icirc;trise technique du GDR",
+     result:"1-0 — Steinitz gagne en 31 coups — ma&icirc;trise technique du GDR",
      analysis:"Steinitz illustre la ma&icirc;trise technique dans les structures GDR similaires au Colle-Zukertort ! Apr&egrave;s 6.c5 Ce4 7.Cxe4 dxe4, la pouss&eacute;e f4-f5! lance une attaque d&eacute;cisive.",
-     result_en:"1-0 â€” Steinitz wins in 31 moves â€” technical QGD mastery",
+     result_en:"1-0 — Steinitz wins in 31 moves — technical QGD mastery",
      analysis_en:"Steinitz illustrates technical mastery in QGD structures similar to the Colle-Zukertort! After 6.c5 Ne4 7.Nxe4 dxe4, the push f4-f5! launches a decisive attack."
     }
   }
@@ -2818,12 +2818,12 @@ var ENRICH = {
     {move:"8...Dc7 9.Cd2",move_en:"8...Qc7 9.Nd2",comment:"Le Cavalier d2 soutient Ce5 et prépare l'attaque sur l'aile roi.",comment_en:"The d2-Knight supports Ne5 and prepares the kingside attack."}
    ],
    game:{
-     header:"Capablanca, J.R. vs Spielmann, R. &middot; New York 1927 &middot; Attaque Stonewall â€” Plans Th&eacute;matiques (D37)",
+     header:"Capablanca, J.R. vs Spielmann, R. &middot; New York 1927 &middot; Attaque Stonewall — Plans Th&eacute;matiques (D37)",
      moves:"1. d4 d5 2. Cf3 e6 3. c4 Cd7 4. Cc3 Cgf6 5. Fg5 Fb4 6. cxd5 exd5 7. Da4 Fxc3+ 8. bxc3 0-0 9. e3 c5 10. Fd3 c4 11. Fc2 De7 12. 0-0 a6 13. Tfe1 De6 14. Cd2 b5 15. Da5 Ce4 16. Cxe4 dxe4 17. a4 Dd5 18. axb5 Dxg5 19. Fxe4 Tb8 20. bxa6 Tb5 21. Dc7 Cb6 22. a7 Fh3 23. Teb1 Txb1+ 24. Txb1 f5 25. Ff3 f4 26. exf4 1-0",
-     result:"1-0 â€” Capablanca gagne en 26 coups â€” attaque &agrave; l'aile roi dans le Stonewall",
-     analysis:"Capablanca illustre les plans th&eacute;matiques du Stonewall ! Apr&egrave;s Fd3, Ce5, f4-f5, l'attaque &agrave; l'aile roi est irr&eacute;sistible. La case e5 comme avant-poste du Cavalier â€” le coeur du Stonewall.",
-     result_en:"1-0 â€” Capablanca wins in 26 moves â€” kingside attack in the Stonewall",
-     analysis_en:"Capablanca illustrates the Stonewall's thematic plans! After Bd3, Ne5, f4-f5, the kingside attack is irresistible. The e5 square as Knight outpost â€” the heart of the Stonewall."
+     result:"1-0 — Capablanca gagne en 26 coups — attaque &agrave; l'aile roi dans le Stonewall",
+     analysis:"Capablanca illustre les plans th&eacute;matiques du Stonewall ! Apr&egrave;s Fd3, Ce5, f4-f5, l'attaque &agrave; l'aile roi est irr&eacute;sistible. La case e5 comme avant-poste du Cavalier — le coeur du Stonewall.",
+     result_en:"1-0 — Capablanca wins in 26 moves — kingside attack in the Stonewall",
+     analysis_en:"Capablanca illustrates the Stonewall's thematic plans! After Bd3, Ne5, f4-f5, the kingside attack is irresistible. The e5 square as Knight outpost — the heart of the Stonewall."
     }
   }
  },
