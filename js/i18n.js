@@ -24,7 +24,7 @@ function dField(d, key) {
 var I18N = {
   fr: {
     title:        "Traité Complet des Ouvertures d'Échecs",
-    subtitle:     "46 ouvertures · 71 variantes · Histoire &amp; contexte · Commentaires coup par coup · Parties de référence annotées",
+    subtitle:     "44 ouvertures · 68 variantes · Histoire &amp; contexte · Commentaires coup par coup · Parties de référence annotées",
     by:           "par",
     prev:         "◀ Reculer",
     next:         "Avancer ▶",
@@ -190,7 +190,7 @@ var I18N = {
   },
   en: {
     title:        "Complete Chess Openings Treatise",
-    subtitle:     "46 openings · 71 variations · History &amp; context · Move-by-move commentary · Annotated reference games",
+    subtitle:     "44 openings · 68 variations · History &amp; context · Move-by-move commentary · Annotated reference games",
     by:           "by",
     prev:         "◀ Back",
     next:         "Forward ▶",
@@ -378,8 +378,8 @@ function refreshAllContent() {
   // Meta tags & title
   var titles = { fr: "Traité des Ouvertures d'Échecs — Vu-Hung Quan",
                  en: "Chess Openings Treatise — Vu-Hung Quan" };
-  var descs  = { fr: "Traité interactif des ouvertures d'échecs — 46 ouvertures, 71 variantes, parties annotées.",
-                 en: "Interactive chess openings treatise — 46 openings, 71 variations, annotated games." };
+  var descs  = { fr: "Traité interactif des ouvertures d'échecs — 44 ouvertures, 68 variantes, parties annotées.",
+                 en: "Interactive chess openings treatise — 44 openings, 68 variations, annotated games." };
   var apples = { fr: "Ouvertures", en: "Openings" };
   document.title = titles[LANG] || titles['fr'];
   var md = document.getElementById('meta-desc');
