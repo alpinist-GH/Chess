@@ -1,0 +1,1022 @@
+================================================================================
+         DÉFENSE SICILIENNE — GUIDE COMPLET DES VARIANTES
+================================================================================
+         1.e4 c5 — L'ouverture la plus jouée au monde (~25-30% des parties)
+================================================================================
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PARTIE I — SICILIENNE OUVERTE (1.e4 c5 2.Cf3 + 3.d4)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+────────────────────────────────────────────────────────────────────────────────
+1. VARIANTE NAJDORF
+   Code ECO : B90–B99
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 d6  3.d4 cxd4  4.Cxd4 Cf6  5.Cc3 a6
+
+Idée de la variante :
+  Le coup 5...a6 (le "coup Najdorf") est d'une subtilité remarquable.
+  Il prépare ...e5 ou ...e6 selon le développement blanc, empêche Cb5
+  (qui enfilerait sur d6), et prépare ...b5 pour une expansion queenside
+  agressive. Le Noir garde une flexibilité maximale avant de révéler
+  sa configuration.
+
+Avantages pour les Noirs :
+  - Flexibilité totale : choix entre ...e5 (Scheveningen-Najdorf) ou ...e6
+  - Prise en main de l'initiative queenside avec ...b5-b4
+  - Très bien théorisé, arme favorite de Kasparov et Fischer
+  - Déséquilibre garanti, les Noirs jouent pour gagner
+
+Désavantages pour les Noirs :
+  - Extrêmement théorique, des dizaines de sous-variantes
+  - Le Roi noir reste souvent au centre plus longtemps
+  - 6.Fg5 crée une pression immédiate difficile à gérer
+
+Plan pour les Blancs :
+  - Attaque sur l'aile roi : g4-g5, h4, 0-0-0 (selon la variante)
+  - 6.Fg5 (Richter-Rauzer du Najdorf), 6.Fc4 (Sozin), 6.f4 (Adams Attack),
+    6.Fg2 (English Attack avec g4)
+  - Ouvrir le centre avec f4-f5 ou e5
+
+Plan pour les Noirs :
+  - Contre-attaque queenside : ...b5, ...Cb6, ...Fb7, ...Tb8
+  - Exploiter la colonne semi-ouverte c
+  - Viser d4 avec ...Cbd7-c5 ou ...Cc6
+
+Partie célèbre représentative :
+  Garry Kasparov vs Anatoly Karpov, match du monde 1985 (Moscou), partie 16.
+  Kasparov, avec les Noirs dans la Najdorf 6.Fg5, exécute un sacrifice de
+  qualité foudroyant et gagne en montrant toute la puissance d'initiative
+  noire. Cette partie symbolise l'essence même de la Najdorf.
+
+
+────────────────────────────────────────────────────────────────────────────────
+2. VARIANTE DU DRAGON
+   Code ECO : B70–B79
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 d6  3.d4 cxd4  4.Cxd4 Cf6  5.Cc3 g6  6.Fe3 Fg7  7.f3
+
+Idée de la variante :
+  Les Noirs fianchettent leur fou en g7, créant un monstre diagonal qui
+  pèse sur d4 et l'aile dame. La structure rappelle la forme d'un dragon.
+  Les Noirs visent une attaque queenside massive (...Tb8, ...b5) pendant
+  que les Blancs lancent une attaque roi souvent irréversible.
+
+Avantages pour les Noirs :
+  - Fou-dragon en g7 extraordinairement actif à long terme
+  - Plans clairs et dynamiques queenside
+  - Contre-attaque vigoureuse possible en toutes circonstances
+
+Désavantages pour les Noirs :
+  - Variante yougoslave (0-0-0 blanc) : attaque blanche parmi les plus
+    dangereuses de toute la théorie des ouvertures
+  - Les Noirs "vivent sur le fil du rasoir" en Dragon yougoslave
+  - Nécessite une connaissance théorique très profonde
+
+Plan pour les Blancs :
+  - Dragon yougoslave : 0-0-0, h4-h5, g4, Fdh6 (échanger le dragon !)
+  - Attaque de mat direct sur le Roi noir en h
+  - Sacrifices de qualité en h6 ou sur c3 sont thématiques
+
+Plan pour les Noirs :
+  - ...Tb8, ...b5-b4, envahir la colonne c et les cases noires
+  - Coup thématique ...Cxd4 puis ...Fc6 pour attaquer d4/e4
+  - Contre-jeu doit être plus rapide que l'attaque blanche
+
+Partie célèbre représentative :
+  Robert Fischer vs Boris Spassky, Reykjavik 1972, partie 11.
+  Fischer, avec les Blancs dans le Dragon yougoslave, démontre la
+  puissance de l'attaque blanche. Sa conduite précise et implacable
+  est un modèle d'attaque king-side dans cette variante.
+
+Sous-variantes notables :
+  a) Dragon accéléré (B34–B39) : 1.e4 c5 2.Cf3 Cc6 3.d4 cxd4 4.Cxd4 g6
+     - Évite le f3 blanc, vise ...d5 en un coup
+  b) Dragon chinois : ...Tb8 avant ...b5, ordre de coups légèrement différent
+  c) Dragon classique sans 0-0-0 blanc : moins tranchant
+
+
+────────────────────────────────────────────────────────────────────────────────
+3. VARIANTE SCHEVENINGEN
+   Code ECO : B80–B89
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 d6  3.d4 cxd4  4.Cxd4 Cf6  5.Cc3 e6
+
+Idée de la variante :
+  Création d'un "petit centre" en e6+d6 qui cède du terrain au centre
+  mais offre une grande solidité. Les Noirs attendent de voir comment
+  les Blancs se déploient avant de décider de leur plan. La structure est
+  très robuste et permet de nombreux ordres de coups.
+
+Avantages pour les Noirs :
+  - Structure solide, peu de faiblesses immédiates
+  - Flexibilité queenside (...a6, ...b5) ou kingside (...Cf6-d7, ...e5)
+  - Bon pour les joueurs qui aiment les positions manœuvrières
+  - Kasparov l'a souvent utilisé comme alternative à la Najdorf
+
+Désavantages pour les Noirs :
+  - La case d5 peut devenir faible à long terme
+  - Les Blancs ont plusieurs attaques tranchantes (Keres Attack : 6.g4)
+  - Moins d'initiative immédiate pour les Noirs que dans le Dragon
+
+Plan pour les Blancs :
+  - Keres Attack : 6.g4 (attaque directe et agressive)
+  - English Attack : 6.Fe3 + 7.f3 + 8.Dd2 + 9.g4
+  - Attaque sur le roi avec f4-f5 ou g4-g5
+
+Plan pour les Noirs :
+  - ...a6, ...b5, ...Fb7, expansion queenside classique
+  - ...Ce5 pour échanger le cheval actif en d4
+  - Roque roi puis contre-jeu au centre
+
+Partie célèbre représentative :
+  Garry Kasparov vs Veselin Topalov, Wijk aan Zee 1999, "Immortelle de
+  Kasparov". Bien que classée Scheveningen-Najdorf, cette partie reste
+  le symbole absolu de la créativité noire dans la Sicilienne, avec un
+  sacrifice de tour dès le 24e coup qui laisse le monde des échecs stupéfait.
+
+
+────────────────────────────────────────────────────────────────────────────────
+4. VARIANTE SVESHNIKOV (alias Cheliabinsk)
+   Code ECO : B33
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 Cc6  3.d4 cxd4  4.Cxd4 Cf6  5.Cc3 e5
+  6.Cdb5 d6  7.Fg5 a6  8.Ca3 b5
+
+Idée de la variante :
+  Les Noirs jouent ...e5 pour gagner de l'espace au centre, acceptant
+  consciemment une faiblesse permanente sur d5 (case accessible aux
+  cavaliers blancs) en échange d'une forte pression sur e4 et d'une
+  dynamique de pièces noires très active.
+
+Avantages pour les Noirs :
+  - Espace kingside et initiative dynamique
+  - Les Noirs dictent souvent le rythme de la partie
+  - Plans queenside avec ...b4 très agressifs
+  - Variante favorite de Magnus Carlsen
+
+Désavantages pour les Noirs :
+  - Faiblesse permanente sur d5 (case blanche)
+  - Le pion e5 peut devenir une cible
+  - Si les Noirs se défendent passivement, leur position se détériore
+
+Plan pour les Blancs :
+  - Installer un cavalier ou un fou sur d5
+  - Pression sur d6 avec Fd3, De2, Ce3-d5
+  - Ouvrir le centre si ...b4 est joué : a3 ou a4
+
+Plan pour les Noirs :
+  - ...b4 pour chasser le cavalier blanc en a3
+  - ...Cd4 ou ...Ce7-d5 pour rééquilibrer
+  - Contre-attaque avec ...f5 quand les pièces sont prêtes
+
+Partie célèbre représentative :
+  Magnus Carlsen vs Viswanathan Anand, match du monde 2013, partie 5.
+  Carlsen avec les Noirs dans le Sveshnikov démontre comment les Noirs
+  peuvent générer un jeu actif et déséquilibré en neutralisant
+  méthodiquement la pression blanche sur d5.
+
+
+────────────────────────────────────────────────────────────────────────────────
+5. VARIANTE CLASSIQUE
+   Code ECO : B56–B69
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 Cc6  3.d4 cxd4  4.Cxd4 Cf6  5.Cc3 d6
+
+Idée de la variante :
+  Développement naturel et solide. Les Noirs maintiennent une pression
+  sur d4 avec ...Cc6 et visent à compléter leur développement rapidement.
+  Mène typiquement à la Richter-Rauzer (6.Fg5) ou à l'Attaque Sozin
+  (6.Fc4), deux des systèmes les plus théoriques de la Sicilienne.
+
+Avantages pour les Noirs :
+  - Très solide et éprouvé au plus haut niveau
+  - Nombreuses options selon le plan blanc
+  - Bonne coordination de pièces dès l'ouverture
+
+Désavantages pour les Noirs :
+  - Moins dynamique que la Najdorf ou le Dragon
+  - La case d5 peut devenir faible selon le plan noir
+
+Plan pour les Blancs (Richter-Rauzer 6.Fg5) :
+  - Pression sur f6 avec Fg5, menaçant Cxc6 + Fxf6
+  - 0-0-0 et attaque queenside puis centrale
+  - f4-f5 pour ouvrir le centre
+
+Plan pour les Blancs (Sozin 6.Fc4) :
+  - Pression sur f7 avec Fc4
+  - 0-0-0, f4-f5, attaque directe sur le roi
+  - Plan Fischer : Fc4 + Fb3, 0-0, f4
+
+Plan pour les Noirs :
+  - ...e6 (transition vers Scheveningen) ou ...e5 (transition Sveshnikov)
+  - Dans Richter-Rauzer : ...e6 puis ...a6, ...b5 pour le contre-jeu
+  - Dans Sozin : ...e6 + roquer rapidement
+
+Partie célèbre représentative :
+  Robert Fischer vs Mark Taimanov, match de candidats 1971, Vancouver.
+  Fischer inflige à Taimanov un 6-0 écrasant, plusieurs parties passant
+  par la variante classique Sozin. Le jeu de Fischer dans l'attaque Sozin
+  reste un modèle inégalé de précision dans la Sicilienne.
+
+
+────────────────────────────────────────────────────────────────────────────────
+6. VARIANTE KAN (alias Paulsen-Kan)
+   Code ECO : B41–B43
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 e6  3.d4 cxd4  4.Cxd4 a6
+
+Idée de la variante :
+  Combinaison de la souplesse de la Paulsen (...e6) et du coup prophylactique
+  ...a6 (empêchant Cb5). Les Noirs gardent une grande flexibilité : ils
+  peuvent jouer ...b5, ...d6 ou ...Cc6 selon les circonstances. Variante
+  caméléon par excellence.
+
+Avantages pour les Noirs :
+  - Extrêmement flexible, difficile pour les Blancs de planifier
+  - Peu de points faibles immédiats
+  - Bonne pour les joueurs qui aiment éviter la théorie
+
+Désavantages pour les Noirs :
+  - Développement lent, les Blancs peuvent prendre de l'espace
+  - La case d5 est souvent faible
+  - Moins de contre-jeu immédiat que d'autres variantes
+
+Plan pour les Blancs :
+  - Occupation du centre avec c4 (formation Maroczy Bind)
+  - f4-f5, pression sur e6
+  - Cxc6 pour doubler les pions noirs
+
+Plan pour les Noirs :
+  - ...b5, ...Fb7, développement queenside
+  - ...d6 puis ...Cf6, ...Fe7, roquer et attendre
+  - ...Cc6 ou ...d5 pour casser le centre blanc
+
+Partie célèbre représentative :
+  Anatoly Karpov vs Viktor Kortchnoi, match du monde 1978, Baguio City.
+  Karpov utilise brillamment la formation Maroczy Bind pour étouffer
+  le contre-jeu de Kortchnoi dans une partie qui démontre les dangers
+  pour les Noirs face à 5.c4.
+
+
+────────────────────────────────────────────────────────────────────────────────
+7. VARIANTE TAIMANOV
+   Code ECO : B44–B49
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 e6  3.d4 cxd4  4.Cxd4 Cc6  5.Cc3 Dc7
+
+Idée de la variante :
+  Nommée d'après le grand maître soviétique Mark Taimanov, cette variante
+  combine le développement naturel du cavalier en c6 avec la dame active
+  en c7 qui surveille e5 et prépare ...a6 + ...b5. Approche pragmatique
+  qui évite certaines lignes théoriques trop complexes.
+
+Avantages pour les Noirs :
+  - Dame active en c7 surveille les cases clés
+  - Plans clairs et flexibles
+  - Bonne résistance aux tentatives blanches tranchantes
+
+Désavantages pour les Noirs :
+  - Dame en c7 peut être exposée en milieu de partie
+  - Moins dynamique que la Najdorf
+  - Le coup 5.Cb5 est une réponse gênante
+
+Plan pour les Blancs :
+  - Cb5-d6 ou Cb5-a7 pour troubler la coordination noire
+  - Maroczy Bind avec c4 si possible
+  - English Attack : Fe3, f3, g4
+
+Plan pour les Noirs :
+  - ...a6, ...b5, expansion queenside standard
+  - ...Cf6, ...Fe7, roque côté roi
+  - ...Ce5 pour échanger les cavaliers actifs
+
+Partie célèbre représentative :
+  Mikhail Tal vs Mark Taimanov, URSS 1953.
+  L'inventeur de la variante se retrouve contre le futur champion du monde
+  Tal, et malgré la défaite, cette partie illustre parfaitement les
+  caractéristiques dynamiques de la variante Taimanov.
+
+
+────────────────────────────────────────────────────────────────────────────────
+8. VARIANTE SCHEVENINGEN — KERES ATTACK
+   Code ECO : B81
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 d6  3.d4 cxd4  4.Cxd4 Cf6  5.Cc3 e6  6.g4
+
+Idée de la variante :
+  Les Blancs lancent immédiatement une attaque sur l'aile roi avant même
+  de terminer leur développement. Le coup 6.g4 est menaçant et agressif :
+  il vise g5 pour chasser le cheval f6. Inventée par le grand maître
+  estonien Paul Keres dans les années 1940.
+
+Avantages pour les Blancs :
+  - Attaque directe et difficile à arrêter psychologiquement
+  - Gain de temps si les Noirs ne répondent pas correctement
+  - Évite les grandes lignes théoriques de 6.Fe3
+
+Désavantages pour les Blancs :
+  - Les pions sur g4 et h4 peuvent devenir faibles
+  - Si l'attaque est repoussée, la position blanche est compromise
+
+Plan pour les Blancs :
+  - g4-g5, h4-h5, mat ou gain de matériel sur le roi noir
+  - Fd3, 0-0-0 pour connecter les tours
+  - Sacrifice de pion avec f4-f5 pour ouvrir
+
+Plan pour les Noirs :
+  - 6...h6 ! (le meilleur) pour bloquer g5
+  - ...e5 pour contester le centre
+  - Développement rapide et contre-attaque queenside
+
+Partie célèbre représentative :
+  Lev Polugaevsky vs Efim Geller, URSS 1960.
+  Partie de référence sur la Keres Attack, où la réponse noire optimale
+  est testée et les deux camps jouent dans un style ultra-tranchant.
+
+
+────────────────────────────────────────────────────────────────────────────────
+9. VARIANTE FOUR KNIGHTS (Quatre Cavaliers)
+   Code ECO : B45–B46
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 e6  3.d4 cxd4  4.Cxd4 Cf6  5.Cc3 Cc6
+
+Idée de la variante :
+  Développement très naturel et symétrique. Les quatre cavaliers sont
+  développés tôt. Les Noirs maintiennent la pression sur d4 et gardent
+  des options vers le Scheveningen ou le Taimanov selon le plan blanc.
+
+Avantages pour les Noirs :
+  - Développement rapide et harmonieux
+  - Très flexible
+  - Moins théorique que la Najdorf
+
+Désavantages pour les Noirs :
+  - 5.Cxc6 donne aux Blancs une structure confortable
+  - Moins de punch que d'autres variantes siciliennes
+
+Plan pour les Blancs :
+  - Cxc6 bxc6, exploiter les faiblesses de la structure noire
+  - Classique : Fe3, Dc2, 0-0-0 et attaque
+  - Cb3 pour éviter les échanges et garder la tension
+
+Plan pour les Noirs :
+  - ...Fb4, épingler le cavalier c3 (Variante Nimzowitsch-Sicilienne)
+  - ...d5 en un coup si possible
+  - ...Dc7, ...a6, ...b5 plan standard
+
+Partie célèbre représentative :
+  Vladimir Kramnik vs Garry Kasparov, Dos Hermanas 1996.
+  Belle partie dans la variante Four Knights où Kramnik, avec les Blancs,
+  développe un plan à long terme subtil menant à une finale gagnante.
+
+
+────────────────────────────────────────────────────────────────────────────────
+10. VARIANTE BOLESLAVSKY
+    Code ECO : B58–B59
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 Cc6  3.d4 cxd4  4.Cxd4 Cf6  5.Cc3 d6  6.Fe2 e5
+
+Idée de la variante :
+  Nommée d'après le grand maître ukrainien Isaac Boleslavsky, cette ligne
+  accepte la case d5 faible en contrepartie d'un fort centre de pions en
+  e5. C'est un précurseur direct du Sveshnikov et partage la même philosophie :
+  espace contre case faible.
+
+Avantages pour les Noirs :
+  - Fort centre de pions, pression sur e4
+  - Activité des pièces noires
+  - Structure solide si bien gérée
+
+Désavantages pour les Noirs :
+  - La case d5 est durablement faible
+  - Les Blancs peuvent y installer un cavalier indélogeble
+
+Plan pour les Blancs :
+  - Cd5, exploiter la case faible
+  - f4 pour attaquer le pion e5
+  - Pression queenside avec b4 ou a4
+
+Plan pour les Noirs :
+  - ...Fe6 pour éliminer Cd5 si joué
+  - ...Ce5 ou ...Cd4 pour les échanges actifs
+  - ...f5-f4 contre-attaque au centre
+
+Partie célèbre représentative :
+  Isaac Boleslavsky vs Efim Geller, Tournoi des candidats 1953.
+  L'inventeur de la variante en démontre tout le potentiel offensif,
+  servant de modèle à une génération entière de joueurs soviétiques.
+
+
+────────────────────────────────────────────────────────────────────────────────
+11. VARIANTE LÖWENTHAL
+    Code ECO : B32
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 Cc6  3.d4 cxd4  4.Cxd4 e5
+
+Idée de la variante :
+  Coup agressif et direct : les Noirs repoussent immédiatement le cavalier
+  de d4 en jouant ...e5. Cela crée une case d5 faible mais donne aux Noirs
+  un fort centre. Variante ancienne mais toujours jouée à l'occasion.
+
+Avantages pour les Noirs :
+  - Gain de terrain au centre dès l'ouverture
+  - Surprend les adversaires moins préparés
+  - Plans simples et directs
+
+Désavantages pour les Noirs :
+  - Case d5 faible et permanente
+  - Le coup Cb5 est souvent très fort pour les Blancs
+  - Moins flexible que d'autres systèmes
+
+Plan pour les Blancs :
+  - Cb5-d6+ ou Ca3 selon la réponse noire
+  - Fc4, pression sur f7 et le centre noir
+  - c3-d4 pour casser le centre e5
+
+Plan pour les Noirs :
+  - ...Cf6 pour contester e4
+  - ...Fe7, roque rapide côté roi
+  - ...f5 pour soutenir e5 et attaquer
+
+Partie célèbre représentative :
+  Adolf Anderssen vs Johann Löwenthal, Londres 1851.
+  La partie originelle qui donne son nom à cette variante, un classique
+  de l'ère romantique des échecs où le jeu tactique prime sur la stratégie.
+
+
+────────────────────────────────────────────────────────────────────────────────
+12. VARIANTE NIMZOWITSCH (2...Cf6)
+    Code ECO : B29
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 Cf6
+
+Idée de la variante :
+  Attaque immédiate sur e4 avec le cavalier, forçant les Blancs à prendre
+  une décision dès le 2e coup. Nommée d'après Aron Nimzowitsch, pionnier
+  de la pensée hypermoderne. Idée : si e5, les Noirs jouent ...Cd5 avec un
+  jeu de type Alekhine-Sicilienne.
+
+Avantages pour les Noirs :
+  - Surprise garantie, peu de joueurs sont bien préparés
+  - Attaque directe sur e4 crée des problèmes immédiats
+  - Mène à des positions peu connues et complexes
+
+Désavantages pour les Noirs :
+  - Après e5 Cd5 c4 Cb4 d4 ! les Noirs ont peu de jeu
+  - Moins solide que les variantes principales
+  - Difficile de maintenir l'initiative après la réponse correcte blanche
+
+Plan pour les Blancs :
+  - 3.e5 Cd5 4.Cc3 : pression sur le cavalier déplacé
+  - 3.Cc3 : transposition vers des lignes normales
+  - 3.d4 : ouvrir le centre immédiatement
+
+Plan pour les Noirs :
+  - ...Cxe4 si e4 n'est pas défendu
+  - ...d6 pour contester e5 et libérer
+  - ...e6, ...d5 pour un contre-jeu rapide
+
+Partie célèbre représentative :
+  Aron Nimzowitsch vs Siegbert Tarrasch, Saint-Pétersbourg 1914.
+  Bien qu'antérieure à la codification moderne, cette confrontation entre
+  l'hypermoderne Nimzowitsch et le classique Tarrasch illustre parfaitement
+  la philosophie derrière 2...Cf6 dans la Sicilienne.
+
+
+────────────────────────────────────────────────────────────────────────────────
+13. VARIANTE O'KELLY (2...a6)
+    Code ECO : B28
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 a6
+
+Idée de la variante :
+  Jouer ...a6 au 2e coup est une idée de l'Irlandais Alberic O'Kelly de
+  Galway. L'idée est d'empêcher Cb5 dans toutes les lignes et de préparer
+  ...b5 sans délai. Si les Blancs jouent d4 immédiatement, les Noirs
+  peuvent répondre cxd4 et entrer dans une Sicilienne normale ou tenter
+  des déviations.
+
+Avantages pour les Noirs :
+  - Désorganise la préparation blanche
+  - ...b5 est préparé immédiatement
+  - Bonne arme de surprise
+
+Désavantages pour les Noirs :
+  - ...a6 n'est pas un coup de développement
+  - Perd un tempo dans l'ouverture
+  - Moins efficace contre 3.c3 (Alapin)
+
+Plan pour les Blancs :
+  - 3.c4 : Maroczy Bind, punir le temps perdu
+  - 3.d4 : entrer dans des lignes normales
+  - 3.Cc3 : développement naturel
+
+Plan pour les Noirs :
+  - ...b5-b4, contre-jeu queenside rapide
+  - Transposer vers la Kan ou la Paulsen
+  - ...e6 + ...d5 pour casser le centre
+
+Partie célèbre représentative :
+  Alberic O'Kelly de Galway vs Miguel Najdorf, Mar del Plata 1952.
+  Confrontation entre l'inventeur de la variante O'Kelly et le légendaire
+  Najdorf, dans une partie qui popularisa cette ligne dans le circuit
+  international.
+
+
+────────────────────────────────────────────────────────────────────────────────
+14. VARIANTE HYPER-ACCÉLÉRÉ DRAGON (2...g6)
+    Code ECO : B27
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 g6  3.d4 cxd4  4.Cxd4 Fg7
+
+Idée de la variante :
+  Fianchetto immédiat du fou roi AVANT de jouer ...d6. Cela permet ...d5
+  en un coup dans certaines lignes, une ressource que le Dragon normal
+  n'a pas. Si les Blancs jouent 5.c4 (Maroczy Bind), les Noirs disposent
+  du contre-jeu ...Cc6 ou ...d6 selon les circonstances.
+
+Avantages pour les Noirs :
+  - Évite le Dragon yougoslave (pas de ...d6 donc pas la même structure)
+  - ...d5 possible en un coup est une ressource puissante
+  - Moins théorique que le Dragon traditionnel
+
+Désavantages pour les Noirs :
+  - Le Maroczy Bind (c4) est une réponse efficace
+  - Sans ...d6, la case d5 manque de soutien
+  - Développement queenside tardif
+
+Plan pour les Blancs :
+  - c4 : Maroczy Bind, control de d5
+  - Développement normal avec Cc3, Fe2, 0-0
+  - Si les Noirs jouent ...d5 : exd5 + pression sur d5
+
+Plan pour les Noirs :
+  - ...Cc6, pression sur d4 + ...d6 normal
+  - ...Cf6, ...0-0, ...d6 transposition vers Dragon classique
+  - Contre l'Alapin : ...d5! immédiatement
+
+Partie célèbre représentative :
+  Bobby Fischer vs Reuben Fine, New York 1963.
+  Fischer, avec les Blancs, affronte la variante du Dragon accéléré et
+  démontre comment imposer le Maroczy Bind pour étouffer le jeu noir,
+  une leçon de stratégie à long terme.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PARTIE II — VARIANTES FERMÉES ET ANTI-SICILIENNES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+────────────────────────────────────────────────────────────────────────────────
+15. SICILIENNE ALAPIN (2.c3)
+    Code ECO : B22
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.c3  d5  3.exd5 Dxd5  4.d4 Cf6  5.Cf3 e6
+
+Idée de la variante :
+  Les Blancs préparent d4 avec le soutien de c3, visant à construire un
+  grand centre sans sacrifier le pion. L'idée est pragmatique : éviter
+  la vaste théorie de la Sicilienne ouverte. Si 2...cxd4, les Blancs
+  récupèrent avec 3.cxd4 et ont un centre solide.
+
+Avantages pour les Blancs :
+  - Évite toute la théorie de la Sicilienne ouverte
+  - Construction solide du centre
+  - Partie souvent plus stratégique et moins tactique
+
+Désavantages pour les Blancs :
+  - 2.c3 ne contribue pas au développement
+  - Après 2...d5 les Noirs équalisent relativement facilement
+  - Moins d'initiative blanche que dans la Sicilienne ouverte
+
+Plan pour les Blancs :
+  - d4-d5, avancer le centre
+  - Développement naturel avec Cf3, Fd3, 0-0
+  - Pression queenside avec a4 ou b4
+
+Plan pour les Noirs :
+  - 2...d5! : le meilleur, égaliser immédiatement
+  - 2...Cf6 : transposition vers l'Alapin standard
+  - ...Cc6, ...Cf6, ...g6 pour le fianchetto
+
+Partie célèbre représentative :
+  Evgeny Sveshnikov vs Garry Kasparov, URSS 1979.
+  Kasparov, avec les Noirs, montre comment répondre activement à l'Alapin
+  avec 2...d5, démontrant que les Noirs obtiennent un excellent jeu avec
+  une préparation adéquate.
+
+
+────────────────────────────────────────────────────────────────────────────────
+16. GRAND PRIX ATTACK
+    Code ECO : B23
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cc3 Cc6  3.f4 g6  4.Cf3 Fg7  5.Fc4
+
+Idée de la variante :
+  Attaque directe sur le roi noir avec la chaîne f4-e4 et développement
+  agressif. Nommée "Grand Prix" car populaire dans les tournois open
+  britanniques des années 1980. Le but est simple : attaquer le roi noir
+  avec f4-f5, Fe3, Dd2, 0-0-0.
+
+Avantages pour les Blancs :
+  - Plan d'attaque simple et direct, efficace en pratique
+  - Évite la théorie Najdorf/Dragon
+  - Surprenant pour les joueurs qui connaissent surtout la Sicilienne ouverte
+
+Désavantages pour les Blancs :
+  - 2.Cc3 avant d4 donne aux Noirs d5 en un coup
+  - Structure blanche peut être faible si l'attaque est stoppée
+  - Théoriquement inférieur à la Sicilienne ouverte
+
+Plan pour les Blancs :
+  - f5, Fe3, Dd2, 0-0-0, attaque directe
+  - Sacrifice sur g6 ou e6 dans certaines lignes
+  - Cf3-g5 menaçant les cases noires
+
+Plan pour les Noirs :
+  - ...d5 ! : le coup clé, contester le centre immédiatement
+  - ...e6, développement solide et attente
+  - ...g6 + fianchetto pour contrer l'attaque avec le fou-dragon
+
+Partie célèbre représentative :
+  Mark Hebden vs John Nunn, Championnat de Grande-Bretagne 1983.
+  L'une des premières parties de référence du Grand Prix Attack, où
+  Hebden démontre le potentiel de l'attaque qui allait devenir populaire
+  dans tout le circuit open international.
+
+
+────────────────────────────────────────────────────────────────────────────────
+17. MORRA GAMBIT (Smith-Morra)
+    Code ECO : B21
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.d4 cxd4  3.c3 dxc3  4.Cxc3 Cc6  5.Cf3 d6  6.Fc4
+
+Idée de la variante :
+  Les Blancs sacrifient un pion dès le début pour obtenir une avance
+  de développement massive. Le gambit doit son nom à l'Américain Ken
+  Smith et au Français Pierre Morra. Les Blancs espèrent que leur
+  développement supérieur et la colonne c ouverte compenseront le
+  déficit matériel.
+
+Avantages pour les Blancs :
+  - Développement fulgurant, 3-4 coups d'avance au développement
+  - Pression constante sur la position noire
+  - Excellent en partie rapide/blitz et en amateur
+
+Désavantages pour les Blancs :
+  - Le pion sacrifié est réel : les Noirs gardent l'avantage matériel
+  - Au plus haut niveau, les Noirs refusent ou trouvent la défense correcte
+  - Si les Blancs n'attaquent pas vite, ils perdent simplement
+
+Plan pour les Blancs :
+  - Développement maximal : Fc4, Cf3, 0-0, Te1, Fd2
+  - Pression sur d6 et f7
+  - Ouverture de la colonne c avec Tc1
+
+Plan pour les Noirs :
+  - Accepter et défendre avec précision : ...d6, ...Cf6, ...g6, ...Fg7
+  - Refus du gambit : 3...Cf6 (Décliné)
+  - Rendre le pion au bon moment pour simplifier
+
+Partie célèbre représentative :
+  Marc Esserman vs Hikaru Nakamura, US Championship 2012.
+  Le plus grand spécialiste modern du Morra Gambit, Marc Esserman,
+  bat l'un des meilleurs joueurs mondiaux avec une préparation dévastatatrice,
+  prouvant que le gambit reste dangereux même au plus haut niveau.
+
+
+────────────────────────────────────────────────────────────────────────────────
+18. WING GAMBIT (2.b4)
+    Code ECO : B20
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.b4 cxb4  3.a3 d5  4.exd5 Df6
+
+Idée de la variante :
+  Gambit de l'aile ultra-agressif. Les Blancs sacrifient le pion b4
+  pour perturber le plan de développement noir et créer une confusion
+  dès le 2e coup. Variante peu jouée au top niveau mais redoutable en
+  pratique pour sa surprise totale.
+
+Avantages pour les Blancs :
+  - Surprise maximale, les Noirs quittent rapidement leur préparation
+  - Initiative queenside immédiate
+  - Peu de théorie à connaître pour les Blancs
+
+Désavantages pour les Blancs :
+  - Objectivement, les Noirs peuvent conserver l'avantage matériel
+  - Sacrifice de pion à contre-sens du développement
+  - Insuffisant contre un joueur préparé
+
+Plan pour les Blancs :
+  - Récupérer le pion avec a3, puis développement normal
+  - Pression queenside avec c3, d4
+  - Contre ...d5 : exd5 puis pression sur le pion d
+
+Plan pour les Noirs :
+  - Accepter et consolider avec ...d5, ...Cf6, ...g6
+  - Refuser avec ...e6 ou ...Cf6 (sans prendre)
+  - ...d5! : le meilleur, contester le centre
+
+Partie célèbre représentative :
+  Savielly Tartakower vs Xavier Tartakower (match amical, Vienne 1923).
+  Partie de référence sur le Wing Gambit, souvent citée dans les manuels
+  d'ouvertures non-conformistes pour illustrer les possibilités pratiques
+  du gambit malgré son insuffisance théorique.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PARTIE III — VARIANTES SECONDAIRES ET SOUS-SYSTÈMES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+────────────────────────────────────────────────────────────────────────────────
+19. RICHTER-RAUZER ATTACK
+    Code ECO : B60–B69
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 d6  3.d4 cxd4  4.Cxd4 Cf6  5.Cc3 Cc6  6.Fg5
+
+Idée de la variante :
+  Les Blancs épinglent le cheval f6 avec le fou, créant une pression sur
+  le nœud d7. La menace Fxf6 forçant ...gxf6 ou la dame à défendre
+  crée des problèmes immédiats. Si les Noirs jouent ...e6, la case d5
+  devient accessible et le pion e6 peut devenir faible.
+
+Avantages pour les Blancs :
+  - Pression immédiate sur la position noire
+  - Bons plans queenside après 0-0-0
+  - Attaque bien coordonnée
+
+Désavantages pour les Blancs :
+  - Le fou peut être échangé avec ...e6 + ...Fe7
+  - Les Noirs ont des plans actifs avec ...a6, ...b5
+
+Plan pour les Blancs :
+  - Dd2, 0-0-0, f4-f5 : attaque directe sur le roi
+  - Cxc6 puis Fxf6 pour affaiblir la structure noire
+  - Ce4, Cd5 : cavalier actif sur d5
+
+Plan pour les Noirs :
+  - ...e6 : le meilleur, libérer la position
+  - ...Fe7, échange du fou épingle
+  - ...a6, ...b5, ...Da5 contre-attaque queenside
+
+Partie célèbre représentative :
+  Paul Keres vs Alexander Kotov, Tournoi des candidats 1953.
+  Keres avec les Blancs exécute l'attaque Richter-Rauzer avec précision,
+  démontrant le plan 0-0-0 + f4-f5 dans toute sa puissance.
+
+
+────────────────────────────────────────────────────────────────────────────────
+20. ATTAQUE ANGLAISE (English Attack)
+    Code ECO : B80
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 d6  3.d4 cxd4  4.Cxd4 Cf6  5.Cc3 e6  6.Fe3 a6  7.f3
+
+Idée de la variante :
+  Système ultra-populaire depuis les années 1980-90, notamment utilisé
+  par Kasparov, Anand et la plupart des grands maîtres anglais et russes.
+  L'idée est de construire un "mur" avec f3, préparer g4-g5 et mener
+  une attaque sur le roi noir.
+
+Avantages pour les Blancs :
+  - Plan très clair : Fe3, Dd2, 0-0-0, g4, g5
+  - Pression directe difficile à contrer
+  - Utilisable contre Najdorf, Scheveningen, Classique
+
+Désavantages pour les Blancs :
+  - f3 affaiblit e3 et d3
+  - Si les Noirs contre-attaquent queenside assez vite, les Blancs
+    peuvent se retrouver en difficulté
+
+Plan pour les Blancs :
+  - g4-g5 : attaque sur le roi noir
+  - h4, h5 : invasion de l'aile h
+  - Fc4 ou Fd3 selon les circonstances
+
+Plan pour les Noirs :
+  - ...b5-b4 : contre-attaque queenside immédiate
+  - ...Ce5, simplification active
+  - Roque long pour une confrontation directe
+
+Partie célèbre représentative :
+  Garry Kasparov vs Viswanathan Anand, Linares 1993.
+  Kasparov utilise l'English Attack avec une précision meurtrière,
+  lançant une attaque sur le roi noir qui reste un modèle absolu de
+  cette variante.
+
+
+────────────────────────────────────────────────────────────────────────────────
+21. VARIANTE PRINS (Sicilienne 5...d6 6.f4)
+    Code ECO : B54–B55
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 d6  3.d4 cxd4  4.Cxd4 Cf6  5.f3
+
+Idée de la variante :
+  Le coup 5.f3 prépare un développement de type English Attack mais
+  avant même de développer le cavalier c1. Variante plus directe encore
+  que l'English Attack, visant g4 immédiatement sans tergiverser.
+
+Avantages pour les Blancs :
+  - Attaque directe dès la 5e case
+  - Plan simple, bon en pratique
+
+Désavantages pour les Blancs :
+  - Très théorique désormais
+  - Les Noirs peuvent contester avec ...e5 ou ...e6
+
+Plan pour les Blancs :
+  - Fe3, Dd2, g4, g5, 0-0-0
+  - Attaque sur le roi noir à grande vitesse
+
+Plan pour les Noirs :
+  - ...e6, ...Fe7, roque rapide
+  - ...a6, ...b5 si le temps le permet
+  - ...Cc6 et pression sur d4
+
+Partie célèbre représentative :
+  Dirk Prins vs Max Euwe, Amsterdam 1943.
+  La partie qui donna son nom à la variante, avec Prins expérimentant
+  le plan f3 avant les développements théoriques modernes.
+
+
+────────────────────────────────────────────────────────────────────────────────
+22. SICILIENNE PAULSEN
+    Code ECO : B41–B43
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 e6  3.d4 cxd4  4.Cxd4 a6  5.Cc3 Dc7
+
+Idée de la variante :
+  Nommée d'après Louis Paulsen (1833-1891), pionnier des ouvertures
+  positionnelles. Combinaison de ...e6 et ...a6 très flexible, proche
+  du Kan mais avec la dame active en c7. Cherche à éviter toute
+  faiblesse et prépare ...b5.
+
+Avantages pour les Noirs :
+  - Structure sans faiblesse
+  - Plans flexibles
+  - Bon pour les joueurs stratégiques
+
+Désavantages pour les Noirs :
+  - Développement lent
+  - La case d5 et la case d6 peuvent être exploitées par les Blancs
+
+Plan pour les Blancs :
+  - Maroczy Bind avec c4 si possible
+  - English Attack : Fe3, f3, g4
+  - Cxc6 + Fxf6 structure affaiblie
+
+Plan pour les Noirs :
+  - ...b5, ...Fb7 et contre-jeu queenside
+  - ...Cf6, ...Fe7, roque et attente
+  - ...Cc6 pour saisir les occasions au centre
+
+Partie célèbre représentative :
+  Louis Paulsen vs Wilhelm Steinitz, Tournoi de Londres 1862.
+  La partie fondatrice de la variante, où Paulsen expose pour la première
+  fois sa philosophie positionnelle en Sicilienne.
+
+
+────────────────────────────────────────────────────────────────────────────────
+23. CHEKHOVER VARIATION
+    Code ECO : B53
+────────────────────────────────────────────────────────────────────────────────
+
+Suite des coups principaux :
+  1.e4 c5  2.Cf3 d6  3.d4 cxd4  4.Cxd4 Cf6  5.Cc3 Cc6  6.Db3
+
+Idée de la variante :
+  La dame en b3 attaque immédiatement le pion d6 et la case f7. Cette
+  pression précoce est souvent négligée mais peut créer de sérieux
+  problèmes aux Noirs s'ils ne connaissent pas les réponses.
+
+Avantages pour les Blancs :
+  - Pression immédiate, les Noirs doivent répondre précisément
+  - Peu théorisé par les Noirs
+  - Bon en blitz / partie rapide
+
+Désavantages pour les Blancs :
+  - La dame en b3 peut être mal placée à long terme
+  - Après ...e6 les Noirs neutralisent bien la pression
+
+Plan pour les Blancs :
+  - Fc4, 0-0, f4-f5
+  - Pression sur d6 et f7
+  - Manœuvres pour garder la tension
+
+Plan pour les Noirs :
+  - ...e6 : neutraliser la dame
+  - ...Cxd4 : simplifier si avantageux
+  - ...Dd7 pour défendre d6
+
+Partie célèbre représentative :
+  Vitaly Chekhover vs Viacheslav Ragozin, Leningrad 1937.
+  La partie originelle de la variante, Chekhover démontrant sa découverte
+  contre un des meilleurs joueurs soviétiques de l'époque.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RÉCAPITULATIF — TABLEAU DE RÉFÉRENCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Variante                  ECO    Complexité    Popularité au top    Style
+  ─────────────────────────────────────────────────────────────────────────
+  Najdorf                   B90-99  ★★★★★         ★★★★★               Dynamique
+  Dragon                    B70-79  ★★★★★         ★★★★                Tactique
+  Scheveningen              B80-89  ★★★★          ★★★★                Équilibré
+  Sveshnikov                B33     ★★★★          ★★★★★               Dynamique
+  Classique                 B56-69  ★★★★          ★★★                 Stratégique
+  Kan/Paulsen               B41-43  ★★★           ★★★                 Flexible
+  Taimanov                  B44-49  ★★★           ★★★                 Stratégique
+  Keres Attack              B81     ★★★           ★★★                 Attaque
+  Four Knights              B45-46  ★★★           ★★                  Solide
+  Boleslavsky               B58-59  ★★★           ★★                  Dynamique
+  Löwenthal                 B32     ★★            ★                   Agressif
+  Nimzowitsch               B29     ★★            ★                   Surprise
+  O'Kelly                   B28     ★★            ★                   Surprise
+  Hyper-accéléré Dragon     B27     ★★★           ★★                  Flexible
+  Alapin (2.c3)             B22     ★★★           ★★★★               Solide
+  Grand Prix Attack          B23     ★★★           ★★★                Attaque
+  Morra Gambit              B21     ★★★           ★★                  Gambit
+  Wing Gambit               B20     ★★            ★                   Gambit
+  Richter-Rauzer            B60-69  ★★★★          ★★★                 Dynamique
+  English Attack            B80     ★★★★          ★★★★               Attaque
+  Prins                     B54-55  ★★★           ★★                  Attaque
+  Chekhover                 B53     ★★            ★                   Pression
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+NOTES FINALES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+La Défense Sicilienne est l'ouverture la plus jouée et la plus étudiée de
+l'histoire des échecs. Ses variantes couvrent les codes ECO de B20 à B99,
+soit 80 codes différents — plus que toute autre ouverture.
+
+Quelques vérités fondamentales sur la Sicilienne :
+
+  1. ASYMÉTRIE : Le premier coup ...c5 crée immédiatement un déséquilibre.
+     Les Noirs ne cherchent pas l'égalité mais le contre-jeu.
+
+  2. L'ÉCHANGE e4xd5 vs d4xc5 : Les Noirs obtiennent une colonne c
+     semi-ouverte contre une colonne d pour les Blancs. Toute la Sicilienne
+     est bâtie sur cette différence.
+
+  3. JEU POUR GAGNER : La Sicilienne est l'arme des joueurs qui jouent pour
+     la victoire avec les pièces noires. Les statistiques montrent que les
+     Noirs gagnent plus souvent en Sicilienne qu'avec toute autre ouverture
+     à 1.e4.
+
+  4. ENCYCLOPÉDIE : Des bibliothèques entières ont été consacrées à la seule
+     Najdorf ou au Dragon. Un joueur peut passer toute sa carrière à explorer
+     une seule de ces variantes.
+
+  "La Sicilienne est la meilleure réfutation de 1.e4."
+                                    — Bobby Fischer
+
+================================================================================
+  Document généré par Claude — Anthropic | Défense Sicilienne — Guide Complet
+================================================================================
