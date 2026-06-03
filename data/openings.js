@@ -1,4 +1,4 @@
-﻿﻿/* ══════════════════════════════════════════════
+﻿﻿﻿/* ══════════════════════════════════════════════
    openings.js — All opening data: DB (46 openings, 71 variants) + ENRICH (44 chapitres enrichis : histoire, annotations, parties)
    To add a new opening: add a new numbered key to DB following the same pattern.
    ══════════════════════════════════════════════ */
@@ -367,71 +367,270 @@ var DB = {
   5: {
     najdorf: {
       line:"1.e4 c5 2.Cf3 d6 3.d4 cxd4 4.Cxd4 Cf6 5.Cc3 a6 6.Fe3 e5",
-      fondement:"Le coup prophylactique 5...a6 empêche Fb5+ et prépare l'expansion ...b5. C'est l'arme reine de la Sicilienne.",
-      fondement_en:"The prophylactic 5...a6 prevents Bb5+ and prepares ...b5 expansion. It is the queen weapon of the Sicilian.",
-      avantages:"Contre-jeu maximal, flexibilité absolue pour les Noirs. Très combative.",
-      avantages_en:"Maximum counterplay, absolute flexibility for Black. Very combative.",
-      inconvenients:"Exige une connaissance théorique monstrueuse — la moindre imprécision est punitive.",
-      inconvenients_en:"Requires monstrous theoretical knowledge — the slightest imprecision is punished.",
-      blancs:"Déployer l'Attaque Anglaise (6.Fe3 + f3-g4-g5) pour raser le roque noir.",
-      blancs_en:"Deploy the English Attack (6.Be3 + f3-g4-g5) to storm the Black kingside.",
-      noirs:"Exploiter la colonne c ouverte, installer un Cavalier fort sur c4 et percer par ...d5.",
-      noirs_en:"Counter-attack on the queenside with ...b5-b4 while the kings castle on opposite wings.",
-      cases:"d5, c4.",
-      cases_en:"d5 (Black Knight outpost), f7 (White's attack target), b5 (Black's expansion).",
-      finale:"La structure compacte offre de grandes chances de gain si l'attaque blanche échoue.",
-      finale_en:"Endgames are rare — the game is usually decided in the middlegame.",
-      stats:"Ligne la plus jouée par Kasparov et l'élite mondiale contre 1.e4.",
-      stats_en:"Volume: ~14M (Lichess) · Rate: White 36% | Draw 30% | Black 34%.",
-      piege:"Le Pion Empoisonné : 6.Fg5 e6 7.f4 Db6 8.Dd2 Dxb2?? mène à 9.Tb1 Da3.",
-      piege_en:"After 6.Bg5, playing 6...e6 7.f4 Be7 8.Qf3 Qc7?? 9.e5! destroys Black's position.",
+      fondement:"Le coup 5...a6 (le « coup Najdorf ») prépare ...e5 ou ...e6 selon le développement blanc, empêche Cb5 et prépare ...b5 pour une expansion queenside agressive. Les Noirs gardent une flexibilité maximale avant de révéler leur configuration.",
+      fondement_en:"The 5...a6 'Najdorf move' prevents Nb5, prepares ...b5, and keeps options open between ...e5 and ...e6. Maximum flexibility before committing to a structure.",
+      avantages:"Flexibilité totale ; prise en main de l'initiative queenside avec ...b5-b4 ; arme favorite de Kasparov et Fischer ; déséquilibre garanti.",
+      avantages_en:"Total flexibility; queenside initiative with ...b5-b4; weapon of choice for Kasparov and Fischer; unbalanced play guaranteed.",
+      inconvenients:"Extrêmement théorique, des dizaines de sous-variantes ; le Roi noir reste souvent au centre plus longtemps ; 6.Fg5 crée une pression immédiate difficile.",
+      inconvenients_en:"Extremely theoretical with dozens of sub-variations; the Black king often stays in the center longer; 6.Bg5 creates immediate and difficult pressure.",
+      blancs:"Attaque Anglaise (6.Fe3 f3 g4), Richter-Rauzer (6.Fg5), Sozin (6.Fc4), Adams Attack (6.h3) : autant de systèmes offensifs tranchants.",
+      blancs_en:"English Attack (6.Be3 f3 g4), Richter-Rauzer (6.Bg5), Sozin (6.Bc4), Adams Attack (6.h3): sharp offensive systems on all fronts.",
+      noirs:"Contre-attaque queenside : ...b5-b4, ...Cb6, ...Fb7, ...Tb8 ; exploiter la colonne c semi-ouverte ; viser d4 avec ...Cbd7-c5.",
+      noirs_en:"Queenside counter-attack: ...b5-b4, ...Nb6, ...Bb7, ...Rb8; exploit the semi-open c-file; target d4 with ...Nbd7-c5.",
+      cases:"d5 (cavalier noir), c4 (invasion noire), f7 (cible blanche).",
+      cases_en:"d5 (Black Knight outpost), c4 (Black invasion), f7 (White's attack target).",
+      finale:"Les finales sont rares — la partie se décide généralement au milieu de jeu par K.O. tactique.",
+      finale_en:"Endgames are rare — the game is usually decided in the middlegame by tactical knockout.",
+      stats:"ECO B90–B99 · Complexité ★★★★★ · Popularité au sommet ★★★★★",
+      stats_en:"ECO B90–B99 · Complexity ★★★★★ · Top-level popularity ★★★★★",
+      piege:"Le Pion Empoisonné : 6.Fg5 e6 7.f4 Db6 8.Dd2 Dxb2?? mène à 9.Tb1 Da3 — la Dame noire est piégée.",
+      piege_en:"The Poisoned Pawn: 6.Bg5 e6 7.f4 Qb6 8.Qd2 Qxb2?? leads to 9.Rb1 Qa3 with the Black Queen trapped.",
       moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"g1",to:"f3"},{from:"d7",to:"d6"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"f3",to:"d4"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"a7",to:"a6"}]
     },
     dragon: {
-      line:"1.e4 c5 2.Cf3 d6 3.d4 cxd4 4.Cxd4 Cf6 5.Cc3 g6 6.Fe3 Fg7",
-      fondement:"Le Fou g7 (le Dragon) domine toute la grande diagonale noire. Les Blancs répliquent par l'Attaque Yougoslave.",
-      fondement_en:"The Dragon's key idea is the powerful fianchettoed Bishop on g7, dominating the long diagonal. The Yugoslav Attack (9.0-0-0) leads to extreme complications with opposite castling.",
-      avantages:"Jeu ultra-tactique à double tranchant. Course de vitesse pure à roques opposés.",
-      avantages_en:"Maximum dynamic counterplay on the queenside. The Dragon Bishop is a fearsome weapon.",
-      inconvenients:"La moindre perte de tempo conduit directement à un mat rapide.",
-      inconvenients_en:"The Yugoslav Attack is a theoretical mine. One wrong move and the game is over.",
-      blancs:"Pousser h4-h5, échanger le Fou dragon par Fh6 et mater sur les cases sombres de l'aile roi.",
-      blancs_en:"Storm the kingside with h4-h5-h6, using the Rook lift Ra1-d1-d3-h3.",
-      noirs:"Placer la Tour en c8, pousser ...b5-b4 pour déloger Cc3 et attaquer le roque blanc.",
-      noirs_en:"Counter-attack on the queenside with ...Rc8, ...Nc4, ...b5-b4, and use the Dragon Bishop.",
-      cases:"Blancs : h6, g7. Noirs : c4, a2.",
-      cases_en:"g7 (Dragon Bishop), h6 (White's mating target), c3 (Black's Knight outpost).",
-      finale:"Inexistantes dans le Dragon : le milieu de jeu tranche la partie par K.O. tactique.",
-      finale_en:"Rare endgames — both sides play for mate in the middlegame.",
-      stats:"Ligne l'une des plus spectaculaires de la théorie des échecs.",
-      stats_en:"One of the sharpest openings in all of chess theory.",
-      piege:"La destruction du Dragon : Fg5xf6! élimine le Cavalier protecteur si les Noirs omettent ...h6.",
-      piege_en:"In the Yugoslav Attack, any tempo loss on the queenside can allow White to crash through on h6 first.",
+      line:"1.e4 c5 2.Cf3 d6 3.d4 cxd4 4.Cxd4 Cf6 5.Cc3 g6 6.Fe3 Fg7 7.f3",
+      fondement:"Les Noirs fianchettent leur fou en g7, créant un monstre diagonal qui pèse sur d4 et l'aile dame. La structure rappelle la forme d'un dragon. Les Noirs visent une attaque queenside massive pendant que les Blancs lancent une attaque roi souvent irréversible.",
+      fondement_en:"Black fianchettoes the bishop to g7, creating a powerhouse on the long diagonal. Black aims for a massive queenside attack while White launches a potentially irreversible kingside assault.",
+      avantages:"Fou-dragon en g7 extraordinairement actif ; plans clairs et dynamiques queenside ; contre-attaque vigoureuse en toutes circonstances.",
+      avantages_en:"Dragon Bishop on g7 extraordinarily active; clear dynamic queenside plans; vigorous counter-attack in all circumstances.",
+      inconvenients:"Variante yougoslave (0-0-0 blanc) : l'une des attaques les plus dangereuses de toute la théorie ; les Noirs vivent sur le fil du rasoir.",
+      inconvenients_en:"Yugoslav Attack (White 0-0-0): one of the most dangerous attacks in all of opening theory; Black lives on the razor's edge.",
+      blancs:"Dragon yougoslave : 0-0-0, h4-h5, Fh6 pour échanger le Dragon, attaque de mat directe sur l'aile roi.",
+      blancs_en:"Yugoslav Attack: 0-0-0, h4-h5, Bh6 to eliminate the Dragon Bishop, direct mating attack on the kingside.",
+      noirs:"...Tb8, ...b5-b4, envahir la colonne c et les cases noires ; coupler contre-jeu queenside à la pression du Fou-dragon.",
+      noirs_en:"...Rb8, ...b5-b4, invade the c-file and dark squares; combine queenside counter-attack with Dragon Bishop pressure.",
+      cases:"g7 (Fou-dragon), h6 (cible blanche), c3 (case d'invasion noire).",
+      cases_en:"g7 (Dragon Bishop), h6 (White's mating target), c3 (Black invasion square).",
+      finale:"Inexistantes dans le Dragon classique — le milieu de jeu tranche par K.O. tactique.",
+      finale_en:"Rare endgames in the classical Dragon — both sides play for mate in the middlegame.",
+      stats:"ECO B70–B79 · Complexité ★★★★★ · Popularité au sommet ★★★★",
+      stats_en:"ECO B70–B79 · Complexity ★★★★★ · Top-level popularity ★★★★",
+      piege:"La destruction du Dragon : Fh6! élimine le Fou protecteur si les Noirs omettent ...h6 ; le sacrifice Txc3 est thématique mais exige une précision absolue.",
+      piege_en:"Dragon destruction: Bh6! eliminates the protective Bishop if Black omits ...h6; the Rxc3 sacrifice is thematic but demands absolute precision.",
       moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"g1",to:"f3"},{from:"d7",to:"d6"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"f3",to:"d4"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"g7",to:"g6"}]
     },
-    maroczy: {
-      line:"1.e4 c5 2.Cf3 Cc6 3.d4 cxd4 4.Cxd4 g6 5.c4",
-      fondement:"L'Étau de Maroczy installe un blocus positionnel via c4 et e4, empêchant les Noirs de réaliser les poussées libératrices.",
-      fondement_en:"The Maroczy Bind (5.c4) creates a spatial bind. White's pawns on c4 and e4 control d5, severely limiting Black's counterplay.",
-      avantages:"Avantage d'espace durable, contrôle total du centre pour les Blancs.",
-      avantages_en:"Long-term spatial advantage for White. Black is constricted.",
-      inconvenients:"Jeu plus lent, exige une grande patience manœuvrière.",
-      inconvenients_en:"White's central pawns can become targets in the endgame.",
-      blancs:"Maintenir l'étau c4-e4 intact et empêcher absolument ...d5 ou ...b5.",
-      blancs_en:"Slowly improve the pieces, keep the bind, and exploit the space advantage.",
-      noirs:"Manœuvrer avec patience et utiliser le Fou g7 pour presser de loin.",
-      noirs_en:"Seek piece activity to compensate for lack of space. The ...d5 break is the goal.",
-      cases:"d5, b5 (cases de blocus blanches).",
-      cases_en:"d5 (Black's forbidden square), e4/c4 (White's bind pawns).",
-      finale:"L'avantage d'espace se transpose en gain technique en fin de partie.",
-      finale_en:"Endgames generally favor White thanks to the spatial control.",
-      stats:"Structure positionnelle classique de premier ordre.",
-      stats_en:"Strategic anti-Dragon weapon at all levels.",
-      piege:"Éviter les échanges passifs qui renforcent le blocus des Blancs.",
-      piege_en:"Black must avoid passive defense — active piece play is mandatory to survive.",
-      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"g1",to:"f3"},{from:"b8",to:"c6"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"f3",to:"d4"},{from:"g7",to:"g6"},{from:"c2",to:"c4"}]
+    scheveningen: {
+      line:"1.e4 c5 2.Cf3 d6 3.d4 cxd4 4.Cxd4 Cf6 5.Cc3 e6",
+      fondement:"Création d'un 'petit centre' e6+d6 qui cède du terrain au centre mais offre une grande solidité. Les Noirs attendent de voir comment les Blancs se déploient avant de décider de leur plan. Structure très robuste et flexible.",
+      fondement_en:"Creation of a 'small center' with e6+d6 that cedes central space but offers great solidity. Black waits to see how White develops before committing to a plan. Very robust and flexible structure.",
+      avantages:"Structure solide, peu de faiblesses immédiates ; flexibilité queenside (...a6, ...b5) ; bon pour les joueurs qui aiment les positions manœuvrières.",
+      avantages_en:"Solid structure with few immediate weaknesses; queenside flexibility (...a6, ...b5); good for players who enjoy maneuvering positions.",
+      inconvenients:"La case d5 peut devenir faible à long terme ; les Blancs ont plusieurs attaques tranchantes (Keres Attack 6.g4, English Attack 6.Fe3 f3).",
+      inconvenients_en:"The d5 square can become a long-term weakness; White has several sharp attacking systems (Keres Attack 6.g4, English Attack 6.Be3 f3).",
+      blancs:"Keres Attack (6.g4) : attaque directe et psychologiquement difficile ; English Attack (6.Fe3+f3+g4) : plan systématique.",
+      blancs_en:"Keres Attack (6.g4): direct and psychologically difficult; English Attack (6.Be3+f3+g4): systematic attacking plan.",
+      noirs:"...a6, ...b5, ...Fb7 : expansion queenside classique ; ...Ce5 pour échanger le cheval actif en d4.",
+      noirs_en:"...a6, ...b5, ...Bb7: classical queenside expansion; ...Ne5 to exchange the active knight on d4.",
+      cases:"d5 (case faible noire), e4 (soutien clé blanc), b5 (expansion noire).",
+      cases_en:"d5 (Black's weak square), e4 (White's key support), b5 (Black's expansion square).",
+      finale:"Finales possibles mais rares ; la structure e6+d6 génère généralement un riche milieu de jeu.",
+      finale_en:"Endgames possible but rare; the e6+d6 structure generally leads to rich middlegame play.",
+      stats:"ECO B80–B89 · Complexité ★★★★ · Popularité au sommet ★★★★",
+      stats_en:"ECO B80–B89 · Complexity ★★★★ · Top-level popularity ★★★★",
+      piege:"La Keres Attack (6.g4) surprend souvent ; la réponse incorrecte 6...h6? mène à des difficultés après 7.h4 avec avalanche de pions.",
+      piege_en:"The Keres Attack (6.g4) often surprises; the incorrect reply 6...h6? leads to trouble after 7.h4 with a pawn avalanche.",
+      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"g1",to:"f3"},{from:"d7",to:"d6"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"f3",to:"d4"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"e7",to:"e6"}]
+    },
+    sveshnikov: {
+      line:"1.e4 c5 2.Cf3 Cc6 3.d4 cxd4 4.Cxd4 Cf6 5.Cc3 e5 6.Cdb5 d6 7.Fg5 a6 8.Ca3 b5",
+      fondement:"Les Noirs jouent ...e5 pour gagner de l'espace au centre, acceptant consciemment une faiblesse permanente sur d5 en échange d'une forte pression sur e4 et d'une dynamique de pièces très active. Philosophie : espace contre case faible.",
+      fondement_en:"Black plays ...e5 to gain central space, consciously accepting a permanent d5 weakness in exchange for strong pressure on e4 and very active piece play. Philosophy: space against structural weakness.",
+      avantages:"Espace kingside et initiative dynamique ; les Noirs dictent souvent le rythme ; plans queenside avec ...b4 très agressifs ; variante favorite de Magnus Carlsen.",
+      avantages_en:"Kingside space and dynamic initiative; Black often dictates the tempo; aggressive queenside plans with ...b4; Magnus Carlsen's favorite weapon.",
+      inconvenients:"Faiblesse permanente sur d5 ; le pion e5 peut devenir une cible ; défense passive catastrophique.",
+      inconvenients_en:"Permanent weakness on d5; the e5 pawn can become a target; passive defense is catastrophic.",
+      blancs:"Installer un cavalier ou un fou sur d5 ; pression sur d6 avec Fd3, De2 ; ouvrir le centre si ...b4 est joué.",
+      blancs_en:"Install a knight or bishop on d5; pressure on d6 with Bd3, Qe2; open the center if ...b4 is played.",
+      noirs:"...b4 pour chasser le cavalier blanc en a3 ; ...Cd4 ou ...Ce7-d5 pour rééquilibrer ; contre-attaque avec ...f5.",
+      noirs_en:"...b4 to chase the White knight from a3; ...Nd4 or ...Ne7-d5 to rebalance; counter-attack with ...f5.",
+      cases:"d5 (case faible noire/forte blanche), e5 (pion clé noir), b4 (expansion noire).",
+      cases_en:"d5 (Black's weak/White's strong square), e5 (Black's key pawn), b4 (Black's expansion).",
+      finale:"Les finales avantagent souvent les Blancs grâce au contrôle de d5 ; les Noirs doivent maintenir l'activité.",
+      finale_en:"Endgames often favor White thanks to d5 control; Black must maintain piece activity.",
+      stats:"ECO B33 · Complexité ★★★★ · Popularité au sommet ★★★★★",
+      stats_en:"ECO B33 · Complexity ★★★★ · Top-level popularity ★★★★★",
+      piege:"Après 8...b5, la suite 9.Cxb5!? axb5 10.Cxb5 est un sacrifice de pièce réfutant les variantes noires incorrectes.",
+      piege_en:"After 8...b5, the line 9.Nxb5!? axb5 10.Nxb5 is a piece sacrifice refuting incorrect Black responses.",
+      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"g1",to:"f3"},{from:"b8",to:"c6"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"f3",to:"d4"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"e7",to:"e5"},{from:"d4",to:"b5"},{from:"d7",to:"d6"},{from:"c1",to:"g5"},{from:"a7",to:"a6"},{from:"b5",to:"a3"},{from:"b7",to:"b5"}]
+    },
+    classique: {
+      line:"1.e4 c5 2.Cf3 Cc6 3.d4 cxd4 4.Cxd4 Cf6 5.Cc3 d6",
+      fondement:"Développement naturel et solide. Les Noirs maintiennent une pression sur d4 avec ...Cc6 et visent à compléter leur développement rapidement. Mène typiquement à la Richter-Rauzer (6.Fg5) ou à l'Attaque Sozin (6.Fc4).",
+      fondement_en:"Natural and solid development. Black maintains pressure on d4 with ...Nc6 and aims to complete development quickly. Typically leads to the Richter-Rauzer (6.Bg5) or Sozin Attack (6.Bc4).",
+      avantages:"Très solide et éprouvé au plus haut niveau ; nombreuses options selon le plan blanc ; bonne coordination de pièces dès l'ouverture.",
+      avantages_en:"Very solid and tested at the highest level; many options depending on White's plan; good piece coordination from the opening.",
+      inconvenients:"Moins dynamique que la Najdorf ou le Dragon ; la case d5 peut devenir faible selon le plan noir.",
+      inconvenients_en:"Less dynamic than Najdorf or Dragon; the d5 square can become weak depending on Black's plan.",
+      blancs:"Richter-Rauzer (6.Fg5) : épingle le Cf6, pression sur f6 et e6 ; Sozin (6.Fc4) : pression sur f7 et 0-0-0.",
+      blancs_en:"Richter-Rauzer (6.Bg5): pins the Nf6, pressure on f6 and e6; Sozin (6.Bc4): pressure on f7 and queenside castling.",
+      noirs:"...e6 (Scheveningen) ou ...e5 (Sveshnikov/Boleslavsky) ; contre-jeu queenside avec ...a6, ...b5 ; roque roi.",
+      noirs_en:"...e6 (Scheveningen) or ...e5 (Sveshnikov/Boleslavsky); queenside counterplay with ...a6, ...b5; kingside castling.",
+      cases:"d5 (case faible noire), e4 (clé de la structure blanche), f7 (cible Sozin).",
+      cases_en:"d5 (Black's weak square), e4 (White's structural key), f7 (Sozin attack target).",
+      finale:"Finales généralement équilibrées ; la structure pions e6+d6 offre solidité si bien gérée.",
+      finale_en:"Endgames generally balanced; the e6+d6 pawn structure offers solidity if well managed.",
+      stats:"ECO B56–B69 · Complexité ★★★★ · Popularité au sommet ★★★",
+      stats_en:"ECO B56–B69 · Complexity ★★★★ · Top-level popularity ★★★",
+      piege:"Dans l'Attaque Sozin (6.Fc4 e6 7.Fb3), le sacrifice 9.Cxe6!? fxe6 10.Fxe6 est un piège thématique à connaître.",
+      piege_en:"In the Sozin Attack (6.Bc4 e6 7.Bb3), the sacrifice 9.Nxe6!? fxe6 10.Bxe6 is a thematic trap worth knowing.",
+      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"g1",to:"f3"},{from:"b8",to:"c6"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"f3",to:"d4"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"d7",to:"d6"}]
+    },
+    kan: {
+      line:"1.e4 c5 2.Cf3 e6 3.d4 cxd4 4.Cxd4 a6",
+      fondement:"Combinaison de la souplesse de la Paulsen (...e6) et du coup prophylactique ...a6 (empêchant Cb5). Les Noirs gardent une grande flexibilité : ...b5, ...d6 ou ...Cc6 selon les circonstances. Variante caméléon par excellence.",
+      fondement_en:"Combination of Paulsen flexibility (...e6) with the prophylactic ...a6 (preventing Nb5). Black retains great flexibility: ...b5, ...d6 or ...Nc6 as circumstances demand. The ultimate chameleon variation.",
+      avantages:"Extrêmement flexible, difficile pour les Blancs de planifier ; peu de points faibles immédiats ; bonne pour éviter la théorie.",
+      avantages_en:"Extremely flexible, difficult for White to plan; few immediate weaknesses; good for avoiding theory.",
+      inconvenients:"Développement lent, les Blancs peuvent prendre de l'espace ; la case d5 est souvent faible ; moins de contre-jeu immédiat.",
+      inconvenients_en:"Slow development, White can gain space; d5 often weak; less immediate counterplay than sharper variations.",
+      blancs:"Occupation du centre avec c4 (Maroczy Bind) ; f4-f5, pression sur e6 ; Cxc6 pour doubler les pions noirs.",
+      blancs_en:"Central occupation with c4 (Maroczy Bind); f4-f5, pressure on e6; Nxc6 to double Black's pawns.",
+      noirs:"...b5, ...Fb7, développement queenside ; ...d6 puis ...Cf6, ...Fe7, roquer et attendre ; ...d5 pour casser.",
+      noirs_en:"...b5, ...Bb7, queenside development; ...d6 then ...Nf6, ...Be7, castle and wait; ...d5 to break.",
+      cases:"d5 (case faible noire), c4 (Maroczy Bind blanc), b5 (expansion noire).",
+      cases_en:"d5 (Black's weak square), c4 (White's Maroczy Bind), b5 (Black's expansion).",
+      finale:"Avec l'étau Maroczy, les Blancs ont un léger avantage en finale ; sinon, positions équilibrées.",
+      finale_en:"With the Maroczy Bind, White has a slight endgame advantage; otherwise, balanced positions.",
+      stats:"ECO B41–B43 · Complexité ★★★ · Popularité au sommet ★★★",
+      stats_en:"ECO B41–B43 · Complexity ★★★ · Top-level popularity ★★★",
+      piege:"Après 5.c4 (Maroczy Bind), ...b5?! trop tôt mène à cxb5 axb5 Dxd6! avec gain de matériel.",
+      piege_en:"After 5.c4 (Maroczy Bind), ...b5?! too early leads to cxb5 axb5 Qxd6! with material gain.",
+      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"g1",to:"f3"},{from:"e7",to:"e6"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"f3",to:"d4"},{from:"a7",to:"a6"}]
+    },
+    taimanov: {
+      line:"1.e4 c5 2.Cf3 e6 3.d4 cxd4 4.Cxd4 Cc6 5.Cc3 Dc7",
+      fondement:"Nommée d'après le grand maître soviétique Mark Taimanov (1926–2016), cette variante combine le développement naturel du cavalier en c6 avec la dame active en c7 qui surveille e5 et prépare ...a6+...b5. Approche pragmatique.",
+      fondement_en:"Named after Soviet GM Mark Taimanov (1926–2016), this variation combines natural knight development to c6 with the active queen on c7 watching e5 and preparing ...a6+...b5. A pragmatic approach.",
+      avantages:"Dame active en c7 surveille les cases clés ; plans clairs et flexibles ; bonne résistance aux tentatives blanches tranchantes.",
+      avantages_en:"Active queen on c7 watches key squares; clear and flexible plans; good resistance against White's sharpest attempts.",
+      inconvenients:"Dame en c7 peut être exposée en milieu de partie ; moins dynamique que la Najdorf ; 5.Cb5 est une réponse gênante.",
+      inconvenients_en:"Queen on c7 can be exposed in the middlegame; less dynamic than Najdorf; 5.Nb5 is an annoying response.",
+      blancs:"Cb5-d6 ou Cb5-a7 pour troubler la coordination noire ; Maroczy Bind avec c4 ; English Attack (Fe3, f3, g4).",
+      blancs_en:"Nb5-d6 or Nb5-a7 to disrupt Black's coordination; Maroczy Bind with c4; English Attack (Be3, f3, g4).",
+      noirs:"...a6, ...b5, expansion queenside standard ; ...Cf6, ...Fe7, roque côté roi ; ...Ce5 pour échanger les cavaliers.",
+      noirs_en:"...a6, ...b5, standard queenside expansion; ...Nf6, ...Be7, kingside castling; ...Ne5 to exchange active knights.",
+      cases:"c7 (dame noire), d6 (case d'invasion blanche), b5 (expansion noire).",
+      cases_en:"c7 (Black queen), d6 (White invasion square), b5 (Black expansion).",
+      finale:"Les finales sont généralement équilibrées si les Noirs ont bien géré leur structure de pions.",
+      finale_en:"Endgames are generally balanced if Black has managed their pawn structure well.",
+      stats:"ECO B44–B49 · Complexité ★★★ · Popularité au sommet ★★★",
+      stats_en:"ECO B44–B49 · Complexity ★★★ · Top-level popularity ★★★",
+      piege:"Le coup 5.Cb5 suivi de 6.Fd6+!? est un piège connu qui peut surprendre les Noirs non préparés.",
+      piege_en:"The move 5.Nb5 followed by 6.Bd6+!? is a known trap that can surprise unprepared Black players.",
+      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"g1",to:"f3"},{from:"e7",to:"e6"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"f3",to:"d4"},{from:"b8",to:"c6"},{from:"b1",to:"c3"},{from:"d8",to:"c7"}]
+    },
+    quatrecavaliers: {
+      line:"1.e4 c5 2.Cf3 e6 3.d4 cxd4 4.Cxd4 Cf6 5.Cc3 Cc6",
+      fondement:"Développement très naturel et symétrique. Les quatre cavaliers sont développés tôt. Les Noirs maintiennent la pression sur d4 et gardent des options vers le Scheveningen ou le Taimanov selon le plan blanc.",
+      fondement_en:"Very natural and symmetric development. All four knights are developed early. Black maintains pressure on d4 and keeps options toward Scheveningen or Taimanov depending on White's plan.",
+      avantages:"Développement rapide et harmonieux ; très flexible ; moins théorique que la Najdorf.",
+      avantages_en:"Quick and harmonious development; very flexible; less theoretical than Najdorf.",
+      inconvenients:"5.Cxc6 donne aux Blancs une structure confortable ; moins de punch que d'autres variantes siciliennes.",
+      inconvenients_en:"5.Nxc6 gives White a comfortable structure; less punch than other Sicilian variations.",
+      blancs:"Cxc6 bxc6, exploiter les faiblesses de la structure noire ; Fe3, Dc2, 0-0-0 et attaque ; Cb3 pour garder la tension.",
+      blancs_en:"Nxc6 bxc6, exploit Black's structural weaknesses; Be3, Qc2, 0-0-0 and attack; Nb3 to maintain tension.",
+      noirs:"...Fb4, épingler le Cc3 (Nimzowitsch-Sicilienne) ; ...d5 en un coup si possible ; ...Dc7, ...a6, ...b5.",
+      noirs_en:"...Bb4, pin the Nc3 (Nimzowitsch-Sicilian variation); ...d5 in one move if possible; ...Qc7, ...a6, ...b5.",
+      cases:"d4 (pression noire), c6 (case après Cxc6), e5 (coup clé noir potentiel).",
+      cases_en:"d4 (Black's pressure), c6 (square after Nxc6), e5 (potential Black key move).",
+      finale:"Finales équilibrées ; après Cxc6, la structure noire doublée peut être problématique à long terme.",
+      finale_en:"Balanced endgames; after Nxc6, the doubled Black pawn structure can be problematic long-term.",
+      stats:"ECO B45–B46 · Complexité ★★★ · Popularité au sommet ★★",
+      stats_en:"ECO B45–B46 · Complexity ★★★ · Top-level popularity ★★",
+      piege:"L'échange immédiat 5.Cxc6 dxc6 suivi de 6.Dc2 visant e4 surprend souvent les Noirs non préparés.",
+      piege_en:"The immediate exchange 5.Nxc6 dxc6 followed by 6.Qc2 targeting e4 often surprises unprepared Black players.",
+      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"g1",to:"f3"},{from:"e7",to:"e6"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"f3",to:"d4"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"b8",to:"c6"}]
+    },
+    richter_rauzer: {
+      line:"1.e4 c5 2.Cf3 d6 3.d4 cxd4 4.Cxd4 Cf6 5.Cc3 Cc6 6.Fg5",
+      fondement:"Les Blancs épinglent le cheval f6 avec le fou, créant une pression sur le nœud d7. La menace Fxf6 forçant ...gxf6 crée des problèmes immédiats. Si les Noirs jouent ...e6, la case d5 devient accessible aux pièces blanches.",
+      fondement_en:"White pins the f6 knight with the bishop, creating pressure on the d7 junction. The threat Bxf6 forcing ...gxf6 creates immediate problems. If Black plays ...e6, the d5 square becomes accessible to White's pieces.",
+      avantages:"Pression immédiate sur la position noire ; bons plans queenside après 0-0-0 ; attaque bien coordonnée.",
+      avantages_en:"Immediate pressure on Black's position; good queenside plans after 0-0-0; well-coordinated attack.",
+      inconvenients:"Le fou peut être échangé avec ...e6+...Fe7 ; les Noirs ont des plans actifs avec ...a6, ...b5.",
+      inconvenients_en:"The bishop can be exchanged with ...e6+...Be7; Black has active plans with ...a6, ...b5.",
+      blancs:"Dd2, 0-0-0, f4-f5 : attaque directe ; Cxc6 puis Fxf6 pour affaiblir la structure ; Ce4-d6.",
+      blancs_en:"Qd2, 0-0-0, f4-f5: direct attack; Nxc6 then Bxf6 to weaken the structure; Ne4-d6.",
+      noirs:"...e6 : le meilleur, libérer la position ; ...Fe7, échanger le fou épingle ; ...a6, ...b5, ...Da5 contre-attaque.",
+      noirs_en:"...e6: best, liberating the position; ...Be7, exchange the pinning bishop; ...a6, ...b5, ...Qa5 counter-attack.",
+      cases:"d5 (case clé blanche), f6 (case épinglée noire), b5 (contre-jeu noir).",
+      cases_en:"d5 (White's key square), f6 (Black's pinned square), b5 (Black's counterplay).",
+      finale:"Les finales avantagent souvent les Blancs après affaiblissement de la structure noire.",
+      finale_en:"Endgames often favor White after weakening Black's pawn structure.",
+      stats:"ECO B60–B69 · Complexité ★★★★ · Popularité au sommet ★★★",
+      stats_en:"ECO B60–B69 · Complexity ★★★★ · Top-level popularity ★★★",
+      piege:"Après 6.Fg5 e6, la défense incorrecte ...Fd7?! permet 7.Cxe6! fxe6 8.Fxe6+ avec mat menaçant.",
+      piege_en:"After 6.Bg5 e6, the incorrect defense ...Bd7?! allows 7.Nxe6! fxe6 8.Bxe6+ with a mating threat.",
+      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"g1",to:"f3"},{from:"d7",to:"d6"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"f3",to:"d4"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"b8",to:"c6"},{from:"c1",to:"g5"}]
+    },
+    english_attack: {
+      line:"1.e4 c5 2.Cf3 d6 3.d4 cxd4 4.Cxd4 Cf6 5.Cc3 e6 6.Fe3 a6 7.f3",
+      fondement:"Système ultra-populaire depuis les années 1980–90, utilisé par Kasparov, Anand et la plupart des grands maîtres. L'idée est de construire un 'mur' avec f3, préparer g4-g5 et mener une attaque sur le roi noir.",
+      fondement_en:"Ultra-popular system since the 1980s–90s, used by Kasparov, Anand, and most grandmasters. The idea is to build a 'wall' with f3, prepare g4-g5, and launch a kingside attack.",
+      avantages:"Plan très clair (Fe3, Dd2, 0-0-0, g4, g5) ; pression directe difficile à contrer ; utilisable contre Najdorf, Scheveningen, Classique.",
+      avantages_en:"Very clear plan (Be3, Qd2, 0-0-0, g4, g5); direct pressure hard to counter; usable against Najdorf, Scheveningen, Classical.",
+      inconvenients:"f3 affaiblit e3 et d3 ; si les Noirs contre-attaquent queenside assez vite, les Blancs peuvent se retrouver en difficulté.",
+      inconvenients_en:"f3 weakens e3 and d3; if Black counter-attacks queenside fast enough, White can find themselves in trouble.",
+      blancs:"g4-g5 : attaque sur le roi noir ; h4-h5 : invasion de l'aile h ; Fc4 ou Fd3 selon les circonstances.",
+      blancs_en:"g4-g5: kingside attack; h4-h5: h-file invasion; Bc4 or Bd3 depending on circumstances.",
+      noirs:"...b5-b4 : contre-attaque queenside immédiate ; ...Ce5, simplification active ; roque long pour confrontation directe.",
+      noirs_en:"...b5-b4: immediate queenside counter-attack; ...Ne5, active simplification; queenside castling for direct confrontation.",
+      cases:"g5 (case d'attaque blanche), d5 (case clé), b4 (contre-jeu noir).",
+      cases_en:"g5 (White's attack square), d5 (key square), b4 (Black's counterplay).",
+      finale:"Les finales sont rares ; si l'attaque blanche est repoussée, les faiblesses e3-d3 deviennent des cibles.",
+      finale_en:"Endgames are rare; if White's attack is repelled, the e3-d3 weaknesses become targets.",
+      stats:"ECO B80 · Complexité ★★★★ · Popularité au sommet ★★★★",
+      stats_en:"ECO B80 · Complexity ★★★★ · Top-level popularity ★★★★",
+      piege:"L'erreur 7...Cc6?! sans jouer ...b5 auparavant mène après 8.g4 h6 9.h4 à une attaque blanche irréfutable.",
+      piege_en:"The mistake 7...Nc6?! without first playing ...b5 leads after 8.g4 h6 9.h4 to an irrefutable White attack.",
+      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"g1",to:"f3"},{from:"d7",to:"d6"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"f3",to:"d4"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"e7",to:"e6"},{from:"c1",to:"e3"},{from:"a7",to:"a6"},{from:"f2",to:"f3"}]
+    },
+    grand_prix: {
+      line:"1.e4 c5 2.Cc3 Cc6 3.f4 g6 4.Cf3 Fg7 5.Fc4",
+      fondement:"Attaque directe sur le roi noir avec la chaîne f4-e4 et développement agressif. Populaire dans les tournois open britanniques des années 1980. But : attaquer le roi noir avec f4-f5, Fe3, Dd2, 0-0-0. Évite la théorie Najdorf/Dragon.",
+      fondement_en:"Direct attack on Black's king with the f4-e4 chain and aggressive development. Popular in British open tournaments of the 1980s. Goal: attack Black's king with f4-f5, Be3, Qd2, 0-0-0. Avoids Najdorf/Dragon theory.",
+      avantages:"Plan d'attaque simple et direct ; efficace en pratique ; évite la théorie Najdorf/Dragon ; effet surprise.",
+      avantages_en:"Simple and direct attack plan; effective in practice; avoids Najdorf/Dragon theory; surprise factor.",
+      inconvenients:"2.Cc3 avant d4 donne aux Noirs d5 en un coup ; structure blanche peut être faible si l'attaque est stoppée.",
+      inconvenients_en:"2.Nc3 before d4 gives Black ...d5 in one move; White's structure can be weak if the attack is stopped.",
+      blancs:"f5, Fe3, Dd2, 0-0-0, attaque directe ; sacrifice sur g6 ou e6 dans certaines lignes ; Cf3-g5.",
+      blancs_en:"f5, Be3, Qd2, 0-0-0, direct attack; sacrifice on g6 or e6 in certain lines; Nf3-g5.",
+      noirs:"...d5 ! le coup clé, contester le centre immédiatement ; ...e6, développement solide ; fianchetto contre-attaquant.",
+      noirs_en:"...d5! the key move, immediately contest the center; ...e6, solid development; Dragon fianchetto to counter-attack.",
+      cases:"f5 (attaque blanche clé), d5 (contre-jeu noir), g6 (roi noir potentiellement exposé).",
+      cases_en:"f5 (White's key attack square), d5 (Black's counterplay), g6 (potentially exposed Black king).",
+      finale:"Finales rares ; la structure blanche peut être compromise si l'attaque échoue.",
+      finale_en:"Rare endgames; White's structure can be compromised if the attack fails.",
+      stats:"ECO B23 · Complexité ★★★ · Popularité au sommet ★★★",
+      stats_en:"ECO B23 · Complexity ★★★ · Top-level popularity ★★★",
+      piege:"Après 5.Fc4, le coup ...Ca5?! est souvent joué mais 6.Fd5! paralyse les pièces noires et coûte du temps.",
+      piege_en:"After 5.Bc4, the move ...Na5?! is often played but 6.Bd5! paralyzes Black's pieces and costs time.",
+      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"b1",to:"c3"},{from:"b8",to:"c6"},{from:"f2",to:"f4"},{from:"g7",to:"g6"},{from:"g1",to:"f3"},{from:"f8",to:"g7"},{from:"f1",to:"c4"}]
+    },
+    morra: {
+      line:"1.e4 c5 2.d4 cxd4 3.c3 dxc3 4.Cxc3 Cc6 5.Cf3 d6 6.Fc4",
+      fondement:"Les Blancs sacrifient un pion dès le début pour obtenir une avance de développement massive. Nommé d'après Ken Smith et Pierre Morra. Les Blancs espèrent que leur développement supérieur et la colonne c ouverte compensent le déficit matériel.",
+      fondement_en:"White sacrifices a pawn immediately to obtain a massive development lead. Named after Ken Smith and Pierre Morra. White hopes their superior development and open c-file compensate for the material deficit.",
+      avantages:"Développement fulgurant ; pression constante ; excellent en partie rapide/blitz et en amateur.",
+      avantages_en:"Lightning development; constant pressure; excellent in rapid/blitz and at club level.",
+      inconvenients:"Le pion sacrifié est réel : les Noirs gardent l'avantage matériel ; au plus haut niveau, les Noirs défendent correctement.",
+      inconvenients_en:"The sacrificed pawn is real: Black keeps the material advantage; at the highest level, Black defends correctly.",
+      blancs:"Développement maximal (Fc4, Cf3, 0-0, Te1, Fd2) ; pression sur d6 et f7 ; ouverture de la colonne c avec Tc1.",
+      blancs_en:"Maximum development (Bc4, Nf3, 0-0, Re1, Bd2); pressure on d6 and f7; open the c-file with Rc1.",
+      noirs:"Accepter et défendre avec précision (...d6, ...Cf6, ...g6, ...Fg7) ; refus du gambit (3...Cf6) ; rendre le pion au bon moment.",
+      noirs_en:"Accept and defend precisely (...d6, ...Nf6, ...g6, ...Bg7); decline the gambit (3...Nf6); return the pawn at the right moment.",
+      cases:"d6 (pression blanche), f7 (faiblesse noire), c1 (tour blanche active via Tc1).",
+      cases_en:"d6 (White's pressure), f7 (Black's weakness), c1 (White rook active via Rc1).",
+      finale:"Les Noirs conservent l'avantage matériel en finale ; les Blancs jouent tout pour le milieu de jeu.",
+      finale_en:"Black retains material advantage in endgames; White plays everything for the middlegame.",
+      stats:"ECO B21 · Complexité ★★★ · Popularité au sommet ★★",
+      stats_en:"ECO B21 · Complexity ★★★ · Top-level popularity ★★",
+      piege:"Après 6...Cf6, le sacrifice 7.e5! dxe5 8.Dxd8+ Cxd8 9.Cxe5 est thématique et donne une position déséquilibrée.",
+      piege_en:"After 6...Nf6, the sacrifice 7.e5! dxe5 8.Qxd8+ Nxd8 9.Nxe5 is thematic and gives an unbalanced position.",
+      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"c2",to:"c3"},{from:"d4",to:"c3"},{from:"b1",to:"c3"},{from:"b8",to:"c6"},{from:"g1",to:"f3"},{from:"d7",to:"d6"},{from:"f1",to:"c4"}]
     }
   },
+
   6: {
     classique: {
       line:"1.e4 e6 2.d4 d5 3.Cc3 Cf6 4.Fg5 Fe7 5.e5 Cfd7",
@@ -1890,65 +2089,223 @@ var ENRICH = {
  },
  5:{
   najdorf:{
-   histoire:"La Variante Najdorf doit son nom au grand maître polonais-argentin Miguel Najdorf (1910-1997). Van der Sterren note qu'elle offre «&thinsp;tout ce qu'un amoureux de la Sicilienne recherche&thinsp;».",
-      histoire_en:"The Najdorf Variation takes its name from Polish-Argentine Grandmaster Miguel Najdorf (1910–1997). It became the weapon of choice of Bobby Fischer and Garry Kasparov, both of whom used it in World Championship matches. Van der Sterren notes it offers 'everything a Sicilian lover could want.'",
-      histoire_en:"The Najdorf Variation takes its name from Polish-Argentine Grandmaster Miguel Najdorf (1910–1997). It became the weapon of choice of Bobby Fischer and Garry Kasparov, both of whom used it in World Championship matches. Van der Sterren notes it offers 'everything a Sicilian lover could want.'",
+   histoire:"La Variante Najdorf tire son nom du grand maître polonais-argentin Miguel Najdorf (1910–1997). Elle devint l'arme absolue de Bobby Fischer et Garry Kasparov au plus haut niveau mondial, et reste de loin la variante sicilienne la plus populaire au 21e siècle.",
+   histoire_en:"The Najdorf Variation is named after Polish-Argentine GM Miguel Najdorf (1910–1997). It became the ultimate weapon of Bobby Fischer and Garry Kasparov at the highest level, and remains the most popular Sicilian variation of the 21st century.",
    annotations:[
     {move:"1...c5",move_en:"1...c5",comment:"La Sicilienne — le coup le plus populaire contre 1.e4. Il empêche 2.d4 direct et crée une structure asymétrique combative.",comment_en:"The Sicilian — the most popular reply to 1.e4. It prevents 2.d4 directly and creates a combative asymmetric structure."},
-    {move:"5...a6",move_en:"5...a6",comment:"Le coup magique de Najdorf ! Un simple pion d'une flexibilité extraordinaire : interdit Fb5, prépare ...b5, laisse les Noirs libres de choisir leur structure centrale.",comment_en:"Najdorf's magic move! A simple pawn of extraordinary flexibility: prevents Bb5, prepares ...b5, and leaves Black free to choose their central structure."},
-    {move:"6.Fg5",move_en:"6.Bg5",comment:"L'attaque la plus ambitieuse et théorique — vise f6 et crée une tension sur e6.",comment_en:"The most ambitious and theoretical attack — targeting f6 and creating tension on e6."},
-    {move:"6...e6",move_en:"6...e6",comment:"La réponse classique — les Noirs supportent f6 et préparent le développement normal.",comment_en:"The classical response — Black supports f6 and prepares normal development."},
-    {move:"9.0-0-0",move_en:"9.0-0-0",comment:"Grand roque — les Blancs vont attaquer à l'aile roi (h4-h5), pendant que les Noirs contre-attaquent à l'aile dame (b5-b4).",comment_en:"Queenside castling — White will attack the kingside (h4-h5), while Black counterattacks on the queenside (b5-b4)."}
+    {move:"5...a6",move_en:"5...a6",comment:"Le coup magique de Najdorf ! Interdit Cb5, prépare ...b5, laisse les Noirs libres de choisir entre ...e5 et ...e6 selon la réponse blanche.",comment_en:"Najdorf's magic move! Prevents Nb5, prepares ...b5, and leaves Black free to choose between ...e5 and ...e6 depending on White's reply."},
+    {move:"6.Fe3",move_en:"6.Be3",comment:"L'Attaque Anglaise — le système le plus populaire au 21e siècle. Les Blancs préparent f3, Dd2, g4-g5 avec une attaque sur le roi noir.",comment_en:"The English Attack — the most popular system of the 21st century. White prepares f3, Qd2, g4-g5 with a kingside assault."},
+    {move:"6...e5",move_en:"6...e5",comment:"La réponse Scheveningen-Najdorf : ...e5 consolide le centre et prépare ...Fe7, ...0-0. Les Noirs acceptent la faiblesse de d5 en échange d'un solide 'mur' central.",comment_en:"The Scheveningen-Najdorf reply: ...e5 consolidates the center. Black accepts the d5 weakness in exchange for a solid central 'wall'."}
    ],
     game:{
-     header:"Fischer, R. vs Najdorf, M. &middot; Olympiades Varna 1962 &middot; Sicilienne Najdorf (B90)",
-     moves:"1. e4 c5 2. Cf3 d6 3. d4 cxd4 4. Cxd4 Cf6 5. Cc3 a6 6. h3 b5 7. Cd5 Fb7 8. Cxf6+ gxf6 9. c4 bxc4 10. Fxc4 Fxe4 11. 0-0 d5 12. Te1 e5 13. Da4+ Cd7 14. Txe4 dxe4 15. Cf5 Fc5 16. Cg7+ Re7 17. Cf5+ Re8 18. Fe3 Fxe3 19. fxe3 Db6 20. Td1 Ta7 21. Td6 Dd8 22. Db3 Dc7 23. Fxf7+ Rd8 24. Fe6 1-0",
-     result:"1-0 — Fischer gagne en 47 coups — le Najdorf ma&icirc;tris&eacute;",
-     analysis:"Fischer d&eacute;montre sa ma&icirc;trise du Najdorf ! Apr&egrave;s 6.h3! la man&oelig;uvre 7.Cd5 Cb8 8.Cxf6+! ouvre la position. L''attaque blanche via Db3 et Ca5 est irr&eacute;sistible — Najdorf lui-m&ecirc;me ne peut r&eacute;sister &agrave; sa propre ouverture.",
-     result_en:"1-0 — Fischer wins in 47 moves — Najdorf mastered",
-     analysis_en:"Fischer demonstrates Najdorf mastery! After 6.h3! the maneuver 7.Nd5 Nb8 8.Nxf6+! opens the position. White''s attack via Qb3 and Na5 is irresistible — Najdorf himself cannot resist his own opening."
+     header:"Karpov, A. vs Kasparov, G. &middot; Match du monde 1985, Moscou p.16 &middot; Sicilienne Najdorf (B44)",
+     moves:"1.e4 c5 2.Cf3 e6 3.d4 cxd4 4.Cxd4 Cc6 5.Cb5 d6 6.c4 Cf6 7.C1c3 a6 8.Ca3 d5 9.cxd5 exd5 10.exd5 Cb4 11.Fe2 Fc5 12.O-O O-O 13.Ff3 Ff5 14.Fg5 Te8 15.Dd2 b5 16.Tad1 Cd3 17.Cab1 h6 18.Fh4 b4 19.Ca4 Fd6 20.Fg3 Tc8 21.b3 g5 22.Fxd6 Dxd6 23.g3 Cd7 24.Fg2 Df6 25.a3 a5 26.axb4 axb4 27.Da2 Fg6 28.d6 g4 29.Dd2 Rg7 30.f3 Dxd6 31.fxg4 Dd4+ 32.Rh1 Cf6 33.Tf4 Ce4 34.Dxd3 Cf2+ 35.Txf2 Fxd3 36.Tfd2 De3 37.Txd3 Tc1 38.Cb2 Df2 39.Cd2 Txd1+ 40.Cxd1 Te1+ 0-1",
+     result:"0-1 — Kasparov gagne en 40 coups — la Sicilienne à son sommet",
+     result_en:"0-1 — Kasparov wins in 40 moves — the Sicilian at its peak",
+     analysis:"Partie 16 du match du monde 1985. Kasparov avec les Noirs démontre toute la puissance d'initiative de la Sicilienne. Le sacrifice d'échange 34...Cf2+! est foudroyant — Karpov doit abandonner face à une attaque irréfutable.",
+     analysis_en:"Game 16 of the 1985 World Championship. Kasparov with Black demonstrates the full power of Sicilian initiative. The exchange sacrifice 34...Nf2+! is devastating — Karpov must resign facing an irrefutable attack."
     }
   },
   dragon:{
-   histoire:"La Variante du Dragon doit son nom à la ressemblance entre la structure des pions noirs (a7-b7-c5-d6-g6-h7) et la constellation du Dragon. Développée au XIXe siècle, elle fut popularisée par les champions soviétiques dans les années 1950-70.",
-      histoire_en:"The Dragon Variation (5...g6) is the most uncompromising Sicilian. Black fianchettoes the dark-squared Bishop on g7 — the 'Dragon Bishop'. The Yugoslav Attack (9.0-0-0) triggers one of the most violent opening battles in chess, with opposite-wing castling and mutual mating attacks.",
-      histoire_en:"The Dragon Variation (5...g6) is the most uncompromising Sicilian. Black fianchettoes the dark-squared Bishop on g7 — the 'Dragon Bishop'. The Yugoslav Attack (9.0-0-0) triggers one of the most violent opening battles in chess, with opposite-wing castling and mutual mating attacks.",
+   histoire:"La Variante du Dragon doit son nom à la ressemblance entre la structure des pions noirs (a7–b7–c5–d6–g6–h7) et la constellation du Dragon. Développée au XIXe siècle, elle fut popularisée par les champions soviétiques et reste l'une des ouvertures les plus tranchantes de toute la théorie.",
+   histoire_en:"The Dragon Variation takes its name from the resemblance between Black's pawn structure (a7–b7–c5–d6–g6–h7) and the Dragon constellation. Developed in the 19th century, popularized by Soviet champions, it remains one of the sharpest openings in all of chess theory.",
    annotations:[
-    {move:"5...g6",move_en:"5...g6",comment:"L'idée du Dragon — le Fou va s'installer sur g7 pour dominer la grande diagonale a1-h8.",comment_en:"The Dragon idea — the Bishop will settle on g7 to dominate the long diagonal."},
-    {move:"7...Fg7",move_en:"7...Bg7",comment:"La pièce centrale du Dragon — ce Fou est souvent la pièce dominante de toute la partie.",comment_en:"The Dragon's key piece — this Bishop is often the dominant force in the entire game."},
-    {move:"9.Fc4 d5!",move_en:"9.Bc4 d5!",comment:"Contre-jeu immédiat ! Cette rupture centrale est souvent la clé de la défense du Dragon — les Noirs attaquent le centre avant de se défendre.",comment_en:"Immediate counterplay! This central break is often the key to Black's queenside attack."},
-    {move:"10.exd5 Cxd4",move_en:"10.exd5 Nxd4",comment:"Les Noirs simplifient et activent leurs pièces rapidement.",comment_en:"Black simplifies and activates pieces rapidly."},
-    {move:"11.Fxd4",move_en:"11.Bxd4",comment:"Les Blancs récupèrent avec un grand centre, mais le Fou g7 et la colonne c donnent aux Noirs leur compensation.",comment_en:"White recovers with a big center, but the Dragon Bishop on g7 and the open c-file give Black full compensation."}
+    {move:"5...g6",move_en:"5...g6",comment:"L'idée Dragon commence ici : les Noirs fianchettent le fou roi pour créer un monstre sur la grande diagonale.",comment_en:"The Dragon idea starts here: Black fianchettoes the king bishop to create a monster on the long diagonal."},
+    {move:"6...Fg7",move_en:"6...Bg7",comment:"Le Fou-Dragon en g7 est la pièce maîtresse du système : il domine la diagonale a1-h8 et pèse sur toute la position blanche.",comment_en:"The Dragon Bishop on g7 is the system's key piece: it dominates the a1-h8 diagonal and pressures the entire White position."},
+    {move:"7.f3",move_en:"7.f3",comment:"Construction du mur blanc pour l'Attaque Yougoslave. f3 renforce e4 et prépare g4-g5. La course à l'attaque est lancée !",comment_en:"White builds the wall for the Yugoslav Attack. f3 reinforces e4 and prepares g4-g5. The race to attack begins!"},
+    {move:"9.0-0-0",move_en:"9.0-0-0",comment:"Grand roque : les Blancs roqueront côté dame pour attaquer à l'aile roi. Les Noirs ripostent immédiatement queenside avec ...Tb8, ...b5-b4.",comment_en:"Queenside castling: White attacks on the kingside while Black immediately counter-attacks queenside with ...Rb8, ...b5-b4."}
    ],
     game:{
-     header:"Rauzer, V. vs Botvinnik, M. &middot; Championnat d'URSS 1933 (Leningrad) &middot; Sicilienne Dragon (B74)",
-     moves:"1.e4 c5 2.Cf3 Cc6 3.d4 cxd4 4.Cxd4 Cf6 5.Cc3 d6 6.Fe2 g6 7.Fe3 Fg7 8.Cb3 Fe6 9.f4 0-0 10.0-0 Ca5 11.Cxa5 Dxa5 12.Ff3 Fc4 13.Te1 Tfd8 14.Dd2 Dc7 15.Tac1 e5 16.b3 d5 17.exd5 e4 18.bxc4 exf3 19.c5 Da5 20.Ted1 Cg4 21.Fd4 f2 22.Rf1 Da6+ 23.De2 Fxd4 24.Txd4 Df6 25.Tcd1 Dh4 26.Dd3 Te8 27.Te4 f5 28.Te6 Cxh2+ 29.Re2 Dxf4 0-1",
-     result:"0-1 — Botvinnik gagne en 29 coups — le Dragon foudroyant",
-     analysis:"Partie fondatrice de la th&eacute;orie du Dragon ! Botvinnik illustre la puissance du Fou g7. Apr&egrave;s 16...Cxb2!! Rauzer ne peut r&eacute;sister. Les Noirs exploitent la colonne c ouverte pour gagner en 29 coups.",
-     result_en:"0-1 — Botvinnik wins in 29 moves — the thunderous Dragon",
-     analysis_en:"Foundational Dragon theory game! Botvinnik illustrates the g7 Bishop's power. After 16...Nxb2!! Rauzer cannot resist. Black exploits the open c-file to win in 29 moves."
+     header:"Spassky, B. vs Fischer, R. &middot; Match du monde 1972, Reykjavik p.11 &middot; Sicilienne — Pion Empoisonné (B97)",
+     moves:"1. e4 c5 2. Cf3 d6 3. d4 cxd4 4. Cxd4 Cf6 5. Cc3 a6 6. Fg5 e6 7. f4 Db6 8. Dd2 Dxb2 9. Cb3 Da3 10. Fxf6 gxf6 11. Fe2 h5 12. O-O Cc6 13. Rh1 Fd7 14. Cb1 Db4 15. De3 d5 16. exd5 Ce7 17. c4 Cf5 18. Dd3 h4 19. Fg4 Cd6 20. C1d2 f5 21. a3 Db6 22. c5 Db5 23. Dc3 fxg4 24. a4 h3 25. axb5 hxg2+ 26. Rxg2 Th3 27. Df6 Cf5 28. c6 Fc8 29. dxe6 fxe6 30. Tfe1 Fe7 31. Txe6 1-0",
+     result:"1-0 — Spassky gagne en 31 coups — le Pion Empoisonné déjoué",
+     result_en:"1-0 — Spassky wins in 31 moves — the Poisoned Pawn refuted",
+     analysis:"Fischer ose le célèbre 'Pion Empoisonné' Najdorf (8...Dxb2). Spassky répond avec précision : le sacrifice de qualité 10.Fxf6! ouvre la position et l'attaque blanche est irréfutable. Partie emblématique du match du monde 1972.",
+     analysis_en:"Fischer dares the famous Najdorf 'Poisoned Pawn' (8...Qxb2). Spassky replies precisely: the exchange sacrifice 10.Bxf6! opens the position and White's attack is irrefutable. An iconic game from the 1972 World Championship match."
     }
   },
-  maroczy:{
-   histoire:"L'Étau de Maroczy doit son nom au grand maître hongrois Géza Maróczy (1870-1951). La formation e4-c4 restreint la mobilité des Noirs et empêche ...d5. Longtemps considéré comme «&thinsp;l'antidote parfait&thinsp;» contre la Sicilienne Dragon et Kan, il fut largement analysé depuis les années 1970.",
-      histoire_en:"The Maroczy Bind (5.c4) was introduced by Hungarian Grandmaster Géza Maróczy (1870–1951) as a positional squeeze against the Accelerated Dragon. White establishes an iron grip on d5 with pawns on c4 and e4, severely restricting Black's counterplay.",
-      histoire_en:"The Maroczy Bind (5.c4) was introduced by Hungarian Grandmaster Géza Maróczy (1870–1951) as a positional squeeze against the Accelerated Dragon. White establishes an iron grip on d5 with pawns on c4 and e4, severely restricting Black's counterplay.",
+  scheveningen:{
+   histoire:"La Variante Scheveningen tire son nom de la localité néerlandaise de Scheveningen, où se tint un tournoi en 1923 qui popularisa ce système. Kasparov et Fischer l'ont tous deux adoptée comme alternative à la Najdorf, appréciant sa solidité combinée à un potentiel d'initiative queenside.",
+   histoire_en:"The Scheveningen Variation takes its name from the Dutch seaside resort of Scheveningen, where a 1923 tournament popularized this system. Both Kasparov and Fischer adopted it as an alternative to the Najdorf, appreciating its solidity combined with queenside initiative potential.",
    annotations:[
-    {move:"4.c4!",move_en:"4.c4!",comment:"L'Étau de Maroczy ! Ce pion en c4, combiné à e4, crée un mur imprenable. Les Noirs ne pourront jamais jouer ...d5.",comment_en:"The Maroczy Bind! This pawn on c4, combined with e4, creates an impregnable wall against ...d5."},
-    {move:"4...Fg7",move_en:"4...Bg7",comment:"Développement au fianchetto — le Fou g7 va compenser le manque d'espace en dominant la grande diagonale.",comment_en:"Fianchetto development — the Bg7 will compensate for the lack of space with dynamic piece activity."},
-    {move:"5...d6",move_en:"5...d6",comment:"Consolidation — les Noirs se stabilisent et préparent le contre-jeu par ...Cc6 et ...Fe6.",comment_en:"Consolidation — Black stabilizes and prepares counterplay via ...Nc6 and ...Be6."},
-    {move:"7.Fe3",move_en:"7.Be3",comment:"Développement harmonieux — les Blancs contrôlent la diagonale et empêchent ...Cg4.",comment_en:"Harmonious development — White controls the diagonal and prevents ...d5 immediately."}
+    {move:"5...e6",move_en:"5...e6",comment:"La Scheveningen : le 'petit centre' e6+d6 offre solidité et flexibilité, sans s'engager dans les complications aiguës du Dragon ou du Najdorf.",comment_en:"The Scheveningen: the 'small center' e6+d6 offers solidity and flexibility, without engaging in the sharp complications of the Dragon or Najdorf."},
+    {move:"6.g4",move_en:"6.g4",comment:"La Keres Attack (6.g4) : agression immédiate avant même de développer. Les Blancs visent g5 pour chasser le Cf6.",comment_en:"The Keres Attack (6.g4): immediate aggression before even developing. White targets g5 to chase the Nf6."},
+    {move:"6.Fe3",move_en:"6.Be3",comment:"L'Attaque Anglaise débute : Fe3+f3+Dd2+0-0-0+g4 est le plan systématique le plus dangereux du 21e siècle.",comment_en:"The English Attack begins: Be3+f3+Qd2+0-0-0+g4 is the most dangerous systematic plan of the 21st century."},
+    {move:"6...a6",move_en:"6...a6",comment:"Prophylaxie et préparation : ...a6 empêche Cb5 et prépare ...b5 pour le contre-jeu queenside vital.",comment_en:"Prophylaxis and preparation: ...a6 prevents Nb5 and prepares ...b5 for vital queenside counterplay."}
    ],
     game:{
-     header:"Smyslov, V. vs Tal, M. &middot; 4e Coupe d'URSS par Equipes 1964 &middot; Sicilienne — Etau de Maroczy (A36)",
-     moves:"1. c4 g6 2. Cc3 Fg7 3. g3 c5 4. Fg2 Cc6 5. b3 e6 6. Fb2 Cge7 7. Ca4 Fxb2 8. Cxb2 0-0 9. e3 d5 10. Cf3 Cf5 11. 0-0 b6 12. Ca4 Fb7 13. cxd5 exd5 14. d3 Df6 15. Dd2 Tad8 16. Tfd1 Tfe8 17. Tab1 Cd6 18. Ce1 d4 19. e4 De7 20. Cc2 f5 21. exf5 Ce5 22. f4 Cf3+ 23. Fxf3 Fxf3 24. Te1 De2 25. Txe2 Txe2 26. Dxe2 Fxe2 27. Cb2 gxf5 28. Te1 Fh5 29. Cc4 Cxc4 30. bxc4 Te8 31. Rf2 Txe1 32. Rxe1 Rf8 33. Rd2 Re7 34. Ce1 a6 35. a4 a5 36. Rc2 Fe8 37. Rb3 Fc6 38. Ra3 Rf6 39. Rb3 Rg6 40. Ra3 Rh5 41. h3 Rg6 42. Rb3 Rg7 43. Ra3 Rf6 44. Rb3 Fe8 45. Cg2 Fh5 46. Rc2 Fe2 47. Ce1 Ff1 48. Cf3 Fxh3 49. Cg5 Fg2 50. Cxh7+ Rg7 51. Cg5 Rg6 52. Rd2 Fc6 53. Rc1 Fg2 54. Rd2 Rh5 55. Ce6 Rg4 56. Cc7 Fc6 57. Cd5 Rxg3 58. Ce7 Fd7 59. Cd5 Fxa4 60. Cxb6 Fe8 61. Cd5 Rf3 62. Cc7 Fc6 63. Ce6 a4 64. Cxc5 a3 65. Cb3 a2 66. Rc1 Rxf4 67. Rb2 Re3 68. Ca5 Fe8 69. c5 f4 70. c6 Fxc6 71. Cxc6 f3 72. Ce5 f2 0-1",
-     result:"0-1 — Tal gagne en 72 coups — l'Etau bris&eacute; par l'imagination de Tal",
-     analysis:"Tal d&eacute;montre comment briser l'Etau de Maroczy ! La man&oelig;uvre ...Cf5 puis ...Cd4 cr&eacute;e des complications irr&eacute;sistibles. Malgr&eacute; l'&eacute;tau c4-e4, Tal gagne en 72 coups.",
-     result_en:"0-1 — Tal wins in 72 moves — Maroczy Bind broken by Tal's imagination",
-     analysis_en:"Tal demonstrates how to break the Maroczy Bind! The maneuver ...Nf5 then ...Nd4 creates irresistible complications. Despite the c4-e4 bind, Tal wins in 72 moves."
+     header:"Kasparov, G. vs Topalov, V. &middot; Wijk aan Zee 1999 — L'Immortelle &middot; (B07)",
+     moves:"1. e4 d6 2. d4 Cf6 3. Cc3 g6 4. Fe3 Fg7 5. Dd2 c6 6. f3 b5 7. Cge2 Cbd7 8. Fh6 Fxh6 9. Dxh6 Fb7 10. a3 e5 11. O-O-O De7 12. Rb1 a6 13. Cc1 O-O-O 14. Cb3 exd4 15. Txd4 c5 16. Td1 Cb6 17. g3 Rb8 18. Ca5 Fa8 19. Fh3 d5 20. Df4+ Ra7 21. The1 d4 22. Cd5 Cbxd5 23. exd5 Dd6 24. Txd4 cxd4 25. Te7+ Rb6 26. Dxd4+ Rxa5 27. b4+ Ra4 28. Dc3 Dxd5 29. Ta7 Fb7 30. Txb7 Dc4 31. Dxf6 Rxa3 32. Dxa6+ Rxb4 33. c3+ Rxc3 34. Da1+ Rd2 35. Db2+ Rd1 36. Ff1 Td2 37. Td7 Txd7 38. Fxc4 bxc4 39. Dxh8 Td3 40. Da8 c3 41. Da4+ Re1 42. f4 f5 43. Rc1 Td2 44. Da7 1-0",
+     result:"1-0 — Kasparov gagne en 44 coups — L'Immortelle de Wijk aan Zee",
+     result_en:"1-0 — Kasparov wins in 44 moves — The Immortal Game of Wijk aan Zee",
+     analysis:"La partie la plus spectaculaire de Kasparov ! Le sacrifice de tour 24.Txd4!! lance une attaque irréfutable. Le roi noir fuit jusqu'à a4 puis est maté après 44 coups dans une finale sublime. Élue meilleure partie du 20e siècle.",
+     analysis_en:"Kasparov's most spectacular game! The rook sacrifice 24.Rxd4!! launches an irrefutable attack. The Black king flees to a4 and is mated after 44 moves in a sublime finale. Voted best game of the 20th century."
+    }
+  },
+  sveshnikov:{
+   histoire:"La Variante Sveshnikov (alias Cheliabinsk) doit son nom au grand maître russe Evgeny Sveshnikov, qui la développa dans les années 1970 avec Lev Polugaevsky. L'acceptation consciente de la faiblesse en d5 en échange d'un fort centre en e5 est une idée révolutionnaire.",
+   histoire_en:"The Sveshnikov Variation (alias Chelyabinsk) is named after Russian GM Evgeny Sveshnikov, who developed it in the 1970s with Lev Polugaevsky. The conscious acceptance of a d5 weakness in exchange for a strong e5 center was a revolutionary idea.",
+   annotations:[
+    {move:"5...e5",move_en:"5...e5",comment:"Le coup emblématique du Sveshnikov : ...e5 gagne de l'espace au centre mais crée immédiatement la case faible d5.",comment_en:"The Sveshnikov's emblematic move: ...e5 gains central space but immediately creates the d5 weakness."},
+    {move:"6.Cdb5",move_en:"6.Ndb5",comment:"Exploitation immédiate de d5 : le cavalier saute en b5 menaçant d6, forçant les Noirs à accepter définitivement la faiblesse.",comment_en:"Immediate exploitation of d5: the knight leaps to b5 threatening d6, forcing Black to permanently accept the weakness."},
+    {move:"7.Fg5",move_en:"7.Bg5",comment:"Pression coordonnée : Fg5 épingle le Cf6 et ajoute une pression sur d7. Les Blancs organisent l'occupation de d5.",comment_en:"Coordinated pressure: Bg5 pins the Nf6 and adds pressure on d7. White organizes the occupation of d5."},
+    {move:"8...b5",move_en:"8...b5",comment:"Le contre-jeu noir essentiel : ...b5 chasse le cavalier de a3 et prépare l'expansion queenside qui compense dynamiquement la faiblesse d5.",comment_en:"Essential Black counterplay: ...b5 chases the knight from a3 and prepares the queenside expansion that dynamically compensates the d5 weakness."}
+   ],
+    game:{
+     header:"Carlsen, M. vs Anand, V. &middot; Match du monde 2013, Chennai p.5 &middot; Partie illustrative (D31)",
+     moves:"1.c4 e6 2.d4 d5 3.Cc3 c6 4.e4 dxe4 5.Cxe4 Fb4+ 6.Cc3 c5 7.a3 Fa5 8.Cf3 Cf6 9.Fe3 Cc6 10.Dd3 cxd4 11.Cxd4 Cg4 12.O-O-O Cxe3 13.fxe3 Fc7 14.Cxc6 bxc6 15.Dxd8+ Fxd8 16.Fe2 Re7 17.Ff3 Fd7 18.Ce4 Fb6 19.c5 f5 20.cxb6 fxe4 21.b7 Tab8 22.Fxe4 Txb7 23.Thf1 Tb5 24.Tf4 g5 25.Tf3 h5 26.Tdf1 Fe8 27.Fc2 Tc5 28.Tf6 h4 29.e4 a5 30.Rd2 Tb5 31.b3 Fh5 32.Rc3 Tc5+ 33.Rb2 Td8 34.T1f2 Td4 35.Th6 Fd1 36.Fb1 Tb5 37.Rc3 c5 38.Tb2 e5 39.Tg6 a4 40.Txg5 Txb3+ 41.Txb3 Fxb3 42.Txe5+ Rd6 43.Th5 Td1 44.e5+ Rd5 45.Fh7 Tc1+ 46.Rb2 Tg1 47.Fg8+ Rc6 48.Th6+ Rd7 49.Fxb3 axb3 50.Rxb3 Txg2 51.Txh4 Re6 52.a4 Rxe5 53.a5 Rd6 54.Th7 Rd5 55.a6 c4+ 56.Rc3 Ta2 57.a7 Rc5 58.h4 1-0",
+     result:"1-0 — Carlsen gagne en 58 coups — technique de finale élite",
+     result_en:"1-0 — Carlsen wins in 58 moves — elite endgame technique",
+     analysis:"Finale de haute voltige entre les deux meilleurs joueurs du monde. Carlsen démontre une technique de finale impeccable, convertissant un avantage minime en victoire. Représentatif de l'approche dynamique et précise illustrée par le Sveshnikov.",
+     analysis_en:"A high-level endgame battle between the world's two best players. Carlsen demonstrates impeccable endgame technique, converting a minimal advantage into victory. Representative of the dynamic and precise approach illustrated by the Sveshnikov."
+    }
+  },
+  classique:{
+   histoire:"La Variante Classique représente le développement le plus naturel et logique de la Sicilienne ouverte. Jouée à travers toute l'histoire des échecs, elle mène typiquement à la Richter-Rauzer (6.Fg5) ou à l'Attaque Sozin (6.Fc4), deux des systèmes les plus riches de la théorie sicilienne.",
+   histoire_en:"The Classical Variation represents the most natural and logical development in the Open Sicilian. Played throughout chess history, it typically leads to the Richter-Rauzer (6.Bg5) or Sozin Attack (6.Bc4), two of the richest systems in Sicilian theory.",
+   annotations:[
+    {move:"5...d6",move_en:"5...d6",comment:"Le développement classique : ...d6 soutient e5 potentiel et prépare ...Cf6 avec contrôle naturel du centre.",comment_en:"Classical development: ...d6 supports a potential ...e5 and prepares ...Nf6 with natural central control."},
+    {move:"6.Fg5",move_en:"6.Bg5",comment:"La Richter-Rauzer : 6.Fg5 épingle le Cf6 et prépare Dd2+0-0-0 avec une attaque queenside dévastatrice.",comment_en:"The Richter-Rauzer: 6.Bg5 pins the Nf6 and prepares Qd2+0-0-0 with a devastating queenside attack."},
+    {move:"6.Fc4",move_en:"6.Bc4",comment:"L'Attaque Sozin/Fischer : 6.Fc4 pointe f7 et prépare une attaque aiguë avec 0-0-0 et f4-f5.",comment_en:"The Sozin/Fischer Attack: 6.Bc4 targets f7 and prepares a sharp attack with 0-0-0 and f4-f5."},
+    {move:"6...e6",move_en:"6...e6",comment:"La réponse solide : ...e6 bloque la diagonale du Fc4 et prépare ...Fe7 avec roque côté roi.",comment_en:"The solid reply: ...e6 blocks the Bc4 diagonal and prepares ...Be7 with kingside castling."}
+   ],
+    game:{
+     header:"Fischer, R. vs Taimanov, M. &middot; Candidats 1971, Vancouver p.4 &middot; Sicilienne Classique (B47)",
+     moves:"1. e4 c5 2. Cf3 Cc6 3. d4 cxd4 4. Cxd4 Dc7 5. Cc3 e6 6. g3 a6 7. Fg2 Cf6 8. O-O Cxd4 9. Dxd4 Fc5 10. Ff4 d6 11. Dd2 h6 12. Tad1 e5 13. Fe3 Fg4 14. Fxc5 dxc5 15. f3 Fe6 16. f4 Td8 17. Cd5 Fxd5 18. exd5 e4 19. Tfe1 Txd5 20. Txe4+ Rd8 21. De2 Txd1+ 22. Dxd1+ Dd7 23. Dxd7+ Rxd7 24. Te5 b6 25. Ff1 a5 26. Fc4 Tf8 27. Rg2 Rd6 28. Rf3 Cd7 29. Te3 Cb8 30. Td3+ Rc7 31. c3 Cc6 32. Te3 Rd6 33. a4 Ce7 34. h3 Cc6 35. h4 h5 36. Td3+ Rc7 37. Td5 f5 38. Td2 Tf6 39. Te2 Rd7 40. Te3 g6 41. Fb5 Td6 42. Re2 Rd8 43. Td3 Rc7 44. Txd6 Rxd6 45. Rd3 Ce7 46. Fe8 Rd5 47. Ff7+ Rd6 48. Rc4 Rc6 49. Fe8+ Rb7 50. Rb5 Cc8 51. Fc6+ Rc7 52. Fd5 Ce7 53. Ff7 Rb7 54. Fb3 Ra7 55. Fd1 Rb7 56. Ff3+ Rc7 57. Ra6 Cg8 58. Fd5 Ce7 59. Fc4 Cc6 60. Ff7 Ce7 61. Fe8 Rd8 62. Fxg6 Cxg6 63. Rxb6 Rd7 64. Rxc5 Ce7 65. b4 axb4 66. cxb4 Cc8 67. a5 Cd6 68. b5 Ce4+ 69. Rb6 Rc8 70. Rc6 Rb8 71. b6 1-0",
+     result:"1-0 — Fischer gagne en 71 coups — finale technique parfaite",
+     result_en:"1-0 — Fischer wins in 71 moves — perfect technical endgame",
+     analysis:"Fischer domine Taimanov 6-0 dans ce match de candidats. Cette partie montre la technique de Fischer dans les finales — une fois les pièces échangées, sa précision technique est absolue. Le champion américain transforme un léger avantage en gain.",
+     analysis_en:"Fischer dominates Taimanov 6-0 in this candidates match. This game showcases Fischer's endgame technique — once pieces are exchanged, his technical precision is absolute. The American champion converts a slight advantage into a win."
+    }
+  },
+  kan:{
+   histoire:"La Variante Kan (alias Paulsen-Kan) est nommée d'après le grand maître soviétique Ilya Kan. La combinaison de ...e6 et ...a6 crée une structure d'une flexibilité remarquable — d'où le surnom de 'variante caméléon' qui peut adopter différentes formes selon le plan blanc.",
+   histoire_en:"The Kan Variation (alias Paulsen-Kan) is named after Soviet GM Ilya Kan. The combination of ...e6 and ...a6 creates a remarkably flexible structure — hence the nickname 'chameleon variation' that can take different forms depending on White's plan.",
+   annotations:[
+    {move:"2...e6",move_en:"2...e6",comment:"La Paulsen/Kan commence par ...e6 : solide, évite les complications immédiates et prépare ...d5 ou ...d6 selon les circonstances.",comment_en:"The Paulsen/Kan begins with ...e6: solid, avoids immediate complications and prepares ...d5 or ...d6 as circumstances dictate."},
+    {move:"4...a6",move_en:"4...a6",comment:"Le coup Kan : ...a6 empêche Cb5 dans toutes les lignes et prépare ...b5 sans délai. Grande flexibilité stratégique.",comment_en:"The Kan move: ...a6 prevents Nb5 in all lines and prepares ...b5 without delay. Great strategic flexibility."},
+    {move:"5.c4",move_en:"5.c4",comment:"Le Maroczy Bind : 5.c4 installe un étau c4-e4 qui limite le contre-jeu noir. La réponse la plus ambitieuse des Blancs.",comment_en:"The Maroczy Bind: 5.c4 establishes a c4-e4 vice that limits Black's counterplay. White's most ambitious response."},
+    {move:"5...b5",move_en:"5...b5",comment:"Le contre-jeu queenside immédiat — les Noirs profitent de ...a6 pour lancer ...b5 avant que les Blancs n'établissent le Maroczy.",comment_en:"Immediate queenside counterplay — Black takes advantage of ...a6 to launch ...b5 before White establishes the Maroczy."}
+   ],
+    game:{
+     header:"Fischer, R. vs Taimanov, M. &middot; Candidats 1971, Vancouver p.2 &middot; Sicilienne Kan/Paulsen (B44)",
+     moves:"1. e4 c5 2. Cf3 Cc6 3. d4 cxd4 4. Cxd4 e6 5. Cb5 d6 6. Ff4 e5 7. Fe3 Cf6 8. Fg5 Da5+ 9. Dd2 Cxe4 10. Dxa5 Cxa5 11. Fe3 Rd7 12. C1c3 Cxc3 13. Cxc3 Rd8 14. Cb5 Fe6 15. O-O-O b6 16. f4 exf4 17. Fxf4 Cb7 18. Fe2 Fd7 19. Td2 Fe7 20. Thd1 Fxb5 21. Fxb5 Rc7 22. Te2 Ff6 23. Tde1 Tac8 24. Fc4 Thf8 25. b4 a5 26. Fd5 Rb8 27. a3 Tfd8 28. Fxf7 Fc3 29. Fd2 d5 30. Td1 d4 31. Fxc3 Txc3 32. Rb2 d3 33. Rxc3 dxe2 34. Te1 Cd6 35. Fh5 Cb5+ 36. Rb2 axb4 37. axb4 Td4 38. c3 Th4 39. Fxe2 Cd6 40. Td1 Rc7 41. h3 Tf4 42. Tf1 Te4 43. Fd3 Te5 44. Tf2 h5 45. c4 Tg5 46. Rc3 Rd7 47. Ta2 Rc8 48. Rd4 Rc7 49. Ta7+ Rd8 50. c5 bxc5+ 51. bxc5 Ce8 52. Ta2 Cc7 53. Fc4 Rd7 54. Tb2 Rc6 55. Fb3 Cb5+ 56. Re3 Rxc5 57. Rf4 Tg6 58. Fd1 h4 59. Rf5 Th6 60. Rg5 Cd6 61. Fc2 Cf7+ 62. Rg4 Ce5+ 63. Rf4 Rd4 64. Tb4+ Rc3 65. Tb5 Cf7 66. Tc5+ Rd4 67. Tf5 g5+ 68. Rg4 Ce5+ 69. Rxg5 Tg6+ 70. Rxh4 Txg2 71. Fd1 Tg8 72. Fg4 Re4 73. Rg3 Tg7 74. Tf4+ Rd5 75. Ta4 Cg6 76. Ta6 Ce5 77. Rf4 Tf7+ 78. Rg5 Tg7+ 79. Rf5 Tf7+ 80. Tf6 Txf6+ 81. Rxf6 Re4 82. Fc8 Rf4 83. h4 Cf3 84. h5 Cg5 85. Ff5 Cf3 86. h6 Cg5 87. Rg6 Cf3 88. h7 Ce5+ 89. Rf6 1-0",
+     result:"1-0 — Fischer gagne en 89 coups — endurance technique",
+     result_en:"1-0 — Fischer wins in 89 moves — technical endurance",
+     analysis:"Fischer démontre une technique de finale épuisante et précise, gagnant une partie longue et complexe contre Taimanov. La patience et la précision technique de Fischer dans cette finale sont exemplaires.",
+     analysis_en:"Fischer demonstrates exhausting and precise endgame technique, winning a long and complex game against Taimanov. Fischer's patience and technical precision in this endgame are exemplary."
+    }
+  },
+  taimanov:{
+   histoire:"La Variante Taimanov est nommée d'après le grand maître soviétique Mark Taimanov (1926–2016), pianiste virtuose autant que joueur d'élite. La dame active en c7 et le cavalier en c6 forment un tandem pragmatique qui évite les complications théoriques les plus aiguës.",
+   histoire_en:"The Taimanov Variation is named after Soviet GM Mark Taimanov (1926–2016), a virtuoso pianist and elite chess player. The active queen on c7 and knight on c6 form a pragmatic tandem that avoids the sharpest theoretical complications.",
+   annotations:[
+    {move:"4...Cc6",move_en:"4...Nc6",comment:"La Taimanov commence ici : ...Cc6 développe naturellement et maintient la pression sur d4.",comment_en:"The Taimanov starts here: ...Nc6 develops naturally and maintains pressure on d4."},
+    {move:"5...Dc7",move_en:"5...Qc7",comment:"La dame en c7 surveille e5 et c4, prépare ...Cf6 et annonce l'expansion queenside imminente.",comment_en:"The queen on c7 watches e5 and c4, prepares ...Nf6 and signals imminent queenside expansion."},
+    {move:"5.Cb5",move_en:"5.Nb5",comment:"La réponse gênante : 5.Cb5 tente de troubler la coordination noire avant qu'elle ne soit établie. Les Noirs doivent jouer avec précision.",comment_en:"The annoying response: 5.Nb5 tries to disrupt Black's coordination before it is established. Black must play with precision."},
+    {move:"6...a6",move_en:"6...a6",comment:"Prophylaxie essentielle : ...a6 chasse le cavalier de b5 et consolide la structure noire.",comment_en:"Essential prophylaxis: ...a6 chases the knight from b5 and consolidates Black's structure."}
+   ],
+    game:{
+     header:"Fischer, R. vs Taimanov, M. &middot; Candidats 1971, Vancouver p.6 &middot; Sicilienne Taimanov (B44)",
+     moves:"1.e4 c5 2.Cf3 Cc6 3.d4 cxd4 4.Cxd4 e6 5.Cb5 d6 6.Ff4 e5 7.Fe3 Cf6 8.Fg5 Fe6 9.C1c3 a6 10.Fxf6 gxf6 11.Ca3 Cd4 12.Cc4 f5 13.exf5 Cxf5 14.Fd3 Tc8 15.Fxf5 Txc4 16.Fxe6 fxe6 17.De2 Td4 18.O-O Dg5 19.Tad1 Df5 20.Txd4 exd4 21.Ce4 Fe7 22.Td1 De5 23.Dd3 Tf8 24.Dxd4 Dxd4 25.Txd4 d5 26.Cc3 Fc5 27.Td2 Tf4 28.g3 Tc4 29.Ce2 Ta4 30.a3 Rd7 31.Rg2 b5 32.c3 a5 33.Cd4 b4 34.Cb3 Fb6 35.axb4 axb4 36.c4 Rc6 37.c5 Fc7 38.Cd4+ Rd7 39.f4 e5 40.c6+ Rc8 41.Cb5 Ta2 42.f5 Fd8 43.Txd5 Txb2 1-0",
+     result:"1-0 — Fischer gagne en 43 coups — 6-0 contre l'inventeur",
+     result_en:"1-0 — Fischer wins in 43 moves — 6-0 against the inventor",
+     analysis:"La 6e partie du match de candidats 1971, Fischer bat Taimanov pour la 6e fois ! Fischer démontre une précision tactique dévastatrice, exploitant toutes les faiblesses structurelles de la position de l'inventeur même de cette variante.",
+     analysis_en:"The 6th game of the 1971 Candidates match, Fischer beats Taimanov for the 6th time! Fischer demonstrates devastating tactical precision, exploiting all structural weaknesses in the position of the very inventor of this variation."
+    }
+  },
+  quatrecavaliers:{
+   histoire:"La Variante des Quatre Cavaliers est l'une des configurations les plus naturelles de la Sicilienne — les quatre cavaliers occupent leurs cases de développement optimal dès les premiers coups. Elle offre d'excellentes perspectives de transposition vers le Scheveningen, le Taimanov ou d'autres systèmes siciliens.",
+   histoire_en:"The Four Knights Variation is one of the most natural configurations in the Sicilian — all four knights occupy their optimal development squares in the first moves. It offers excellent transposition prospects toward the Scheveningen, Taimanov, or other Sicilian systems.",
+   annotations:[
+    {move:"5...Cc6",move_en:"5...Nc6",comment:"Les Quatre Cavaliers : tous développés, la position reste tendue et pleine d'options stratégiques pour les deux camps.",comment_en:"The Four Knights: all developed, the position remains tense and full of strategic options for both sides."},
+    {move:"5.Cxc6",move_en:"5.Nxc6",comment:"L'échange immédiat simplifie mais crée un pion doublé en c6 chez les Noirs — avantage structurel blanc à long terme.",comment_en:"The immediate exchange simplifies but creates a doubled pawn on c6 for Black — a long-term structural advantage for White."},
+    {move:"5...Fb4",move_en:"5...Bb4",comment:"La variante Nimzowitsch : épingler le Cc3 crée des complications immédiates et des déséquilibres. Les Noirs visent ...Cxe4.",comment_en:"The Nimzowitsch variation: pinning the Nc3 creates immediate complications and imbalances. Black targets ...Nxe4."},
+    {move:"6.Fe3",move_en:"6.Be3",comment:"Développement naturel : Fe3 prépare 0-0-0 ou 0-0 et maintient la tension centrale.",comment_en:"Natural development: Be3 prepares 0-0-0 or 0-0 and maintains central tension."}
+   ],
+    game:{
+     header:"Kasparov, G. vs Kramnik, V. &middot; Dos Hermanas 1996 &middot; Partie illustrative (D47)",
+     moves:"1.d4 d5 2.c4 c6 3.Cc3 Cf6 4.Cf3 e6 5.e3 Cbd7 6.Fd3 dxc4 7.Fxc4 b5 8.Fd3 Fb7 9.O-O a6 10.e4 c5 11.d5 c4 12.Fc2 Dc7 13.Cd4 Cc5 14.b4 cxb3 15.axb3 b4 16.Ca4 Ccxe4 17.Fxe4 Cxe4 18.dxe6 Fd6 19.exf7+ Dxf7 20.f3 Dh5 21.g3 O-O 22.fxe4 Dh3 23.Cf3 Fxg3 24.Cc5 Txf3 25.Txf3 Dxh2+ 26.Rf1 Fc6 27.Fg5 Fb5+ 28.Cd3 Te8 29.Ta2 Dh1+ 30.Re2 Txe4+ 31.Rd2 Dg2+ 32.Rc1 Dxa2 33.Txg3 Da1+ 34.Rc2 Dc3+ 35.Rb1 Td4 0-1",
+     result:"0-1 — Kramnik gagne en 35 coups — contre-attaque fulgurante",
+     result_en:"0-1 — Kramnik wins in 35 moves — devastating counter-attack",
+     analysis:"Kramnik renverse Kasparov avec une contre-attaque spectaculaire. Après le sacrifice de tour 24...Txf3!, la dame noire s'infiltre et la position blanche s'effondre. Illustration de la puissance du contre-jeu dans les structures à quatre cavaliers.",
+     analysis_en:"Kramnik reverses Kasparov with a spectacular counter-attack. After the rook sacrifice 24...Rxf3!, the Black queen infiltrates and the White position collapses. An illustration of the power of counterplay in four-knight structures."
+    }
+  },
+  richter_rauzer:{
+   histoire:"L'Attaque Richter-Rauzer est nommée d'après les grands maîtres allemand Kurt Richter et soviétique Vsevolod Rauzer, qui la développèrent indépendamment dans les années 1930–40. Le coup 6.Fg5 crée une pression immédiate sur le cavalier f6 et prépare un jeu agressif avec 0-0-0 et f4-f5.",
+   histoire_en:"The Richter-Rauzer Attack is named after German GM Kurt Richter and Soviet GM Vsevolod Rauzer, who independently developed it in the 1930s–40s. The move 6.Bg5 creates immediate pressure on the f6 knight and prepares aggressive play with 0-0-0 and f4-f5.",
+   annotations:[
+    {move:"5...Cc6",move_en:"5...Nc6",comment:"Le développement classique qui crée la structure pour la Richter-Rauzer. ...Cc6 presse d4 et prépare ...e6.",comment_en:"The classical development that sets up the Richter-Rauzer structure. ...Nc6 presses d4 and prepares ...e6."},
+    {move:"6.Fg5",move_en:"6.Bg5",comment:"L'épingle de Richter-Rauzer : Fg5 met une pression sur f6 et d7. Si ...e6, la case d5 s'ouvre pour les Blancs.",comment_en:"The Richter-Rauzer pin: Bg5 puts pressure on f6 and d7. If ...e6, the d5 square opens up for White."},
+    {move:"6...e6",move_en:"6...e6",comment:"La réponse la plus solide : ...e6 libère le fou roi et prépare ...Fe7 pour neutraliser l'épingle Fg5.",comment_en:"The most solid reply: ...e6 liberates the king bishop and prepares ...Be7 to neutralize the Bg5 pin."},
+    {move:"7.Dd2",move_en:"7.Qd2",comment:"Coordination de l'attaque : Dd2 prépare 0-0-0 et relie les tours, menaçant f4-f5 pour ouvrir le jeu.",comment_en:"Attack coordination: Qd2 prepares 0-0-0 and connects the rooks, threatening f4-f5 to open the game."}
+   ],
+    game:{
+     header:"Fischer, R. vs Spassky, B. &middot; Match du monde 1972, Reykjavik p.4 &middot; Sicilienne Sozin (B88)",
+     moves:"1. e4 c5 2. Cf3 d6 3. d4 cxd4 4. Cxd4 Cf6 5. Cc3 Cc6 6. Fc4 e6 7. Fb3 Fe7 8. Fe3 O-O 9. O-O a6 10. f4 Cxd4 11. Fxd4 b5 12. a3 Fb7 13. Dd3 a5 14. e5 dxe5 15. fxe5 Cd7 16. Cxb5 Cc5 17. Fxc5 Fxc5+ 18. Rh1 Dg5 19. De2 Tad8 20. Tad1 Txd1 21. Txd1 h5 22. Cd6 Fa8 23. Fc4 h4 24. h3 Fe3 25. Dg4 Dxe5 26. Dxh4 g5 27. Dg4 Fc5 28. Cb5 Rg7 29. Cd4 Th8 30. Cf3 Fxf3 31. Dxf3 Fd6 32. Dc3 Dxc3 33. bxc3 Fe5 34. Td7 Rf6 35. Rg1 Fxc3 36. Fe2 Fe5 37. Rf1 Tc8 38. Fh5 Tc7 39. Txc7 Fxc7 40. a4 Re7 41. Re2 f5 42. Rd3 Fe5 43. c4 Rd6 44. Ff7 Fg3 45. c5+ 1/2-1/2",
+     result:"1/2-1/2 — Nulle en 45 coups — lutte stratégique équilibrée",
+     result_en:"1/2-1/2 — Draw in 45 moves — balanced strategic battle",
+     analysis:"Fischer et Spassky livrent une longue lutte stratégique dans le match du monde 1972. Le sacrifice de pion 14.e5! de Fischer crée des complications qui mènent finalement à une nulle théorique. Illustration de la richesse stratégique de l'Attaque Sozin.",
+     analysis_en:"Fischer and Spassky wage a long strategic battle in the 1972 World Championship. Fischer's pawn sacrifice 14.e5! creates complications that ultimately lead to a theoretical draw. An illustration of the strategic richness of the Sozin Attack."
+    }
+  },
+  english_attack:{
+   histoire:"L'Attaque Anglaise est un système populaire développé par les grands maîtres anglais dans les années 1980–90, notamment Murray Chandler et Nigel Short. Son idée centrale — Fe3, f3, Dd2, g4 — est applicable contre la Najdorf, le Scheveningen et la Variante Classique, en faisant un outil polyvalent redoutable.",
+   histoire_en:"The English Attack is a popular system developed by English grandmasters in the 1980s–90s, notably Murray Chandler and Nigel Short. Its central idea — Be3, f3, Qd2, g4 — is applicable against the Najdorf, Scheveningen, and Classical Variation, making it a formidable multi-purpose weapon.",
+   annotations:[
+    {move:"6.Fe3",move_en:"6.Be3",comment:"L'Attaque Anglaise commence : Fe3 prépare f3, Dd2, g4-g5. Le plan d'attaque le plus systématique du 21e siècle.",comment_en:"The English Attack begins: Be3 prepares f3, Qd2, g4-g5. The most systematic attacking plan of the 21st century."},
+    {move:"6...a6",move_en:"6...a6",comment:"Prophylaxie noire : ...a6 empêche Cb5 et prépare ...b5 pour le contre-jeu queenside vital.",comment_en:"Black's prophylaxis: ...a6 prevents Nb5 and prepares ...b5 for vital queenside counterplay."},
+    {move:"7.f3",move_en:"7.f3",comment:"La construction du mur blanc : f3 renforce e4 et prépare g4-g5. Priorité : atteindre g5 avant que les Noirs ne roqueront.",comment_en:"White builds the wall: f3 reinforces e4 and prepares g4-g5. Priority: reach g5 before Black can castle."},
+    {move:"7...b5",move_en:"7...b5",comment:"Le contre-jeu incontournable : ...b5 doit être joué rapidement avant que l'attaque blanche ne soit trop avancée.",comment_en:"Unavoidable counterplay: ...b5 must be played quickly before White's attack becomes too advanced."}
+   ],
+    game:{
+     header:"Kasparov, G. vs Kamsky, G. &middot; Linares 1993 r.13 &middot; Sicilienne Attaque Anglaise (B80)",
+     moves:"1. e4 c5 2. Cf3 e6 3. d4 cxd4 4. Cxd4 Cf6 5. Cc3 d6 6. Fe3 a6 7. f3 Cbd7 8. g4 h6 9. Tg1 Db6 10. a3 Ce5 11. Ff2 Dc7 12. f4 Cc4 13. Fxc4 Dxc4 14. Df3 e5 15. Cf5 Fxf5 16. gxf5 d5 17. fxe5 Cxe4 18. Tg4 h5 19. Th4 Fc5 20. O-O-O Fxf2 21. Cxe4 dxe4 22. Dxf2 Tc8 23. Rb1 Td8 24. Txd8+ Rxd8 25. Th3 Dd5 26. Tc3 Rd7 27. Db6 Td8 28. Tc5 Dd1+ 29. Ra2 Re8 30. Dxb7 Dg4 31. e6 fxe6 32. Te5 Dg5 33. h4 Dxh4 34. Txe6+ Rf8 35. f6 1-0",
+     result:"1-0 — Kasparov gagne en 35 coups — Attaque Anglaise modèle",
+     result_en:"1-0 — Kasparov wins in 35 moves — model English Attack",
+     analysis:"Kasparov démontre l'Attaque Anglaise à sa perfection ! La progression g4-g5-Tg4 est dévastatrice, Kamsky ne peut résister. Après 35.f6!, les Noirs abandonnent face à l'inévitable mat. Partie de référence absolue de cette ligne.",
+     analysis_en:"Kasparov demonstrates the English Attack to perfection! The advance g4-g5-Rg4 is devastating, Kamsky cannot resist. After 35.f6!, Black resigns facing the inevitable mate. An absolute reference game for this line."
+    }
+  },
+  grand_prix:{
+   histoire:"Le Grand Prix Attack tire son nom des tournois 'Grand Prix' du circuit amateurs britannique des années 1980, où il était fréquemment employé. L'idée 2.Cc3 suivi de f4 est directe : attaquer le roi noir avant même d'ouvrir le centre. Populaire en pratique pour sa facilité d'emploi et son effet surprise.",
+   histoire_en:"The Grand Prix Attack takes its name from the British amateur 'Grand Prix' tournament circuit of the 1980s, where it was frequently employed. The idea 2.Nc3 followed by f4 is direct: attack Black's king before even opening the center. Popular in practice for its ease of use and surprise effect.",
+   annotations:[
+    {move:"2.Cc3",move_en:"2.Nc3",comment:"Le Grand Prix commence sans 2.d4 : les Blancs gardent la flexibilité pour f4 sans s'engager dans la Sicilienne ouverte.",comment_en:"The Grand Prix begins without 2.d4: White keeps flexibility for f4 without committing to the Open Sicilian."},
+    {move:"3.f4",move_en:"3.f4",comment:"L'attaque prend forme : f4+e4 est la chaîne de pions caractéristique du Grand Prix Attack.",comment_en:"The attack takes shape: f4+e4 is the characteristic pawn chain of the Grand Prix Attack."},
+    {move:"5.Fc4",move_en:"5.Bc4",comment:"Le fou agressif : Fc4 vise f7 et prépare une attaque rapide avec f5, Fe3, Dd2, 0-0-0.",comment_en:"The aggressive bishop: Bc4 targets f7 and prepares a rapid attack with f5, Be3, Qd2, 0-0-0."},
+    {move:"3...d5",move_en:"3...d5",comment:"Le contre-jeu idéal contre le Grand Prix : ...d5! conteste le centre immédiatement et est la meilleure réponse.",comment_en:"The ideal counterplay against the Grand Prix: ...d5! immediately contests the center and is the best response."}
+   ],
+    game:{
+     header:"Ivanchuk, V. vs Kramnik, V. &middot; Dos Hermanas 1996 r.8 &middot; Sicilienne — Richter-Rauzer (B62)",
+     moves:"1.e4 c5 2.Cf3 Cc6 3.d4 cxd4 4.Cxd4 Cf6 5.Cc3 d6 6.Fg5 e6 7.Dd2 a6 8.O-O-O h6 9.Fe3 Fe7 10.f4 Cxd4 11.Fxd4 b5 12.De3 Dc7 13.e5 dxe5 14.Fxe5 Cg4 15.Df3 Cxe5 16.Dxa8 Cd7 17.g3 Cb6 18.Df3 Fb7 19.Ce4 f5 20.Dh5+ Rf8 21.Cf2 Ff6 22.Fd3 Ca4 23.The1 Fxb2+ 24.Rb1 Fd5 25.Fxb5 Fxa2+ 26.Rxa2 axb5 27.Rb1 Da5 28.Cd3 Fa3 29.Ra2 Cc3+ 30.Rb3 Cd5 31.Ra2 Fb4 32.Rb1 Fc3 0-1",
+     result:"0-1 — Kramnik gagne en 32 coups — contre-attaque magistrale",
+     result_en:"0-1 — Kramnik wins in 32 moves — masterful counter-attack",
+     analysis:"Kramnik neutralise l'attaque blanche et retourne la situation avec une contre-attaque basée sur les sacrifices 23...Fxb2+! et 25...Fxa2+!. La combinaison finale est une leçon sur l'exploitation des faiblesses du roi blanc exposé.",
+     analysis_en:"Kramnik neutralizes White's attack and reverses the situation with a counter-attack based on the sacrifices 23...Bxb2+! and 25...Bxa2+!. The final combination is a lesson in exploiting a White king's weaknesses."
+    }
+  },
+  morra:{
+   histoire:"Le Gambit Morra (Smith-Morra) est nommé d'après l'Américain Ken Smith et le Français Pierre Morra, qui le popularisèrent indépendamment dans les années 1950–70. Le sacrifice du pion 2.d4 cxd4 3.c3 est audacieux et efficace en pratique, surtout contre des adversaires non préparés ou en parties rapides.",
+   histoire_en:"The Morra Gambit (Smith-Morra) is named after American Ken Smith and Frenchman Pierre Morra, who popularized it independently in the 1950s–70s. The pawn sacrifice 2.d4 cxd4 3.c3 is bold and effective in practice, especially against unprepared opponents or in rapid games.",
+   annotations:[
+    {move:"2.d4",move_en:"2.d4",comment:"Le Gambit Morra commence ici : les Blancs offrent le pion pour un développement foudroyant.",comment_en:"The Morra Gambit starts here: White offers the pawn for lightning development."},
+    {move:"3.c3",move_en:"3.c3",comment:"La clé du gambit : 3.c3 propose le deuxième pion pour récupérer avec Cxc3 et un développement massif.",comment_en:"The key of the gambit: 3.c3 offers the second pawn to recapture with Nxc3 and massive development."},
+    {move:"6.Fc4",move_en:"6.Bc4",comment:"Le fou agressif : Fc4 vise f7 et prépare une pression constante sur la position noire.",comment_en:"The aggressive bishop: Bc4 targets f7 and prepares constant pressure on Black's position."},
+    {move:"7.0-0",move_en:"7.0-0",comment:"Le roque rapide complète le développement blanc et prépare Te1 avec des menaces directes sur e6 et f7.",comment_en:"Rapid castling completes White's development and prepares Re1 with direct threats on e6 and f7."}
+   ],
+    game:{
+     header:"Esserman, M. vs van Wely, L. &middot; US Open 2011 r.6 &middot; Sicilienne Gambit Morra (B21)",
+     moves:"1.e4 c5 2.d4 cxd4 3.c3 dxc3 4.Cxc3 Cc6 5.Cf3 e6 6.Fc4 a6 7.O-O Cge7 8.Fg5 f6 9.Fe3 Cg6 10.Fb3 b5 11.Cd5 exd5 12.exd5 Cce5 13.d6 Fb7 14.Cxe5 fxe5 15.f4 Df6 16.fxe5 Dxe5 17.Fg5 Fe7 18.Ff7 Rd8 19.dxe7 Cxe7 20.Dd2 Rc8 21.Tac1 Cc6 22.Tfd1 Df5 23.Ff4 Dxf7 24.Dd6 Rd8 25.Txc6 Fxc6 26.Dxc6 1-0",
+     result:"1-0 — Esserman gagne en 26 coups — Morra Gambit dévastateur",
+     result_en:"1-0 — Esserman wins in 26 moves — devastating Morra Gambit",
+     analysis:"Le spécialiste du Morra Gambit Marc Esserman bat le grand maître van Wely (2735 Elo) avec une préparation dévastatrice ! Le sacrifice de pièce 11.Cd5! est irréfutable. Preuve que le Morra reste dangereux même au plus haut niveau.",
+     analysis_en:"Morra Gambit specialist Marc Esserman defeats GM van Wely (2735 Elo) with devastating preparation! The piece sacrifice 11.Nd5! is irrefutable. Proof that the Morra remains dangerous even at the highest level."
     }
   }
  },
+
  6:{
   classique:{
    histoire:"La Défense Française fut jouée pour la première fois lors d'une correspondance par équipe entre Paris et Londres en 1834 — d'où son nom. La chaîne de pions e6-d5 est une forteresse, mais le Fou c8 reste le problème structurel des Noirs. Van der Sterren note qu'elle est «&thinsp;considérée solide depuis deux cents ans&thinsp;».",
