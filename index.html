@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -239,6 +239,57 @@
       </div>
     </div>
     <div class="content-container" id="content4"></div>
+  </div>
+</div>
+
+<!-- Ch.46 -->
+<div class="chapter-card">
+  <div class="chapter-header"><h3 data-i18n="ch46">46. La Défense Petroff</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board46" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(46)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(46)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc46"></div>
+      <div class="variant-selector" id="vs46">
+        <button class="btn-var active" data-i18n="var_petrov" onclick="switchVariant(46,'petrov',event)">Défense Petrov</button>
+        <button class="btn-var" data-i18n="var_classique" onclick="switchVariant(46,'classique',event)">Variante Classique</button>
+        <button class="btn-var" data-i18n="var_nimzowitsch" onclick="switchVariant(46,'nimzowitsch',event)">Attaque Nimzowitsch</button>
+        <button class="btn-var" data-i18n="var_lasker" onclick="switchVariant(46,'lasker',event)">Attaque Lasker / Cozio</button>
+        <button class="btn-var" data-i18n="var_cochrane" onclick="switchVariant(46,'cochrane',event)">Gambit Cochrane</button>
+        <button class="btn-var" data-i18n="var_steinitz" onclick="switchVariant(46,'steinitz',event)">Variante Steinitz (C43)</button>
+        <button class="btn-var" data-i18n="var_stafford" onclick="switchVariant(46,'stafford',event)">Gambit Stafford</button>
+      </div>
+      <div class="engine-panel" id="ep46">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(46)">
+            <div class="engine-switch" id="esw46"></div>
+            <div class="engine-status-dot" id="esd46"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb46">
+          <div class="engine-loading" id="el46">Chargement du moteur...</div>
+          <div id="er46" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf46"></div></div>
+              <div class="eval-score" id="esc46">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm46"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp46">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content46"></div>
   </div>
 </div>
 
@@ -2091,57 +2142,6 @@
       </div>
     </div>
     <div class="content-container" id="content45"></div>
-  </div>
-</div>
-
-<!-- Ch.46 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch46">46. La Défense Petroff</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board46" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(46)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(46)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc46"></div>
-      <div class="variant-selector" id="vs46">
-        <button class="btn-var active" data-i18n="var_petrov" onclick="switchVariant(46,'petrov',event)">Défense Petrov</button>
-        <button class="btn-var" data-i18n="var_classique" onclick="switchVariant(46,'classique',event)">Variante Classique</button>
-        <button class="btn-var" data-i18n="var_nimzowitsch" onclick="switchVariant(46,'nimzowitsch',event)">Attaque Nimzowitsch</button>
-        <button class="btn-var" data-i18n="var_lasker" onclick="switchVariant(46,'lasker',event)">Attaque Lasker / Cozio</button>
-        <button class="btn-var" data-i18n="var_cochrane" onclick="switchVariant(46,'cochrane',event)">Gambit Cochrane</button>
-        <button class="btn-var" data-i18n="var_steinitz" onclick="switchVariant(46,'steinitz',event)">Variante Steinitz (C43)</button>
-        <button class="btn-var" data-i18n="var_stafford" onclick="switchVariant(46,'stafford',event)">Gambit Stafford</button>
-      </div>
-      <div class="engine-panel" id="ep46">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(46)">
-            <div class="engine-switch" id="esw46"></div>
-            <div class="engine-status-dot" id="esd46"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb46">
-          <div class="engine-loading" id="el46">Chargement du moteur...</div>
-          <div id="er46" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf46"></div></div>
-              <div class="eval-score" id="esc46">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm46"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp46">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content46"></div>
   </div>
 </div>
 
