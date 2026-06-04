@@ -340,28 +340,6 @@ var DB = {
       piege:"Les Blancs doivent faire attention aux brèches si leur Cavalier d4 se fait chasser.",
       piege_en:"White must beware of gaps if their d4 Knight gets driven away.",
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"d7",to:"d6"},{from:"d2",to:"d4"},{from:"e5",to:"d4"},{from:"f3",to:"d4"},{from:"g8",to:"f6"}]
-    },
-    petrov: {
-      line:"1.e4 e5 2.Cf3 Cf6 3.Cxe5 d6 4.Cf3 Cxe4 5.d4 d5",
-      fondement:"La Défense Petrov (1.e4 e5 2.Cf3 Cf6) cherche à forcer la nulle par une symétrie parfaite.",
-      fondement_en:"The Petrov Defense (1.e4 e5 2.Nf3 Nf6) seeks to force a draw through perfect symmetry.",
-      avantages:"Très solide, mène à une égalité presque assurée avec un jeu correct.",
-      avantages_en:"Very solid, leads to near-certain equality with correct play.",
-      inconvenients:"Joue ouvertement pour la nulle. Position symétrique restrictive.",
-      inconvenients_en:"Openly plays for a draw. Restrictive symmetric position.",
-      blancs:"Manœuvrer avec une extrême finesse positionnelle pour conserver une infime initiative.",
-      blancs_en:"Maneuver with extreme positional finesse to retain the slightest initiative.",
-      noirs:"Échanger méthodiquement les pièces actives au centre et liquider la position.",
-      noirs_en:"Methodically exchange the active central pieces and liquidate the position.",
-      cases:"e4, d5 (cases fortes de centralisation des Cavaliers).",
-      cases_en:"e4, d5 (strong central Knight squares).",
-      finale:"L'objectif ultime : atteindre une finale plate et égale pour sécuriser un score.",
-      finale_en:"The ultimate goal: reach a flat, equal endgame to secure a score.",
-      stats:"Pilier historique des matchs de Championnat du Monde.",
-      stats_en:"Historic pillar of World Championship matches.",
-      piege:"L'ouverture exige une précision absolue : la moindre faille brise la forteresse.",
-      piege_en:"The opening demands absolute precision: the slightest flaw breaks the fortress.",
-      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"f3",to:"e5"},{from:"d7",to:"d6"},{from:"e5",to:"f3"},{from:"f6",to:"e4"},{from:"d2",to:"d4"},{from:"d6",to:"d5"}]
     }
   },
   5: {
@@ -628,6 +606,50 @@ var DB = {
       piege:"Après 6...Cf6, le sacrifice 7.e5! dxe5 8.Dxd8+ Cxd8 9.Cxe5 est thématique et donne une position déséquilibrée.",
       piege_en:"After 6...Nf6, the sacrifice 7.e5! dxe5 8.Qxd8+ Nxd8 9.Nxe5 is thematic and gives an unbalanced position.",
       moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"c2",to:"c3"},{from:"d4",to:"c3"},{from:"b1",to:"c3"},{from:"b8",to:"c6"},{from:"g1",to:"f3"},{from:"d7",to:"d6"},{from:"f1",to:"c4"}]
+    },
+    alapin: {
+      line:"1.e4 c5 2.c3 Cf6 3.e5 Cd5 4.d4 cxd4 5.Cf3",
+      fondement:"L'Alapin (2.c3) est l'anti-Sicilienne la plus solide. Les Blancs préparent d4 pour bâtir un centre classique, évitant l'immense théorie de la Sicilienne ouverte.",
+      fondement_en:"The Alapin (2.c3) is the most solid anti-Sicilian. White prepares d4 to build a classical center, sidestepping the immense theory of the Open Sicilian.",
+      avantages:"Centre de pions sain, plans clairs, très peu de théorie à mémoriser.",
+      avantages_en:"Sound pawn center, clear plans, very little theory to memorize.",
+      inconvenients:"Le coup c3 prive le Cavalier b1 de sa meilleure case et concède un jeu confortable aux Noirs.",
+      inconvenients_en:"The move c3 deprives the b1-Knight of its best square and concedes Black comfortable play.",
+      blancs:"Construire et soutenir le centre d4-e5, développer harmonieusement et exploiter l'avance d'espace.",
+      blancs_en:"Build and support the d4-e5 center, develop harmoniously and exploit the space advantage.",
+      noirs:"Contester le centre par ...d5 (à la française) ou ...d6/...Cf6 pour harceler le pion e5.",
+      noirs_en:"Challenge the center with ...d5 (French-style) or ...d6/...Nf6 to harass the e5 pawn.",
+      cases:"d5 (avant-poste noir), e5 (coin de la chaîne blanche), d4 (case centrale).",
+      cases_en:"d5 (Black's outpost), e5 (head of White's chain), d4 (central square).",
+      finale:"Finales équilibrées où la structure de pions saine des Blancs compense l'absence d'initiative.",
+      finale_en:"Balanced endgames where White's sound pawn structure offsets the lack of initiative.",
+      stats:"ECO B22 · Très populaire au niveau club et en parties rapides pour sa simplicité.",
+      stats_en:"ECO B22 · Very popular at club level and in rapid games for its simplicity.",
+      piege:"Après 2...d5 3.exd5 Dxd5 4.d4 Cf6, les Blancs ne doivent pas jouer 5.Cf3?! cxd4 trop tôt sans préparation.",
+      piege_en:"After 2...d5 3.exd5 Qxd5 4.d4 Nf6, White must not play 5.Nf3?! cxd4 prematurely without preparation.",
+      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"c2",to:"c3"},{from:"g8",to:"f6"},{from:"e4",to:"e5"},{from:"f6",to:"d5"},{from:"d2",to:"d4"},{from:"c5",to:"d4"},{from:"g1",to:"f3"}]
+    },
+    rossolimo: {
+      line:"1.e4 c5 2.Cf3 Cc6 3.Fb5",
+      fondement:"La variante Rossolimo (3.Fb5) est une anti-Sicilienne dans l'esprit de la Ruy Lopez. Les Blancs visent le Cavalier c6 pour endommager la structure noire ou la centralisation.",
+      fondement_en:"The Rossolimo Variation (3.Bb5) is an anti-Sicilian in the spirit of the Ruy Lopez. White targets the c6-Knight to damage Black's structure or central control.",
+      avantages:"Évite la Sicilienne ouverte, mène à un jeu positionnel sain avec la paire de fous potentielle.",
+      avantages_en:"Avoids the Open Sicilian, leading to sound positional play with the potential bishop pair.",
+      inconvenients:"Moins agressive ; les Noirs disposent de plusieurs égalisations confortables (...g6, ...e6, ...d6).",
+      inconvenients_en:"Less aggressive; Black has several comfortable equalizing setups (...g6, ...e6, ...d6).",
+      blancs:"Échanger en c6 au bon moment pour fixer une faiblesse, puis pression positionnelle lente.",
+      blancs_en:"Exchange on c6 at the right moment to fix a weakness, then apply slow positional pressure.",
+      noirs:"Fianchettoer en g7 ou jouer ...e6, conserver une structure saine et viser la rupture ...d5.",
+      noirs_en:"Fianchetto on g7 or play ...e6, keep a sound structure and aim for the ...d5 break.",
+      cases:"c6 (cible du Fou b5), d4 et e5 (cases centrales disputées).",
+      cases_en:"c6 (target of the b5-Bishop), d4 and e5 (contested central squares).",
+      finale:"Finales tranquilles où la qualité des structures décide ; souvent un léger plus blanc.",
+      finale_en:"Quiet endgames decided by structural quality; often a slight White edge.",
+      stats:"ECO B30-B31 · Choix de prédilection des joueurs de tournoi modernes contre la Sicilienne.",
+      stats_en:"ECO B30-B31 · A favorite of modern tournament players against the Sicilian.",
+      piege:"Après 3...g6 4.Fxc6 dxc6 5.d3, les Noirs gardent la paire de fous mais doivent surveiller e5.",
+      piege_en:"After 3...g6 4.Bxc6 dxc6 5.d3, Black keeps the bishop pair but must watch the e5 square.",
+      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c5"},{from:"g1",to:"f3"},{from:"b8",to:"c6"},{from:"f1",to:"b5"}]
     }
   },
 
@@ -699,6 +721,50 @@ var DB = {
       piege:"Le blocus complet des cases sombres par les Blancs est une menace à ne pas sous-estimer.",
       piege_en:"After 3.e5 c5 4.c3 Nc6 5.Nf3 Qb6 6.Bd3?! cxd4 7.cxd4 Nxd4! wins material.",
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e6"},{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"e4",to:"e5"},{from:"c7",to:"c5"},{from:"c2",to:"c3"},{from:"b8",to:"c6"}]
+    },
+    tarrasch: {
+      line:"1.e4 e6 2.d4 d5 3.Cd2",
+      fondement:"La variante Tarrasch (3.Cd2) développe le Cavalier sans bloquer le pion c et en évitant le clouage ...Fb4 de la Winawer. C'est l'approche la plus saine et flexible contre la Française.",
+      fondement_en:"The Tarrasch Variation (3.Nd2) develops the Knight without blocking the c-pawn and avoids the ...Bb4 pin of the Winawer. It is the soundest, most flexible approach against the French.",
+      avantages:"Évite le clouage, conserve la structure intacte et la possibilité de jouer c3-c4 plus tard.",
+      avantages_en:"Avoids the pin, keeps the structure intact and the option of playing c3-c4 later.",
+      inconvenients:"Le Cd2 obstrue momentanément le Fou c1 et est moins ambitieux que 3.Cc3.",
+      inconvenients_en:"The Nd2 momentarily blocks the c1-Bishop and is less ambitious than 3.Nc3.",
+      blancs:"Adopter la structure pion isolé après ...c5 ou avancer e5 ; développer rapidement et roquer.",
+      blancs_en:"Adopt the isolated-pawn structure after ...c5 or advance e5; develop quickly and castle.",
+      noirs:"Frapper le centre par ...c5 (ligne ouverte) ou ...Cf6 (ligne fermée) pour un jeu équilibré.",
+      noirs_en:"Strike the center with ...c5 (open line) or ...Nf6 (closed line) for balanced play.",
+      cases:"e5 et d4 (centre blanc), d5 et c5 (leviers noirs).",
+      cases_en:"e5 and d4 (White's center), d5 and c5 (Black's levers).",
+      finale:"Finales souvent égales ; le pion dame isolé blanc peut être force ou faiblesse.",
+      finale_en:"Endgames often equal; White's isolated d-pawn can be a strength or a weakness.",
+      stats:"ECO C03-C09 · L'arme principale de Karpov et Kasparov contre la Française.",
+      stats_en:"ECO C03-C09 · The main weapon of Karpov and Kasparov against the French.",
+      piege:"Après 3...c5 4.exd5 Dxd5 5.Cgf3 cxd4 6.Fc4 Dd6, la précision est requise pour exploiter le tempo.",
+      piege_en:"After 3...c5 4.exd5 Qxd5 5.Ngf3 cxd4 6.Bc4 Qd6, precision is required to exploit the tempo.",
+      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e6"},{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"b1",to:"d2"}]
+    },
+    echange: {
+      line:"1.e4 e6 2.d4 d5 3.exd5 exd5",
+      fondement:"La variante de l'Échange (3.exd5) libère immédiatement la tension centrale et crée une structure symétrique. Elle dissout le célèbre « problème du Fou c8 » de la Française.",
+      fondement_en:"The Exchange Variation (3.exd5) releases the central tension immediately and creates a symmetrical structure. It resolves the famous 'bad c8-Bishop problem' of the French.",
+      avantages:"Position claire et symétrique ; le Fou problématique des Noirs est libéré, jeu facile pour les deux camps.",
+      avantages_en:"Clear, symmetrical position; Black's problem Bishop is freed, with easy play for both sides.",
+      inconvenients:"Réputée stérile et nullarde ; les Blancs renoncent à toute prétention d'avantage d'ouverture.",
+      inconvenients_en:"Reputed to be sterile and drawish; White gives up any claim to an opening advantage.",
+      blancs:"Jouer pour une légère initiative de développement, viser la colonne e et les avant-postes c5/e5.",
+      blancs_en:"Play for a slight developmental initiative, target the e-file and the c5/e5 outposts.",
+      noirs:"Développer symétriquement, contester la colonne e et viser l'égalité complète.",
+      noirs_en:"Develop symmetrically, contest the e-file and aim for full equality.",
+      cases:"e4/e5 (cases d'avant-poste), colonne e (axe d'échange des Tours).",
+      cases_en:"e4/e5 (outpost squares), the e-file (axis for rook exchanges).",
+      finale:"Finales symétriques très nulles ; un seul tempo ou une faiblesse minime peut faire la différence.",
+      finale_en:"Highly drawish symmetrical endgames; a single tempo or tiny weakness can decide.",
+      stats:"ECO C01 · Souvent choisie pour neutraliser un adversaire ou jouer la sécurité.",
+      stats_en:"ECO C01 · Often chosen to neutralize an opponent or play it safe.",
+      piege:"L'attaque Monte-Carlo 4.c4! relance la lutte et peut surprendre les Noirs cherchant la nulle.",
+      piege_en:"The Monte Carlo attack 4.c4! revives the fight and can surprise Black looking for a draw.",
+      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e6"},{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"e4",to:"d5"},{from:"e6",to:"d5"}]
     }
   },
   7: {
@@ -736,6 +802,28 @@ var DB = {
       piege:"Attention aux poussées centrales brutales d5 qui ouvrent le jeu pour les Fous blancs.",
       piege_en:"White must not push d5 prematurely without adequate piece support.",
       moves:[{from:"e2",to:"e4"},{from:"c7",to:"c6"},{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"e4",to:"d5"},{from:"c6",to:"d5"},{from:"c2",to:"c4"},{from:"g8",to:"f6"}]
+    },
+    avance: {
+      line:"1.e4 c6 2.d4 d5 3.e5 Ff5",
+      fondement:"La variante d'Avance (3.e5) ferme le centre et gagne de l'espace. Contrairement à la Française, le Fou c8 de la Caro-Kann sort librement en f5 avant le verrouillage des pions.",
+      fondement_en:"The Advance Variation (3.e5) closes the center and gains space. Unlike the French, the Caro-Kann's c8-Bishop develops freely to f5 before the pawns lock.",
+      avantages:"Avantage d'espace durable et chaîne de pions e5-d4 solide qui contraint le jeu noir.",
+      avantages_en:"Lasting space advantage and a solid e5-d4 pawn chain that cramps Black's play.",
+      inconvenients:"Le pion e5 peut devenir une cible et la case d4 être minée par ...c5.",
+      inconvenients_en:"The e5 pawn can become a target and the d4 square can be undermined by ...c5.",
+      blancs:"Soutenir la chaîne, harceler le Fou f5 par Cf3-h4 ou g4, attaquer à l'aile roi.",
+      blancs_en:"Support the chain, harass the f5-Bishop with Nf3-h4 or g4, and attack on the kingside.",
+      noirs:"Miner le centre par ...c5 et ...e6, activer le Fou f5 et viser le pion d4.",
+      noirs_en:"Undermine the center with ...c5 and ...e6, activate the f5-Bishop and target the d4 pawn.",
+      cases:"e5 et d4 (chaîne blanche), f5 (bon Fou noir), c5 (levier noir).",
+      cases_en:"e5 and d4 (White's chain), f5 (Black's good Bishop), c5 (Black's lever).",
+      finale:"Finales souvent équilibrées ; la qualité du Fou de cases claires noir compense l'espace blanc.",
+      finale_en:"Endgames often balanced; the quality of Black's light-squared Bishop offsets White's space.",
+      stats:"ECO B12 · Système agressif très en vogue, popularisé par Short et Nakamura.",
+      stats_en:"ECO B12 · An aggressive, fashionable system popularized by Short and Nakamura.",
+      piege:"Après 4.Cf3 e6 5.Fe2 c5 6.Fe3 Db6, les Blancs doivent défendre d4 et b2 avec précision.",
+      piege_en:"After 4.Nf3 e6 5.Be2 c5 6.Be3 Qb6, White must defend d4 and b2 precisely.",
+      moves:[{from:"e2",to:"e4"},{from:"c7",to:"c6"},{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"e4",to:"e5"},{from:"c8",to:"f5"}]
     }
   },
   8: {
@@ -850,6 +938,50 @@ var DB = {
       piege:"Dans la Botvinnik, jouer le naturel 6...Fe7?? est une gaffe.",
       piege_en:"In the Meran (5...Nbd7 6.Bd3 dxc4 7.Bxc4 b5), Black must know precise move orders.",
       moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"c7",to:"c6"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"d5",to:"c4"}]
+    },
+    meran: {
+      line:"1.d4 d5 2.c4 c6 3.Cf3 Cf6 4.Cc3 e6 5.e3 Cbd7 6.Fd3 dxc4 7.Fxc4 b5",
+      fondement:"La variante Meran de la Semi-Slave est l'une des lignes les plus dynamiques contre 1.d4. Les Noirs jouent ...dxc4 puis ...b5 pour gagner l'aile dame et un contre-jeu actif.",
+      fondement_en:"The Meran Variation of the Semi-Slav is one of the most dynamic lines against 1.d4. Black plays ...dxc4 then ...b5 to seize the queenside and active counterplay.",
+      avantages:"Contre-jeu vigoureux à l'aile dame, paire de fous potentielle et grande richesse tactique.",
+      avantages_en:"Vigorous queenside counterplay, the potential bishop pair, and great tactical richness.",
+      inconvenients:"Le Fou c8 reste momentanément enfermé et le centre blanc peut exploser par e4.",
+      inconvenients_en:"The c8-Bishop stays momentarily locked in and White's center can erupt with e4.",
+      blancs:"Préparer la rupture centrale e4, ouvrir le jeu pour le développement supérieur.",
+      blancs_en:"Prepare the central break e4, opening the game for superior development.",
+      noirs:"Étendre l'aile dame par ...a6/...c5, développer le Fou en b7 et frapper au centre.",
+      noirs_en:"Expand on the queenside with ...a6/...c5, develop the Bishop to b7 and strike in the center.",
+      cases:"e4 (rupture blanche clé), c5 et b4 (leviers noirs), d4 (pion central).",
+      cases_en:"e4 (White's key break), c5 and b4 (Black's levers), d4 (central pawn).",
+      finale:"Finales déséquilibrées riches ; la qualité de l'activité des pièces décide souvent.",
+      finale_en:"Rich, unbalanced endgames; the activity of the pieces often decides.",
+      stats:"ECO D47-D49 · Champ de bataille théorique majeur depuis le tournoi de Meran 1924.",
+      stats_en:"ECO D47-D49 · A major theoretical battleground since the Meran tournament of 1924.",
+      piege:"Après 8.Fd3 a6 9.e4 c5 10.e5 cxd4 11.Cxb5!, les complications exigent une connaissance précise.",
+      piege_en:"After 8.Bd3 a6 9.e4 c5 10.e5 cxd4 11.Nxb5!, the complications demand precise knowledge.",
+      moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"c7",to:"c6"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"e7",to:"e6"},{from:"e2",to:"e3"},{from:"b8",to:"d7"},{from:"f1",to:"d3"},{from:"d5",to:"c4"},{from:"d3",to:"c4"},{from:"b7",to:"b5"}]
+    },
+    carlsbad: {
+      line:"1.d4 d5 2.c4 e6 3.Cc3 Cf6 4.cxd5 exd5 5.Fg5",
+      fondement:"La structure de Carlsbad naît de la variante d'Échange du QGD (4.cxd5 exd5). Elle est le terrain de prédilection de l'Attaque Minoritaire blanche (b4-b5) contre la majorité noire à l'aile dame.",
+      fondement_en:"The Carlsbad structure arises from the QGD Exchange Variation (4.cxd5 exd5). It is the classic battleground for White's Minority Attack (b4-b5) against Black's queenside majority.",
+      avantages:"Plan stratégique limpide pour les Blancs : l'attaque minoritaire crée une faiblesse durable en c6.",
+      avantages_en:"A crystal-clear strategic plan for White: the minority attack creates a lasting weakness on c6.",
+      inconvenients:"Les Noirs disposent d'une contre-attaque thématique à l'aile roi et d'un jeu de pièces actif.",
+      inconvenients_en:"Black has a thematic kingside counter-attack and active piece play.",
+      blancs:"Lancer b4-b5 pour fixer une faiblesse en c6, puis presser sur la colonne c semi-ouverte.",
+      blancs_en:"Launch b4-b5 to fix a weakness on c6, then press on the semi-open c-file.",
+      noirs:"Contre-attaquer à l'aile roi par ...Ce4, ...f5 et ...g5, ou organiser ...c6-c5 au bon moment.",
+      noirs_en:"Counter-attack on the kingside with ...Ne4, ...f5 and ...g5, or arrange ...c6-c5 at the right time.",
+      cases:"c6 (cible de l'attaque minoritaire), e4 et f5 (avant-postes noirs), colonne c.",
+      cases_en:"c6 (target of the minority attack), e4 and f5 (Black's outposts), the c-file.",
+      finale:"Finales très favorables aux Blancs si la faiblesse en c6 est créée et exploitée.",
+      finale_en:"Endgames highly favorable for White if the c6 weakness is created and exploited.",
+      stats:"ECO D35-D36 · Référence stratégique nommée d'après le tournoi de Carlsbad 1923.",
+      stats_en:"ECO D35-D36 · A strategic reference named after the Carlsbad 1923 tournament.",
+      piege:"Les Noirs doivent éviter ...c6 passif sans contre-jeu, sous peine de subir une attaque minoritaire mortelle.",
+      piege_en:"Black must avoid passive ...c6 play without counterplay, or suffer a deadly minority attack.",
+      moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"e7",to:"e6"},{from:"b1",to:"c3"},{from:"g8",to:"f6"},{from:"c4",to:"d5"},{from:"e6",to:"d5"},{from:"c1",to:"g5"}]
     }
   },
   10: {
@@ -1757,6 +1889,222 @@ var DB = {
       piege_en:"1.b3 e5 2.Bb2 d6?! 3.e4 transposes to a structure similar to the KIA with an extra tempo.",
       moves:[{from:"b2",to:"b3"},{from:"e7",to:"e5"},{from:"c1",to:"b2"},{from:"b8",to:"c6"},{from:"e2",to:"e3"},{from:"g8",to:"f6"},{from:"f1",to:"b5"},{from:"f8",to:"d6"}]
     }
+  },
+  46: {
+    petrov: {
+      line:"1.e4 e5 2.Cf3 Cf6 3.Cxe5 d6 4.Cf3 Cxe4 5.d4 d5",
+      fondement:"La Défense Petrov (1.e4 e5 2.Cf3 Cf6) cherche à forcer la nulle par une symétrie parfaite.",
+      fondement_en:"The Petrov Defense (1.e4 e5 2.Nf3 Nf6) seeks to force a draw through perfect symmetry.",
+      avantages:"Très solide, mène à une égalité presque assurée avec un jeu correct.",
+      avantages_en:"Very solid, leads to near-certain equality with correct play.",
+      inconvenients:"Joue ouvertement pour la nulle. Position symétrique restrictive.",
+      inconvenients_en:"Openly plays for a draw. Restrictive symmetric position.",
+      blancs:"Manœuvrer avec une extrême finesse positionnelle pour conserver une infime initiative.",
+      blancs_en:"Maneuver with extreme positional finesse to retain the slightest initiative.",
+      noirs:"Échanger méthodiquement les pièces actives au centre et liquider la position.",
+      noirs_en:"Methodically exchange the active central pieces and liquidate the position.",
+      cases:"e4, d5 (cases fortes de centralisation des Cavaliers).",
+      cases_en:"e4, d5 (strong central Knight squares).",
+      finale:"L'objectif ultime : atteindre une finale plate et égale pour sécuriser un score.",
+      finale_en:"The ultimate goal: reach a flat, equal endgame to secure a score.",
+      stats:"Pilier historique des matchs de Championnat du Monde.",
+      stats_en:"Historic pillar of World Championship matches.",
+      piege:"L'ouverture exige une précision absolue : la moindre faille brise la forteresse.",
+      piege_en:"The opening demands absolute precision: the slightest flaw breaks the fortress.",
+      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"f3",to:"e5"},{from:"d7",to:"d6"},{from:"e5",to:"f3"},{from:"f6",to:"e4"},{from:"d2",to:"d4"},{from:"d6",to:"d5"}]
+    }
+  },
+  47: {
+    trois_cavaliers: {
+      line:"1.e4 e5 2.Cf3 Cc6 3.Cc3",
+      fondement:"La Partie des Trois Cavaliers (3.Cc3) survient quand les Noirs s'écartent de la symétrie des Quatre Cavaliers par un coup autre que ...Cf6, souvent 3...g6 ou 3...Fb4.",
+      fondement_en:"The Three Knights Game (3.Nc3) arises when Black avoids the Four Knights symmetry with a move other than ...Nf6, often 3...g6 or 3...Bb4.",
+      avantages:"Développement naturel et solide, jeu ouvert classique sans théorie écrasante.",
+      avantages_en:"Natural, solid development with classical open play and no overwhelming theory.",
+      inconvenients:"Peu ambitieuse ; concède facilement l'égalité si les Noirs jouent avec précision.",
+      inconvenients_en:"Unambitious; easily concedes equality if Black plays accurately.",
+      blancs:"Compléter le développement, viser d4 et exploiter une éventuelle imprécision noire.",
+      blancs_en:"Complete development, aim for d4 and exploit any Black inaccuracy.",
+      noirs:"Choisir entre le fianchetto ...g6 ou le clouage ...Fb4 pour égaliser confortablement.",
+      noirs_en:"Choose between the fianchetto ...g6 or the pin ...Bb4 to equalize comfortably.",
+      cases:"d4 et d5 (cases centrales), e5 (pion clé), f5/f4 (avant-postes des Cavaliers).",
+      cases_en:"d4 and d5 (central squares), e5 (key pawn), f5/f4 (Knight outposts).",
+      finale:"Finales équilibrées issues d'une lutte ouverte saine.",
+      finale_en:"Balanced endgames arising from sound open play.",
+      stats:"ECO C46 · Ouverture classique du XIXe siècle, aujourd'hui rare au sommet.",
+      stats_en:"ECO C46 · A classical 19th-century opening, now rare at the top.",
+      piege:"Après 3...Fb4 4.Cd5! Fa5? 5.b4! piège le Fou ; les Noirs doivent jouer 4...Fc5 ou 4...Fe7.",
+      piege_en:"After 3...Bb4 4.Nd5! Ba5? 5.b4! traps the Bishop; Black must play 4...Bc5 or 4...Be7.",
+      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"b8",to:"c6"},{from:"b1",to:"c3"}]
+    }
+  },
+  48: {
+    damiano: {
+      line:"1.e4 e5 2.Cf3 f6",
+      fondement:"La Défense Damiano (2...f6) est l'une des pires réponses connues : elle affaiblit le roi et n'aide pas le développement. Réfutée dès le XVIe siècle par Damiano lui-même.",
+      fondement_en:"The Damiano Defense (2...f6) is one of the worst known replies: it weakens the king and does nothing for development. It was refuted in the 16th century by Damiano himself.",
+      avantages:"Aucun avantage réel pour les Noirs ; sert surtout d'avertissement didactique.",
+      avantages_en:"No real advantage for Black; it mainly serves as a didactic warning.",
+      inconvenients:"Affaiblit fatalement la diagonale a2-g8 et le roi noir ; perd souvent par la force.",
+      inconvenients_en:"Fatally weakens the a2-g8 diagonal and Black's king; often loses by force.",
+      blancs:"Frapper immédiatement par 3.Cxe5! fxe5 4.Dh5+ avec une attaque gagnante.",
+      blancs_en:"Strike at once with 3.Nxe5! fxe5 4.Qh5+ for a winning attack.",
+      noirs:"Tenter de survivre par 3...De7 plutôt que 3...fxe5, mais l'infériorité demeure.",
+      noirs_en:"Try to survive with 3...Qe7 rather than 3...fxe5, but the inferiority remains.",
+      cases:"f7 et e6 (faiblesses fatales), h5 (case d'attaque de la Dame).",
+      cases_en:"f7 and e6 (fatal weaknesses), h5 (the Queen's attacking square).",
+      finale:"Les Noirs atteignent rarement une finale ; ils sont généralement balayés en milieu de jeu.",
+      finale_en:"Black rarely reaches an endgame; they are usually swept away in the middlegame.",
+      stats:"ECO C40 · Curiosité historique, jamais jouée sérieusement au niveau maître.",
+      stats_en:"ECO C40 · A historical curiosity, never played seriously at master level.",
+      piege:"3.Cxe5! fxe5 4.Dh5+ g6 5.Dxe5+ Ce7 6.Dxh8 gagne une Tour par la force.",
+      piege_en:"3.Nxe5! fxe5 4.Qh5+ g6 5.Qxe5+ Ne7 6.Qxh8 wins a Rook by force.",
+      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"f7",to:"f6"}]
+    }
+  },
+  49: {
+    bongcloud: {
+      line:"1.e4 e5 2.Re2",
+      fondement:"L'Attaque Bongcloud (2.Re2) est une provocation absurde popularisée par la culture internet : les Blancs bougent le roi au coup 2, perdant le roque et bloquant leurs propres pièces.",
+      fondement_en:"The Bongcloud Attack (2.Ke2) is an absurd provocation popularized by internet culture: White moves the king on move 2, losing castling rights and blocking their own pieces.",
+      avantages:"Valeur de surprise et d'humour ; aucun mérite objectif. Carlsen et Nakamura l'ont jouée pour plaisanter.",
+      avantages_en:"Surprise and comedic value; no objective merit. Carlsen and Nakamura have played it as a joke.",
+      inconvenients:"Viole tous les principes : roi exposé, Fou f1 et Dame enfermés, perte du roque.",
+      inconvenients_en:"Violates every principle: exposed king, trapped f1-Bishop and Queen, loss of castling.",
+      blancs:"Survivre tant bien que mal et ramener le roi en sécurité ; objectivement perdant d'idée.",
+      blancs_en:"Survive as best as possible and tuck the king back to safety; objectively a losing idea.",
+      noirs:"Développer naturellement et ouvrir le centre pour exploiter le roi blanc baladeur.",
+      noirs_en:"Develop naturally and open the center to exploit White's wandering king.",
+      cases:"e2 (roi exposé), centre (à ouvrir par les Noirs).",
+      cases_en:"e2 (exposed king), the center (to be opened by Black).",
+      finale:"Sans intérêt théorique ; les Noirs ont un avantage clair s'ils jouent simplement.",
+      finale_en:"Of no theoretical interest; Black has a clear edge by simply playing well.",
+      stats:"ECO C20 · Coup-meme rendu célèbre par les parties amicales de l'élite.",
+      stats_en:"ECO C20 · A meme move made famous by friendly games among the elite.",
+      piege:"Les Noirs ne doivent pas se précipiter : un développement sain suffit à punir l'excentricité.",
+      piege_en:"Black should not rush: sound development is enough to punish the eccentricity.",
+      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"e1",to:"e2"}]
+    }
+  },
+  50: {
+    barnes: {
+      line:"1.e4 f6",
+      fondement:"La Défense Barnes (1...f6) est considérée comme la pire réponse à 1.e4 : elle n'aide pas le développement, affaiblit la diagonale du roi et bloque le Cavalier g8.",
+      fondement_en:"The Barnes Defense (1...f6) is considered the worst reply to 1.e4: it does not aid development, weakens the king's diagonal and blocks the g8-Knight.",
+      avantages:"Aucun ; elle illustre par l'absurde les principes d'ouverture à ne pas violer.",
+      avantages_en:"None; it illustrates by absurdity the opening principles one must not break.",
+      inconvenients:"Affaiblit e6 et la diagonale a2-g8, ouvre le roi noir à une attaque foudroyante.",
+      inconvenients_en:"Weakens e6 and the a2-g8 diagonal, exposing Black's king to a swift attack.",
+      blancs:"Occuper le centre par 2.d4 et développer rapidement pour une attaque décisive.",
+      blancs_en:"Occupy the center with 2.d4 and develop quickly for a decisive attack.",
+      noirs:"Tenter de limiter les dégâts ; aucune ligne ne donne l'égalité.",
+      noirs_en:"Try to limit the damage; no line offers equality.",
+      cases:"e6 et g8 (faiblesses créées), centre (dominé par les Blancs).",
+      cases_en:"e6 and g8 (created weaknesses), the center (dominated by White).",
+      finale:"Rarement atteinte ; les Noirs sont généralement débordés bien avant.",
+      finale_en:"Rarely reached; Black is usually overrun long before.",
+      stats:"ECO B00 · Du nom de Thomas Barnes, qui battit pourtant Morphy ; pure curiosité.",
+      stats_en:"ECO B00 · Named after Thomas Barnes, who nonetheless beat Morphy; a pure curiosity.",
+      piege:"2.d4 g6?? 3.Dh5+! gxh5?? n'existe pas, mais 2...g5?? 3.Dh5# illustre la fragilité du roi noir.",
+      piege_en:"2.d4 g5?? 3.Qh5# mate illustrates the fragility of Black's king after 1...f6.",
+      moves:[{from:"e2",to:"e4"},{from:"f7",to:"f6"}]
+    }
+  },
+  51: {
+    gda: {
+      line:"1.d4 d5 2.c4 dxc4",
+      fondement:"Le Gambit de la Dame Accepté (2...dxc4) rend immédiatement le centre aux Blancs en échange d'un développement libre et d'un jeu de pièces actif, sans le « mauvais Fou » du QGD.",
+      fondement_en:"The Queen's Gambit Accepted (2...dxc4) immediately returns the center to White in exchange for free development and active piece play, without the QGD's 'bad Bishop'.",
+      avantages:"Développement aisé, Fou c8 actif et structure souple ; pas de faiblesse permanente.",
+      avantages_en:"Easy development, an active c8-Bishop and a flexible structure; no permanent weakness.",
+      inconvenients:"Les Blancs obtiennent un fort centre e4-d4 et un avantage d'espace durable.",
+      inconvenients_en:"White obtains a strong e4-d4 center and a lasting space advantage.",
+      blancs:"Reprendre c4 par e3/Fxc4, ériger le centre e4 et exploiter l'avance d'espace.",
+      blancs_en:"Recover c4 with e3/Bxc4, erect the e4 center and exploit the space advantage.",
+      noirs:"Développer rapidement, frapper le centre par ...c5 et ...a6/...b5 pour le contre-jeu.",
+      noirs_en:"Develop quickly, strike the center with ...c5 and ...a6/...b5 for counterplay.",
+      cases:"c4 (pion à reprendre), e4 et d4 (centre blanc), c5 (levier noir).",
+      cases_en:"c4 (pawn to recapture), e4 and d4 (White's center), c5 (Black's lever).",
+      finale:"Finales équilibrées si les Noirs égalisent le centre ; sinon léger plus blanc.",
+      finale_en:"Balanced endgames if Black neutralizes the center; otherwise a slight White edge.",
+      stats:"ECO D20-D29 · Défense saine et respectée, employée par Anand et Carlsen.",
+      stats_en:"ECO D20-D29 · A sound, respected defense used by Anand and Carlsen.",
+      piege:"Vouloir garder le pion par ...b5?! 3.a4! ou ...Fe6?! mène à une perte de matériel pour les Noirs.",
+      piege_en:"Trying to hold the pawn with ...b5?! 3.a4! or ...Be6?! leads to material loss for Black.",
+      moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"d5",to:"c4"}]
+    }
+  },
+  52: {
+    tchigorine: {
+      line:"1.d4 d5 2.c4 Cc6",
+      fondement:"La Défense Tchigorine (2...Cc6) est une réponse hypermoderne et combative au Gambit de la Dame : les Noirs développent les pièces avant les pions et acceptent une structure déséquilibrée.",
+      fondement_en:"The Chigorin Defense (2...Nc6) is a hypermodern, combative reply to the Queen's Gambit: Black develops pieces before pawns and accepts an unbalanced structure.",
+      avantages:"Jeu de pièces actif, paire de fous potentielle et lutte asymétrique riche en tactique.",
+      avantages_en:"Active piece play, the potential bishop pair, and a rich, asymmetric tactical struggle.",
+      inconvenients:"Concède la paire de fous ou un centre blanc fort ; structure de pions irrégulière.",
+      inconvenients_en:"Concedes the bishop pair or a strong White center; an irregular pawn structure.",
+      blancs:"Accepter le déséquilibre par cxd5 et e4, viser un centre de pions mobile et supérieur.",
+      blancs_en:"Embrace the imbalance with cxd5 and e4, aiming for a mobile, superior pawn center.",
+      noirs:"Mettre la pression sur d4 par ...Fg4 et ...e5, utiliser l'activité des pièces.",
+      noirs_en:"Pressure d4 with ...Bg4 and ...e5, using the activity of the pieces.",
+      cases:"d4 (pion sous pression), e5 (rupture noire), e4 (avancée blanche).",
+      cases_en:"d4 (pawn under pressure), e5 (Black's break), e4 (White's advance).",
+      finale:"Finales déséquilibrées ; la paire de fous blanche peut devenir décisive à long terme.",
+      finale_en:"Unbalanced endgames; White's bishop pair can become decisive in the long run.",
+      stats:"ECO D07 · Défense favorite de Mikhaïl Tchigorine, fidèle à son style romantique.",
+      stats_en:"ECO D07 · The favorite defense of Mikhail Chigorin, true to his romantic style.",
+      piege:"Après 3.Cc3 dxc4 4.d5 Ce5 5.Df4!, les Noirs doivent jouer avec précision pour ne pas perdre le Cavalier.",
+      piege_en:"After 3.Nc3 dxc4 4.d5 Ne5 5.Qf4!, Black must play precisely not to lose the Knight.",
+      moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"b8",to:"c6"}]
+    }
+  },
+  53: {
+    sokolski: {
+      line:"1.b4",
+      fondement:"L'Ouverture Sokolski (1.b4), aussi nommée Orang-Outan, gagne de l'espace à l'aile dame et fianchettoe le Fou en b2. Excentrique mais jouable, elle évite toute théorie classique.",
+      fondement_en:"The Sokolski Opening (1.b4), also called the Orangutan, gains queenside space and fianchettoes the Bishop on b2. Eccentric but playable, it sidesteps all classical theory.",
+      avantages:"Surprise totale, peu de théorie, le Fou b2 exerce une pression sur la grande diagonale.",
+      avantages_en:"Total surprise, little theory, and the b2-Bishop pressures the long diagonal.",
+      inconvenients:"Le pion b4 peut devenir une cible ; ne dispute pas directement le centre.",
+      inconvenients_en:"The b4 pawn can become a target; it does not directly contest the center.",
+      blancs:"Fianchettoer en b2, développer Cf3 et e3, viser le centre à distance et l'aile dame.",
+      blancs_en:"Fianchetto on b2, develop Nf3 and e3, target the center from afar and the queenside.",
+      noirs:"Occuper le centre par ...d5 et ...e5, harceler b4 par ...a5 pour gagner du temps.",
+      noirs_en:"Occupy the center with ...d5 and ...e5, harass b4 with ...a5 to gain time.",
+      cases:"b4 (pion avancé cible), e5 (souvent attaqué par le Fou b2), centre.",
+      cases_en:"b4 (advanced target pawn), e5 (often attacked by the b2-Bishop), the center.",
+      finale:"Finales équilibrées où l'espace à l'aile dame peut offrir un menu avantage blanc.",
+      finale_en:"Balanced endgames where the queenside space can offer White a tiny edge.",
+      stats:"ECO A00 · Nommée Orang-Outan par Tartakower après une visite au zoo de New York en 1924.",
+      stats_en:"ECO A00 · Dubbed the Orangutan by Tartakower after a visit to the New York zoo in 1924.",
+      piege:"Après 1...e5 2.Fb2 Fxb4? 3.Fxe5 les Blancs gagnent la Tour h8 ; les Noirs doivent jouer 2...f6.",
+      piege_en:"After 1...e5 2.Bb2 Bxb4? 3.Bxe5 White wins the h8-Rook; Black must play 2...f6.",
+      moves:[{from:"b2",to:"b4"}]
+    }
+  },
+  54: {
+    grob: {
+      line:"1.g4",
+      fondement:"L'Attaque Grob (1.g4) est l'une des ouvertures les plus provocantes : elle affaiblit le roque et le centre pour fianchettoer le Fou en g2 et viser b7 et d5. Objectivement douteuse mais redoutable en surprise.",
+      fondement_en:"The Grob Attack (1.g4) is one of the most provocative openings: it weakens the kingside and center to fianchetto the Bishop on g2 and target b7 and d5. Objectively dubious but a fearsome surprise.",
+      avantages:"Effet de surprise maximal, pression du Fou g2 sur b7, jeu hors-théorie déroutant.",
+      avantages_en:"Maximum surprise value, b7 pressure from the g2-Bishop, and disorienting off-theory play.",
+      inconvenients:"Affaiblit gravement le roi blanc ; le pion g4 est une cible chronique.",
+      inconvenients_en:"Seriously weakens White's king; the g4 pawn is a chronic target.",
+      blancs:"Fianchettoer en g2, frapper d5 par c4, jouer agressivement pour exploiter la surprise.",
+      blancs_en:"Fianchetto on g2, strike at d5 with c4, and play aggressively to exploit the surprise.",
+      noirs:"Réagir au centre par ...d5, capturer ou ignorer g4, et exploiter le roque blanc fragilisé.",
+      noirs_en:"React in the center with ...d5, capture or ignore g4, and exploit White's weakened kingside.",
+      cases:"g4 (pion faible avancé), b7 et d5 (cibles du Fou g2), f3/h3 (trous autour du roi).",
+      cases_en:"g4 (weak advanced pawn), b7 and d5 (targets of the g2-Bishop), f3/h3 (holes near the king).",
+      finale:"Finales souvent inférieures pour les Blancs à cause des faiblesses de l'aile roi.",
+      finale_en:"Endgames often inferior for White due to the kingside weaknesses.",
+      stats:"ECO A00 · Défendue avec passion par le GM Henri Grob ; rare mais piégeuse.",
+      stats_en:"ECO A00 · Passionately championed by GM Henri Grob; rare but tricky.",
+      piege:"Après 1...d5 2.Fg2 Fxg4? 3.c4! les Blancs frappent d5 et ouvrent des lignes ; mais 2...c6 est solide.",
+      piege_en:"After 1...d5 2.Bg2 Bxg4? 3.c4! White hits d5 and opens lines; but 2...c6 is solid.",
+      moves:[{from:"g2",to:"g4"}]
+    }
   }
 };
 
@@ -2064,26 +2412,6 @@ var ENRICH = {
      analysis:"Le Moulin illustre les dangers de la Philidor passive. Apr&egrave;s 18.De6!, le centre blanc domine. La Tour en g7 d&eacute;roule un cycle infernal en r&eacute;cup&eacute;rant toutes les pi&egrave;ces noires.",
      result_en:"1-0 — Adams wins — The Windmill illustrates passive Philidor's dangers",
      analysis_en:"'The Windmill' illustrates passive Philidor's dangers. After 18.Qe6!, the White center dominates. The g7 Rook executes an infernal cycle capturing all Black's pieces."
-    }
-  },
-  petrov:{
-   histoire:"La Défense Petrov (ou Partie des Deux Cavaliers) doit son nom au maître russe Alexander Petrov (1794-1867).",
-      histoire_en:"The Petrov Defense (or Russian Game) takes its name from Russian master Alexander Petrov (1794–1867). It is the drawing weapon par excellence: by counter-attacking e4 on move 2, Black achieves perfect symmetry and near-guaranteed equality.",
-      histoire_en:"The Petrov Defense (or Russian Game) takes its name from Russian master Alexander Petrov (1794–1867). It is the drawing weapon par excellence: by counter-attacking e4 on move 2, Black achieves perfect symmetry and near-guaranteed equality.",
-   annotations:[
-    {move:"2...Cf6",move_en:"2...Nf6",comment:"La Défense Petrov — contre-attaque symétrique sur e4. Les Noirs ignorent leur e5 et attaquent e4.",comment_en:"The Petrov Defense — symmetrical counter-attack on e4. Black ignores their own e5 and attacks e4."},
-    {move:"3.Cxe5",move_en:"3.Nxe5",comment:"Les Blancs prennent e5 — mais ils doivent faire très attention à ne pas perdre leur propre Cavalier.",comment_en:"White takes e5 — but must be very careful not to lose their own Knight."},
-    {move:"3...d6!",move_en:"3...d6!",comment:"Crucial ! Les Noirs attaquent le Cavalier e5 avant de prendre en e4. Si 3...Cxe4? alors 4.De2 gagne le Cavalier.",comment_en:"Crucial! Black attacks the Ne5 before taking on e4. If 3...Nxe4? then 4.Qe2 wins the Knight."},
-    {move:"4.Cf3 Cxe4",move_en:"4.Nf3 Nxe4",comment:"Maintenant les Noirs récupèrent leur pion. La position est symétrique et équilibrée.",comment_en:"Now Black recovers the pawn. The position is symmetrical and balanced."},
-    {move:"5.d4",move_en:"5.d4",comment:"Les Blancs cherchent un avantage spatial. Mais les Noirs ont une défense solide et éprouvée.",comment_en:"White seeks a spatial advantage. But Black has a solid and tested defense."}
-   ],
-    game:{
-     header:"Capablanca, J.R. vs Kostic, B. &middot; La Havane 1919 &middot; D&eacute;fense Petrov (C42)",
-     moves:"1. e4 e5 2. Cf3 Cf6 3. Cxe5 d6 4. Cf3 Cxe4 5. De2 De7 6. d3 Cf6 7. Fg5 Dxe2+ 8. Fxe2 Fe7 9. Cc3 Fd7 10. 0-0 0-0 11. Tfe1 Cc6 12. d4 Tfe8 13. Fb5 a6 14. Fa4 b5 15. Fb3 Ca5 16. Te3 c6 17. Tae1 Rf8 18. Ff4 Cb7 19. h3 h6 20. Fh2 Fd8 21. Txe8+ Fxe8 22. a4 c5 23. Ce4 Cxe4 24. Fd5 Ta7 25. Fxe4 Fe7 26. axb5 axb5 27. dxc5 dxc5 28. Fb8 Ta8 29. Fg3 Ta7 30. Fb8 Ta8 31. Fg3 Ta7 32. Ce5 Cd8 33. b3 Ce6 34. Fd5 Cd4 35. c3 Cf5 36. Fh2 b4 37. g4 Cd6 38. c4 Ta3 39. Te3 Cc8 40. Fb7 Ca7 41. Fd5 f6 42. Cf3 Cc6 43. Ch4 Cd4 44. Cf5 Cxf5 45. gxf5 Fd7 46. Fe4 Ta6 47. Td3 Fc6 48. Fxc6 Txc6 49. Rg2 Ta6 50. Rf3 Ta2 51. Fg3 Re8 52. Ff4 Ta6 53. Fe3 Ta1 54. Rg4 Ta7 55. Rh5 Rf7 56. Td5 Ta3 57. Td7 Re8 58. Td3 Rf7 59. h4 Ta7 60. Td5 Ta5 61. Td7 Re8 62. Td3 Rf7 63. Td5 Ta3 64. Fxc5 Fxc5 65. Txc5 Txb3 66. Tc7+ Rf8 67. Rg6 Tf3 68. Tf7+ Re8 69. Txg7 Tf4 70. h5 Txc4 71. Rxh6 Rf8 72. Tb7 Tg4 73. f3 Tg5 74. Txb4 Rf7 75. Tg4 Txf5 76. f4 Ta5 77. Tg7+ Rf8 78. Tb7 f5 79. Rg6 Ta6+ 80. Rxf5 Ta5+ 81. Rg4 Ta6 82. Rg5 Tc6 83. f5 Rg8 84. f6 Tc1 85. Tg7+ Rf8 86. h6 1-0",
-     result:"1-0 — Capablanca gagne en 86 coups — ma&icirc;trise technique de la Petrov",
-     analysis:"D&eacute;monstration magistrale de technique ! Capablanca exploite un avantage minuscule dans la Petrov pendant 86 coups gr&acirc;ce &agrave; une pression continue. La progression m&eacute;thodique illustre pourquoi Capablanca fut surnomm&eacute; la machine d'&eacute;checs.",
-     result_en:"1-0 — Capablanca wins in 86 moves — technical mastery of the Petrov",
-     analysis_en:"A masterful endgame technique demonstration! Capablanca exploits a tiny advantage in the Petrov for 86 moves through continuous pressure. The methodical advance illustrates why Capablanca was called 'the chess machine.'"
     }
   }
  },
@@ -3257,6 +3585,179 @@ var ENRICH = {
      analysis:"Partie choc ! Spassky r&eacute;fute 1.b3 : 7...e4! 8.Cd4 Cf3+! 9.gxf3 Dxh4!! cr&eacute;e une attaque irr&eacute;sistible. Cette partie d&eacute;montre que 1.b3 peut se retourner contre les Blancs.",
      result_en:"0-1 — Spassky wins in 17 moves — dangers of the Nimzo-Larsen",
      analysis_en:"Shocking game! Spassky refutes 1.b3: 7...e4! 8.Nd4 Nf3+! 9.gxf3 Qxh4!! creates an irresistible attack. This game demonstrates that 1.b3 can backfire on White."
+    }
+  }
+ },
+ 46:{
+  petrov:{
+   histoire:"La Défense Petrov (ou Partie Russe) doit son nom au maître russe Alexander Petrov (1794-1867). C'est l'arme nullarde par excellence : en contre-attaquant e4 dès le 2e coup, les Noirs atteignent une symétrie parfaite et une égalité quasi garantie.",
+   histoire_en:"The Petrov Defense (or Russian Game) takes its name from Russian master Alexander Petrov (1794–1867). It is the drawing weapon par excellence: by counter-attacking e4 on move 2, Black achieves perfect symmetry and near-guaranteed equality.",
+   annotations:[
+    {move:"2...Cf6",move_en:"2...Nf6",comment:"La Défense Petrov — contre-attaque symétrique sur e4. Les Noirs ignorent leur e5 et attaquent e4.",comment_en:"The Petrov Defense — symmetrical counter-attack on e4. Black ignores their own e5 and attacks e4."},
+    {move:"3.Cxe5",move_en:"3.Nxe5",comment:"Les Blancs prennent e5 — mais ils doivent faire très attention à ne pas perdre leur propre Cavalier.",comment_en:"White takes e5 — but must be very careful not to lose their own Knight."},
+    {move:"3...d6!",move_en:"3...d6!",comment:"Crucial ! Les Noirs attaquent le Cavalier e5 avant de prendre en e4. Si 3...Cxe4? alors 4.De2 gagne le Cavalier.",comment_en:"Crucial! Black attacks the Ne5 before taking on e4. If 3...Nxe4? then 4.Qe2 wins the Knight."},
+    {move:"4.Cf3 Cxe4",move_en:"4.Nf3 Nxe4",comment:"Maintenant les Noirs récupèrent leur pion. La position est symétrique et équilibrée.",comment_en:"Now Black recovers the pawn. The position is symmetrical and balanced."},
+    {move:"5.d4",move_en:"5.d4",comment:"Les Blancs cherchent un avantage spatial. Mais les Noirs ont une défense solide et éprouvée.",comment_en:"White seeks a spatial advantage. But Black has a solid and tested defense."}
+   ],
+    game:{
+     header:"Capablanca, J.R. vs Kostic, B. &middot; La Havane 1919 &middot; D&eacute;fense Petrov (C42)",
+     moves:"1. e4 e5 2. Cf3 Cf6 3. Cxe5 d6 4. Cf3 Cxe4 5. De2 De7 6. d3 Cf6 7. Fg5 Dxe2+ 8. Fxe2 Fe7 9. Cc3 Fd7 10. 0-0 0-0 11. Tfe1 Cc6 12. d4 Tfe8 13. Fb5 a6 14. Fa4 b5 15. Fb3 Ca5 16. Te3 c6 17. Tae1 Rf8 18. Ff4 Cb7 19. h3 h6 20. Fh2 Fd8 21. Txe8+ Fxe8 22. a4 c5 23. Ce4 Cxe4 24. Fd5 Ta7 25. Fxe4 Fe7 26. axb5 axb5 27. dxc5 dxc5 28. Fb8 Ta8 29. Fg3 Ta7 30. Fb8 Ta8 31. Fg3 Ta7 32. Ce5 Cd8 33. b3 Ce6 34. Fd5 Cd4 35. c3 Cf5 36. Fh2 b4 37. g4 Cd6 38. c4 Ta3 39. Te3 Cc8 40. Fb7 Ca7 41. Fd5 f6 42. Cf3 Cc6 43. Ch4 Cd4 44. Cf5 Cxf5 45. gxf5 Fd7 46. Fe4 Ta6 47. Td3 Fc6 48. Fxc6 Txc6 49. Rg2 Ta6 50. Rf3 Ta2 51. Fg3 Re8 52. Ff4 Ta6 53. Fe3 Ta1 54. Rg4 Ta7 55. Rh5 Rf7 56. Td5 Ta3 57. Td7 Re8 58. Td3 Rf7 59. h4 Ta7 60. Td5 Ta5 61. Td7 Re8 62. Td3 Rf7 63. Td5 Ta3 64. Fxc5 Fxc5 65. Txc5 Txb3 66. Tc7+ Rf8 67. Rg6 Tf3 68. Tf7+ Re8 69. Txg7 Tf4 70. h5 Txc4 71. Rxh6 Rf8 72. Tb7 Tg4 73. f3 Tg5 74. Txb4 Rf7 75. Tg4 Txf5 76. f4 Ta5 77. Tg7+ Rf8 78. Tb7 f5 79. Rg6 Ta6+ 80. Rxf5 Ta5+ 81. Rg4 Ta6 82. Rg5 Tc6 83. f5 Rg8 84. f6 Tc1 85. Tg7+ Rf8 86. h6 1-0",
+     result:"1-0 — Capablanca gagne en 86 coups — ma&icirc;trise technique de la Petrov",
+     analysis:"D&eacute;monstration magistrale de technique ! Capablanca exploite un avantage minuscule dans la Petrov pendant 86 coups gr&acirc;ce &agrave; une pression continue. La progression m&eacute;thodique illustre pourquoi Capablanca fut surnomm&eacute; la machine d'&eacute;checs.",
+     result_en:"1-0 — Capablanca wins in 86 moves — technical mastery of the Petrov",
+     analysis_en:"A masterful endgame technique demonstration! Capablanca exploits a tiny advantage in the Petrov for 86 moves through continuous pressure. The methodical advance illustrates why Capablanca was called 'the chess machine.'"
+    }
+  }
+ },
+ 47:{
+  trois_cavaliers:{
+   histoire:"La Partie des Trois Cavaliers est une ouverture classique du XIXe siècle, issue de la famille des jeux ouverts. Elle survient lorsque les Noirs refusent la symétrie des Quatre Cavaliers, gardant la flexibilité d'un fianchetto ou d'un clouage.",
+   histoire_en:"The Three Knights Game is a classical 19th-century opening from the open-game family. It arises when Black declines the Four Knights symmetry, keeping the flexibility of a fianchetto or a pin.",
+   annotations:[
+    {move:"3.Cc3",move_en:"3.Nc3",comment:"Les Blancs développent leur second Cavalier, contrôlant d5 et e4 et invitant les Noirs à choisir leur système.",comment_en:"White develops the second Knight, controlling d5 and e4 and inviting Black to choose a system."},
+    {move:"3...g6",move_en:"3...g6",comment:"Les Noirs optent pour le fianchetto au lieu de la symétrie ...Cf6, gardant une structure flexible.",comment_en:"Black opts for the fianchetto instead of the ...Nf6 symmetry, keeping a flexible structure."},
+    {move:"4.d4",move_en:"4.d4",comment:"Coup central thématique : les Blancs ouvrent le jeu pour exploiter leur léger avantage de développement.",comment_en:"Thematic central move: White opens the game to exploit a slight lead in development."}
+   ],
+    game:{
+     header:"Shirov, A. vs Kazhgaleyev, M. &middot; 2002 &middot; Partie ouverte (C96)",
+     moves:"1.e4 e5 2.Cf3 Cc6 3.Cc3 g6 4.d4 exd4 5.Cd5 Fg7 6.Fg5 Cce7 7.Cxd4 c6 8.Cc3 h6 9.Fe3 d5 10.exd5 cxd5 11.Dd2 a6 12.0-0-0 b5 13.f4 Cf6 14.Ff3 0-0 15.g4 b4 16.Ce2 a5 17.g5 hxg5 18.fxg5 Ce4 19.Fxe4 dxe4 20.h4 a4 21.h5 a3 22.b3 De8 23.hxg6 fxg6 24.Fh6 Ff5 25.Fxg7 Rxg7 26.Dh6+ Rg8 27.Dxg6+ Cxg6 1-0",
+     result:"1-0 — Shirov l'emporte — attaque directe sur le roi",
+     result_en:"1-0 — Shirov prevails — a direct king attack",
+     analysis:"Shirov illustre la puissance de l'attaque dans les jeux ouverts : le grand roque opposé débouche sur une course de pions où les Blancs sont les plus rapides.",
+     analysis_en:"Shirov illustrates the power of attack in open games: the opposite-side castling leads to a pawn race in which White is faster."
+    }
+  }
+ },
+ 48:{
+  damiano:{
+   histoire:"La Défense Damiano fut analysée — et condamnée — par le Portugais Pedro Damiano dans son traité de 1512. C'est l'exemple canonique d'un coup qui viole les principes : 2...f6 affaiblit le roi sans aider le développement.",
+   histoire_en:"The Damiano Defense was analyzed — and condemned — by the Portuguese Pedro Damiano in his 1512 treatise. It is the canonical example of a principle-violating move: 2...f6 weakens the king without aiding development.",
+   annotations:[
+    {move:"2...f6",move_en:"2...f6",comment:"Un coup notoirement mauvais : il affaiblit la diagonale a2-g8 et la case e6, sans développer aucune pièce.",comment_en:"A notoriously bad move: it weakens the a2-g8 diagonal and the e6 square, without developing any piece."},
+    {move:"3.Cxe5!",move_en:"3.Nxe5!",comment:"Le sacrifice réfutant : après 3...fxe5 4.Dh5+ le roi noir est exposé à une attaque dévastatrice.",comment_en:"The refuting sacrifice: after 3...fxe5 4.Qh5+ the Black king is exposed to a devastating attack."},
+    {move:"4.Dh5+",move_en:"4.Qh5+",comment:"L'échec décisif : 4...g6 5.Dxe5+ ou 4...Re7 5.Dxe5+ gagne du matériel et maintient l'initiative.",comment_en:"The decisive check: 4...g6 5.Qxe5+ or 4...Ke7 5.Qxe5+ wins material and keeps the initiative."}
+   ],
+    game:{
+     header:"Szabo vs Kocsis &middot; partie par correspondance &middot; D&eacute;fense Damiano",
+     moves:"1.e4 e5 2.Cf3 f6 3.Cxe5 fxe5 4.Dh5+ Re7 5.Dxe5+ Rf7 6.Fc4+ Rg6 7.Df5+ Rh6 8.d4+ g5 9.Fxg5+ Rg7 10.Df7+ Rh6 11.h4 0-1",
+     result:"0-1 — illustration didactique des dangers de la Damiano",
+     result_en:"0-1 — a didactic illustration of the Damiano's dangers",
+     analysis:"Bien que la partie se termine sur une erreur blanche, elle illustre comment 2...f6 livre immédiatement le roi noir à une attaque. La Damiano reste une réfutation théorique de manuel.",
+     analysis_en:"Although the game ends on a White blunder, it illustrates how 2...f6 immediately delivers the Black king to attack. The Damiano remains a textbook theoretical refutation."
+    }
+  }
+ },
+ 49:{
+  bongcloud:{
+   histoire:"L'Attaque Bongcloud est née de la culture des échecs en ligne au début des années 2010. Son nom vient du pseudonyme d'un joueur, et le coup 2.Re2 est devenu un mème : Carlsen et Nakamura l'ont même joué l'un contre l'autre dans un tournoi officiel en 2021.",
+   histoire_en:"The Bongcloud Attack was born from online chess culture in the early 2010s. Its name comes from a player's handle, and 2.Ke2 became a meme: Carlsen and Nakamura even played it against each other in an official 2021 tournament.",
+   annotations:[
+    {move:"2.Re2",move_en:"2.Ke2",comment:"Le coup-mème : les Blancs bougent volontairement leur roi, perdant le roque et bloquant Fou et Dame. Aucune valeur objective.",comment_en:"The meme move: White voluntarily moves the king, losing castling and blocking the Bishop and Queen. No objective value."},
+    {move:"2...Re7",move_en:"2...Ke7",comment:"Le double Bongcloud ! Dans la partie Carlsen-Nakamura 2021, les deux joueurs ont imité la provocation par plaisanterie.",comment_en:"The double Bongcloud! In the 2021 Carlsen–Nakamura game, both players mirrored the provocation as a joke."},
+    {move:"3.Cf3",move_en:"3.Nf3",comment:"Après la plaisanterie, le jeu reprend un cours normal ; la position reste à peu près équilibrée malgré tout.",comment_en:"After the joke, play resumes normally; the position remains roughly balanced despite everything."}
+   ],
+    game:{
+     header:"Carlsen, M. vs Nakamura, H. &middot; Magnus Carlsen Invitational 2021 &middot; Attaque Bongcloud (C20)",
+     moves:"1.e4 e5 2.Re2 Re7 3.Cf3 d6 4.d4 Cf6 5.dxe5 dxe5 6.Dxd8+ Rxd8 1/2-1/2",
+     result:"1/2-1/2 — le c&eacute;l&egrave;bre double Bongcloud",
+     result_en:"1/2-1/2 — the famous double Bongcloud",
+     analysis:"Les deux meilleurs joueurs de blitz du monde se sont amusés à jouer le coup le plus absurde de la théorie. La partie fut rapidement nulle — une plaisanterie devenue légende.",
+     analysis_en:"The world's two best blitz players amused themselves with the most absurd move in theory. The game was quickly drawn — a joke that became legend."
+    }
+  }
+ },
+ 50:{
+  barnes:{
+   histoire:"La Défense Barnes porte le nom de Thomas Wilson Barnes, qui — fait remarquable — battit huit fois Paul Morphy. Le coup 1...f6 est néanmoins considéré comme la plus faible réponse à 1.e4, illustrant par l'absurde les principes d'ouverture.",
+   histoire_en:"The Barnes Defense is named after Thomas Wilson Barnes, who — remarkably — beat Paul Morphy eight times. Yet the move 1...f6 is considered the weakest reply to 1.e4, illustrating opening principles by absurdity.",
+   annotations:[
+    {move:"1...f6",move_en:"1...f6",comment:"Le coup le plus faible contre 1.e4 : il n'aide pas le développement, affaiblit e6 et la diagonale du roi noir.",comment_en:"The weakest reply to 1.e4: it does not aid development and weakens e6 and the Black king's diagonal."},
+    {move:"2.d4",move_en:"2.d4",comment:"Les Blancs s'emparent du centre sans opposition, profitant directement de la passivité du coup noir.",comment_en:"White seizes the center unopposed, directly exploiting the passivity of Black's move."},
+    {move:"2...g5",move_en:"2...g5",comment:"Une aggravation fatale : après 3.Dh5#, c'est mat immédiat. Une leçon mémorable sur la sécurité du roi.",comment_en:"A fatal worsening: after 3.Qh5# it is immediate mate. A memorable lesson in king safety."}
+   ],
+    game:{
+     header:"Waltemathe vs Schmidt &middot; 1986 &middot; D&eacute;fense Barnes",
+     moves:"1.e4 f6 2.d4 g5 3.Dh5# 1-0",
+     result:"1-0 — mat en trois coups : la punition de 1...f6",
+     result_en:"1-0 — mate in three: the punishment of 1...f6",
+     analysis:"Le « mat du fou » version Barnes : 1...f6 suivi de 2...g5?? ouvre une autoroute vers le roi noir. 3.Dh5# conclut instantanément. Exemple d'école sur l'importance de la sécurité du roi.",
+     analysis_en:"A Barnes version of the fool's mate: 1...f6 followed by 2...g5?? opens a highway to the Black king. 3.Qh5# ends it instantly. A textbook example of king safety."
+    }
+  }
+ },
+ 51:{
+  gda:{
+   histoire:"Le Gambit de la Dame Accepté est l'une des plus anciennes ouvertures, mentionnée dès le manuscrit de Göttingen au XVe siècle. Les Noirs prennent en c4 non pour garder le pion, mais pour libérer leur jeu et éviter la passivité du QGD.",
+   histoire_en:"The Queen's Gambit Accepted is one of the oldest openings, mentioned as early as the 15th-century Göttingen manuscript. Black captures on c4 not to keep the pawn, but to free their game and avoid the passivity of the QGD.",
+   annotations:[
+    {move:"2...dxc4",move_en:"2...dxc4",comment:"Les Noirs acceptent le gambit : ils rendront le pion mais obtiennent un développement aisé et un Fou c8 actif.",comment_en:"Black accepts the gambit: they will return the pawn but obtain easy development and an active c8-Bishop."},
+    {move:"3.Cf3",move_en:"3.Nf3",comment:"Empêche ...e5 et prépare e3 pour reprendre tranquillement en c4. Les Blancs ne se précipitent pas.",comment_en:"Prevents ...e5 and prepares e3 to recapture on c4 calmly. White is in no hurry."},
+    {move:"3...Cf6",move_en:"3...Nf6",comment:"Développement naturel ; les Noirs visent ...c5 pour frapper le centre et égaliser.",comment_en:"Natural development; Black aims for ...c5 to strike the center and equalize."}
+   ],
+    game:{
+     header:"Kasparov, G. vs Anand, V. &middot; 1995 &middot; Gambit de la Dame Accept&eacute; (C80)",
+     moves:"1.d4 d5 2.c4 dxc4 3.Cf3 Cf6 4.e3 e6 5.Fxc4 c5 6.0-0 a6 7.Fb3 cxd4 8.exd4 Cc6 9.Cc3 Fe7 10.Te1 0-0 11.Ff4 Ca5 12.d5 Cxb3 13.Dxb3 exd5 14.Cxd5 Cxd5 15.Dxd5 Dxd5 16.Cxd5 Fd6 17.Fxd6 1-0",
+     result:"1-0 — Kasparov exploite le pion dame isol&eacute;",
+     result_en:"1-0 — Kasparov exploits the isolated queen's pawn",
+     analysis:"Kasparov démontre la stratégie classique du QGA : après l'échange en d4, le pion dame isolé devient une force dynamique. La poussée 12.d5! libère l'initiative blanche.",
+     analysis_en:"Kasparov demonstrates the classic QGA strategy: after the exchange on d4, the isolated queen's pawn becomes a dynamic force. The push 12.d5! unleashes White's initiative."
+    }
+  }
+ },
+ 52:{
+  tchigorine:{
+   histoire:"La Défense Tchigorine est l'œuvre du grand maître russe Mikhaïl Tchigorine (1850-1908), pionnier de l'école romantique. Contre toutes les conventions positionnelles de son époque, il développait les pièces avant les pions, misant sur l'activité.",
+   histoire_en:"The Chigorin Defense is the work of Russian grandmaster Mikhail Chigorin (1850–1908), a pioneer of the romantic school. Against all positional conventions of his time, he developed pieces before pawns, betting on activity.",
+   annotations:[
+    {move:"2...Cc6",move_en:"2...Nc6",comment:"Le coup signature de Tchigorine : un Cavalier qui bloque le pion c mais exerce une pression immédiate sur d4.",comment_en:"Chigorin's signature move: a Knight that blocks the c-pawn but pressures d4 immediately."},
+    {move:"3.Cc3",move_en:"3.Nc3",comment:"Les Blancs renforcent le centre ; après 3...dxc4 4.d5 le jeu devient déséquilibré et tactique.",comment_en:"White reinforces the center; after 3...dxc4 4.d5 the game becomes unbalanced and tactical."},
+    {move:"3...Fg4",move_en:"3...Bg4",comment:"Idée typique : clouer le Cf3 pour augmenter la pression sur d4 et compenser la structure irrégulière.",comment_en:"A typical idea: pin the Nf3 to increase pressure on d4 and compensate for the irregular structure."}
+   ],
+    game:{
+     header:"Tarrasch, S. vs Tchigorine, M. &middot; Hastings 1895 &middot; D&eacute;fense Tchigorine",
+     moves:"1.d4 d5 2.c4 Cc6 3.Cc3 dxc4 4.Cf3 Cf6 5.e4 Fg4 6.Fxc4 e6 7.Fe3 Fb4 8.Dc2 Fxf3 9.gxf3 Dd7 10.a3 Fxc3+ 11.bxc3 0-0-0 12.f4 Ca5 13.Fe2 b6 14.0-0 Rb7 15.Tab1 Ce8 16.f5 exf5 17.exf5 Cd6 18.f6 g6 19.Tfd1 Thg8 20.Ff3 Tge8 21.Fg5 De6 0-1",
+     result:"0-1 — Tchigorine triomphe de la th&eacute;orie positionnelle de Tarrasch",
+     result_en:"0-1 — Chigorin triumphs over Tarrasch's positional theory",
+     analysis:"Le duel emblématique entre Tchigorine le romantique et Tarrasch le dogmatique. Tchigorine prouve que l'activité des pièces peut surpasser une structure de pions saine.",
+     analysis_en:"The iconic duel between Chigorin the romantic and Tarrasch the dogmatist. Chigorin proves that piece activity can overcome a sound pawn structure."
+    }
+  }
+ },
+ 53:{
+  sokolski:{
+   histoire:"L'Ouverture Sokolski (1.b4) doit son surnom « Orang-Outan » à Savielly Tartakower : lors du tournoi de New York 1924, il consulta un orang-outan du zoo du Bronx avant de jouer ce coup. Le maître soviétique Alexeï Sokolski en fit ensuite une analyse systématique.",
+   histoire_en:"The Sokolski Opening (1.b4) owes its 'Orangutan' nickname to Savielly Tartakower: during the 1924 New York tournament, he consulted an orangutan at the Bronx zoo before playing the move. Soviet master Alexei Sokolski later systematized its analysis.",
+   annotations:[
+    {move:"1.b4",move_en:"1.b4",comment:"Gain d'espace immédiat à l'aile dame et préparation du fianchetto Fb2 ; une ouverture hors des sentiers battus.",comment_en:"Immediate queenside space and preparation of the Bb2 fianchetto; an off-the-beaten-path opening."},
+    {move:"2.Fb2",move_en:"2.Bb2",comment:"Le Fou prend la grande diagonale et vise e5 et g7 ; c'est le cœur de l'idée Sokolski.",comment_en:"The Bishop takes the long diagonal, eyeing e5 and g7; this is the heart of the Sokolski idea."},
+    {move:"2...f6",move_en:"2...f6",comment:"Soutient e5 et empêche Fxe5 ; les Noirs neutralisent la pression sur la grande diagonale.",comment_en:"Supports e5 and prevents Bxe5; Black neutralizes the long-diagonal pressure."}
+   ],
+    game:{
+     header:"Sokolski vs adversaire &middot; Ouverture Sokolski (Orang-Outan) (A00)",
+     moves:"1.b4 e5 2.Fb2 f6 3.e4 Fxb4 4.Fc4 Cc6 5.f4 Df8 6.Cf3 d6 7.fxe5 dxe5 8.0-0 Ce7 9.c3 Fa5 10.d4 exd4 11.cxd4 Fb6 12.Cc3 c6 13.e5 fxe5 14.dxe5 1-0",
+     result:"1-0 — la pression du Fou b2 finit par d&eacute;cider",
+     result_en:"1-0 — the b2-Bishop's pressure finally decides",
+     analysis:"Sokolski montre le potentiel offensif de son ouverture : le fianchetto b2 combiné aux poussées f4 et e5 ouvre des lignes vers le roi noir. Une arme de surprise efficace.",
+     analysis_en:"Sokolski shows the offensive potential of his opening: the b2 fianchetto combined with f4 and e5 opens lines toward the Black king. An effective surprise weapon."
+    }
+  }
+ },
+ 54:{
+  grob:{
+   histoire:"L'Attaque Grob (1.g4) porte le nom du maître international suisse Henri Grob (1904-1974), qui la défendit avec acharnement dans des milliers de parties par correspondance. Objectivement douteuse, elle reste une arme de surprise piégeuse.",
+   histoire_en:"The Grob Attack (1.g4) is named after Swiss international master Henri Grob (1904–1974), who championed it fiercely in thousands of correspondence games. Objectively dubious, it remains a tricky surprise weapon.",
+   annotations:[
+    {move:"1.g4",move_en:"1.g4",comment:"Le coup le plus provocant des débuts : il affaiblit le roque mais prépare le fianchetto Fg2 visant b7 et d5.",comment_en:"The most provocative first move: it weakens the kingside but prepares the Bg2 fianchetto eyeing b7 and d5."},
+    {move:"2.Fg2",move_en:"2.Bg2",comment:"Le Fou prend la grande diagonale ; toute la justification du Grob repose sur la pression contre b7.",comment_en:"The Bishop takes the long diagonal; the whole point of the Grob rests on pressure against b7."},
+    {move:"2...Fxg4",move_en:"2...Bxg4",comment:"Tentant mais risqué : après 3.c4! les Blancs frappent d5 et ouvrent des lignes pour le contre-jeu.",comment_en:"Tempting but risky: after 3.c4! White hits d5 and opens lines for counterplay."}
+   ],
+    game:{
+     header:"Grob, H. vs adversaire &middot; partie par correspondance &middot; Attaque Grob (A00)",
+     moves:"1.g4 d5 2.Fg2 Fxg4 3.c4 c6 4.Db3 Db6 5.Dxb6 axb6 6.cxd5 cxd5 7.Fxd5 Cf6 8.Fxb7 Txa2 9.Txa2 Cc6 10.Cc3 e5 11.d3 Fc5 12.Cf3 0-0 13.Cxe5 Cxe5 14.Fxe5 1-0",
+     result:"1-0 — le Grob montre ses crocs",
+     result_en:"1-0 — the Grob shows its teeth",
+     analysis:"Grob illustre les pièges de son ouverture : la prise 2...Fxg4 est punie par 3.c4!, et le Fou g2 récolte le pion b7. Une ouverture qui ne pardonne pas l'avidité adverse.",
+     analysis_en:"Grob illustrates the traps of his opening: the capture 2...Bxg4 is punished by 3.c4!, and the g2-Bishop harvests the b7 pawn. An opening that does not forgive an opponent's greed."
     }
   }
  }
