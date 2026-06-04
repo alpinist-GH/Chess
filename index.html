@@ -242,64 +242,9 @@
   </div>
 </div>
 
-<!-- Ch.46 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch46">46. La Défense Petroff</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board46" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(46)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(46)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc46"></div>
-      <div class="variant-selector" id="vs46">
-        <button class="btn-var active" data-i18n="var_petrov" onclick="switchVariant(46,'petrov',event)">Défense Petrov</button>
-        <button class="btn-var" data-i18n="var_classique" onclick="switchVariant(46,'classique',event)">Variante Classique</button>
-        <button class="btn-var" data-i18n="var_nimzowitsch" onclick="switchVariant(46,'nimzowitsch',event)">Attaque Nimzowitsch</button>
-        <button class="btn-var" data-i18n="var_lasker" onclick="switchVariant(46,'lasker',event)">Attaque Lasker / Cozio</button>
-        <button class="btn-var" data-i18n="var_cochrane" onclick="switchVariant(46,'cochrane',event)">Gambit Cochrane</button>
-        <button class="btn-var" data-i18n="var_steinitz" onclick="switchVariant(46,'steinitz',event)">Variante Steinitz (C43)</button>
-        <button class="btn-var" data-i18n="var_stafford" onclick="switchVariant(46,'stafford',event)">Gambit Stafford</button>
-      </div>
-      <div class="engine-panel" id="ep46">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(46)">
-            <div class="engine-switch" id="esw46"></div>
-            <div class="engine-status-dot" id="esd46"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb46">
-          <div class="engine-loading" id="el46">Chargement du moteur...</div>
-          <div id="er46" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf46"></div></div>
-              <div class="eval-score" id="esc46">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm46"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp46">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content46"></div>
-  </div>
-</div>
-
-<!-- PARTIE II -->
-<div class="part-title" data-i18n="part2_title">PARTIE II — Les Parties Semi-Ouvertes (1.e4 …)</div>
-<div class="part-desc" data-i18n="part2_desc">Les Noirs rompent la symétrie dès le premier coup, acceptant un léger retard d'espace pour une structure asymétrique dynamique et combative.</div>
-
 <!-- Ch.5 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch5">5. La Défense Sicilienne</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch5">5. La Défense Petroff</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -310,25 +255,18 @@
         </div>
       </div>
       <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(5)">◀ Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(5)">Avancer ▶</button>
+        <button class="btn" data-i18n="prev" onclick="prevMove(5)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(5)">Avancer &#9654;</button>
       </div>
       <div class="move-counter" id="mc5"></div>
       <div class="variant-selector" id="vs5">
-        <button class="btn-var active" data-i18n="var_najdorf"        onclick="switchVariant(5,'najdorf',event)">Variante Najdorf</button>
-        <button class="btn-var"        data-i18n="var_dragon"         onclick="switchVariant(5,'dragon',event)">Variante du Dragon</button>
-        <button class="btn-var"        data-i18n="var_scheveningen"   onclick="switchVariant(5,'scheveningen',event)">Scheveningen</button>
-        <button class="btn-var"        data-i18n="var_sveshnikov"     onclick="switchVariant(5,'sveshnikov',event)">Sveshnikov</button>
-        <button class="btn-var"        data-i18n="var_classique"      onclick="switchVariant(5,'classique',event)">Variante Classique</button>
-        <button class="btn-var"        data-i18n="var_kan"            onclick="switchVariant(5,'kan',event)">Variante Kan</button>
-        <button class="btn-var"        data-i18n="var_taimanov"       onclick="switchVariant(5,'taimanov',event)">Variante Taimanov</button>
-        <button class="btn-var"        data-i18n="var_quatre_cavaliers" onclick="switchVariant(5,'quatrecavaliers',event)">Quatre Cavaliers</button>
-        <button class="btn-var"        data-i18n="var_richter_rauzer" onclick="switchVariant(5,'richter_rauzer',event)">Richter-Rauzer</button>
-        <button class="btn-var"        data-i18n="var_english_attack" onclick="switchVariant(5,'english_attack',event)">Attaque Anglaise</button>
-        <button class="btn-var"        data-i18n="var_grand_prix"     onclick="switchVariant(5,'grand_prix',event)">Grand Prix Attack</button>
-        <button class="btn-var"        data-i18n="var_morra"          onclick="switchVariant(5,'morra',event)">Gambit Morra</button>
-        <button class="btn-var"        data-i18n="var_alapin"         onclick="switchVariant(5,'alapin',event)">Variante Alapin</button>
-        <button class="btn-var"        data-i18n="var_rossolimo"      onclick="switchVariant(5,'rossolimo',event)">Variante Rossolimo</button>
+        <button class="btn-var active" data-i18n="var_petrov" onclick="switchVariant(5,'petrov',event)">Défense Petrov</button>
+        <button class="btn-var" data-i18n="var_classique" onclick="switchVariant(5,'classique',event)">Variante Classique</button>
+        <button class="btn-var" data-i18n="var_nimzowitsch" onclick="switchVariant(5,'nimzowitsch',event)">Attaque Nimzowitsch</button>
+        <button class="btn-var" data-i18n="var_lasker" onclick="switchVariant(5,'lasker',event)">Attaque Lasker / Cozio</button>
+        <button class="btn-var" data-i18n="var_cochrane" onclick="switchVariant(5,'cochrane',event)">Gambit Cochrane</button>
+        <button class="btn-var" data-i18n="var_steinitz" onclick="switchVariant(5,'steinitz',event)">Variante Steinitz (C43)</button>
+        <button class="btn-var" data-i18n="var_stafford" onclick="switchVariant(5,'stafford',event)">Gambit Stafford</button>
       </div>
       <div class="engine-panel" id="ep5">
         <div class="engine-header">
@@ -355,9 +293,13 @@
   </div>
 </div>
 
+<!-- PARTIE II -->
+<div class="part-title" data-i18n="part2_title">PARTIE II — Les Parties Semi-Ouvertes (1.e4 …)</div>
+<div class="part-desc" data-i18n="part2_desc">Les Noirs rompent la symétrie dès le premier coup, acceptant un léger retard d'espace pour une structure asymétrique dynamique et combative.</div>
+
 <!-- Ch.6 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch6">6. La Défense Française</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch6">6. La Défense Sicilienne</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -373,11 +315,20 @@
       </div>
       <div class="move-counter" id="mc6"></div>
       <div class="variant-selector" id="vs6">
-        <button class="btn-var active" data-i18n="var_classique" onclick="switchVariant(6,'classique',event)">Variante Classique</button>
-        <button class="btn-var" data-i18n="var_winawer" onclick="switchVariant(6,'winawer',event)">Variante Winawer</button>
-        <button class="btn-var" data-i18n="var_avance" onclick="switchVariant(6,'avance',event)">Variante d'Avance</button>
-        <button class="btn-var" data-i18n="var_tarrasch" onclick="switchVariant(6,'tarrasch',event)">Variante Tarrasch</button>
-        <button class="btn-var" data-i18n="var_echange" onclick="switchVariant(6,'echange',event)">Variante de l'Échange</button>
+        <button class="btn-var active" data-i18n="var_najdorf"        onclick="switchVariant(6,'najdorf',event)">Variante Najdorf</button>
+        <button class="btn-var"        data-i18n="var_dragon"         onclick="switchVariant(6,'dragon',event)">Variante du Dragon</button>
+        <button class="btn-var"        data-i18n="var_scheveningen"   onclick="switchVariant(6,'scheveningen',event)">Scheveningen</button>
+        <button class="btn-var"        data-i18n="var_sveshnikov"     onclick="switchVariant(6,'sveshnikov',event)">Sveshnikov</button>
+        <button class="btn-var"        data-i18n="var_classique"      onclick="switchVariant(6,'classique',event)">Variante Classique</button>
+        <button class="btn-var"        data-i18n="var_kan"            onclick="switchVariant(6,'kan',event)">Variante Kan</button>
+        <button class="btn-var"        data-i18n="var_taimanov"       onclick="switchVariant(6,'taimanov',event)">Variante Taimanov</button>
+        <button class="btn-var"        data-i18n="var_quatre_cavaliers" onclick="switchVariant(6,'quatrecavaliers',event)">Quatre Cavaliers</button>
+        <button class="btn-var"        data-i18n="var_richter_rauzer" onclick="switchVariant(6,'richter_rauzer',event)">Richter-Rauzer</button>
+        <button class="btn-var"        data-i18n="var_english_attack" onclick="switchVariant(6,'english_attack',event)">Attaque Anglaise</button>
+        <button class="btn-var"        data-i18n="var_grand_prix"     onclick="switchVariant(6,'grand_prix',event)">Grand Prix Attack</button>
+        <button class="btn-var"        data-i18n="var_morra"          onclick="switchVariant(6,'morra',event)">Gambit Morra</button>
+        <button class="btn-var"        data-i18n="var_alapin"         onclick="switchVariant(6,'alapin',event)">Variante Alapin</button>
+        <button class="btn-var"        data-i18n="var_rossolimo"      onclick="switchVariant(6,'rossolimo',event)">Variante Rossolimo</button>
       </div>
       <div class="engine-panel" id="ep6">
         <div class="engine-header">
@@ -406,7 +357,7 @@
 
 <!-- Ch.7 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch7">7. La Défense Caro-Kann</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch7">7. La Défense Française</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -423,8 +374,10 @@
       <div class="move-counter" id="mc7"></div>
       <div class="variant-selector" id="vs7">
         <button class="btn-var active" data-i18n="var_classique" onclick="switchVariant(7,'classique',event)">Variante Classique</button>
-        <button class="btn-var" data-i18n="var_panov" onclick="switchVariant(7,'panov',event)">Attaque Panov</button>
+        <button class="btn-var" data-i18n="var_winawer" onclick="switchVariant(7,'winawer',event)">Variante Winawer</button>
         <button class="btn-var" data-i18n="var_avance" onclick="switchVariant(7,'avance',event)">Variante d'Avance</button>
+        <button class="btn-var" data-i18n="var_tarrasch" onclick="switchVariant(7,'tarrasch',event)">Variante Tarrasch</button>
+        <button class="btn-var" data-i18n="var_echange" onclick="switchVariant(7,'echange',event)">Variante de l'Échange</button>
       </div>
       <div class="engine-panel" id="ep7">
         <div class="engine-header">
@@ -453,7 +406,7 @@
 
 <!-- Ch.8 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch8">8. La Défense Alekhine, Pirc &amp; Scandinave</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch8">8. La Défense Caro-Kann</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -469,9 +422,9 @@
       </div>
       <div class="move-counter" id="mc8"></div>
       <div class="variant-selector" id="vs8">
-        <button class="btn-var active" data-i18n="var_alekhine" onclick="switchVariant(8,'alekhine',event)">Attaque des 4 Pions</button>
-        <button class="btn-var" data-i18n="var_pirc" onclick="switchVariant(8,'pirc',event)">Défense Pirc</button>
-        <button class="btn-var" data-i18n="var_scandinave" onclick="switchVariant(8,'scandinave',event)">Défense Scandinave</button>
+        <button class="btn-var active" data-i18n="var_classique" onclick="switchVariant(8,'classique',event)">Variante Classique</button>
+        <button class="btn-var" data-i18n="var_panov" onclick="switchVariant(8,'panov',event)">Attaque Panov</button>
+        <button class="btn-var" data-i18n="var_avance" onclick="switchVariant(8,'avance',event)">Variante d'Avance</button>
       </div>
       <div class="engine-panel" id="ep8">
         <div class="engine-header">
@@ -498,13 +451,9 @@
   </div>
 </div>
 
-<!-- PARTIE III -->
-<div class="part-title" data-i18n="part3_title">PARTIE III — Les Parties Fermées &amp; Semi-Fermées (1.d4)</div>
-<div class="part-desc" data-i18n="part3_desc">Guerres d'usure positionnelles sous 1.d4 ou 1.c4. Le centre reste verrouillé, déplaçant le combat sur la maîtrise géométrique des flancs et les structures de pions à long terme.</div>
-
 <!-- Ch.9 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch9">9. Le Gambit de la Dame Décliné (QGD) &amp; Slave</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch9">9. La Défense Alekhine, Pirc &amp; Scandinave</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -520,10 +469,9 @@
       </div>
       <div class="move-counter" id="mc9"></div>
       <div class="variant-selector" id="vs9">
-        <button class="btn-var active" data-i18n="var_qgd_exch" onclick="switchVariant(9,'exchange',event)">QGD — Variante de l'Échange</button>
-        <button class="btn-var" data-i18n="var_slave" onclick="switchVariant(9,'slave',event)">Défense Slave</button>
-        <button class="btn-var" data-i18n="var_meran" onclick="switchVariant(9,'meran',event)">Variante Meran</button>
-        <button class="btn-var" data-i18n="var_carlsbad" onclick="switchVariant(9,'carlsbad',event)">Structure Carlsbad</button>
+        <button class="btn-var active" data-i18n="var_alekhine" onclick="switchVariant(9,'alekhine',event)">Attaque des 4 Pions</button>
+        <button class="btn-var" data-i18n="var_pirc" onclick="switchVariant(9,'pirc',event)">Défense Pirc</button>
+        <button class="btn-var" data-i18n="var_scandinave" onclick="switchVariant(9,'scandinave',event)">Défense Scandinave</button>
       </div>
       <div class="engine-panel" id="ep9">
         <div class="engine-header">
@@ -550,9 +498,13 @@
   </div>
 </div>
 
+<!-- PARTIE III -->
+<div class="part-title" data-i18n="part3_title">PARTIE III — Les Parties Fermées &amp; Semi-Fermées (1.d4)</div>
+<div class="part-desc" data-i18n="part3_desc">Guerres d'usure positionnelles sous 1.d4 ou 1.c4. Le centre reste verrouillé, déplaçant le combat sur la maîtrise géométrique des flancs et les structures de pions à long terme.</div>
+
 <!-- Ch.10 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch10">10. La Défense Nimzo-Indienne</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch10">10. Le Gambit de la Dame Décliné (QGD) &amp; Slave</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -568,8 +520,10 @@
       </div>
       <div class="move-counter" id="mc10"></div>
       <div class="variant-selector" id="vs10">
-        <button class="btn-var active" data-i18n="var_rubinstein" onclick="switchVariant(10,'rubinstein',event)">Variante Rubinstein</button>
-        <button class="btn-var" data-i18n="var_samisch" onclick="switchVariant(10,'samisch',event)">Variante Sämisch</button>
+        <button class="btn-var active" data-i18n="var_qgd_exch" onclick="switchVariant(10,'exchange',event)">QGD — Variante de l'Échange</button>
+        <button class="btn-var" data-i18n="var_slave" onclick="switchVariant(10,'slave',event)">Défense Slave</button>
+        <button class="btn-var" data-i18n="var_meran" onclick="switchVariant(10,'meran',event)">Variante Meran</button>
+        <button class="btn-var" data-i18n="var_carlsbad" onclick="switchVariant(10,'carlsbad',event)">Structure Carlsbad</button>
       </div>
       <div class="engine-panel" id="ep10">
         <div class="engine-header">
@@ -598,7 +552,7 @@
 
 <!-- Ch.11 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch11">11. La Défense Indienne du Roi (KID)</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch11">11. La Défense Nimzo-Indienne</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -614,8 +568,8 @@
       </div>
       <div class="move-counter" id="mc11"></div>
       <div class="variant-selector" id="vs11">
-        <button class="btn-var active" data-i18n="var_kid_class" onclick="switchVariant(11,'classique',event)">Variante Classique</button>
-        <button class="btn-var" data-i18n="var_samisch_kid" onclick="switchVariant(11,'samisch_kid',event)">Variante Sämisch KID</button>
+        <button class="btn-var active" data-i18n="var_rubinstein" onclick="switchVariant(11,'rubinstein',event)">Variante Rubinstein</button>
+        <button class="btn-var" data-i18n="var_samisch" onclick="switchVariant(11,'samisch',event)">Variante Sämisch</button>
       </div>
       <div class="engine-panel" id="ep11">
         <div class="engine-header">
@@ -644,7 +598,7 @@
 
 <!-- Ch.12 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch12">12. La Défense Grünfeld</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch12">12. La Défense Indienne du Roi (KID)</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -660,8 +614,8 @@
       </div>
       <div class="move-counter" id="mc12"></div>
       <div class="variant-selector" id="vs12">
-        <button class="btn-var active" data-i18n="var_exchange_gru" onclick="switchVariant(12,'exchange_gru',event)">Variante d'Échange</button>
-        <button class="btn-var" data-i18n="var_russe_gru" onclick="switchVariant(12,'russe_gru',event)">Système Russe</button>
+        <button class="btn-var active" data-i18n="var_kid_class" onclick="switchVariant(12,'classique',event)">Variante Classique</button>
+        <button class="btn-var" data-i18n="var_samisch_kid" onclick="switchVariant(12,'samisch_kid',event)">Variante Sämisch KID</button>
       </div>
       <div class="engine-panel" id="ep12">
         <div class="engine-header">
@@ -690,7 +644,7 @@
 
 <!-- Ch.13 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch13">13. L'Ouverture Anglaise</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch13">13. La Défense Grünfeld</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -706,8 +660,8 @@
       </div>
       <div class="move-counter" id="mc13"></div>
       <div class="variant-selector" id="vs13">
-        <button class="btn-var active" data-i18n="var_reversed" onclick="switchVariant(13,'reversed',event)">Sicilienne Renversée</button>
-        <button class="btn-var" data-i18n="var_symmetric" onclick="switchVariant(13,'symmetric',event)">Anglaise Symétrique</button>
+        <button class="btn-var active" data-i18n="var_exchange_gru" onclick="switchVariant(13,'exchange_gru',event)">Variante d'Échange</button>
+        <button class="btn-var" data-i18n="var_russe_gru" onclick="switchVariant(13,'russe_gru',event)">Système Russe</button>
       </div>
       <div class="engine-panel" id="ep13">
         <div class="engine-header">
@@ -736,7 +690,7 @@
 
 <!-- Ch.14 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch14">14. La Partie Écossaise</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch14">14. L'Ouverture Anglaise</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -747,12 +701,13 @@
         </div>
       </div>
       <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(14)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(14)">Avancer &#9654;</button>
+        <button class="btn" data-i18n="prev" onclick="prevMove(14)">◀ Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(14)">Avancer ▶</button>
       </div>
       <div class="move-counter" id="mc14"></div>
       <div class="variant-selector" id="vs14">
-        <button class="btn-var active" onclick="switchVariant(14,'scotch',event)">Partie Écossaise</button>
+        <button class="btn-var active" data-i18n="var_reversed" onclick="switchVariant(14,'reversed',event)">Sicilienne Renversée</button>
+        <button class="btn-var" data-i18n="var_symmetric" onclick="switchVariant(14,'symmetric',event)">Anglaise Symétrique</button>
       </div>
       <div class="engine-panel" id="ep14">
         <div class="engine-header">
@@ -781,7 +736,7 @@
 
 <!-- Ch.15 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch15">15. L'Ouverture Ponziani</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch15">15. La Partie Écossaise</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -797,7 +752,7 @@
       </div>
       <div class="move-counter" id="mc15"></div>
       <div class="variant-selector" id="vs15">
-        <button class="btn-var active" onclick="switchVariant(15,'ponziani',event)">Ponziani</button>
+        <button class="btn-var active" onclick="switchVariant(15,'scotch',event)">Partie Écossaise</button>
       </div>
       <div class="engine-panel" id="ep15">
         <div class="engine-header">
@@ -826,7 +781,7 @@
 
 <!-- Ch.16 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch16">16. La Partie des Quatre Cavaliers</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch16">16. L'Ouverture Ponziani</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -842,7 +797,7 @@
       </div>
       <div class="move-counter" id="mc16"></div>
       <div class="variant-selector" id="vs16">
-        <button class="btn-var active" onclick="switchVariant(16,'quatre_cavaliers',event)">Quatre Cavaliers</button>
+        <button class="btn-var active" onclick="switchVariant(16,'ponziani',event)">Ponziani</button>
       </div>
       <div class="engine-panel" id="ep16">
         <div class="engine-header">
@@ -871,7 +826,7 @@
 
 <!-- Ch.17 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch17">17. Le Gambit Éléphant</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch17">17. La Partie des Quatre Cavaliers</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -887,7 +842,7 @@
       </div>
       <div class="move-counter" id="mc17"></div>
       <div class="variant-selector" id="vs17">
-        <button class="btn-var active" onclick="switchVariant(17,'elephant',event)">Gambit Éléphant</button>
+        <button class="btn-var active" onclick="switchVariant(17,'quatre_cavaliers',event)">Quatre Cavaliers</button>
       </div>
       <div class="engine-panel" id="ep17">
         <div class="engine-header">
@@ -916,7 +871,7 @@
 
 <!-- Ch.18 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch18">18. Le Gambit Letton</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch18">18. Le Gambit Éléphant</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -932,7 +887,7 @@
       </div>
       <div class="move-counter" id="mc18"></div>
       <div class="variant-selector" id="vs18">
-        <button class="btn-var active" onclick="switchVariant(18,'letton',event)">Gambit Letton</button>
+        <button class="btn-var active" onclick="switchVariant(18,'elephant',event)">Gambit Éléphant</button>
       </div>
       <div class="engine-panel" id="ep18">
         <div class="engine-header">
@@ -961,7 +916,7 @@
 
 <!-- Ch.19 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch19">19. La Partie du Centre</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch19">19. Le Gambit Letton</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -977,7 +932,7 @@
       </div>
       <div class="move-counter" id="mc19"></div>
       <div class="variant-selector" id="vs19">
-        <button class="btn-var active" onclick="switchVariant(19,'centre',event)">Partie du Centre</button>
+        <button class="btn-var active" onclick="switchVariant(19,'letton',event)">Gambit Letton</button>
       </div>
       <div class="engine-panel" id="ep19">
         <div class="engine-header">
@@ -1006,7 +961,7 @@
 
 <!-- Ch.20 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch20">20. Le Gambit Danois</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch20">20. La Partie du Centre</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1022,7 +977,7 @@
       </div>
       <div class="move-counter" id="mc20"></div>
       <div class="variant-selector" id="vs20">
-        <button class="btn-var active" onclick="switchVariant(20,'danois',event)">Gambit Danois</button>
+        <button class="btn-var active" onclick="switchVariant(20,'centre',event)">Partie du Centre</button>
       </div>
       <div class="engine-panel" id="ep20">
         <div class="engine-header">
@@ -1051,7 +1006,7 @@
 
 <!-- Ch.21 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch21">21. La Partie Viennoise</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch21">21. Le Gambit Danois</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1067,7 +1022,7 @@
       </div>
       <div class="move-counter" id="mc21"></div>
       <div class="variant-selector" id="vs21">
-        <button class="btn-var active" onclick="switchVariant(21,'viennoise',event)">Partie Viennoise</button>
+        <button class="btn-var active" onclick="switchVariant(21,'danois',event)">Gambit Danois</button>
       </div>
       <div class="engine-panel" id="ep21">
         <div class="engine-header">
@@ -1096,7 +1051,7 @@
 
 <!-- Ch.22 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch22">22. L'Ouverture du Fou</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch22">22. La Partie Viennoise</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1112,7 +1067,7 @@
       </div>
       <div class="move-counter" id="mc22"></div>
       <div class="variant-selector" id="vs22">
-        <button class="btn-var active" onclick="switchVariant(22,'fou',event)">Ouverture du Fou</button>
+        <button class="btn-var active" onclick="switchVariant(22,'viennoise',event)">Partie Viennoise</button>
       </div>
       <div class="engine-panel" id="ep22">
         <div class="engine-header">
@@ -1139,13 +1094,9 @@
   </div>
 </div>
 
-<!-- PARTIE II — Autres Défenses contre 1.e4 -->
-<div class="part-title" data-i18n="part2_title">PARTIE II — Autres Défenses contre 1.e4</div>
-<div class="part-desc" data-i18n="part2_desc">Ouvertures moins fréquentes mais redoutables contre 1.e4 : défenses irrégulières, gambits noirs et systèmes hypermodernes.</div>
-
 <!-- Ch.23 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch23">23. La Défense Nimzowitsch</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch23">23. L'Ouverture du Fou</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1161,7 +1112,7 @@
       </div>
       <div class="move-counter" id="mc23"></div>
       <div class="variant-selector" id="vs23">
-        <button class="btn-var active" onclick="switchVariant(23,'nimzowitsch_def',event)">Défense Nimzowitsch</button>
+        <button class="btn-var active" onclick="switchVariant(23,'fou',event)">Ouverture du Fou</button>
       </div>
       <div class="engine-panel" id="ep23">
         <div class="engine-header">
@@ -1188,9 +1139,13 @@
   </div>
 </div>
 
+<!-- PARTIE II — Autres Défenses contre 1.e4 -->
+<div class="part-title" data-i18n="part2_title">PARTIE II — Autres Défenses contre 1.e4</div>
+<div class="part-desc" data-i18n="part2_desc">Ouvertures moins fréquentes mais redoutables contre 1.e4 : défenses irrégulières, gambits noirs et systèmes hypermodernes.</div>
+
 <!-- Ch.24 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch24">24. La Défense Moderne</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch24">24. La Défense Nimzowitsch</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1206,7 +1161,7 @@
       </div>
       <div class="move-counter" id="mc24"></div>
       <div class="variant-selector" id="vs24">
-        <button class="btn-var active" onclick="switchVariant(24,'moderne_def',event)">Défense Moderne</button>
+        <button class="btn-var active" onclick="switchVariant(24,'nimzowitsch_def',event)">Défense Nimzowitsch</button>
       </div>
       <div class="engine-panel" id="ep24">
         <div class="engine-header">
@@ -1235,7 +1190,7 @@
 
 <!-- Ch.25 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch25">25. La Défense Owen / Hippopotame</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch25">25. La Défense Moderne</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1251,7 +1206,7 @@
       </div>
       <div class="move-counter" id="mc25"></div>
       <div class="variant-selector" id="vs25">
-        <button class="btn-var active" onclick="switchVariant(25,'owen',event)">Défense Owen</button>
+        <button class="btn-var active" onclick="switchVariant(25,'moderne_def',event)">Défense Moderne</button>
       </div>
       <div class="engine-panel" id="ep25">
         <div class="engine-header">
@@ -1278,13 +1233,9 @@
   </div>
 </div>
 
-<!-- PARTIE III — Le Jeu Fermé (1.d4) -->
-<div class="part-title" data-i18n="part3_title">PARTIE III — Le Jeu Fermé (1.d4)</div>
-<div class="part-desc" data-i18n="part3_desc">Lorsque les Blancs jouent 1.d4, les parties s'ouvrent de façon plus positionnel et stratégique. Les structures de pions et les plans à long terme prennent le dessus sur les tactiques immédiates.</div>
-
 <!-- Ch.26 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch26">26. La Défense Hollandaise</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch26">26. La Défense Owen / Hippopotame</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1300,7 +1251,7 @@
       </div>
       <div class="move-counter" id="mc26"></div>
       <div class="variant-selector" id="vs26">
-        <button class="btn-var active" onclick="switchVariant(26,'hollandaise',event)">Défense Hollandaise</button>
+        <button class="btn-var active" onclick="switchVariant(26,'owen',event)">Défense Owen</button>
       </div>
       <div class="engine-panel" id="ep26">
         <div class="engine-header">
@@ -1327,9 +1278,13 @@
   </div>
 </div>
 
+<!-- PARTIE III — Le Jeu Fermé (1.d4) -->
+<div class="part-title" data-i18n="part3_title">PARTIE III — Le Jeu Fermé (1.d4)</div>
+<div class="part-desc" data-i18n="part3_desc">Lorsque les Blancs jouent 1.d4, les parties s'ouvrent de façon plus positionnel et stratégique. Les structures de pions et les plans à long terme prennent le dessus sur les tactiques immédiates.</div>
+
 <!-- Ch.27 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch27">27. Le Gambit Englund</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch27">27. La Défense Hollandaise</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1345,7 +1300,7 @@
       </div>
       <div class="move-counter" id="mc27"></div>
       <div class="variant-selector" id="vs27">
-        <button class="btn-var active" onclick="switchVariant(27,'englund',event)">Gambit Englund</button>
+        <button class="btn-var active" onclick="switchVariant(27,'hollandaise',event)">Défense Hollandaise</button>
       </div>
       <div class="engine-panel" id="ep27">
         <div class="engine-header">
@@ -1374,7 +1329,7 @@
 
 <!-- Ch.28 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch28">28. La Défense Nimzo-Indienne</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch28">28. Le Gambit Englund</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1390,7 +1345,7 @@
       </div>
       <div class="move-counter" id="mc28"></div>
       <div class="variant-selector" id="vs28">
-        <button class="btn-var active" onclick="switchVariant(28,'nimzo_indienne',event)">Nimzo-Indienne</button>
+        <button class="btn-var active" onclick="switchVariant(28,'englund',event)">Gambit Englund</button>
       </div>
       <div class="engine-panel" id="ep28">
         <div class="engine-header">
@@ -1419,7 +1374,7 @@
 
 <!-- Ch.29 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch29">29. La Défense Indienne Dame</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch29">29. La Défense Nimzo-Indienne</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1435,7 +1390,7 @@
       </div>
       <div class="move-counter" id="mc29"></div>
       <div class="variant-selector" id="vs29">
-        <button class="btn-var active" onclick="switchVariant(29,'qid',event)">Indienne Dame</button>
+        <button class="btn-var active" onclick="switchVariant(29,'nimzo_indienne',event)">Nimzo-Indienne</button>
       </div>
       <div class="engine-panel" id="ep29">
         <div class="engine-header">
@@ -1464,7 +1419,7 @@
 
 <!-- Ch.30 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch30">30. La Défense Bogo-Indienne</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch30">30. La Défense Indienne Dame</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1480,7 +1435,7 @@
       </div>
       <div class="move-counter" id="mc30"></div>
       <div class="variant-selector" id="vs30">
-        <button class="btn-var active" onclick="switchVariant(30,'bogo',event)">Bogo-Indienne</button>
+        <button class="btn-var active" onclick="switchVariant(30,'qid',event)">Indienne Dame</button>
       </div>
       <div class="engine-panel" id="ep30">
         <div class="engine-header">
@@ -1509,7 +1464,7 @@
 
 <!-- Ch.31 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch31">31. L'Ouverture Catalane</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch31">31. La Défense Bogo-Indienne</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1525,7 +1480,7 @@
       </div>
       <div class="move-counter" id="mc31"></div>
       <div class="variant-selector" id="vs31">
-        <button class="btn-var active" onclick="switchVariant(31,'catalane',event)">Catalane</button>
+        <button class="btn-var active" onclick="switchVariant(31,'bogo',event)">Bogo-Indienne</button>
       </div>
       <div class="engine-panel" id="ep31">
         <div class="engine-header">
@@ -1554,7 +1509,7 @@
 
 <!-- Ch.32 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch32">32. La Défense Benoni</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch32">32. L'Ouverture Catalane</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1570,7 +1525,7 @@
       </div>
       <div class="move-counter" id="mc32"></div>
       <div class="variant-selector" id="vs32">
-        <button class="btn-var active" onclick="switchVariant(32,'benoni',event)">Défense Benoni</button>
+        <button class="btn-var active" onclick="switchVariant(32,'catalane',event)">Catalane</button>
       </div>
       <div class="engine-panel" id="ep32">
         <div class="engine-header">
@@ -1599,7 +1554,7 @@
 
 <!-- Ch.33 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch33">33. Le Gambit Budapest</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch33">33. La Défense Benoni</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1615,7 +1570,7 @@
       </div>
       <div class="move-counter" id="mc33"></div>
       <div class="variant-selector" id="vs33">
-        <button class="btn-var active" onclick="switchVariant(33,'budapest',event)">Gambit Budapest</button>
+        <button class="btn-var active" onclick="switchVariant(33,'benoni',event)">Défense Benoni</button>
       </div>
       <div class="engine-panel" id="ep33">
         <div class="engine-header">
@@ -1642,13 +1597,9 @@
   </div>
 </div>
 
-<!-- PARTIE IV — Systèmes avec 1.d4 (Attaques) -->
-<div class="part-title" data-i18n="part4_title">PARTIE IV — Systèmes avec 1.d4 (Attaques)</div>
-<div class="part-desc" data-i18n="part4_desc">Systèmes où les Blancs jouent 1.d4 sans engager directement la théorie des Indiennes ou du Gambit Dame : Trompowsky, London, Colle, Torre, Stonewall.</div>
-
 <!-- Ch.34 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch34">34. L'Attaque Trompowsky</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch34">34. Le Gambit Budapest</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1664,7 +1615,7 @@
       </div>
       <div class="move-counter" id="mc34"></div>
       <div class="variant-selector" id="vs34">
-        <button class="btn-var active" onclick="switchVariant(34,'trompowsky',event)">Trompowsky</button>
+        <button class="btn-var active" onclick="switchVariant(34,'budapest',event)">Gambit Budapest</button>
       </div>
       <div class="engine-panel" id="ep34">
         <div class="engine-header">
@@ -1691,9 +1642,13 @@
   </div>
 </div>
 
+<!-- PARTIE IV — Systèmes avec 1.d4 (Attaques) -->
+<div class="part-title" data-i18n="part4_title">PARTIE IV — Systèmes avec 1.d4 (Attaques)</div>
+<div class="part-desc" data-i18n="part4_desc">Systèmes où les Blancs jouent 1.d4 sans engager directement la théorie des Indiennes ou du Gambit Dame : Trompowsky, London, Colle, Torre, Stonewall.</div>
+
 <!-- Ch.35 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch35">35. Le Système Londonien</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch35">35. L'Attaque Trompowsky</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1709,7 +1664,7 @@
       </div>
       <div class="move-counter" id="mc35"></div>
       <div class="variant-selector" id="vs35">
-        <button class="btn-var active" onclick="switchVariant(35,'london',event)">London</button>
+        <button class="btn-var active" onclick="switchVariant(35,'trompowsky',event)">Trompowsky</button>
       </div>
       <div class="engine-panel" id="ep35">
         <div class="engine-header">
@@ -1738,7 +1693,7 @@
 
 <!-- Ch.36 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch36">36. Le Système Jobava-London</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch36">36. Le Système Londonien</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1754,7 +1709,7 @@
       </div>
       <div class="move-counter" id="mc36"></div>
       <div class="variant-selector" id="vs36">
-        <button class="btn-var active" onclick="switchVariant(36,'jobava',event)">Jobava-London</button>
+        <button class="btn-var active" onclick="switchVariant(36,'london',event)">London</button>
       </div>
       <div class="engine-panel" id="ep36">
         <div class="engine-header">
@@ -1783,7 +1738,7 @@
 
 <!-- Ch.37 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch37">37. Le Système Colle</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch37">37. Le Système Jobava-London</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1799,7 +1754,7 @@
       </div>
       <div class="move-counter" id="mc37"></div>
       <div class="variant-selector" id="vs37">
-        <button class="btn-var active" onclick="switchVariant(37,'colle',event)">Colle</button>
+        <button class="btn-var active" onclick="switchVariant(37,'jobava',event)">Jobava-London</button>
       </div>
       <div class="engine-panel" id="ep37">
         <div class="engine-header">
@@ -1828,7 +1783,7 @@
 
 <!-- Ch.38 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch38">38. Le Système Colle-Zukertort</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch38">38. Le Système Colle</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1844,7 +1799,7 @@
       </div>
       <div class="move-counter" id="mc38"></div>
       <div class="variant-selector" id="vs38">
-        <button class="btn-var active" onclick="switchVariant(38,'colle_zukertort',event)">Colle-Zukertort</button>
+        <button class="btn-var active" onclick="switchVariant(38,'colle',event)">Colle</button>
       </div>
       <div class="engine-panel" id="ep38">
         <div class="engine-header">
@@ -1873,7 +1828,7 @@
 
 <!-- Ch.39 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch39">39. L'Attaque Torre</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch39">39. Le Système Colle-Zukertort</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1889,7 +1844,7 @@
       </div>
       <div class="move-counter" id="mc39"></div>
       <div class="variant-selector" id="vs39">
-        <button class="btn-var active" onclick="switchVariant(39,'torre',event)">Torre</button>
+        <button class="btn-var active" onclick="switchVariant(39,'colle_zukertort',event)">Colle-Zukertort</button>
       </div>
       <div class="engine-panel" id="ep39">
         <div class="engine-header">
@@ -1918,7 +1873,7 @@
 
 <!-- Ch.40 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch40">40. L'Attaque Stonewall</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch40">40. L'Attaque Torre</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -1934,7 +1889,7 @@
       </div>
       <div class="move-counter" id="mc40"></div>
       <div class="variant-selector" id="vs40">
-        <button class="btn-var active" onclick="switchVariant(40,'stonewall',event)">Stonewall</button>
+        <button class="btn-var active" onclick="switchVariant(40,'torre',event)">Torre</button>
       </div>
       <div class="engine-panel" id="ep40">
         <div class="engine-header">
@@ -1958,6 +1913,51 @@
       </div>
     </div>
     <div class="content-container" id="content40"></div>
+  </div>
+</div>
+
+<!-- Ch.41 -->
+<div class="chapter-card">
+  <div class="chapter-header"><h3 data-i18n="ch41">41. L'Attaque Stonewall</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board41" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(41)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(41)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc41"></div>
+      <div class="variant-selector" id="vs41">
+        <button class="btn-var active" onclick="switchVariant(41,'stonewall',event)">Stonewall</button>
+      </div>
+      <div class="engine-panel" id="ep41">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(41)">
+            <div class="engine-switch" id="esw41"></div>
+            <div class="engine-status-dot" id="esd41"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb41">
+          <div class="engine-loading" id="el41">Chargement du moteur...</div>
+          <div id="er41" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf41"></div></div>
+              <div class="eval-score" id="esc41">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm41"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp41">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content41"></div>
   </div>
 </div>
 
@@ -2145,9 +2145,54 @@
   </div>
 </div>
 
+<!-- Ch.46 -->
+<div class="chapter-card">
+  <div class="chapter-header"><h3 data-i18n="ch46">46. La Partie des Trois Cavaliers</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board46" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(46)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(46)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc46"></div>
+      <div class="variant-selector" id="vs46">
+        <button class="btn-var active" data-i18n="var_trois_cavaliers" onclick="switchVariant(46,'trois_cavaliers',event)">Trois Cavaliers</button>
+      </div>
+      <div class="engine-panel" id="ep46">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(46)">
+            <div class="engine-switch" id="esw46"></div>
+            <div class="engine-status-dot" id="esd46"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb46">
+          <div class="engine-loading" id="el46">Chargement du moteur...</div>
+          <div id="er46" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf46"></div></div>
+              <div class="eval-score" id="esc46">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm46"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp46">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content46"></div>
+  </div>
+</div>
+
 <!-- Ch.47 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch47">47. La Partie des Trois Cavaliers</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch47">47. La Défense Damiano</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -2163,7 +2208,7 @@
       </div>
       <div class="move-counter" id="mc47"></div>
       <div class="variant-selector" id="vs47">
-        <button class="btn-var active" data-i18n="var_trois_cavaliers" onclick="switchVariant(47,'trois_cavaliers',event)">Trois Cavaliers</button>
+        <button class="btn-var active" data-i18n="var_damiano" onclick="switchVariant(47,'damiano',event)">Défense Damiano</button>
       </div>
       <div class="engine-panel" id="ep47">
         <div class="engine-header">
@@ -2192,7 +2237,7 @@
 
 <!-- Ch.48 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch48">48. La Défense Damiano</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch48">48. L'Attaque Bongcloud</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -2208,7 +2253,7 @@
       </div>
       <div class="move-counter" id="mc48"></div>
       <div class="variant-selector" id="vs48">
-        <button class="btn-var active" data-i18n="var_damiano" onclick="switchVariant(48,'damiano',event)">Défense Damiano</button>
+        <button class="btn-var active" data-i18n="var_bongcloud" onclick="switchVariant(48,'bongcloud',event)">Attaque Bongcloud</button>
       </div>
       <div class="engine-panel" id="ep48">
         <div class="engine-header">
@@ -2237,7 +2282,7 @@
 
 <!-- Ch.49 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch49">49. L'Attaque Bongcloud</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch49">49. La Défense Barnes</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -2253,7 +2298,7 @@
       </div>
       <div class="move-counter" id="mc49"></div>
       <div class="variant-selector" id="vs49">
-        <button class="btn-var active" data-i18n="var_bongcloud" onclick="switchVariant(49,'bongcloud',event)">Attaque Bongcloud</button>
+        <button class="btn-var active" data-i18n="var_barnes" onclick="switchVariant(49,'barnes',event)">Défense Barnes</button>
       </div>
       <div class="engine-panel" id="ep49">
         <div class="engine-header">
@@ -2282,7 +2327,7 @@
 
 <!-- Ch.50 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch50">50. La Défense Barnes</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch50">50. Le Gambit de la Dame Accepté</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -2298,7 +2343,7 @@
       </div>
       <div class="move-counter" id="mc50"></div>
       <div class="variant-selector" id="vs50">
-        <button class="btn-var active" data-i18n="var_barnes" onclick="switchVariant(50,'barnes',event)">Défense Barnes</button>
+        <button class="btn-var active" data-i18n="var_gda" onclick="switchVariant(50,'gda',event)">Gambit Dame Accepté</button>
       </div>
       <div class="engine-panel" id="ep50">
         <div class="engine-header">
@@ -2327,7 +2372,7 @@
 
 <!-- Ch.51 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch51">51. Le Gambit de la Dame Accepté</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch51">51. La Défense Tchigorine</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -2343,7 +2388,7 @@
       </div>
       <div class="move-counter" id="mc51"></div>
       <div class="variant-selector" id="vs51">
-        <button class="btn-var active" data-i18n="var_gda" onclick="switchVariant(51,'gda',event)">Gambit Dame Accepté</button>
+        <button class="btn-var active" data-i18n="var_tchigorine" onclick="switchVariant(51,'tchigorine',event)">Défense Tchigorine</button>
       </div>
       <div class="engine-panel" id="ep51">
         <div class="engine-header">
@@ -2372,7 +2417,7 @@
 
 <!-- Ch.52 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch52">52. La Défense Tchigorine</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch52">52. L'Ouverture Sokolski (Orang-Outan)</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -2388,7 +2433,7 @@
       </div>
       <div class="move-counter" id="mc52"></div>
       <div class="variant-selector" id="vs52">
-        <button class="btn-var active" data-i18n="var_tchigorine" onclick="switchVariant(52,'tchigorine',event)">Défense Tchigorine</button>
+        <button class="btn-var active" data-i18n="var_sokolski" onclick="switchVariant(52,'sokolski',event)">Sokolski (Orang-Outan)</button>
       </div>
       <div class="engine-panel" id="ep52">
         <div class="engine-header">
@@ -2417,7 +2462,7 @@
 
 <!-- Ch.53 -->
 <div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch53">53. L'Ouverture Sokolski (Orang-Outan)</h3></div>
+  <div class="chapter-header"><h3 data-i18n="ch53">53. L'Attaque Grob</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
@@ -2433,7 +2478,7 @@
       </div>
       <div class="move-counter" id="mc53"></div>
       <div class="variant-selector" id="vs53">
-        <button class="btn-var active" data-i18n="var_sokolski" onclick="switchVariant(53,'sokolski',event)">Sokolski (Orang-Outan)</button>
+        <button class="btn-var active" data-i18n="var_grob" onclick="switchVariant(53,'grob',event)">Attaque Grob</button>
       </div>
       <div class="engine-panel" id="ep53">
         <div class="engine-header">
@@ -2457,51 +2502,6 @@
       </div>
     </div>
     <div class="content-container" id="content53"></div>
-  </div>
-</div>
-
-<!-- Ch.54 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch54">54. L'Attaque Grob</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board54" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(54)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(54)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc54"></div>
-      <div class="variant-selector" id="vs54">
-        <button class="btn-var active" data-i18n="var_grob" onclick="switchVariant(54,'grob',event)">Attaque Grob</button>
-      </div>
-      <div class="engine-panel" id="ep54">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(54)">
-            <div class="engine-switch" id="esw54"></div>
-            <div class="engine-status-dot" id="esd54"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb54">
-          <div class="engine-loading" id="el54">Chargement du moteur...</div>
-          <div id="er54" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf54"></div></div>
-              <div class="eval-score" id="esc54">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm54"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp54">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content54"></div>
   </div>
 </div>
 
