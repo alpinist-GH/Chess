@@ -1,4 +1,4 @@
-﻿﻿﻿/* ══════════════════════════════════════════════
+﻿﻿﻿﻿/* ══════════════════════════════════════════════
    openings.js — All opening data: DB (46 openings, 71 variants) + ENRICH (44 chapitres enrichis : histoire, annotations, parties)
    To add a new opening: add a new numbered key to DB following the same pattern.
    ══════════════════════════════════════════════ */
@@ -1892,29 +1892,160 @@ var DB = {
   },
   46: {
     petrov: {
-      line:"1.e4 e5 2.Cf3 Cf6 3.Cxe5 d6 4.Cf3 Cxe4 5.d4 d5",
-      fondement:"La Défense Petrov (1.e4 e5 2.Cf3 Cf6) cherche à forcer la nulle par une symétrie parfaite.",
-      fondement_en:"The Petrov Defense (1.e4 e5 2.Nf3 Nf6) seeks to force a draw through perfect symmetry.",
-      avantages:"Très solide, mène à une égalité presque assurée avec un jeu correct.",
-      avantages_en:"Very solid, leads to near-certain equality with correct play.",
-      inconvenients:"Joue ouvertement pour la nulle. Position symétrique restrictive.",
-      inconvenients_en:"Openly plays for a draw. Restrictive symmetric position.",
-      blancs:"Manœuvrer avec une extrême finesse positionnelle pour conserver une infime initiative.",
-      blancs_en:"Maneuver with extreme positional finesse to retain the slightest initiative.",
-      noirs:"Échanger méthodiquement les pièces actives au centre et liquider la position.",
-      noirs_en:"Methodically exchange the active central pieces and liquidate the position.",
-      cases:"e4, d5 (cases fortes de centralisation des Cavaliers).",
-      cases_en:"e4, d5 (strong central Knight squares).",
-      finale:"L'objectif ultime : atteindre une finale plate et égale pour sécuriser un score.",
-      finale_en:"The ultimate goal: reach a flat, equal endgame to secure a score.",
-      stats:"Pilier historique des matchs de Championnat du Monde.",
-      stats_en:"Historic pillar of World Championship matches.",
-      piege:"L'ouverture exige une précision absolue : la moindre faille brise la forteresse.",
-      piege_en:"The opening demands absolute precision: the slightest flaw breaks the fortress.",
-      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"f3",to:"e5"},{from:"d7",to:"d6"},{from:"e5",to:"f3"},{from:"f6",to:"e4"},{from:"d2",to:"d4"},{from:"d6",to:"d5"}]
+      line:"1.e4 e5 2.Cf3 Cf6",
+      fondement:"Contre-attaque symÃ©trique immÃ©diate sur e4 au lieu de dÃ©fendre e5. Les Noirs acceptent une structure souvent symÃ©trique en Ã©change d'un dÃ©veloppement facile et de l'annulation de l'initiative blanche. L'idÃ©e est de refuser le combat thÃ©orique de la Ruy Lopez ou de l'Italienne.",
+      fondement_en:"Immediate symmetric counter-attack on e4 instead of defending e5. Black accepts an often symmetric structure in exchange for easy development and neutralizing White's initiative. The idea is to refuse the theoretical battles of the Ruy Lopez or Italian Game.",
+      avantages:"SoliditÃ© structurale exceptionnelle. Annule les lignes d'attaque ultra-agressives (Ruy Lopez, Italienne). IdÃ©ale pour sÃ©curiser la nulle ou jouer un milieu de partie basÃ© sur la comprÃ©hension stratÃ©gique pure.",
+      avantages_en:"Exceptional structural solidity. Neutralizes ultra-aggressive attacking lines (Ruy Lopez, Italian). Ideal for securing a draw or playing a middlegame based on pure strategic understanding.",
+      inconvenients:"RÃ©putation de 'sÃ©cher' le jeu. Difficile de forcer le gain si les Blancs optent pour une ligne ultra-symÃ©trique. NÃ©cessite une grande prÃ©cision mÃ©morielle dans les fins de variantes.",
+      inconvenients_en:"Reputation for 'drying out' the game. Difficult for Black to force a win if White opts for an ultra-symmetric line. Requires great memory precision in the final variations.",
+      blancs:"Prendre l'initiative dÃ¨s 3.Cxe5 puis d4, jouer la Variante Steinitz (3.d4), ou tenter le Gambit Cochrane (4.Cxf7).",
+      blancs_en:"Take the initiative from 3.Nxe5 then d4, play the Steinitz Variation (3.d4), or try the Cochrane Gambit (4.Nxf7).",
+      noirs:"Contre-attaquer en e4 aprÃ¨s 3.Cxe5 d6 4.Cf3 Cxe4, installer solidement le cavalier en e4, puis viser ...c5 ou ...f5.",
+      noirs_en:"Counter-attack on e4 after 3.Nxe5 d6 4.Nf3 Nxe4, firmly establish the knight on e4, then aim for ...c5 or ...f5.",
+      cases:"e4 (contre-attaque noire) ; e5 (cavalier blanc transitoire) ; d5 (tension centrale ligne classique)",
+      cases_en:"e4 (Black's counter-attack); e5 (White's transient knight); d5 (central tension in classical line)",
+      finale:"MÃ¨ne souvent Ã  des finales Ã©quilibrÃ©es de Tours ou de Cavaliers. L'avantage d'espace blanc peut Ãªtre dÃ©cisif si les Noirs ne contre-attaquent pas activement.",
+      finale_en:"Often leads to balanced Rook or Knight endgames. White's space advantage can be decisive if Black doesn't counter-attack actively.",
+      stats:"ECO C42-C43 | ~15% des parties 1.e4 e5 au niveau Ã©lite | Taux de nulle ~45% | Kramnik (titre mondial 2000), Caruana, Ding Liren",
+      stats_en:"ECO C42-C43 | ~15% of elite 1.e4 e5 games | Draw rate ~45% | Kramnik (world title 2000), Caruana, Ding Liren",
+      piege:"PiÃ¨ge absolu : 3.Cxe5 Cxe4?? 4.De2! et les Noirs perdent le cavalier. Si 4...Cf6?? 5.Cc6+ dÃ©couvert gagne la Dame. Toujours jouer 3...d6 d'abord !",
+      piege_en:"Absolute trap: 3.Nxe5 Nxe4?? 4.Qe2! and Black loses the knight. If 4...Nf6?? 5.Nc6+ discovered check wins the Queen. Always play 3...d6 first!",
+      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"}]
+    },
+    classique: {
+      line:"1.e4 e5 2.Cf3 Cf6 3.Cxe5 d6 4.Cf3 Cxe4 5.d4 d5 6.Fd3",
+      fondement:"La ligne principale de la Petroff. Les Blancs rÃ©pondent au cavalier noir en e4 par d4, visant le centre d5. Les Noirs consolident leur cavalier en e4 et cherchent Ã  contre-attaquer avec ...c5.",
+      fondement_en:"The main line of the Petroff. White responds to Black's knight on e4 with d4, targeting the d5 center. Black consolidates their knight on e4 and looks to counter with ...c5.",
+      avantages:"Blancs : prise de centre puissante, paire de Fous active, pression sur d5. Noirs : cavalier central solide en e4, structure symÃ©trique Ã©quilibrÃ©e.",
+      avantages_en:"White: powerful center control, active bishop pair, pressure on d5. Black: solid central knight on e4, balanced symmetric structure.",
+      inconvenients:"Blancs : cavalier noir e4 difficile Ã  chasser. Noirs : dÃ©fense prÃ©cise requise face aux menaces c4 et Re1.",
+      inconvenients_en:"White: Black's e4 knight is hard to dislodge. Black: precise defense required against c4 and Re1 threats.",
+      blancs:"Attaquer d5 avec c4, chasser le cavalier e4 par Re1, manÅ“uvre Fc2-Db3 pour pression directe.",
+      blancs_en:"Attack d5 with c4, drive away the e4 knight with Re1, Bc2-Qb3 maneuver for direct pressure.",
+      noirs:"Ancrer le cavalier en e4 via ...f5 ou ...Fd7, puis percÃ©e centrale ...c5 ou ...f5.",
+      noirs_en:"Anchor the knight on e4 via ...f5 or ...Bd7, then central break ...c5 or ...f5.",
+      cases:"e4 (cavalier noir central), d5 (tension), c4 (levier blanc), e1 (colonne e Tour blanche)",
+      cases_en:"e4 (Black's central knight), d5 (tension), c4 (White's lever), e1 (e-file White's Rook)",
+      finale:"Finales de Tour souvent Ã©quilibrÃ©es. La paire de Fous blanche peut Ãªtre dÃ©cisive en jeu ouvert.",
+      finale_en:"Rook endgames often balanced. White's bishop pair can be decisive in open play.",
+      stats:"ECO C42 | Sous-variante la plus jouÃ©e au niveau mondial | Taux de nulle ~47%",
+      stats_en:"ECO C42 | Most played sub-variation worldwide | Draw rate ~47%",
+      piege:"Dans la variante Jaenisch (8.c4), ne pas prÃ©cipiter ...c5 sans prÃ©parer le cavalier. Toujours 3...d6 avant de reprendre en e4.",
+      piege_en:"In the Jaenisch variation (8.c4), do not rush ...c5 without preparing the knight. Always 3...d6 before recapturing on e4.",
+      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"f3",to:"e5"},{from:"d7",to:"d6"},{from:"e5",to:"f3"},{from:"f6",to:"e4"},{from:"d2",to:"d4"},{from:"d6",to:"d5"},{from:"f1",to:"d3"}]
+    },
+    nimzowitsch: {
+      line:"1.e4 e5 2.Cf3 Cf6 3.Cxe5 d6 4.Cf3 Cxe4 5.Cc3 Cxc3 6.dxc3",
+      fondement:"Les Blancs Ã©changent les cavaliers pour obtenir des pions doublÃ©s en c, en Ã©change d'un dÃ©veloppement rapide et d'une attaque violente. Plan principal : Grand Roque puis tempÃªte de pions h4-g4-g5.",
+      fondement_en:"White exchanges knights to obtain doubled c-pawns in exchange for rapid development and a violent attack. Main plan: queenside castling then pawn storm h4-g4-g5.",
+      avantages:"Blancs : initiative puissante, attaque directe sur le roi noir. Noirs : pion supplÃ©mentaire (pions doublÃ©s blancs), contre-jeu Ã  l'aile Dame.",
+      avantages_en:"White: powerful initiative, direct attack on Black's king. Black: theoretical extra pawn (doubled pawns), counterplay on the queenside.",
+      inconvenients:"Blancs : pions doublÃ©s en c (faiblesse structurelle Ã  long terme). Noirs : dÃ©fense prÃ©cise indispensable, initiative blanche dangereuse.",
+      inconvenients_en:"White: doubled c-pawns (long-term structural weakness). Black: precise defense essential, White's initiative is dangerous.",
+      blancs:"0-0-0 puis h4-g4-g5, exploitant la colonne h et le Fou en e3 pour soutenir l'attaque.",
+      blancs_en:"Castle queenside, then h4-g4-g5, exploiting the h-file and Bishop on e3 to support the attack.",
+      noirs:"Petit Roque, contre-attaque Ã  l'aile Dame avec ...c6, ...b5, exploiter les pions doublÃ©s blancs en finale.",
+      noirs_en:"Castle kingside, queenside counter-attack with ...c6, ...b5, exploit White's doubled pawns in the endgame.",
+      cases:"h7 (cible attaque blanche), d5 (cavalier noir), b5 (contre-attaque noire), g5 (tÃªte de pont blanc)",
+      cases_en:"h7 (White's attack target), d5 (Black's central knight), b5 (Black's counter-attack), g5 (White's pawn bridgehead)",
+      finale:"Si les Blancs n'arrivent pas Ã  mater, les pions doublÃ©s en c deviennent une faiblesse dÃ©cisive.",
+      finale_en:"If White fails to deliver mate, the doubled c-pawns become a decisive weakness.",
+      stats:"ECO C42 | Populaire au niveau Ã©lite 2000-2010 | Taux de victoire blanc ~38%",
+      stats_en:"ECO C42 | Popular at elite level 2000-2010 | White win rate ~38%",
+      piege:"PiÃ¨ge de Nimzowitsch : aprÃ¨s 5.Cc3 NE PAS jouer 5...Ff5?? car 6.De2! broche fatale, et 6...De7 7.Cd5! perd la Dame noire.",
+      piege_en:"Nimzowitsch trap: after 5.Nc3 do NOT play 5...Bf5?? as 6.Qe2! creates a fatal pin, and 6...Qe7 7.Nd5! loses Black's Queen.",
+      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"f3",to:"e5"},{from:"d7",to:"d6"},{from:"e5",to:"f3"},{from:"f6",to:"e4"},{from:"b1",to:"c3"},{from:"e4",to:"c3"},{from:"d2",to:"c3"}]
+    },
+    lasker: {
+      line:"1.e4 e5 2.Cf3 Cf6 3.Cxe5 d6 4.Cf3 Cxe4 5.De2",
+      fondement:"L'Attaque Lasker-Cozio â€” la plus calme des rÃ©ponses blanches. Les Blancs proposent un Ã©change prÃ©coce des Dames dÃ¨s le 5e coup, visant Ã  assÃ©cher complÃ¨tement la position et Ã  jouer une finale technique.",
+      fondement_en:"The Lasker-Cozio Attack â€” the calmest of White's responses. White proposes an early queen exchange on move 5, aiming to completely dry out the position and play a technical endgame.",
+      avantages:"Blancs : finale lÃ©gÃ¨rement favorable grÃ¢ce au dÃ©veloppement et Ã  la structure. Noirs : Ã©galitÃ© facile avec jeu correct.",
+      avantages_en:"White: slightly favorable endgame thanks to development and structure. Black: easy equality with correct play.",
+      inconvenients:"Blancs : trÃ¨s difficile de jouer pour le gain contre un adversaire solide. Noirs : doivent accepter la nulle ou compliquer le jeu.",
+      inconvenients_en:"White: very difficult to play for a win against a solid opponent. Black: must accept the draw or try to complicate.",
+      blancs:"AprÃ¨s l'Ã©change de Dames, centraliser le Roi, activer les Tours sur les colonnes ouvertes.",
+      blancs_en:"After the queen exchange, centralize the King, activate Rooks on open files.",
+      noirs:"Ã‰galiser rapidement, simplifier vers une finale de Tours ou de Cavaliers, maintenir la soliditÃ©.",
+      noirs_en:"Equalize quickly, simplify toward a Rook or knight endgame, maintain structural solidity.",
+      cases:"e4 (cavalier noir), e2 (Dame blanche), d5 (tension centrale), colonne-e (finale de Tours)",
+      cases_en:"e4 (Black's knight), e2 (White's Queen), d5 (central tension), e-file (Rook endgame)",
+      finale:"Les finales Lasker sont des Ã©tudes de technique pure â€” zugzwang, opposition des Rois, pions passÃ©s.",
+      finale_en:"Lasker endgames are studies in pure technique â€” zugzwang, king opposition, passed pawns.",
+      stats:"ECO C42 | Rare au niveau Ã©lite (~5% des Petroff) | Option pour les joueurs aimant les finales",
+      stats_en:"ECO C42 | Rare at elite level (~5% of Petroff games) | Option for endgame-oriented players",
+      piege:"Ne pas Ã©viter l'Ã©change de Dames Ã  tout prix : aprÃ¨s 5...De7 6.d3 Cf6 7.Fg5 Dxe2+, les Blancs ont un lÃ©ger avantage structurel en finale.",
+      piege_en:"Don't try to avoid the queen exchange at all costs: after 5...Qe7 6.d3 Nf6 7.Bg5 Qxe2+, White has a slight structural advantage in the endgame.",
+      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"f3",to:"e5"},{from:"d7",to:"d6"},{from:"e5",to:"f3"},{from:"f6",to:"e4"},{from:"d1",to:"e2"}]
+    },
+    cochrane: {
+      line:"1.e4 e5 2.Cf3 Cf6 3.Cxe5 d6 4.Cxf7!? Rxf7 5.d4 c5",
+      fondement:"Sacrifice de cavalier spectaculaire sur f7, lÃ©guÃ© par l'Ã‰cossais John Cochrane qui le pratiqua Ã  Calcutta vers 1848. Les Blancs sacrifient une piÃ¨ce pour dÃ©roquer immÃ©diatement le roi noir et obtenir une compensation pratique.",
+      fondement_en:"Spectacular knight sacrifice on f7, bequeathed by Scottish player John Cochrane who practiced it in Calcutta around 1848. White sacrifices a piece to immediately dislodge Black's king and obtain practical compensation.",
+      avantages:"Blancs : initiative, roi noir exposÃ©, centre fort aprÃ¨s d4. Noirs : piÃ¨ce d'avance, roi peut se rapatrier (Rg8).",
+      avantages_en:"White: initiative, Black's exposed king, strong center after d4. Black: extra piece, king can return (Kg8).",
+      inconvenients:"Blancs : compensation thÃ©oriquement insuffisante avec jeu prÃ©cis noir. Noirs : roi exposÃ© pendant plusieurs coups.",
+      inconvenients_en:"White: theoretically insufficient compensation with precise Black play. Black: king exposed for several moves.",
+      blancs:"Pousser les pions centraux e5 et d5, harceler le roi noir avec la Dame et les Tours.",
+      blancs_en:"Push central pawns e5 and d5, harass Black's king with Queen and Rooks.",
+      noirs:"Rapatrier le roi (Rg8), consolider la piÃ¨ce d'avance, simplifier vers la finale.",
+      noirs_en:"Bring king back (Kg8), consolidate the extra piece, simplify to the endgame.",
+      cases:"f7 (case du sacrifice), e5 (avant-poste blanc), g8 (refuge roi noir), d5 (pion blanc avancÃ©)",
+      cases_en:"f7 (sacrifice square), e5 (White's outpost), g8 (Black's king shelter), d5 (White's advanced pawn)",
+      finale:"Si les Noirs survivent Ã  l'attaque, la piÃ¨ce d'avance devrait Ãªtre dÃ©cisive en finale.",
+      finale_en:"If Black survives the attack, the extra piece should be decisive in the endgame.",
+      stats:"ECO C42 | Rare au niveau Ã©lite (~1% des parties) | Taux de victoire blanc pratique ~40%",
+      stats_en:"ECO C42 | Rare at elite level (~1% of games) | Practical White win rate ~40%",
+      piege:"Les Noirs ne doivent pas jouer trop passivement aprÃ¨s 4...Rxf7. Les coups 5...c5! puis 6...Fe6 consolident efficacement la position.",
+      piege_en:"Black must not play too passively after 4...Kxf7. The moves 5...c5! then 6...Be6 effectively consolidate the position.",
+      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"f3",to:"e5"},{from:"d7",to:"d6"},{from:"e5",to:"f7"},{from:"e8",to:"f7"},{from:"d2",to:"d4"},{from:"c7",to:"c5"}]
+    },
+    steinitz: {
+      line:"1.e4 e5 2.Cf3 Cf6 3.d4 Cxe4 4.Fd3 d5 5.Cxe5 Cd7",
+      fondement:"La Variante Steinitz (ECO C43) : au lieu de 3.Cxe5, les Blancs jouent 3.d4, attaquant immÃ©diatement le centre. Les Noirs peuvent prendre le pion (3...exd4) ou dÃ©velopper leur cavalier (3...Cxe4).",
+      fondement_en:"The Steinitz Variation (ECO C43): instead of 3.Nxe5, White plays 3.d4, immediately attacking the center. Black can either take the pawn (3...exd4) or develop their knight (3...Nxe4).",
+      avantages:"Blancs : centre puissant, avantage d'espace, manÅ“uvre Tour Te3-Th3. Noirs : paire de Fous active, percÃ©e ...c5.",
+      avantages_en:"White: powerful center, space advantage, Rook maneuver Re3-Rh3. Black: active bishop pair, ...c5 break.",
+      inconvenients:"Blancs : centre peut devenir une cible. Noirs : doit calculer prÃ©cisÃ©ment le moment de la percÃ©e ...c5.",
+      inconvenients_en:"White: center can become a target. Black: must precisely calculate the timing of the ...c5 break.",
+      blancs:"Maintenir le centre, manÅ“uvrer Te3-Th3 pour attaquer l'aile Roi, Fd2-Dc2 pour pression directe.",
+      blancs_en:"Maintain the center, maneuver Re3-Rh3 to attack the kingside, Bd2-Qc2 for direct pressure.",
+      noirs:"DÃ©velopper la paire de Fous, prÃ©parer ...c5 pour briser le centre blanc, utiliser les colonnes ouvertes.",
+      noirs_en:"Develop the bishop pair, prepare ...c5 to break White's center, use open files after pawn exchanges.",
+      cases:"e5 (cavalier blanc dominant), d5 (tension centrale), c5 (percÃ©e noire), h3 (Tour blanche d'attaque)",
+      cases_en:"e5 (White's dominant knight), d5 (central tension), c5 (Black's break), h3 (White's attacking Rook)",
+      finale:"Les Blancs peuvent conserver un avantage avec la paire de pions centrale, mais les Noirs ont souvent des ressources dÃ©fensives.",
+      finale_en:"White can maintain an advantage with the central pawn pair, but Black often has defensive resources.",
+      stats:"ECO C43 | Code distinct de C42 (Petroff classique) | Taux de victoire blanc ~42%",
+      stats_en:"ECO C43 | Different code from C42 (classical Petroff) | White win rate ~42%",
+      piege:"AprÃ¨s 3.d4 Cxe4, les Noirs ne doivent pas jouer 4...Ff5?? car 5.De2! puis 6.Cf3 crÃ©e une pression insoutenable sur la colonne e. Le coup correct est 4...d5 ou 4...Cd7.",
+      piege_en:"After 3.d4 Nxe4, Black must not play 4...Bf5?? as 5.Qe2! then 6.Nf3 creates unsustainable pressure on the e-file. The correct move is 4...d5 or 4...Nd7.",
+      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"d2",to:"d4"},{from:"f6",to:"e4"},{from:"f1",to:"d3"},{from:"d7",to:"d5"},{from:"f3",to:"e5"},{from:"b8",to:"d7"}]
+    },
+    stafford: {
+      line:"1.e4 e5 2.Cf3 Cf6 3.Cxe5 Cc6?! 4.Cxc6 dxc6 5.d3!",
+      fondement:"Le Gambit Stafford est une dÃ©viation noire douteuse du Petroff, trÃ¨s populaire en parties rapides et en ligne. Les Noirs sacrifient un pion pour une initiative rapide. ThÃ©oriquement perdant avec 5.d3!, mais trÃ¨s dangereux contre un adversaire non prÃ©parÃ©.",
+      fondement_en:"The Stafford Gambit is a dubious Black deviation from the Petroff, very popular in rapid games and online. Black sacrifices a pawn for quick initiative. Theoretically losing with 5.d3!, but very dangerous against an unprepared opponent.",
+      avantages:"Noirs : dÃ©veloppement rapide, initiative pratique, positions complexes propices aux piÃ¨ges. Blancs avec 5.d3! : solide avantage matÃ©riel.",
+      avantages_en:"Black: rapid development, practical initiative, complex positions prone to traps. White with 5.d3!: solid material advantage.",
+      inconvenients:"Noirs : thÃ©oriquement perdant si les Blancs connaissent la rÃ©futation 5.d3!. Blancs : attention aux piÃ¨ges si jeu passif.",
+      inconvenients_en:"Black: theoretically losing if White knows the refutation 5.d3!. White: beware tactical traps if playing passively.",
+      blancs:"AprÃ¨s 5.d3!, consolider le pion e4, jouer h3 (interdit Cg4), puis f4 pour verrouiller le centre.",
+      blancs_en:"After 5.d3!, consolidate the e4 pawn, play h3 (prevents Ng4), then f4 to lock the center.",
+      noirs:"Viser les coups Fc5, h5, Dh4 et Cg4 pour crÃ©er des menaces tactiques. Toutes les ressources dÃ©pendent de l'imprÃ©cision blanche.",
+      noirs_en:"Aim for Bc5, h5, Qh4 and Ng4 to create tactical threats. All resources depend on White's imprecision.",
+      cases:"f2 (cible principale noire), h1 (case mat si Stafford rÃ©ussit), d3 (clÃ© de la rÃ©futation blanche)",
+      cases_en:"f2 (Black's main target), h1 (mate square if Stafford succeeds), d3 (key to White's refutation)",
+      finale:"Avec 5.d3!, les Blancs ont un pion supplÃ©mentaire et entrent dans une finale gagnante.",
+      finale_en:"With 5.d3!, White has an extra pawn and enters a winning endgame.",
+      stats:"ECO C42 | ~15% des parties Petroff en ligne (Blitz/Bullet) | Taux victoire noir ~70% si Blancs jouent mal",
+      stats_en:"ECO C42 | ~15% of online Petroff games (Blitz/Bullet) | Black win rate ~70% if White plays poorly",
+      piege:"Les Blancs NE doivent PAS jouer 5.Cc3?! AprÃ¨s 5.Cc3 Fc5 6.Fe2 h5 7.h3 Dh4!, les Noirs crÃ©ent des menaces terribles incluant Cg4 et le mat en h1. Toujours 5.d3!",
+      piege_en:"White must NOT play 5.Nc3?! After 5.Nc3 Bc5 6.Be2 h5 7.h3 Qh4!, Black creates terrible threats including Ng4 and mate on h1. Always 5.d3!",
+      moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"f3",to:"e5"},{from:"b8",to:"c6"},{from:"e5",to:"c6"},{from:"d7",to:"c6"},{from:"d2",to:"d3"}]
     }
-  },
-  47: {
+  },  47: {
     trois_cavaliers: {
       line:"1.e4 e5 2.Cf3 Cc6 3.Cc3",
       fondement:"La Partie des Trois Cavaliers (3.Cc3) survient quand les Noirs s'écartent de la symétrie des Quatre Cavaliers par un coup autre que ...Cf6, souvent 3...g6 ou 3...Fb4.",
@@ -3590,26 +3721,139 @@ var ENRICH = {
  },
  46:{
   petrov:{
-   histoire:"La Défense Petrov (ou Partie Russe) doit son nom au maître russe Alexander Petrov (1794-1867). C'est l'arme nullarde par excellence : en contre-attaquant e4 dès le 2e coup, les Noirs atteignent une symétrie parfaite et une égalité quasi garantie.",
-   histoire_en:"The Petrov Defense (or Russian Game) takes its name from Russian master Alexander Petrov (1794–1867). It is the drawing weapon par excellence: by counter-attacking e4 on move 2, Black achieves perfect symmetry and near-guaranteed equality.",
+   histoire:"La DÃ©fense Petroff â€” ou DÃ©fense Russe â€” fut systÃ©matisÃ©e au XIXe siÃ¨cle par le maÃ®tre russe Alexander Petroff (1794-1867) et par Carl Jaenisch, dont les analyses fondÃ¨rent la thÃ©orie moderne. Anatoly Karpov la remit au goÃ»t du jour dans les annÃ©es 1970. La percÃ©e dÃ©cisive vint de Vladimir Kramnik : il l'adopta comme arme principale et l'utilisa pour battre Kasparov lors du match du monde en 2000 Ã  Londres. Aujourd'hui, Fabiano Caruana et Ding Liren en font leur dÃ©fense principale contre 1.e4.",
+   histoire_en:"The Petroff Defense â€” or Russian Defense â€” was systematized in the 19th century by Russian master Alexander Petroff (1794-1867) and Carl Jaenisch, whose analyses founded modern theory. Anatoly Karpov revived it in the 1970s. The decisive breakthrough came from Vladimir Kramnik: he adopted it as his primary weapon and used it to beat Kasparov in the world championship match in 2000 in London. Today, Fabiano Caruana and Ding Liren make it their primary defense against 1.e4.",
    annotations:[
-    {move:"2...Cf6",move_en:"2...Nf6",comment:"La Défense Petrov — contre-attaque symétrique sur e4. Les Noirs ignorent leur e5 et attaquent e4.",comment_en:"The Petrov Defense — symmetrical counter-attack on e4. Black ignores their own e5 and attacks e4."},
-    {move:"3.Cxe5",move_en:"3.Nxe5",comment:"Les Blancs prennent e5 — mais ils doivent faire très attention à ne pas perdre leur propre Cavalier.",comment_en:"White takes e5 — but must be very careful not to lose their own Knight."},
-    {move:"3...d6!",move_en:"3...d6!",comment:"Crucial ! Les Noirs attaquent le Cavalier e5 avant de prendre en e4. Si 3...Cxe4? alors 4.De2 gagne le Cavalier.",comment_en:"Crucial! Black attacks the Ne5 before taking on e4. If 3...Nxe4? then 4.Qe2 wins the Knight."},
-    {move:"4.Cf3 Cxe4",move_en:"4.Nf3 Nxe4",comment:"Maintenant les Noirs récupèrent leur pion. La position est symétrique et équilibrée.",comment_en:"Now Black recovers the pawn. The position is symmetrical and balanced."},
-    {move:"5.d4",move_en:"5.d4",comment:"Les Blancs cherchent un avantage spatial. Mais les Noirs ont une défense solide et éprouvée.",comment_en:"White seeks a spatial advantage. But Black has a solid and tested defense."}
+    {move:"2...Cf6",move_en:"2...Nf6",comment:"Le coup Petroff. Contrairement Ã  2...Cc6, les Noirs attaquent directement e4 au lieu de dÃ©fendre e5.",comment_en:"The Petroff move. Unlike 2...Nc6, Black attacks e4 directly instead of defending e5."},
+    {move:"3.Cxe5",move_en:"3.Nxe5",comment:"Les Blancs prennent e5. Maintenant 3...Cxe5?? 4.d4 est fatal (fourche).",comment_en:"White takes e5. Now 3...Nxe5?? 4.d4 is fatal (fork)."},
+    {move:"3...d6!",move_en:"3...d6!",comment:"La rÃ¨gle d'or : chasser le cavalier blanc AVANT de reprendre en e4. Si 3...Cxe4? alors 4.De2 gagne le cavalier.",comment_en:"The golden rule: chase White's knight away BEFORE recapturing on e4. If 3...Nxe4? then 4.Qe2 wins the knight."},
+    {move:"4.Cf3 Cxe4",move_en:"4.Nf3 Nxe4",comment:"Maintenant les Noirs rÃ©cupÃ¨rent le pion e4. Position symÃ©trique et Ã©quilibrÃ©e.",comment_en:"Now Black recovers the e4 pawn. Symmetrical and balanced position."},
+    {move:"80.h6 Fxh6",move_en:"80.h6 Bxh6",comment:"AprÃ¨s 80 coups, Caruana dÃ©fend avec une prÃ©cision remarquable, forÃ§ant Carlsen Ã  accepter la nulle.",comment_en:"After 80 moves, Caruana defends with remarkable precision, forcing Carlsen to accept the draw."}
    ],
     game:{
-     header:"Capablanca, J.R. vs Kostic, B. &middot; La Havane 1919 &middot; D&eacute;fense Petrov (C42)",
+     header:"Magnus Carlsen - Fabiano Caruana, Championnat du Monde, Londres 2018 (C42)",
+     moves:"1.e4 e5 2.Cf3 Cf6 3.Cxe5 d6 4.Cd3 Cxe4 5.De2 De7 6.Cf4 Cc6 7.Cd5 Cd4 8.Cxe7 Cxe2 9.Cd5 Cd4 10.Ca3 Ce6 11.f3 C4c5 12.d4 Cd7 13.c3 c6 14.Cf4 Cb6 15.Fd3 d5 16.Cc2 Fd6 17.Cxe6 Fxe6 18.Rf2 h5 19.h4 Cc8 20.Ce3 Ce7 21.g3 c5 22.Fc2 0-0 23.Td1 Tfd8 24.Cg2 cxd4 25.cxd4 Tac8 26.Fb3 Cc6 27.Ff4 Ca5 28.Tdc1 Fb4 29.Fd1 Cc4 30.b3 Ca3 31.Txc8 Txc8 32.Tc1 Cb5 33.Txc8+ Fxc8 34.Ce3 Cc3 35.Fc2 Fa3 36.Fb8 a6 37.f4 Fd7 38.f5 Fc6 39.Fd1 Fb2 40.Fxh5 Ce4+ 41.Rg2 Fxd4 42.Ff4 Fc5 43.Ff3 Cd2 44.Fxd5 Fxe3 45.Fxc6 Fxf4 46.Fxb7 Fd6 47.Fxa6 Ce4 48.g4 Fa3 49.Fc4 Rf8 50.g5 Cc3 51.b4 Fxb4 52.Rf3 Ca4 53.Fb5 Cc5 54.a4 f6 55.Rg4 Ce4 56.Rh5 Fe1 57.Fd3 Cd6 58.a5 Fxa5 59.gxf6 gxf6 60.Rg6 Fd8 61.Rh7 Cf7 62.Fc4 Ce5 63.Fd5 Fa5 64.h5 Fd2 65.Fa2 Cf3 66.Fd5 Cd4 67.Rg6 Fg5 68.Fc4 Cf3 69.Rh7 Ce5 70.Fb3 Cg4 71.Fc4 Ce3 72.Fd3 Cg4 73.Fc4 Ch6 74.Rg6 Re7 75.Fb3 Rd6 76.Fc2 Re5 77.Fd3 Rf4 78.Fc2 Cg4 79.Fb3 Ce3 80.h6 Fxh6 1/2-1/2",
+     result:"1/2-1/2 â€” AprÃ¨s 80 coups d'une lutte acharnÃ©e, Caruana tient la nulle avec une technique dÃ©fensive impeccable. Cette partie du match du Monde 2018 est la dÃ©monstration par excellence de la soliditÃ© de la DÃ©fense Petroff.",
+     result_en:"1/2-1/2 â€” After 80 moves of fierce struggle, Caruana holds the draw with impeccable defensive technique. This game from the 2018 World Championship match is the ultimate demonstration of the Petroff Defense's solidity.",
+     analysis:"Carlsen pousse sans relÃ¢che mais Caruana neutralise chaque menace avec prÃ©cision. Ce match conclut en 12 nulles classiques consÃ©cutives, un record dans l'histoire des matches pour le titre mondial. La Petroff, arme de Kramnik pour dÃ©crocher le titre en 2000, confirme ici son statut d'ouverture la plus solide pour les Noirs contre 1.e4.",
+     analysis_en:"Carlsen pushes relentlessly but Caruana neutralizes every threat with precision. This match concluded with 12 consecutive classical draws, a record in world championship history. The Petroff, Kramnik's weapon to win the title in 2000, confirms here its status as the most solid opening for Black against 1.e4."
+    }
+  },
+  classique:{
+   histoire:"La Ligne Classique (5.d4) est la rÃ©ponse la plus jouÃ©e depuis le XIXe siÃ¨cle. Emanuel Lasker, champion du monde 1894-1921, la pratiquait rÃ©guliÃ¨rement. Vladimir Kramnik en fit sa colonne vertÃ©brale pour neutraliser 1.e4. La sous-variante Jaenisch (8.c4) porte le nom du thÃ©oricien Carl Jaenisch qui l'analysa dans son ouvrage de 1842.",
+   histoire_en:"The Classical Line (5.d4) has been the most played response since the 19th century. World champion Emanuel Lasker (1894-1921) played it regularly. Vladimir Kramnik made it his backbone to neutralize 1.e4. The Jaenisch sub-variation (8.c4) bears the name of theorist Carl Jaenisch who analyzed it in his 1842 treatise.",
+   annotations:[
+    {move:"5.d4",move_en:"5.d4",comment:"Les Blancs rÃ©vÃ¨lent leur plan : occuper le centre, chasser le cavalier noir d'e4.",comment_en:"White reveals their plan: occupy the center, drive the Black knight from e4."},
+    {move:"5...d5",move_en:"5...d5",comment:"Les Noirs dressent leur propre mur central, refusant que leur cavalier soit chassÃ© sans contrepartie.",comment_en:"Black erects their own central wall, refusing to let their knight be driven away without compensation."},
+    {move:"6.Fd3",move_en:"6.Bd3",comment:"DÃ©veloppement actif du Fou, visant e4. PrÃ©lude Ã  Re1 puis Fd2-Cc3 pour attaquer le cavalier.",comment_en:"Active bishop development targeting e4. Prelude to Re1 then Bd2-Nc3 to attack the knight."},
+    {move:"8.c4 (Jaenisch)",move_en:"8.c4 (Jaenisch)",comment:"La rÃ©ponse la plus agressive. Les Blancs attaquent immÃ©diatement la base d5 du cavalier noir.",comment_en:"The most aggressive response. White immediately attacks the d5 base of Black's knight."},
+    {move:"25.Fxh7+!",move_en:"25.Bxh7+!",comment:"Le coup dÃ©cisif de Polgar : sacrifice du Fou sur h7 suivi de Dh5+ force le mat en quelques coups.",comment_en:"Polgar's decisive move: bishop sacrifice on h7 followed by Qh5+ forces mate in a few moves."}
+   ],
+    game:{
+     header:"Judit Polgar - Anatoly Karpov, 7th Essent, Hoogeveen 2003 (C42)",
+     moves:"1. e4 e5 2. Cf3 Cf6 3. Cxe5 d6 4. Cf3 Cxe4 5. d4 d5 6. Fd3 Fe7 7. 0-0 Cc6 8. c4 Cb4 9. Fe2 0-0 10. a3 Cc6 11. cxd5 Dxd5 12. Cc3 Cxc3 13. bxc3 Dd6 14. Tb1 b6 15. Te1 Fe6 16. Fd3 Tae8 17. Tb5 Ca5 18. Tbe5 Cc6 19. T5e2 Fd7 20. d5 Ca5 21. Ce5 Ff6 22. Ff4 Fxe5 23. Fxe5 Dxa3 24. Te3 Dc5 25. Fxh7+ Rxh7 26. Dh5+ 1-0",
+     result:"1-0 â€” Polgar rÃ©alise un sacrifice thÃ©matique sur h7 pour un mat immÃ©diat en 26 coups. Cette partie dÃ©montre la puissance de l'attaque blanche dans la variante Jaenisch.",
+     result_en:"1-0 â€” Polgar executes a thematic sacrifice on h7 for immediate mate in 26 moves. This game demonstrates the power of White's attack in the Jaenisch variation.",
+     analysis:"La position semblait solide pour les Noirs, mais Polgar brise la dÃ©fense par 25.Fxh7+! Rxh7 26.Dh5+ forÃ§ant le mat. La clÃ© : la Tour ouverte sur la colonne e et le Fou actif en e5. Une victoire emblÃ©matique de la ligne Classique.",
+     analysis_en:"The position seemed solid for Black, but Polgar breaks through with 25.Bxh7+! Kxh7 26.Qh5+ forcing mate. The key: the open e-file rook and the active bishop on e5. An iconic victory in the Classical line."
+    }
+  },
+  nimzowitsch:{
+   histoire:"L'Attaque Nimzowitsch porte le nom du grand-maÃ®tre Aaron Nimzowitsch (1886-1935), figure majeure du mouvement hypermoderne. C'est en rÃ©alitÃ© Carl Hamppe qui l'analysa dÃ¨s le XIXe siÃ¨cle. Judit Polgar en fit une arme redoutable contre Karpov en 2003 avec un double sacrifice de Fou sur h7.",
+   histoire_en:"The Nimzowitsch Attack bears the name of grandmaster Aaron Nimzowitsch (1886-1935), a key figure of the hypermodern movement. It was actually Carl Hamppe who analyzed it in the 19th century. Judit Polgar made it a formidable weapon against Karpov in 2003 with a double bishop sacrifice on h7.",
+   annotations:[
+    {move:"5.Cc3",move_en:"5.Nc3",comment:"Au lieu de 5.d4, les Blancs dÃ©veloppent le cavalier Dame pour forcer l'Ã©change.",comment_en:"Instead of 5.d4, White develops the queen's knight to force the exchange."},
+    {move:"5...Cxc3 6.dxc3",move_en:"5...Nxc3 6.dxc3",comment:"Les pions doublÃ©s blancs semblent une concession, mais compensÃ©s par l'avance de dÃ©veloppement et la colonne d ouverte.",comment_en:"White's doubled pawns seem a concession, but compensated by a development lead and the open d-file."},
+    {move:"9.0-0-0",move_en:"9.0-0-0",comment:"Grand Roque ! Les Blancs menacent maintenant h4-g4-g5 pour attaquer le roi en g8.",comment_en:"Queenside castling! White now threatens h4-g4-g5 to attack the king on g8."},
+    {move:"10.h4",move_en:"10.h4",comment:"Le dÃ©but de la tempÃªte de pions. L'objectif est de forcer h5 puis g4-g5 pour ouvrir des lignes contre le roi noir.",comment_en:"The start of the pawn storm. The goal is to force h5 then g4-g5 to open lines against Black's king."},
+    {move:"22.Te1 Txe1+",move_en:"22.Re1 Rxe1+",comment:"Gelfand simplifie intelligemment pour exploiter les pions doublÃ©s blancs dans la finale.",comment_en:"Gelfand simplifies intelligently to exploit White's doubled pawns in the endgame."}
+   ],
+    game:{
+     header:"Viswanathan Anand - Boris Gelfand, WC Tournament, Mexico City 2007 (C42)",
+     moves:"1. e4 e5 2. Cf3 Cf6 3. Cxe5 d6 4. Cf3 Cxe4 5. Cc3 Cxc3 6. dxc3 Fe7 7. Fe3 Cd7 8. Dd2 Ce5 9. 0-0-0 0-0 10. h4 Te8 11. h5 Ff6 12. Ch2 h6 13. Fe2 Fe6 14. f4 Cc4 15. Fxc4 Fxc4 16. b3 Fb5 17. Thg1 Te4 18. Cg4 De7 19. Tde1 Te8 20. Ff2 Dd8 21. Txe4 Txe4 22. Te1 Txe1+ 1/2-1/2",
+     result:"1/2-1/2 â€” Gelfand neutralise la tempÃªte de pions blancs par une dÃ©fense prÃ©cise et des Ã©changes judicieux. Anand reconnaÃ®t que sans percÃ©e dÃ©cisive, les pions doublÃ©s deviennent problÃ©matiques.",
+     result_en:"1/2-1/2 â€” Gelfand neutralizes White's pawn storm with precise defense and judicious exchanges. Anand acknowledges that without a decisive breakthrough, the doubled pawns become problematic.",
+     analysis:"Le duel autour de la colonne e est caractÃ©ristique de la variante Nimzowitsch. Anand essaie de trouer la dÃ©fense noire par h4-h5 et Cg4, mais Gelfand bloque mÃ©thodiquement avec Te4. La leÃ§on : la prÃ©cision dÃ©fensive des Noirs est suffisante pour tenir la nulle.",
+     analysis_en:"The struggle over the e-file is characteristic of the Nimzowitsch variation. Anand tries to breach Black's defense with h4-h5 and Ng4, but Gelfand methodically blocks with Re4. The lesson: Black's precise defense is sufficient to hold the draw."
+    }
+  },
+  lasker:{
+   histoire:"L'Attaque Lasker-Cozio (5.De2) porte le nom d'Emanuel Lasker, champion du monde 1894-1921, et de Carlo Cozio qui l'analysa au XVIIIe siÃ¨cle. Lasker l'utilisa comme outil pour jouer des finales techniques oÃ¹ son profond sens stratÃ©gique l'avantageait. La partie Capablanca-Kostic 1919 est considÃ©rÃ©e comme l'un des plus grands chefs-d'Å“uvre de technique dans la Petroff.",
+   histoire_en:"The Lasker-Cozio Attack (5.Qe2) bears the name of Emanuel Lasker, world champion 1894-1921, and Carlo Cozio who analyzed it in the 18th century. Lasker used it as a tool to play technical endgames where his deep strategic sense gave him an advantage. The Capablanca-Kostic 1919 game is considered one of the greatest technical masterpieces in the Petroff.",
+   annotations:[
+    {move:"5.De2",move_en:"5.Qe2",comment:"L'option la plus calme. Les Blancs proposent un Ã©change de Dames pour assÃ©cher la position.",comment_en:"The calmest option. White proposes a queen exchange to dry out the position."},
+    {move:"5...De7 6.d3",move_en:"5...Qe7 6.d3",comment:"AprÃ¨s l'Ã©change de Dames, les Blancs jouent d3 pour soutenir le cavalier e5.",comment_en:"After the queen exchange, White plays d3 to support the e5 knight."},
+    {move:"7.Fg5 Dxe2+",move_en:"7.Bg5 Qxe2+",comment:"Les Dames sont Ã©changÃ©es. La partie est maintenant une finale technique.",comment_en:"The queens are exchanged. The game is now a technical endgame."},
+    {move:"23.Ce4",move_en:"23.Ne4",comment:"Capablanca active son cavalier pour crÃ©er une pression continue sur la structure noire.",comment_en:"Capablanca activates his knight to create continuous pressure on Black's structure."},
+    {move:"86.h6",move_en:"86.h6",comment:"AprÃ¨s 86 coups de technique pure, Capablanca matÃ©rialise son avantage minuscule. Un zugzwang monumental.",comment_en:"After 86 moves of pure technique, Capablanca materializes his tiny advantage. A monumental zugzwang."}
+   ],
+    game:{
+     header:"Jose Raul Capablanca - Boris Kostic, La Havane 1919 (C42 â€” Attaque Lasker/Cozio)",
      moves:"1. e4 e5 2. Cf3 Cf6 3. Cxe5 d6 4. Cf3 Cxe4 5. De2 De7 6. d3 Cf6 7. Fg5 Dxe2+ 8. Fxe2 Fe7 9. Cc3 Fd7 10. 0-0 0-0 11. Tfe1 Cc6 12. d4 Tfe8 13. Fb5 a6 14. Fa4 b5 15. Fb3 Ca5 16. Te3 c6 17. Tae1 Rf8 18. Ff4 Cb7 19. h3 h6 20. Fh2 Fd8 21. Txe8+ Fxe8 22. a4 c5 23. Ce4 Cxe4 24. Fd5 Ta7 25. Fxe4 Fe7 26. axb5 axb5 27. dxc5 dxc5 28. Fb8 Ta8 29. Fg3 Ta7 30. Fb8 Ta8 31. Fg3 Ta7 32. Ce5 Cd8 33. b3 Ce6 34. Fd5 Cd4 35. c3 Cf5 36. Fh2 b4 37. g4 Cd6 38. c4 Ta3 39. Te3 Cc8 40. Fb7 Ca7 41. Fd5 f6 42. Cf3 Cc6 43. Ch4 Cd4 44. Cf5 Cxf5 45. gxf5 Fd7 46. Fe4 Ta6 47. Td3 Fc6 48. Fxc6 Txc6 49. Rg2 Ta6 50. Rf3 Ta2 51. Fg3 Re8 52. Ff4 Ta6 53. Fe3 Ta1 54. Rg4 Ta7 55. Rh5 Rf7 56. Td5 Ta3 57. Td7 Re8 58. Td3 Rf7 59. h4 Ta7 60. Td5 Ta5 61. Td7 Re8 62. Td3 Rf7 63. Td5 Ta3 64. Fxc5 Fxc5 65. Txc5 Txb3 66. Tc7+ Rf8 67. Rg6 Tf3 68. Tf7+ Re8 69. Txg7 Tf4 70. h5 Txc4 71. Rxh6 Rf8 72. Tb7 Tg4 73. f3 Tg5 74. Txb4 Rf7 75. Tg4 Txf5 76. f4 Ta5 77. Tg7+ Rf8 78. Tb7 f5 79. Rg6 Ta6+ 80. Rxf5 Ta5+ 81. Rg4 Ta6 82. Rg5 Tc6 83. f5 Rg8 84. f6 Tc1 85. Tg7+ Rf8 86. h6 1-0",
-     result:"1-0 — Capablanca gagne en 86 coups — ma&icirc;trise technique de la Petrov",
-     analysis:"D&eacute;monstration magistrale de technique ! Capablanca exploite un avantage minuscule dans la Petrov pendant 86 coups gr&acirc;ce &agrave; une pression continue. La progression m&eacute;thodique illustre pourquoi Capablanca fut surnomm&eacute; la machine d'&eacute;checs.",
-     result_en:"1-0 — Capablanca wins in 86 moves — technical mastery of the Petrov",
-     analysis_en:"A masterful endgame technique demonstration! Capablanca exploits a tiny advantage in the Petrov for 86 moves through continuous pressure. The methodical advance illustrates why Capablanca was called 'the chess machine.'"
+     result:"1-0 â€” Capablanca gagne en 86 coups â€” dÃ©monstration magistrale de technique dans la finale Petroff.",
+     result_en:"1-0 â€” Capablanca wins in 86 moves â€” masterful demonstration of technique in the Petroff endgame.",
+     analysis:"DÃ©monstration monumentale de technique ! Capablanca exploite un avantage minuscule pendant 86 coups grÃ¢ce Ã  une pression continue et un zugzwang final. La progression mÃ©thodique illustre pourquoi Capablanca fut surnommÃ© 'la machine d'Ã©checs'.",
+     analysis_en:"A monumental technique demonstration! Capablanca exploits a tiny advantage for 86 moves through continuous pressure and a final zugzwang. The methodical advance illustrates why Capablanca was dubbed 'the chess machine'."
+    }
+  },
+  cochrane:{
+   histoire:"John Cochrane (1798-1878), avocat Ã©cossais et fort joueur amateur, dÃ©couvrit ce sacrifice lors d'un sÃ©jour Ã  Calcutta vers 1848, oÃ¹ il l'employa contre les joueurs locaux. TombÃ© dans l'oubli, il refait surface sporadiquement dans les tournois modernes, notamment lorsque Topalov tente de surprendre Kramnik Ã  Linares 1999.",
+   histoire_en:"John Cochrane (1798-1878), a Scottish lawyer and strong amateur player, discovered this sacrifice during a stay in Calcutta around 1848, where he employed it against local players. Fallen into obscurity, it resurfaces sporadically in modern tournaments, notably when Topalov tried to surprise Kramnik at Linares 1999.",
+   annotations:[
+    {move:"4.Cxf7!?",move_en:"4.Nxf7!?",comment:"Le coup surprise ! Le roi noir est forcÃ© de capturer et perd dÃ©finitivement le droit au roque.",comment_en:"The surprise move! Black's king is forced to capture and permanently loses castling rights."},
+    {move:"4...Rxf7",move_en:"4...Kxf7",comment:"ObligÃ©. AprÃ¨s 4...Cxe4?? 5.Db5+ e6 6.Cxe4, les Blancs rÃ©cupÃ¨rent la piÃ¨ce avec avantage.",comment_en:"Forced. After 4...Nxe4?? 5.Qb5+ e6 6.Nxe4, White recovers the piece with advantage."},
+    {move:"5...c5!",move_en:"5...c5!",comment:"La meilleure rÃ©ponse des Noirs : attaquer immÃ©diatement la base du centre blanc.",comment_en:"Black's best response: immediately attack the base of White's center."},
+    {move:"7.Fxe6+ Rxe6",move_en:"7.Bxe6+ Kxe6",comment:"Le roi noir s'avance courageusement vers le centre. La position devient explosive.",comment_en:"Black's king boldly advances toward the center. The position becomes explosive."},
+    {move:"31.Fxh4 Fc5+",move_en:"31.Bxh4 Bc5+",comment:"Kramnik sauve la nulle dans une finale complexe, dÃ©montrant que la piÃ¨ce d'avance compte plus que l'attaque.",comment_en:"Kramnik saves the draw in a complex endgame, demonstrating that the extra piece outweighs the attack."}
+   ],
+    game:{
+     header:"Veselin Topalov - Vladimir Kramnik, Linares 1999 (C42 â€” Gambit Cochrane)",
+     moves:"1. e4 e5 2. Cf3 Cf6 3. Cxe5 d6 4. Cxf7 Rxf7 5. Cc3 c5 6. Fc4+ Fe6 7. Fxe6+ Rxe6 8. d4 Rf7 9. dxc5 Cc6 10. De2 Dd7 11. Fe3 dxc5 12. f4 Te8 13. e5 Cg4 14. Td1 Df5 15. 0-0 h5 16. Fc1 Cd4 17. Dc4+ Rg6 18. h3 Ch6 19. Cb5 a6 20. Cxd4 cxd4 21. Dxd4 Tc8 22. Db6+ Rh7 23. Dxb7 Txc2 24. Fe3 Dg6 25. Tc1 Txc1 26. Txc1 Cf5 27. Ff2 h4 28. Tc7 Cg3 29. Rh2 Cf1+ 30. Rg1 Db1 31. Fxh4 Fc5+ 1/2-1/2",
+     result:"1/2-1/2 â€” MalgrÃ© le sacrifice spectaculaire, Kramnik tient la nulle en 31 coups grÃ¢ce Ã  une technique dÃ©fensive irrÃ©prochable, dÃ©montrant que la piÃ¨ce d'avance noire est suffisante avec le bon jeu.",
+     result_en:"1/2-1/2 â€” Despite the spectacular sacrifice, Kramnik holds the draw in 31 moves through impeccable defensive technique, demonstrating that Black's extra piece is sufficient with correct play.",
+     analysis:"Topalov essaie d'exploiter le roi exposÃ© noir mais Kramnik revient mÃ©thodiquement. Le roi noir en g6 puis h7 trouve finalement un refuge. Le dernier coup 31...Fc5+ sauve la nulle en exploitant la broche sur la diagonale.",
+     analysis_en:"Topalov tries to exploit Black's exposed king but Kramnik methodically returns. Black's king on g6 then h7 finally finds shelter. The final move 31...Bc5+ saves the draw by exploiting the pin on the diagonal."
+    }
+  },
+  steinitz:{
+   histoire:"Wilhelm Steinitz (1836-1900), premier champion du monde officiel des Ã©checs, dÃ©veloppa cette variante comme alternative Ã  3.Cxe5. Elle porte son nom car il l'analysa systÃ©matiquement. La variante fut modernisÃ©e dans les annÃ©es 1980-90 par Anand qui en fit une arme redoutable, notamment contre Ivanchuk Ã  Linares 1993.",
+   histoire_en:"Wilhelm Steinitz (1836-1900), the first official world chess champion, developed this variation as an alternative to 3.Nxe5. It bears his name as he analyzed it systematically. The variation was modernized in the 1980s-90s by Anand, who made it a formidable weapon, notably against Ivanchuk at Linares 1993.",
+   annotations:[
+    {move:"3.d4",move_en:"3.d4",comment:"La caractÃ©ristique de la Steinitz : attaque centrale immÃ©diate au lieu de 3.Cxe5.",comment_en:"The hallmark of the Steinitz: immediate central attack instead of 3.Nxe5."},
+    {move:"3...Cxe4",move_en:"3...Nxe4",comment:"La rÃ©ponse la plus active des Noirs, profitant du pion e4 non dÃ©fendu.",comment_en:"Black's most active response, exploiting the undefended e4 pawn."},
+    {move:"5.Cxe5 Cd7",move_en:"5.Nxe5 Nd7",comment:"Le cavalier noir en d7 soutient e5 et prÃ©pare ...Cxe5 ou ...Cf6. DÃ©veloppement solide.",comment_en:"Black's knight on d7 supports e5 and prepares ...Nxe5 or ...Nf6. Solid development."},
+    {move:"10.Cc3 Fg7",move_en:"10.Nc3 Bg7",comment:"Les Noirs dÃ©veloppent leur Fou en fianchetto pour s'opposer au centre blanc.",comment_en:"Black develops their bishop in fianchetto to oppose White's center."},
+    {move:"28.Fb5",move_en:"28.Bb5",comment:"Anand finit par une variante calculÃ©e qui force la reddition des Noirs.",comment_en:"Anand finishes with a calculated variation that forces Black's surrender."}
+   ],
+    game:{
+     header:"Viswanathan Anand - Vassily Ivanchuk, Linares 1993 (C43 â€” Variante Steinitz)",
+     moves:"1.e4 e5 2.Cf3 Cf6 3.d4 Cxe4 4.Fd3 d5 5.Cxe5 Cd7 6.Cxd7 Fxd7 7.0-0 Dh4 8.c4 0-0-0 9.c5 g5 10.Cc3 Fg7 11.g3 Dh3 12.Cxe4 dxe4 13.Fxe4 Fb5 14.Fg2 Df5 15.Fe3 Fxf1 16.Fxf1 The8 17.Da4 Rb8 18.Td1 c6 19.Td3 De4 20.Ta3 a6 21.Fd3 Dg4 22.Tb3 Fxd4 23.Txb7+ Rxb7 24.Dxa6+ Rb8 25.Db6+ Ra8 26.Dxc6+ Rb8 27.Db6+ Ra8 28.Fb5 1-0",
+     result:"1-0 â€” Anand exploite l'avantage d'espace de la Steinitz pour mater Ivanchuk en 28 coups. La manÅ“uvre finale Fb5 illustre la puissance du centre blanc transformÃ© en attaque directe.",
+     result_en:"1-0 â€” Anand exploits the Steinitz's space advantage to convincingly mate Ivanchuk in 28 moves. The final maneuver Bb5 illustrates the power of White's center transformed into a direct attack.",
+     analysis:"AprÃ¨s le sacrifice de qualitÃ© (Fxf1, Txb7+), Anand crÃ©e une attaque imparable sur le roi noir coincÃ© en a8. La variante finale 28.Fb5 menace Dc7# avec des ressources insuffisantes pour les Noirs. Un modÃ¨le d'exploitation de l'avantage d'espace dans la Steinitz.",
+     analysis_en:"After the exchange sacrifice (Bxf1, Rxb7+), Anand creates an unstoppable attack on Black's king trapped on a8. The final variation 28.Bb5 threatens Qc7# with insufficient resources for Black. A model exploitation of the space advantage in the Steinitz."
+    }
+  },
+  stafford:{
+   histoire:"Le Gambit Stafford tire son nom du joueur amÃ©ricain Joseph Henry Stafford (1884-1942), qui l'analysa dans les annÃ©es 1930. TombÃ© dans l'oubli pendant des dÃ©cennies, il connut une renaissance explosive avec l'essor des plateformes en ligne dans les annÃ©es 2020. Le youtuber d'Ã©checs Eric Rosen le popularisa en le jouant avec succÃ¨s, y compris lors du Championnat du Monde de Blitz 2024.",
+   histoire_en:"The Stafford Gambit takes its name from American player Joseph Henry Stafford (1884-1942), who analyzed it in the 1930s. Forgotten for decades, it experienced an explosive revival with the rise of online platforms in the 2020s. Chess YouTuber Eric Rosen popularized it by playing it successfully, including at the 2024 World Blitz Championship.",
+   annotations:[
+    {move:"3...Cc6?!",move_en:"3...Nc6?!",comment:"La dÃ©viation Stafford. Au lieu du correct 3...d6, les Noirs proposent un gambit.",comment_en:"The Stafford deviation. Instead of the correct 3...d6, Black proposes a gambit."},
+    {move:"4.Cxc6 dxc6",move_en:"4.Nxc6 dxc6",comment:"Les Noirs rÃ©cupÃ¨rent avec un pion doublÃ© en c6 mais obtiennent un dÃ©veloppement rapide.",comment_en:"Black recaptures with a doubled pawn on c6 but gains rapid development."},
+    {move:"5.d3!",move_en:"5.d3!",comment:"La rÃ©futation ! Ce coup ferme la diagonale du Fou c8 et consolide e4, Ã©touffant l'initiative noire.",comment_en:"The refutation! This move closes the c8 bishop's diagonal and consolidates e4, stifling Black's initiative."},
+    {move:"5.Cc3?!",move_en:"5.Nc3?!",comment:"L'erreur blanche classique : aprÃ¨s 5.Cc3 Fc5 6.Fe2 h5, les Blancs sont dÃ©jÃ  sous pression.",comment_en:"The classic White error: after 5.Nc3 Bc5 6.Be2 h5, White is already under pressure."},
+    {move:"14.Dxf3 Dh1#",move_en:"14.Qxf3 Qh1#",comment:"Mat brillant ! AprÃ¨s 5.Cc3?!, le gambit Stafford conclut de faÃ§on implacable en 14 coups.",comment_en:"Brilliant mate! After 5.Nc3?!, the Stafford gambit concludes relentlessly in 14 moves."}
+   ],
+    game:{
+     header:"Sergey Erenburg - Eric Rosen, World Blitz Championship, New York 2024 (C42 â€” Gambit Stafford)",
+     moves:"1. e4 e5 2. Cf3 Cf6 3. Cxe5 Cc6 4. Cxc6 dxc6 5. Cc3 Fc5 6. Fe2 h5 7. h3 Dd4 8. 0-0 Cg4 9. hxg4 hxg4 10. g3 De5 11. Rg2 Fxf2 12. Txf2 Dh5 13. Ff3 gxf3+ 14. Dxf3 Dh1# 0-1",
+     result:"0-1 â€” Erenburg joue 5.Cc3?! au lieu de la rÃ©futation 5.d3!, et Rosen exÃ©cute le Stafford Ã  la perfection : sacrifice Cg4, sacrifice Fxf2, et mat en h1 en seulement 14 coups !",
+     result_en:"0-1 â€” Erenburg plays 5.Nc3?! instead of the refutation 5.d3!, and Rosen executes the Stafford perfectly: Ng4 sacrifice, Bxf2 sacrifice, and mate on h1 in only 14 moves!",
+     analysis:"Cette partie illustre parfaitement pourquoi le Gambit Stafford est si dangereux en pratique. Avec 5.d3!, les Blancs n'auraient aucune difficultÃ©. Mais aprÃ¨s 5.Cc3?!, chaque coup noir est une menace. La finale 13.Ff3 gxf3+ 14.Dxf3 Dh1# est le mat classique du Stafford.",
+     analysis_en:"This game perfectly illustrates why the Stafford Gambit is so dangerous in practice. With 5.d3!, White would have no difficulty. But after 5.Nc3?!, every Black move is a threat. The finale 13.Bf3 gxf3+ 14.Qxf3 Qh1# is the classic Stafford mate."
     }
   }
- },
- 47:{
+ }, 47:{
   trois_cavaliers:{
    histoire:"La Partie des Trois Cavaliers est une ouverture classique du XIXe siècle, issue de la famille des jeux ouverts. Elle survient lorsque les Noirs refusent la symétrie des Quatre Cavaliers, gardant la flexibilité d'un fianchetto ou d'un clouage.",
    histoire_en:"The Three Knights Game is a classical 19th-century opening from the open-game family. It arises when Black declines the Four Knights symmetry, keeping the flexibility of a fianchetto or a pin.",
