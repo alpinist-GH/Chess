@@ -24,7 +24,7 @@ function dField(d, key) {
 var I18N = {
   fr: {
     title:        "Traité Complet des Ouvertures d'Échecs",
-    subtitle:     "53 ouvertures · 93 variantes · Histoire &amp; contexte · Commentaires coup par coup · Parties de référence annotées",
+    subtitle:     "53 ouvertures · 99 variantes · Histoire &amp; contexte · Commentaires coup par coup · Parties de référence annotées",
     by:           "par",
     prev:         "◀ Reculer",
     next:         "Avancer ▶",
@@ -108,6 +108,11 @@ var I18N = {
     var_hanham:         "Variante Hanham",
     var_moderne:        "Variante Moderne",
     var_petrov:         "Défense Petrov",
+    var_nimzowitsch:    "Attaque Nimzowitsch",
+    var_lasker:         "Attaque Lasker / Cozio",
+    var_cochrane:       "Gambit Cochrane",
+    var_steinitz:       "Variante Steinitz (C43)",
+    var_stafford:       "Gambit Stafford",
     var_alapin:         "Variante Alapin",
     var_rossolimo:      "Variante Rossolimo",
     var_tarrasch:       "Variante Tarrasch",
@@ -219,7 +224,7 @@ var I18N = {
   },
   en: {
     title:        "Complete Chess Openings Treatise",
-    subtitle:     "53 openings · 93 variations · History &amp; context · Move-by-move commentary · Annotated reference games",
+    subtitle:     "53 openings · 99 variations · History &amp; context · Move-by-move commentary · Annotated reference games",
     by:           "by",
     prev:         "◀ Back",
     next:         "Forward ▶",
@@ -303,6 +308,11 @@ var I18N = {
     var_hanham:         "Hanham Variation",
     var_moderne:        "Modern Variation",
     var_petrov:         "Petrov Defense",
+    var_nimzowitsch:    "Nimzowitsch Attack",
+    var_lasker:         "Lasker / Cozio Attack",
+    var_cochrane:       "Cochrane Gambit",
+    var_steinitz:       "Steinitz Variation (C43)",
+    var_stafford:       "Stafford Gambit",
     var_alapin:         "Alapin Variation",
     var_rossolimo:      "Rossolimo Variation",
     var_tarrasch:       "Tarrasch Variation",
@@ -436,8 +446,8 @@ function refreshAllContent() {
   // Meta tags & title
   var titles = { fr: "Traité des Ouvertures d'Échecs — Vu-Hung Quan",
                  en: "Chess Openings Treatise — Vu-Hung Quan" };
-  var descs  = { fr: "Traité interactif des ouvertures d'échecs — 53 ouvertures, 93 variantes, parties annotées.",
-                 en: "Interactive chess openings treatise — 53 openings, 93 variations, annotated games." };
+  var descs  = { fr: "Traité interactif des ouvertures d'échecs — 53 ouvertures, 99 variantes, parties annotées.",
+                 en: "Interactive chess openings treatise — 53 openings, 99 variations, annotated games." };
   var apples = { fr: "Ouvertures", en: "Openings" };
   document.title = titles[LANG] || titles['fr'];
   var md = document.getElementById('meta-desc');
