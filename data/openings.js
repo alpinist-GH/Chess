@@ -1,4 +1,4 @@
-﻿﻿﻿/* ══════════════════════════════════════════════
+﻿﻿/* ══════════════════════════════════════════════
    openings.js — All opening data: DB (46 openings, 71 variants) + ENRICH (44 chapitres enrichis : histoire, annotations, parties)
    To add a new opening: add a new numbered key to DB following the same pattern.
    ══════════════════════════════════════════════ */
@@ -342,7 +342,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"d7",to:"d6"},{from:"d2",to:"d4"},{from:"e5",to:"d4"},{from:"f3",to:"d4"},{from:"g8",to:"f6"}]
     }
   },
-  5: {
+  6: {
     najdorf: {
       line:"1.e4 c5 2.Cf3 d6 3.d4 cxd4 4.Cxd4 Cf6 5.Cc3 a6 6.Fe3 e5",
       fondement:"Le coup 5...a6 (le « coup Najdorf ») prépare ...e5 ou ...e6 selon le développement blanc, empêche Cb5 et prépare ...b5 pour une expansion queenside agressive. Les Noirs gardent une flexibilité maximale avant de révéler leur configuration.",
@@ -653,7 +653,7 @@ var DB = {
     }
   },
 
-  6: {
+  7: {
     classique: {
       line:"1.e4 e6 2.d4 d5 3.Cc3 Cf6 4.Fg5 Fe7 5.e5 Cfd7",
       fondement:"Lutte des chaînes de pions fermées (e5-d4). Les Noirs acceptent un manque d'espace pour une structure monolithique.",
@@ -767,7 +767,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e6"},{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"e4",to:"d5"},{from:"e6",to:"d5"}]
     }
   },
-  7: {
+  8: {
     classique: {
       line:"1.e4 c6 2.d4 d5 3.Cc3 dxe4 4.Cxe4 Ff5 5.Cg3 Fg6 6.h4 h6 7.Cf3 Cd7",
       fondement:"Défense des champions positionnels (Karpov, Capablanca). Permet ...d5 sans emprisonner le Fou en c8.",
@@ -826,7 +826,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"c7",to:"c6"},{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"e4",to:"e5"},{from:"c8",to:"f5"}]
     }
   },
-  8: {
+  9: {
     alekhine: {
       line:"1.e4 Cf6 2.e5 Cd5 3.d4 d6 4.c4 Cb6 5.f4",
       fondement:"Hypermoderne : inciter les pions blancs à avancer au centre pour mieux les pilonner à distance. L'Attaque des Quatre Pions est la plus agressive.",
@@ -894,7 +894,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"d7",to:"d5"},{from:"e4",to:"d5"},{from:"d8",to:"d5"},{from:"b1",to:"c3"},{from:"d5",to:"a5"}]
     }
   },
-  9: {
+  10: {
     exchange: {
       line:"1.d4 d5 2.c4 e6 3.Cc3 Cf6 4.cxd5 exd5 5.Fg5 Fe7 6.e3 0-0",
       fondement:"Le Gambit de la Dame n'est pas un vrai gambit. La variante de l'Échange permet de lancer l'Attaque Minoritaire thématique (b4-b5).",
@@ -984,7 +984,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"e7",to:"e6"},{from:"b1",to:"c3"},{from:"g8",to:"f6"},{from:"c4",to:"d5"},{from:"e6",to:"d5"},{from:"c1",to:"g5"}]
     }
   },
-  10: {
+  11: {
     rubinstein: {
       line:"1.d4 Cf6 2.c4 e6 3.Cc3 Fb4 4.e3 0-0 5.Fd3 d5",
       fondement:"Cloue le Cavalier c3 pour contrôler e4 à distance sans structure rigide.",
@@ -1028,7 +1028,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"c2",to:"c4"},{from:"e7",to:"e6"},{from:"b1",to:"c3"},{from:"f8",to:"b4"},{from:"a2",to:"a3"},{from:"b4",to:"c3"},{from:"b2",to:"c3"}]
     }
   },
-  11: {
+  12: {
     classique: {
       line:"1.d4 Cf6 2.c4 g6 3.Cc3 Fg7 4.e4 d6 5.Cf3 0-0 6.Fe2 e5 7.0-0 Cc6 8.d5 Ce7",
       fondement:"L'ouverture des attaquants. Les Noirs cèdent le centre pour lancer une course au mat réciproque.",
@@ -1061,7 +1061,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"c2",to:"c4"},{from:"g7",to:"g6"},{from:"b1",to:"c3"},{from:"f8",to:"g7"},{from:"e2",to:"e4"},{from:"d7",to:"d6"},{from:"f2",to:"f3"},{from:"e8",to:"g8"},{from:"c1",to:"e3"},{from:"e7",to:"e5"}]
     }
   },
-  12: {
+  13: {
     exchange_gru: {
       line:"1.d4 Cf6 2.c4 g6 3.Cc3 d5 4.cxd5 Cxd5 5.e4 Cxc3 6.bxc3 Fg7",
       fondement:"Offrir le grand centre e4-d4 aux Blancs pour mieux le dynamiter instantanément.",
@@ -1103,7 +1103,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"c2",to:"c4"},{from:"g7",to:"g6"},{from:"b1",to:"c3"},{from:"d7",to:"d5"},{from:"g1",to:"f3"},{from:"f8",to:"g7"},{from:"d1",to:"b3"},{from:"d5",to:"c4"},{from:"b3",to:"c4"},{from:"e8",to:"g8"}]
     }
   },
-  13: {
+  14: {
     reversed: {
       line:"1.c4 e5 2.Cc3 Cf6 3.g3 d5 4.cxd5 Cxd5 5.Fg2",
       fondement:"Contrôle hypermoderne du centre par les flancs. La « Sicilienne Renversée » donne la structure sicilienne avec un tempo de plus.",
@@ -1146,7 +1146,7 @@ var DB = {
     }
   }
 ,
-  14: {
+  15: {
     scotch: {
       line:"1.e4 e5 2.Cf3 Cc6 3.d4 exd4 4.Cxd4 Fc5 5.Cb3 Fb6",
       fondement:"La Partie Écossaise ouvre le jeu immédiatement au 3e coup. Kasparov l'a popularisée comme alternative à la Ruy Lopez pour éviter la Défense de Berlin.",
@@ -1170,7 +1170,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"b8",to:"c6"},{from:"d2",to:"d4"},{from:"e5",to:"d4"},{from:"f3",to:"d4"},{from:"f8",to:"c5"},{from:"d4",to:"b3"},{from:"c5",to:"b6"}]
     }
   },
-  15: {
+  16: {
     ponziani: {
       line:"1.e4 e5 2.Cf3 Cc6 3.c3 Cf6 4.d4 Cxe4 5.d5",
       fondement:"L'Ouverture Ponziani (3.c3) prépare d4 comme dans l'Italienne et la Ruy Lopez. Arme surprise : peu de théorie connue des adversaires.",
@@ -1194,7 +1194,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"b8",to:"c6"},{from:"c2",to:"c3"},{from:"g8",to:"f6"},{from:"d2",to:"d4"},{from:"f6",to:"e4"},{from:"d4",to:"d5"}]
     }
   },
-  16: {
+  17: {
     quatre_cavaliers: {
       line:"1.e4 e5 2.Cf3 Cc6 3.Cc3 Cf6 4.Fb5 Cd4",
       fondement:"La Partie des Quatre Cavaliers est l'une des ouvertures les plus naturelles : les quatre cavaliers se développent vers le centre. La variante espagnole (4.Bb5) est la plus sérieuse.",
@@ -1218,7 +1218,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"b8",to:"c6"},{from:"b1",to:"c3"},{from:"g8",to:"f6"},{from:"f1",to:"b5"},{from:"f6",to:"d4"}]
     }
   },
-  17: {
+  18: {
     elephant: {
       line:"1.e4 e5 2.Cf3 d5 3.exd5 e4 4.De2 Cf6 5.d3",
       fondement:"Le Gambit Éléphant (2...d5) est un contre-gambit agressif des Noirs. Le pion e4 avancé étouffe le développement blanc si Blanc n'est pas préparé.",
@@ -1242,7 +1242,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"d7",to:"d5"},{from:"e4",to:"d5"},{from:"e5",to:"e4"},{from:"d1",to:"e2"},{from:"g8",to:"f6"},{from:"d2",to:"d3"}]
     }
   },
-  18: {
+  19: {
     letton: {
       line:"1.e4 e5 2.Cf3 f5 3.Cxe5 Df6 4.d4 d6 5.Cc4",
       fondement:"Le Gambit Letton (2...f5?!) est le contre-gambit le plus agressif possible. Les Noirs affaiblissent leur aile Roi en échange d'une initiative explosive.",
@@ -1266,7 +1266,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"f7",to:"f5"},{from:"f3",to:"e5"},{from:"d8",to:"f6"},{from:"d2",to:"d4"},{from:"d7",to:"d6"},{from:"e5",to:"c4"}]
     }
   },
-  19: {
+  20: {
     centre: {
       line:"1.e4 e5 2.d4 exd4 3.Dxd4 Cc6 4.De3 Cf6 5.Cc3",
       fondement:"La Partie du Centre (2.d4) ouvre le jeu immédiatement. La Dame en d4 est exposée après 3...Nc6, perdant un tempo. Rarement jouée au niveau master.",
@@ -1290,7 +1290,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"d2",to:"d4"},{from:"e5",to:"d4"},{from:"d1",to:"d4"},{from:"b8",to:"c6"},{from:"d4",to:"e3"},{from:"g8",to:"f6"},{from:"b1",to:"c3"}]
     }
   },
-  20: {
+  21: {
     danois: {
       line:"1.e4 e5 2.d4 exd4 3.c3 dxc3 4.Fc4 cxb2 5.Fxb2 d6",
       fondement:"Le Gambit Danois (3.c3) sacrifie deux pions pour obtenir deux Fous actifs sur les grandes diagonales et un développement foudroyant. Excellent en blitz.",
@@ -1314,7 +1314,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"d2",to:"d4"},{from:"e5",to:"d4"},{from:"c2",to:"c3"},{from:"d4",to:"c3"},{from:"f1",to:"c4"},{from:"c3",to:"b2"},{from:"c1",to:"b2"},{from:"d7",to:"d6"}]
     }
   },
-  21: {
+  22: {
     viennoise: {
       line:"1.e4 e5 2.Cc3 Cf6 3.f4 d5 4.fxe5 Cxe4",
       fondement:"La Partie Viennoise (2.Cc3) est très flexible. Elle peut basculer vers le tactique (3.f4 : Gambit Viennois) ou le positionnel (3.g3 : Fianchetto Viennois).",
@@ -1338,7 +1338,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"b1",to:"c3"},{from:"g8",to:"f6"},{from:"f2",to:"f4"},{from:"d7",to:"d5"},{from:"f4",to:"e5"},{from:"f6",to:"e4"}]
     }
   },
-  22: {
+  23: {
     fou: {
       line:"1.e4 e5 2.Fc4 Cf6 3.d3 Cc6 4.Cf3 Fe7",
       fondement:"L'Ouverture du Fou (2.Fc4) mène souvent vers l'Italienne ou le Gambit du Roi par transposition. Le Gambit Urusov (3.d4) est une variante surprenante.",
@@ -1362,7 +1362,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"f1",to:"c4"},{from:"g8",to:"f6"},{from:"d2",to:"d3"},{from:"b8",to:"c6"},{from:"g1",to:"f3"},{from:"f8",to:"e7"}]
     }
   },
-  23: {
+  24: {
     nimzowitsch_def: {
       line:"1.e4 Cc6 2.d4 d5 3.e5 f6",
       fondement:"La Défense Nimzowitsch (1...Nc6) est très rare et surprenante. Le Cavalier en c6 contrôle d4 et e5 à distance, dans la tradition hypermoderne.",
@@ -1386,7 +1386,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"b8",to:"c6"},{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"e4",to:"e5"},{from:"f7",to:"f6"}]
     }
   },
-  24: {
+  25: {
     moderne_def: {
       line:"1.e4 g6 2.d4 Fg7 3.Cc3 d6 4.Cf3 c6 5.Fe2 Cd7",
       fondement:"La Défense Moderne (1...g6) pousse l'hypermodernisme à l'extrême : Noir ne conteste pas le centre immédiatement et développe son Fou en g7 pour le contre-attaquer de loin.",
@@ -1410,7 +1410,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"g7",to:"g6"},{from:"d2",to:"d4"},{from:"f8",to:"g7"},{from:"b1",to:"c3"},{from:"d7",to:"d6"},{from:"g1",to:"f3"},{from:"c7",to:"c6"},{from:"f1",to:"e2"},{from:"b8",to:"d7"}]
     }
   },
-  25: {
+  26: {
     owen: {
       line:"1.e4 b6 2.d4 Fb7 3.Fd3 Cf6 4.Cf3 d5",
       fondement:"La Défense Owen (1...b6) prépare le fianchetto du Fou sombre en b7. La Défense Hippopotame est une variante ultra-passive où les Noirs développent tous leurs pions à la 2e et 3e rangée.",
@@ -1434,7 +1434,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"b7",to:"b6"},{from:"d2",to:"d4"},{from:"c8",to:"b7"},{from:"f1",to:"d3"},{from:"g8",to:"f6"},{from:"g1",to:"f3"},{from:"d7",to:"d5"}]
     }
   },
-  26: {
+  27: {
     hollandaise: {
       line:"1.d4 f5 2.g3 Cf6 3.Fg2 e6 4.Cf3 Fe7 5.0-0 0-0",
       fondement:"La Défense Hollandaise (1...f5) est une réponse combative à 1.d4. Les Noirs créent un contre-jeu agressif sur l'aile Roi dès le départ.",
@@ -1458,7 +1458,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"f7",to:"f5"},{from:"g2",to:"g3"},{from:"g8",to:"f6"},{from:"f1",to:"g2"},{from:"e7",to:"e6"},{from:"g1",to:"f3"},{from:"f8",to:"e7"},{from:"e1",to:"g1"},{from:"e8",to:"g8"}]
     }
   },
-  27: {
+  28: {
     englund: {
       line:"1.d4 e5 2.dxe5 Cc6 3.Cf3 De7 4.Ff4 Db4+",
       fondement:"Le Gambit Englund (1...e5?!) tente de déséquilibrer immédiatement la position contre 1.d4. Contient de nombreux pièges dont le célèbre Piège Rosen.",
@@ -1482,7 +1482,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"e7",to:"e5"},{from:"d4",to:"e5"},{from:"b8",to:"c6"},{from:"g1",to:"f3"},{from:"d8",to:"e7"},{from:"c1",to:"f4"},{from:"e7",to:"b4"}]
     }
   },
-  28: {
+  29: {
     nimzo_indienne: {
       line:"1.d4 Cf6 2.c4 e6 3.Cc3 Fb4 4.e3 0-0 5.Fd3 d5",
       fondement:"La Défense Nimzo-Indienne (3...Fb4) épingle le Cavalier c3 et empêche e4 immédiat. La réponse la plus populaire contre 3.Nc3 aux niveaux élevés.",
@@ -1506,7 +1506,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"c2",to:"c4"},{from:"e7",to:"e6"},{from:"b1",to:"c3"},{from:"f8",to:"b4"},{from:"e2",to:"e3"},{from:"e8",to:"g8"},{from:"f1",to:"d3"},{from:"d7",to:"d5"}]
     }
   },
-  29: {
+  30: {
     qid: {
       line:"1.d4 Cf6 2.c4 e6 3.Cf3 b6 4.g3 Fb7 5.Fg2 Fe7",
       fondement:"La Défense Indienne Dame (3...b6) contrôle les cases blanches du centre avec le Fou en b7. Solide et flexible, favorite de Petrosian.",
@@ -1530,7 +1530,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"c2",to:"c4"},{from:"e7",to:"e6"},{from:"g1",to:"f3"},{from:"b7",to:"b6"},{from:"g2",to:"g3"},{from:"c8",to:"b7"},{from:"f1",to:"g2"},{from:"f8",to:"e7"}]
     }
   },
-  30: {
+  31: {
     bogo: {
       line:"1.d4 Cf6 2.c4 e6 3.Cf3 Fb4+ 4.Fd2 Fxd2+ 5.Dxd2 b6",
       fondement:"La Défense Bogo-Indienne (3...Fb4+) perturbe le développement blanc et donne aux Noirs une position solide similaire à la Nimzo-Indienne mais sans 3.Nc3.",
@@ -1554,7 +1554,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"c2",to:"c4"},{from:"e7",to:"e6"},{from:"g1",to:"f3"},{from:"f8",to:"b4"},{from:"c1",to:"d2"},{from:"b4",to:"d2"},{from:"d1",to:"d2"},{from:"b7",to:"b6"}]
     }
   },
-  31: {
+  32: {
     catalane: {
       line:"1.d4 Cf6 2.c4 e6 3.g3 d5 4.Fg2 dxc4 5.Cf3 a6",
       fondement:"L'Ouverture Catalane combine le Gambit Dame et le Fianchetto blanc. Le Fou en g2 exerce une pression de longue distance sur les cases blanches et le centre.",
@@ -1578,7 +1578,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"c2",to:"c4"},{from:"e7",to:"e6"},{from:"g2",to:"g3"},{from:"d7",to:"d5"},{from:"f1",to:"g2"},{from:"d5",to:"c4"},{from:"g1",to:"f3"},{from:"a7",to:"a6"}]
     }
   },
-  32: {
+  33: {
     benoni: {
       line:"1.d4 Cf6 2.c4 c5 3.d5 e6 4.Cc3 exd5 5.cxd5 d6",
       fondement:"La Défense Benoni (2...c5) crée un déséquilibre immédiat. Les Noirs obtiennent un jeu dynamique sur l'aile Roi, tandis que Blanc possède un avantage spatial central.",
@@ -1602,7 +1602,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"c2",to:"c4"},{from:"c7",to:"c5"},{from:"d4",to:"d5"},{from:"e7",to:"e6"},{from:"b1",to:"c3"},{from:"e6",to:"d5"},{from:"c4",to:"d5"},{from:"d7",to:"d6"}]
     }
   },
-  33: {
+  34: {
     budapest: {
       line:"1.d4 Cf6 2.c4 e5 3.dxe5 Cg4 4.Cf3 Fc5 5.e3 Cc6",
       fondement:"Le Gambit Budapest (2...e5!?) sacrifie un pion pour obtenir une initiative immédiate et un contre-jeu actif. Excellent outil surprise.",
@@ -1626,7 +1626,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"c2",to:"c4"},{from:"e7",to:"e5"},{from:"d4",to:"e5"},{from:"f6",to:"g4"},{from:"g1",to:"f3"},{from:"f8",to:"c5"},{from:"e2",to:"e3"},{from:"b8",to:"c6"}]
     }
   },
-  34: {
+  35: {
     trompowsky: {
       line:"1.d4 Cf6 2.Fg5 Ce4 3.Ff4 d5 4.e3 Cf6",
       fondement:"L'Attaque Trompowsky (2.Fg5) contourne toute la théorie indienne standard. Le Fou en g5 épingle le Cavalier f6 et crée des positions déséquilibrées dès le 2e coup.",
@@ -1650,7 +1650,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"c1",to:"g5"},{from:"f6",to:"e4"},{from:"g5",to:"f4"},{from:"d7",to:"d5"},{from:"e2",to:"e3"},{from:"e4",to:"f6"}]
     }
   },
-  35: {
+  36: {
     london: {
       line:"1.d4 d5 2.Cf3 Cf6 3.Ff4 e6 4.e3 Fd6 5.Fg3 0-0",
       fondement:"Le Système Londonien (Nf3+Bf4+e3) est un système solide et populaire à tous les niveaux. Les Blancs jouent les mêmes coups quelle que soit la réponse noire.",
@@ -1674,7 +1674,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"c1",to:"f4"},{from:"e7",to:"e6"},{from:"e2",to:"e3"},{from:"f8",to:"d6"},{from:"f4",to:"g3"},{from:"e8",to:"g8"}]
     }
   },
-  36: {
+  37: {
     jobava: {
       line:"1.d4 d5 2.Cc3 Cf6 3.Ff4 e6 4.e3 Fd6 5.Cb5",
       fondement:"Le Système Jobava-London est une variante agressive du Système Londonien. Le Cavalier en c3 (au lieu de f3 habituel) crée des menaces immédiates avec Nb5-Nc7+.",
@@ -1698,7 +1698,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"b1",to:"c3"},{from:"g8",to:"f6"},{from:"c1",to:"f4"},{from:"e7",to:"e6"},{from:"e2",to:"e3"},{from:"f8",to:"d6"},{from:"c3",to:"b5"}]
     }
   },
-  37: {
+  38: {
     colle: {
       line:"1.d4 d5 2.Cf3 Cf6 3.e3 e6 4.Fd3 c5 5.c3 Cc6",
       fondement:"Le Système Colle (d4+Nf3+e3) est le système le plus systématique. Les Blancs jouent le même setup contre n'importe quelle réponse noire. Le sacrifice grec Bxh7+ est naturel.",
@@ -1722,7 +1722,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"e2",to:"e3"},{from:"e7",to:"e6"},{from:"f1",to:"d3"},{from:"c7",to:"c5"},{from:"c2",to:"c3"},{from:"b8",to:"c6"}]
     }
   },
-  38: {
+  39: {
     colle_zukertort: {
       line:"1.d4 d5 2.Cf3 Cf6 3.e3 e6 4.Fd3 c5 5.b3 Cc6 6.0-0",
       fondement:"Le Système Colle-Zukertort est une variante du Colle avec le Fou en b2. Le Fou en b2 exerce une pression sur la grande diagonale a1-h8.",
@@ -1746,7 +1746,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"e2",to:"e3"},{from:"e7",to:"e6"},{from:"f1",to:"d3"},{from:"c7",to:"c5"},{from:"b2",to:"b3"},{from:"b8",to:"c6"},{from:"e1",to:"g1"}]
     }
   },
-  39: {
+  40: {
     torre: {
       line:"1.d4 Cf6 2.Cf3 e6 3.Fg5 c5 4.e3 cxd4 5.exd4",
       fondement:"L'Attaque Torre (Bg5 contre Nf6) est un système positionnel solide. La célèbre partie Torre-Lasker 1925 illustre le mécanisme du 'moulin' (windmill).",
@@ -1770,7 +1770,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"g1",to:"f3"},{from:"e7",to:"e6"},{from:"c1",to:"g5"},{from:"c7",to:"c5"},{from:"e2",to:"e3"},{from:"c5",to:"d4"},{from:"e3",to:"d4"}]
     }
   },
-  40: {
+  41: {
     stonewall: {
       line:"1.d4 d5 2.e3 Cf6 3.Fd3 e6 4.f4 c5 5.c3 Cc6",
       fondement:"L'Attaque Stonewall est un système positionnel où Blanc joue d4+e3+f4+c3 créant un 'mur de pierre'. Le Cavalier en e5 surprotégé est la pièce clé.",
@@ -1890,7 +1890,7 @@ var DB = {
       moves:[{from:"b2",to:"b3"},{from:"e7",to:"e5"},{from:"c1",to:"b2"},{from:"b8",to:"c6"},{from:"e2",to:"e3"},{from:"g8",to:"f6"},{from:"f1",to:"b5"},{from:"f8",to:"d6"}]
     }
   },
-  46: {
+  5: {
     petrov: {
       line:"1.e4 e5 2.Cf3 Cf6",
       fondement:"Contre-attaque symétrique immédiate sur e4 au lieu de défendre e5. Les Noirs acceptent une structure souvent symétrique en échange d'un développement facile et de l'annulation de l'initiative blanche. L'idée est de refuser le combat théorique de la Ruy Lopez ou de l'Italienne.",
@@ -2046,7 +2046,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"f3",to:"e5"},{from:"b8",to:"c6"},{from:"e5",to:"c6"},{from:"d7",to:"c6"},{from:"d2",to:"d3"}]
     }
   },
-  47: {
+  46: {
     trois_cavaliers: {
       line:"1.e4 e5 2.Cf3 Cc6 3.Cc3",
       fondement:"La Partie des Trois Cavaliers (3.Cc3) survient quand les Noirs s'écartent de la symétrie des Quatre Cavaliers par un coup autre que ...Cf6, souvent 3...g6 ou 3...Fb4.",
@@ -2070,7 +2070,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"b8",to:"c6"},{from:"b1",to:"c3"}]
     }
   },
-  48: {
+  47: {
     damiano: {
       line:"1.e4 e5 2.Cf3 f6",
       fondement:"La Défense Damiano (2...f6) est l'une des pires réponses connues : elle affaiblit le roi et n'aide pas le développement. Réfutée dès le XVIe siècle par Damiano lui-même.",
@@ -2094,7 +2094,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"f7",to:"f6"}]
     }
   },
-  49: {
+  48: {
     bongcloud: {
       line:"1.e4 e5 2.Re2",
       fondement:"L'Attaque Bongcloud (2.Re2) est une provocation absurde popularisée par la culture internet : les Blancs bougent le roi au coup 2, perdant le roque et bloquant leurs propres pièces.",
@@ -2118,7 +2118,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"e1",to:"e2"}]
     }
   },
-  50: {
+  49: {
     barnes: {
       line:"1.e4 f6",
       fondement:"La Défense Barnes (1...f6) est considérée comme la pire réponse à 1.e4 : elle n'aide pas le développement, affaiblit la diagonale du roi et bloque le Cavalier g8.",
@@ -2142,7 +2142,7 @@ var DB = {
       moves:[{from:"e2",to:"e4"},{from:"f7",to:"f6"}]
     }
   },
-  51: {
+  50: {
     gda: {
       line:"1.d4 d5 2.c4 dxc4",
       fondement:"Le Gambit de la Dame Accepté (2...dxc4) rend immédiatement le centre aux Blancs en échange d'un développement libre et d'un jeu de pièces actif, sans le « mauvais Fou » du QGD.",
@@ -2166,7 +2166,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"d5",to:"c4"}]
     }
   },
-  52: {
+  51: {
     tchigorine: {
       line:"1.d4 d5 2.c4 Cc6",
       fondement:"La Défense Tchigorine (2...Cc6) est une réponse hypermoderne et combative au Gambit de la Dame : les Noirs développent les pièces avant les pions et acceptent une structure déséquilibrée.",
@@ -2190,7 +2190,7 @@ var DB = {
       moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"b8",to:"c6"}]
     }
   },
-  53: {
+  52: {
     sokolski: {
       line:"1.b4",
       fondement:"L'Ouverture Sokolski (1.b4), aussi nommée Orang-Outan, gagne de l'espace à l'aile dame et fianchettoe le Fou en b2. Excentrique mais jouable, elle évite toute théorie classique.",
@@ -2214,7 +2214,7 @@ var DB = {
       moves:[{from:"b2",to:"b4"}]
     }
   },
-  54: {
+  53: {
     grob: {
       line:"1.g4",
       fondement:"L'Attaque Grob (1.g4) est l'une des ouvertures les plus provocantes : elle affaiblit le roque et le centre pour fianchettoer le Fou en g2 et viser b7 et d5. Objectivement douteuse mais redoutable en surprise.",
@@ -2547,7 +2547,7 @@ var ENRICH = {
     }
   }
  },
- 5:{
+ 6:{
   najdorf:{
    histoire:"La Variante Najdorf tire son nom du grand maître polonais-argentin Miguel Najdorf (1910–1997). Elle devint l'arme absolue de Bobby Fischer et Garry Kasparov au plus haut niveau mondial, et reste de loin la variante sicilienne la plus populaire au 21e siècle.",
    histoire_en:"The Najdorf Variation is named after Polish-Argentine GM Miguel Najdorf (1910–1997). It became the ultimate weapon of Bobby Fischer and Garry Kasparov at the highest level, and remains the most popular Sicilian variation of the 21st century.",
@@ -2766,7 +2766,7 @@ var ENRICH = {
   }
  },
 
- 6:{
+ 7:{
   classique:{
    histoire:"La Défense Française fut jouée pour la première fois lors d'une correspondance par équipe entre Paris et Londres en 1834 — d'où son nom. La chaîne de pions e6-d5 est une forteresse, mais le Fou c8 reste le problème structurel des Noirs. Van der Sterren note qu'elle est «&thinsp;considérée solide depuis deux cents ans&thinsp;».",
       histoire_en:"The King's Indian Defense became popular in the 1940s–1950s, championed by Bronstein, Geller, and later Fischer and Kasparov. The Classical Variation is the most theoretical and leads to the sharpest battles in chess, with White attacking queenside and Black storming the kingside.",
@@ -2831,7 +2831,7 @@ var ENRICH = {
     }
   }
  },
- 7:{
+ 8:{
   classique:{
    histoire:"La Défense Caro-Kann fut développée par Horatio Caro et Markus Kann en 1886. Souvent comparée à la Française, elle évite le «&thinsp;mauvais Fou&thinsp;» de cette dernière.",
    annotations:[
@@ -2870,7 +2870,7 @@ var ENRICH = {
     }
   }
  },
- 8:{
+ 9:{
   alekhine:{
    histoire:"La Défense Alekhine fut inventée par le champion du monde Alexandre Alekhine en 1921. La philosophie est hypermoderne : les Noirs laissent leur Cavalier être chassé pour mieux attaquer les pions blancs ensuite. Van der Sterren décrit l'Attaque des Quatre Pions comme «&thinsp;la punition la plus radicale&thinsp;» contre cette défense.",
       histoire_en:"The Alekhine Defense (1...Nf6) was invented by World Champion Alexander Alekhine in the 1920s. Black invites White to chase the Knight and over-extend their center. The Four Pawns Attack is White's most aggressive response.",
@@ -2929,7 +2929,7 @@ var ENRICH = {
     }
   }
  },
- 9:{
+ 10:{
   exchange:{
    histoire:"Le Gambit de la Dame Décliné (QGD) est la défense la plus solide et la plus testée contre 1.d4. Joué depuis le XVIIe siècle, il connut son âge d'or lors des grands tournois du début du XXe siècle. La Variante de l'Échange (4.cxd5) fut popularisée par Capablanca — il s'empare de l'espace mais doit gérer les 'deux fous' noirs.",
       histoire_en:"The Queen's Gambit Declined is one of the most ancient and respected openings, played since the 15th century. The Exchange Variation (5.cxd5) was a favorite of Capablanca, who used it to create symmetrical pawn structures with a long-term endgame advantage.",
@@ -2971,7 +2971,7 @@ var ENRICH = {
     }
   }
  },
- 10:{
+ 11:{
   rubinstein:{
    histoire:"La Défense Nimzo-Indienne fut créée par Aron Nimzowitsch au début du XXe siècle — une révolution. Nimzowitsch démontra que le carré e4 pouvait être contrôlé indirectement par un Fou développé.",
       histoire_en:"The Nimzo-Indian Defense (1.d4 Nf6 2.c4 e6 3.Nc3 Bb4) was created by Aron Nimzowitsch in the 1920s. By pinning the Knight on c3, Black prevents e4 and creates structural imbalances. The Rubinstein Variation (4.e3) was systematized by Rubinstein himself and is the most solid White approach.",
@@ -3013,7 +3013,7 @@ var ENRICH = {
     }
   }
  },
- 11:{
+ 12:{
   classique:{
    histoire:"L'Indienne du Roi (KID) est née dans les années 1920, méprisée par les classiques. Ce sont les Soviétiques — Bronstein, Boleslavsky — puis Fischer et Kasparov qui en révélèrent la profondeur. Van der Sterren écrit : «&thinsp;Ce n'est pas une tentative de maintenir l'égalité — c'est un défi violent pour arracher l'initiative à l'adversaire&thinsp;».",
    annotations:[
@@ -3053,7 +3053,7 @@ var ENRICH = {
     }
   }
  },
- 12:{
+ 13:{
   exchange_gru:{
    histoire:"La Défense Grünfeld fut créée par Ernst Grünfeld, grand maître autrichien, au tournoi de Vienne en 1922. Ce sont Boleslavsky et surtout Kasparov qui en firent leur ouverture fétiche.. C'est le choix numéro 1 de Kasparov contre 1.d4.",
       histoire_en:"The Grünfeld Defense (1.d4 Nf6 2.c4 g6 3.Nc3 d5) was developed by Ernst Grünfeld in the 1920s. The Exchange Variation (4.cxd5 Nxd5 5.e4) was Kasparov's main weapon in his world championship matches against Karpov.",
@@ -3096,7 +3096,7 @@ var ENRICH = {
   }
  },
 
- 13:{
+ 14:{
   reversed:{
    histoire:"L'Ouverture Anglaise (1.c4) fut popularis&eacute;e par Howard Staunton en 1843. La Sicilienne Renvers&eacute;e donne la structure sicilienne avec un tempo de plus pour les Blancs.",
    histoire_en:"The English Opening (1.c4) was popularized by Howard Staunton in 1843. The Reversed Sicilian gives the Sicilian structure with an extra tempo for White.",
@@ -3131,7 +3131,7 @@ var ENRICH = {
    }
   }
  },
- 14:{
+ 15:{
   scotch:{
    histoire:"La Partie Écossaise tire son nom d'un match épistolaire entre les clubs d'Édimbourg et de Londres en 1824. Longtemps délaissée, elle fut ressuscitée spectaculairement par Garry Kasparov lors de ses matchs contre Karpov (1990) et Anand (1995). Kasparov y voyait le moyen idéal d'éviter la Défense de Berlin tout en conservant un jeu ouvert et dynamique.",
    histoire_en:"The Scotch Game takes its name from a correspondence match between Edinburgh and London chess clubs in 1824. Long neglected, it was spectacularly revived by Garry Kasparov in his matches against Karpov (1990) and Anand (1995).",
@@ -3150,7 +3150,7 @@ var ENRICH = {
     }
   }
  },
- 15:{
+ 16:{
   ponziani:{
    histoire:"L'Ouverture Ponziani (3.c3) porte le nom du prêtre italien Domenico Lorenzo Ponziani (1719-1796), qui l'analysa dans son traité de 1769. Rare au plus haut niveau, elle reste une arme surprise redoutable en partie amateur — la menace 4.Da4 prend souvent au dépourvu un adversaire non préparé. Son défaut : 3...d5! contre-attaque immédiatement.",
    histoire_en:"The Ponziani Opening (3.c3) is named after Italian priest Domenico Lorenzo Ponziani (1719–1796), who analyzed it in his 1769 treatise. Rare at the top level, it remains a formidable surprise weapon. The threat of 4.Qa4 often catches unprepared opponents off guard.",
@@ -3169,7 +3169,7 @@ var ENRICH = {
     }
   }
  },
- 16:{
+ 17:{
   quatre_cavaliers:{
    histoire:"La Partie des Quatre Cavaliers est l'une des plus anciennes ouvertures systématisées, populaire aux XIXe et début XXe siècles. La variante espagnole (4.Fb5) fut analysée par Jaenisch (1847) et popularisée par Rubinstein, dont la magnifique défense (4...Cd4!) porte le nom. Aujourd'hui considérée comme égale, elle attire les joueurs qui aiment la solidité structurelle.",
    histoire_en:"The Four Knights Game is one of the oldest systematized openings, popular in the 19th and early 20th centuries. The Spanish variation (4.Bb5) was analyzed by Jaenisch (1847) and popularized by Rubinstein, whose magnificent defense (4...Nd4!) bears his name.",
@@ -3188,7 +3188,7 @@ var ENRICH = {
     }
   }
  },
- 17:{
+ 18:{
   elephant:{
    histoire:"Le Gambit Éléphant (2...d5?!) est nommé ainsi pour l'avancée audacieuse du pion d, semblable à la charge d'un éléphant. Analysé par Ernst Falkbeer au XIXe siècle, il reste objectivement douteux mais constitue une arme surprise efficace. La réfutation 4.De2! est essentielle à connaître pour les Blancs.",
    histoire_en:"The Elephant Gambit (2...d5?!) is named for the bold advance of the d-pawn, resembling an elephant's charge. Analyzed by Ernst Falkbeer in the 19th century, it remains objectively dubious but is an effective surprise weapon. The refutation 4.Qe2! is essential knowledge for White.",
@@ -3207,7 +3207,7 @@ var ENRICH = {
    }
   }
  },
- 18:{
+ 19:{
   letton:{
    histoire:"Le Gambit Letton (2...f5!?) porte le nom des joueurs lettons qui l'ont systématisé au début du XXe siècle, notamment Kārlis Bētiņš (1867-1943). Cette ouverture hyper-agressive sacrifie la solidité pour une initiative immédiate. Elle est particulièrement redoutable en blitz mais considérée objectivement insuffisante au niveau master.",
    histoire_en:"The Latvian Gambit (2...f5!?) is named after Latvian players who systematized it in the early 20th century, notably Kārlis Bētiņš (1867–1943). This hyper-aggressive opening sacrifices solidity for immediate initiative. Particularly dangerous in blitz but objectively insufficient at master level.",
@@ -3226,7 +3226,7 @@ var ENRICH = {
    }
   }
  },
- 19:{
+ 20:{
   centre:{
    histoire:"La Partie du Centre (3.Dxd4) fut populaire au XIXe siècle mais est aujourd'hui rarement vue au niveau master. Son principal défaut : la Dame sortie prématurément perd un tempo après 3...Cc6. La partie Winawer–Zukertort (Paris 1878) illustre parfaitement ses dangers pour les Blancs.",
    histoire_en:"The Center Game (3.Qxd4) was popular in the 19th century but is now rarely seen at master level. Its main flaw: the prematurely developed Queen loses a tempo after 3...Nc6. The game Winawer–Zukertort (Paris 1878) perfectly illustrates its dangers for White.",
@@ -3245,7 +3245,7 @@ var ENRICH = {
    }
   }
  },
- 20:{
+ 21:{
   danois:{
    histoire:"Le Gambit Danois (3.c3!) est l'une des ouvertures romantiques par excellence du XIXe siècle. Populaire en Scandinavie, il offre deux pions pour un développement foudroyant des deux Fous sur les grandes diagonales. Bien que réfuté au niveau master, il reste redoutable en blitz et contre des adversaires non préparés.",
    histoire_en:"The Danish Gambit (3.c3!) is one of the quintessential romantic openings of the 19th century. Popular in Scandinavia, it offers two pawns for lightning development of both Bishops on the long diagonals. Though refuted at master level, it remains dangerous in blitz.",
@@ -3264,7 +3264,7 @@ var ENRICH = {
    }
   }
  },
- 21:{
+ 22:{
   viennoise:{
    histoire:"La Partie Viennoise (2.Cc3) doit son nom aux joueurs du cercle d'échecs de Vienne au XIXe siècle. Flexible et redoutable, elle peut basculer vers le gambit tactique (3.f4) ou une structure positionnelle (3.g3). Le maître autrichien Rudolf Spielmann (1883-1942) en était le grand défenseur, développant de nombreuses idées d'attaque basées sur 4.Dh5!",
    histoire_en:"The Vienna Game (2.Nc3) takes its name from the players of the Vienna chess circle in the 19th century. Flexible and formidable, it can switch to the tactical gambit (3.f4) or positional structure (3.g3). Austrian master Rudolf Spielmann (1883–1942) was its greatest advocate, developing many attacking ideas based on 4.Qh5!",
@@ -3283,7 +3283,7 @@ var ENRICH = {
    }
   }
  },
- 22:{
+ 23:{
   fou:{
    histoire:"L'Ouverture du Fou (2.Fc4) est l'une des premières ouvertures systématiques de l'histoire — analysée dès le XVIe siècle par les maîtres italiens. Elle mène souvent à l'Italienne par transposition (2...Cf6 3.Cf3) ou peut devenir tranchante avec le Gambit d'Urusov (3.d4). Paul Morphy visait constamment la case faible f7.",
    histoire_en:"The Bishop's Opening (2.Bc4) is one of the first systematic openings in chess history — analyzed as early as the 16th century by Italian masters. It often transposes to the Italian Game or can become sharp with the Urusov Gambit (3.d4). Paul Morphy constantly targeted the weak f7 square.",
@@ -3302,7 +3302,7 @@ var ENRICH = {
    }
   }
  },
- 23:{
+ 24:{
   nimzowitsch_def:{
    histoire:"La Défense Nimzowitsch (1...Cc6) est l'une des défenses les plus irrégulières contre 1.e4. Elle porte le nom d'Aaron Nimzowitsch (1886-1935), le grand théoricien hypermoderne letton-danois qui défendit ce coup dans les années 1920. Son idée : contrôler le centre à distance avec les pièces plutôt qu'avec les pions.",
    histoire_en:"The Nimzowitsch Defense (1...Nc6) is one of the most irregular defenses against 1.e4. It bears the name of Aaron Nimzowitsch (1886–1935), the great Latvian-Danish hypermodern theorist who championed this move in the 1920s. The idea: control the center from a distance with pieces rather than pawns.",
@@ -3321,7 +3321,7 @@ var ENRICH = {
     }
   }
  },
- 24:{
+ 25:{
   moderne_def:{
    histoire:"La Défense Moderne (1...g6) est l'incarnation de l'hypermodernisme poussé à l'extrême. Popularisée dans les années 1960-70, elle fut défendue par des joueurs comme Keene et Suttles. Le Fou en g7 ('Dragon Bishop') exerce une pression à distance sur e4 et d4 sans occuper le centre. Une ouverture flexible qui peut transposer vers la Pirc ou le King's Indian.",
    histoire_en:"The Modern Defense (1...g6) is the incarnation of hypermodernism pushed to the extreme. Popularized in the 1960s–70s, it was championed by players like Keene and Suttles. The Bishop on g7 ('Dragon Bishop') exerts long-range pressure on e4 and d4 without occupying the center.",
@@ -3340,7 +3340,7 @@ var ENRICH = {
     }
   }
  },
- 25:{
+ 26:{
   owen:{
    histoire:"La Défense Owen (1...b6) porte le nom du prêtre anglican John Owen (1827-1901), qui la joua contre Paul Morphy en 1858. La Défense Hippopotame est une variante encore plus passive, toutes les pièces noires se développant derrière un rempart de pions avancés seulement d'une case. Un système désorientant qui frustre les attaquants cherchant une cible précise.",
    histoire_en:"The Owen Defense (1...b6) is named after Anglican priest John Owen (1827–1901), who played it against Paul Morphy in 1858. The Hippopotamus Defense is even more passive, all Black pieces developing behind a pawn wall advanced only one square. A disorienting system that frustrates attackers looking for a target.",
@@ -3359,7 +3359,7 @@ var ENRICH = {
     }
   }
  },
- 26:{
+ 27:{
   hollandaise:{
    histoire:"La Défense Hollandaise (1...f5) est l'une des ouvertures les plus combatives contre 1.d4. Populaire depuis le XVIIIe siècle, elle fut popularisée par Staunton, Nimzowitsch et Botvinnik. Le chef-d'œuvre de Botvinnik contre Capablanca (AVRO 1938) reste la partie de référence absolue de cette ouverture.",
    histoire_en:"The Dutch Defense (1...f5) is one of the most combative openings against 1.d4. Popular since the 18th century, it was popularized by Staunton, Nimzowitsch, and Botvinnik. Botvinnik's masterpiece against Capablanca (AVRO 1938) remains the absolute reference game.",
@@ -3378,7 +3378,7 @@ var ENRICH = {
    }
   }
  },
- 27:{
+ 28:{
   englund:{
    histoire:"Le Gambit Englund (1.d4 e5!?) porte le nom du joueur suédois Fritz Carl Anton Englund (1871-1933). Ce gambit ultra-agressif contre 1.d4 est objectivement réfuté, mais génère des positions pleines de pièges, notamment le célèbre Piège Rosen : 1.d4 e5 2.dxe5 Cc6 3.Cf3 De7 4.Fd2?? Dxb2 5.Fc3 Fb4 6.Dd2 Fxc3 7.Dxc3 Dc1# — mat en 8 coups !",
    histoire_en:"The Englund Gambit (1.d4 e5!?) is named after Swedish player Fritz Carl Anton Englund (1871–1933). This ultra-aggressive gambit is objectively refuted, but generates positions full of traps, including the famous Rosen Trap: 1.d4 e5 2.dxe5 Nc6 3.Nf3 Qe7 4.Bd2?? Qxb2 5.Bc3 Bb4 6.Qd2 Bxc3 7.Qxc3 Qc1# — checkmate in 8!",
@@ -3397,7 +3397,7 @@ var ENRICH = {
    }
   }
  },
- 28:{
+ 29:{
   nimzo_indienne:{
    histoire:"La Défense Nimzo-Indienne (3...Fb4) est l'une des ouvertures les plus stratégiquement riches de la théorie moderne. Inventée par Aaron Nimzowitsch dans les années 1920, elle révolutionne le 'contrôle du centre' : les Noirs l'influencent avec leurs pièces en épinglant le Cavalier c3. Botvinnik, Kasparov et Anand l'ont tous utilisée comme arme principale.",
    histoire_en:"The Nimzo-Indian Defense (3...Bb4) is one of the most strategically rich openings in modern theory. Invented by Aaron Nimzowitsch in the 1920s, it revolutionized 'center control': Black influences it with pieces by pinning the c3-Knight. Botvinnik, Kasparov, and Anand all used it as their main weapon.",
@@ -3416,7 +3416,7 @@ var ENRICH = {
    }
   }
  },
- 29:{
+ 30:{
   qid:{
    histoire:"La Défense Indienne Dame (QID, 3...b6) est l'une des défenses indiennes les plus solides contre 1.d4. Popularisée dans les années 1920 par Nimzowitsch et Réti dans le cadre de la révolution hypermoderne, le fianchetto du Fou dame (Fb7) crée une pression durable sur la grande diagonale. Petrosian, Karpov et Kramnik l'ont utilisée comme forteresse positionnelle.",
    histoire_en:"The Queen's Indian Defense (QID, 3...b6) is one of the most solid Indian defenses against 1.d4. Popularized in the 1920s by Nimzowitsch and Réti, the queenside Bishop fianchetto (Bb7) creates lasting pressure on the long diagonal. Petrosian, Karpov, and Kramnik used it as a positional fortress.",
@@ -3435,7 +3435,7 @@ var ENRICH = {
     }
   }
  },
- 30:{
+ 31:{
   bogo:{
    histoire:"La Défense Bogo-Indienne (3...Fb4+) porte le nom d'Efim Bogoljubov (1889-1952), le grand maître russo-allemand qui la joua régulièrement dans les années 1920. Ce coup d'échec en b4 perturbe le développement blanc et donne aux Noirs une position solide. Moins tranchante que la Nimzo-Indienne, elle est souvent utilisée comme alternative surprise.",
    histoire_en:"The Bogo-Indian Defense (3...Bb4+) is named after Efim Bogoljubov (1889–1952), the Russo-German grandmaster who played it regularly in the 1920s. This check on b4 disrupts White's development and gives Black a solid position. Less sharp than the Nimzo-Indian, it is often used as a surprise alternative.",
@@ -3454,7 +3454,7 @@ var ENRICH = {
    }
   }
  },
- 31:{
+ 32:{
   catalane:{
    histoire:"L'Ouverture Catalane fut inventée pour le grand tournoi de Barcelone en 1929 à la demande de l'organisateur qui voulait une ouverture 'espagnole'. Développée par Savielly Tartakower, son idée centrale : le fianchetto du Fou roi (Fg2) crée une pression durable sur les cases blanches du camp noir. Karpov, Kramnik et Giri en sont les plus grands spécialistes modernes.",
    histoire_en:"The Catalan Opening was invented for the grand Barcelona tournament of 1929 at the organizer's request for a 'Spanish' opening. Developed by Savielly Tartakower, its central idea: the kingside Bishop fianchetto (Bg2) creates lasting pressure on the white squares in Black's camp. Karpov, Kramnik, and Giri are its greatest modern specialists.",
@@ -3473,7 +3473,7 @@ var ENRICH = {
    }
   }
  },
- 32:{
+ 33:{
   benoni:{
    histoire:"La Défense Benoni doit son nom à l'hébreu 'Ben-Oni' (fils de ma douleur), titre d'un traité de 1825. Rendue populaire par Tal, Fischer et Kasparov, elle est l'une des ouvertures les plus dynamiques contre 1.d4 : les Noirs acceptent une structure de pions inférieure en échange d'un jeu actif et de contre-chances sur l'aile roi.",
    histoire_en:"The Benoni Defense takes its name from the Hebrew 'Ben-Oni' (son of my sorrow), the title of an 1825 treatise. Popularized by Tal, Fischer, and Kasparov, it is one of the most dynamic openings against 1.d4: Black accepts an inferior pawn structure in exchange for active play and kingside counterchances.",
@@ -3492,7 +3492,7 @@ var ENRICH = {
     }
   }
  },
- 33:{
+ 34:{
   budapest:{
    histoire:"Le Gambit Budapest (2.c4 e5!?) fut découvert indépendamment par plusieurs joueurs hongrois autour de 1916, notamment Abonyi, Breyer et Barász. Ce gambit surprend les joueurs de 1.d4 en sacrifiant un pion pour une initiative rapide. La partie de Rubinstein contre Vidmar en 1918 reste la référence absolue de cette ouverture.",
    histoire_en:"The Budapest Gambit (2.c4 e5!?) was independently discovered by several Hungarian players around 1916, notably Abonyi, Breyer, and Barász. This gambit surprises 1.d4 players by sacrificing a pawn for quick initiative. Rubinstein's game against Vidmar in 1918 remains the absolute reference.",
@@ -3511,7 +3511,7 @@ var ENRICH = {
    }
   }
  },
- 34:{
+ 35:{
   trompowsky:{
    histoire:"L'Attaque Trompowsky (2.Fg5) porte le nom du joueur brésilien Octavio Trompowsky (1897-1984), qui la popularisa dans les années 1930. Elle contourne toute la théorie indienne standard en épinglant le Cavalier f6 dès le 2e coup. Julian Hodgson et Nigel Short en furent les grands promoteurs modernes dans les années 1990. Magnus Carlsen l'utilise occasionnellement comme arme surprise.",
    histoire_en:"The Trompowsky Attack (2.Bg5) is named after Brazilian player Octavio Trompowsky (1897–1984), who popularized it in the 1930s. It bypasses all standard Indian theory by pinning the f6-Knight on move 2. Julian Hodgson and Nigel Short were its great modern promoters in the 1990s. Magnus Carlsen occasionally uses it as a surprise weapon.",
@@ -3530,7 +3530,7 @@ var ENRICH = {
    }
   }
  },
- 35:{
+ 36:{
   london:{
    histoire:"Le Système Londonien (d4+Cf3+Ff4) est l'une des structures les plus populaires du XXIe siècle. Longtemps considéré comme 'ennuyeux', il fut réhabilité par des joueurs comme Geller dans les années 1970, puis popularisé massivement par Magnus Carlsen et Vladimir Kramnik dans les années 2010. Il est aujourd'hui l'une des ouvertures les plus jouées sur Lichess et Chess.com.",
    histoire_en:"The London System (d4+Nf3+Bf4) is one of the most popular structures of the 21st century. Long considered 'boring', it was rehabilitated by players like Geller in the 1970s, then massively popularized by Magnus Carlsen and Vladimir Kramnik in the 2010s. Today it is one of the most played openings on Lichess and Chess.com.",
@@ -3549,7 +3549,7 @@ var ENRICH = {
    }
   }
  },
- 36:{
+ 37:{
   jobava:{
    histoire:"Le Système Jobava-London est une variante moderne et agressive du Système Londonien, popularisée par le grand maître géorgien Baadur Jobava (né en 1983). Au lieu du classique Ff4+e3, les Blancs jouent d4+Cf3+Cc3+Ff4 — une approche hybride qui génère des possibilités tactiques immédiates tout en conservant la solidité structurelle du Londonien.",
    histoire_en:"The Jobava-London System is a modern and aggressive variant of the London System, popularized by Georgian grandmaster Baadur Jobava (born 1983). Instead of the classic Bf4+e3, White plays d4+Nf3+Nc3+Bf4 — a hybrid approach that generates immediate tactical possibilities while maintaining London's structural solidity.",
@@ -3568,7 +3568,7 @@ var ENRICH = {
    }
   }
  },
- 37:{
+ 38:{
   colle:{
    histoire:"Le Système Colle porte le nom du grand maître belge Edgard Colle (1897-1932), qui le développa et le joua presque exclusivement entre 1924 et 1932. Ce système — d4+Cf3+e3+Fd3+Cbd2+0-0 — est parfait pour les joueurs qui aiment les structures claires et les attaques mécaniques sur l'aile roi. Son sacrifice récurrent Fxh7+! reste l'un des thèmes les plus connus des ouvertures.",
    histoire_en:"The Colle System is named after Belgian grandmaster Edgard Colle (1897–1932), who developed and played it almost exclusively between 1924 and 1932. This system — d4+Nf3+e3+Bd3+Nbd2+0-0 — is perfect for players who like clear structures and mechanical kingside attacks. Its recurring sacrifice Bxh7+! remains one of the best-known opening themes.",
@@ -3587,7 +3587,7 @@ var ENRICH = {
     }
   }
  },
- 38:{
+ 39:{
   colle_zukertort:{
    histoire:"Le Colle-Zukertort est une variante plus active du Système Colle, combinant les idées de Colle avec le fianchetto du Fou dame de Zukertort (b3+Fb2). Ce système hybride fut popularisé par le Néerlandais Jan van der Sterren. Aujourd'hui, il est fréquemment utilisé comme alternative solide au Système Londonien, le Fou b2 ajoutant une pression supplémentaire sur la grande diagonale.",
    histoire_en:"The Colle-Zukertort is a more active variant of the Colle System, combining Colle's ideas with Zukertort's queenside Bishop fianchetto (b3+Bb2). This hybrid system was popularized by Dutch player Jan van der Sterren. Today it is frequently used as a solid alternative to the London System.",
@@ -3606,7 +3606,7 @@ var ENRICH = {
     }
   }
  },
- 39:{
+ 40:{
   torre:{
    histoire:"L'Attaque Torre (2.Cf3 puis 3.Fg5) porte le nom du grand maître mexicain Carlos Torre Repetto (1904-1978), qui la joua avec succès dans les années 1920. Torre est célèbre pour sa victoire sensationnelle contre Emanuel Lasker en 1925 avec la manœuvre 'moulin' — considérée comme l'une des combinaisons les plus spectaculaires de l'histoire des échecs.",
    histoire_en:"The Torre Attack (2.Nf3 then 3.Bg5) is named after Mexican grandmaster Carlos Torre Repetto (1904–1978), who played it successfully in the 1920s. Torre is famous for his sensational victory against Emanuel Lasker in 1925 with the 'windmill' maneuver — considered one of the most spectacular combinations in chess history.",
@@ -3625,7 +3625,7 @@ var ENRICH = {
    }
   }
  },
- 40:{
+ 41:{
   stonewall:{
    histoire:"L'Attaque Stonewall (d4+f4+e3+Cf3+Fd3) est une structure blanche inspirée de la Défense Hollandaise jouée en miroir. Utilisée par de nombreux joueurs du début du XXe siècle, notamment Max Euwe (champion du monde 1935-37). La case e5, contrôlée par les pions f4 et d4, est la case idéale pour le Cavalier blanc — une forteresse difficile à déloger.",
    histoire_en:"The Stonewall Attack (d4+f4+e3+Nf3+Bd3) is a White structure inspired by the Dutch Defense played in mirror image. Used by many early 20th century players, notably Max Euwe (world champion 1935–37). The e5-square, controlled by the f4 and d4 pawns, is the ideal square for the White Knight — a fortress difficult to dislodge.",
@@ -3720,7 +3720,7 @@ var ENRICH = {
     }
   }
  },
- 46:{
+ 5:{
   petrov:{
    histoire:"La Défense Petroff — ou Défense Russe — fut systématisée au XIXe siècle par le maître russe Alexander Petroff (1794-1867) et par Carl Jaenisch, dont les analyses fondèrent la théorie moderne. Anatoly Karpov la remit au goût du jour dans les années 1970. La percée décisive vint de Vladimir Kramnik : il l'adopta comme arme principale et l'utilisa pour battre Kasparov lors du match du monde en 2000 à Londres. Aujourd'hui, Fabiano Caruana et Ding Liren en font leur défense principale contre 1.e4.",
    histoire_en:"The Petroff Defense — or Russian Defense — was systematized in the 19th century by Russian master Alexander Petroff (1794-1867) and Carl Jaenisch, whose analyses founded modern theory. Anatoly Karpov revived it in the 1970s. The decisive breakthrough came from Vladimir Kramnik: he adopted it as his primary weapon and used it to beat Kasparov in the world championship match in 2000 in London. Today, Fabiano Caruana and Ding Liren make it their primary defense against 1.e4.",
@@ -3855,7 +3855,7 @@ var ENRICH = {
     }
   }
  },
- 47:{
+ 46:{
   trois_cavaliers:{
    histoire:"La Partie des Trois Cavaliers est une ouverture classique du XIXe siècle, issue de la famille des jeux ouverts. Elle survient lorsque les Noirs refusent la symétrie des Quatre Cavaliers, gardant la flexibilité d'un fianchetto ou d'un clouage.",
    histoire_en:"The Three Knights Game is a classical 19th-century opening from the open-game family. It arises when Black declines the Four Knights symmetry, keeping the flexibility of a fianchetto or a pin.",
@@ -3874,7 +3874,7 @@ var ENRICH = {
     }
   }
  },
- 48:{
+ 47:{
   damiano:{
    histoire:"La Défense Damiano fut analysée — et condamnée — par le Portugais Pedro Damiano dans son traité de 1512. C'est l'exemple canonique d'un coup qui viole les principes : 2...f6 affaiblit le roi sans aider le développement.",
    histoire_en:"The Damiano Defense was analyzed — and condemned — by the Portuguese Pedro Damiano in his 1512 treatise. It is the canonical example of a principle-violating move: 2...f6 weakens the king without aiding development.",
@@ -3893,7 +3893,7 @@ var ENRICH = {
     }
   }
  },
- 49:{
+ 48:{
   bongcloud:{
    histoire:"L'Attaque Bongcloud est née de la culture des échecs en ligne au début des années 2010. Son nom vient du pseudonyme d'un joueur, et le coup 2.Re2 est devenu un mème : Carlsen et Nakamura l'ont même joué l'un contre l'autre dans un tournoi officiel en 2021.",
    histoire_en:"The Bongcloud Attack was born from online chess culture in the early 2010s. Its name comes from a player's handle, and 2.Ke2 became a meme: Carlsen and Nakamura even played it against each other in an official 2021 tournament.",
@@ -3912,7 +3912,7 @@ var ENRICH = {
     }
   }
  },
- 50:{
+ 49:{
   barnes:{
    histoire:"La Défense Barnes porte le nom de Thomas Wilson Barnes, qui — fait remarquable — battit huit fois Paul Morphy. Le coup 1...f6 est néanmoins considéré comme la plus faible réponse à 1.e4, illustrant par l'absurde les principes d'ouverture.",
    histoire_en:"The Barnes Defense is named after Thomas Wilson Barnes, who — remarkably — beat Paul Morphy eight times. Yet the move 1...f6 is considered the weakest reply to 1.e4, illustrating opening principles by absurdity.",
@@ -3931,7 +3931,7 @@ var ENRICH = {
     }
   }
  },
- 51:{
+ 50:{
   gda:{
    histoire:"Le Gambit de la Dame Accepté est l'une des plus anciennes ouvertures, mentionnée dès le manuscrit de Göttingen au XVe siècle. Les Noirs prennent en c4 non pour garder le pion, mais pour libérer leur jeu et éviter la passivité du QGD.",
    histoire_en:"The Queen's Gambit Accepted is one of the oldest openings, mentioned as early as the 15th-century Göttingen manuscript. Black captures on c4 not to keep the pawn, but to free their game and avoid the passivity of the QGD.",
@@ -3950,7 +3950,7 @@ var ENRICH = {
     }
   }
  },
- 52:{
+ 51:{
   tchigorine:{
    histoire:"La Défense Tchigorine est l'œuvre du grand maître russe Mikhaïl Tchigorine (1850-1908), pionnier de l'école romantique. Contre toutes les conventions positionnelles de son époque, il développait les pièces avant les pions, misant sur l'activité.",
    histoire_en:"The Chigorin Defense is the work of Russian grandmaster Mikhail Chigorin (1850–1908), a pioneer of the romantic school. Against all positional conventions of his time, he developed pieces before pawns, betting on activity.",
@@ -3969,7 +3969,7 @@ var ENRICH = {
     }
   }
  },
- 53:{
+ 52:{
   sokolski:{
    histoire:"L'Ouverture Sokolski (1.b4) doit son surnom « Orang-Outan » à Savielly Tartakower : lors du tournoi de New York 1924, il consulta un orang-outan du zoo du Bronx avant de jouer ce coup. Le maître soviétique Alexeï Sokolski en fit ensuite une analyse systématique.",
    histoire_en:"The Sokolski Opening (1.b4) owes its 'Orangutan' nickname to Savielly Tartakower: during the 1924 New York tournament, he consulted an orangutan at the Bronx zoo before playing the move. Soviet master Alexei Sokolski later systematized its analysis.",
@@ -3988,7 +3988,7 @@ var ENRICH = {
     }
   }
  },
- 54:{
+ 53:{
   grob:{
    histoire:"L'Attaque Grob (1.g4) porte le nom du maître international suisse Henri Grob (1904-1974), qui la défendit avec acharnement dans des milliers de parties par correspondance. Objectivement douteuse, elle reste une arme de surprise piégeuse.",
    histoire_en:"The Grob Attack (1.g4) is named after Swiss international master Henri Grob (1904–1974), who championed it fiercely in thousands of correspondence games. Objectively dubious, it remains a tricky surprise weapon.",
