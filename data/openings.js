@@ -1,4 +1,4 @@
-﻿﻿/* ══════════════════════════════════════════════
+﻿﻿﻿/* ══════════════════════════════════════════════
    openings.js — All opening data: DB (46 openings, 71 variants) + ENRICH (44 chapitres enrichis : histoire, annotations, parties)
    To add a new opening: add a new numbered key to DB following the same pattern.
    ══════════════════════════════════════════════ */
@@ -848,50 +848,6 @@ var DB = {
       piege:"Oublier la rupture rapide ...c5! laisse le centre blanc indestructible.",
       piege_en:"After 5.f4 dxe5 6.fxe5 Nc6 7.Be3 Bf5!, Black already has excellent counterplay.",
       moves:[{from:"e2",to:"e4"},{from:"g8",to:"f6"},{from:"e4",to:"e5"},{from:"f6",to:"d5"},{from:"d2",to:"d4"},{from:"d7",to:"d6"},{from:"c2",to:"c4"},{from:"d5",to:"b6"},{from:"f2",to:"f4"}]
-    },
-    pirc: {
-      line:"1.e4 d6 2.d4 Cf6 3.Cc3 g6 4.f4 Fg7",
-      fondement:"Les Noirs laissent le centre aux Blancs pour organiser une contre-attaque explosive via le Fou fianchetté en g7.",
-      fondement_en:"The Pirc Defense lets White build a big center and then attacks it with ...g6, ...Bg7, and ...c5 or ...e5.",
-      avantages:"Jeu hyper-dynamique asymétrique. Pas de lignes simplifiées.",
-      avantages_en:"Flexible and solid. Black avoids early contact and fights back from the flanks.",
-      inconvenients:"Avantage d'espace blanc redoutable si mal défendu.",
-      inconvenients_en:"White has a comfortable space advantage in the early game.",
-      blancs:"Lancer f4-f5 au moment de la rupture pour enfoncer le roque noir.",
-      blancs_en:"Attack the kingside after castling with f4-f5 or the Austrian Attack (4.f4).",
-      noirs:"Pousser ...c5 ou ...e5 pour ébranler l'emprise centrale blanche.",
-      noirs_en:"Counter in the center with ...c5 or ...e5 once the pieces are developed.",
-      cases:"Blancs : e6, f5. Noirs : d4, e4.",
-      cases_en:"g7 (Dragon Bishop), d5 (Black's central break), f5 (White's attack).",
-      finale:"Peu fréquentes : le Fou g7 reste la pièce maîtresse.",
-      finale_en:"Balanced endgame — Black's solid structure resists White's space advantage.",
-      stats:"Ligne tranchante moderne de contre-attaque.",
-      stats_en:"Popular at club level, less common at elite level.",
-      piege:"Dans l'Autrichienne, roquer trop tôt permet l'assaut destructeur 6.f5!",
-      piege_en:"After 4.f4 Bg7 5.Nf3 0-0 6.e5! White gains immediate space.",
-      moves:[{from:"e2",to:"e4"},{from:"d7",to:"d6"},{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"g7",to:"g6"},{from:"f2",to:"f4"},{from:"f8",to:"g7"}]
-    },
-    scandinave: {
-      line:"1.e4 d5 2.exd5 Dxd5 3.Cc3 Da5",
-      fondement:"La Scandinave attaque e4 immédiatement. La Dame noire doit bouger tôt (Da5) ce qui offre des tempos aux Blancs.",
-      fondement_en:"The Scandinavian (1...d5) immediately challenges e4. After 2.exd5 Qxd5 3.Nc3 Qa5, the Queen is misplaced but Black has solid development.",
-      avantages:"Structure noire saine style Caro-Kann, développement limpide.",
-      avantages_en:"No pawn concessions. Simple, solid development for Black.",
-      inconvenients:"Pression blanche initiale due aux gains de temps sur la Dame.",
-      inconvenients_en:"The Queen is temporarily misplaced after 2...Qxd5. White gains tempo with Nc3.",
-      blancs:"Profiter du harcèlement de la Dame pour occuper le centre.",
-      blancs_en:"Attack the Queen with Nc3 and Nf3, gaining tempos for rapid development.",
-      noirs:"Construire un rempart de pions solide et roquer en sécurité.",
-      noirs_en:"Develop solidly with ...Nf6, ...c6, ...Bg4, and castle quickly.",
-      cases:"d4, a5.",
-      cases_en:"d5 (the contested pawn), a5 (Queen's post), e5 (White's space).",
-      finale:"Structure saine garantissant des finales tout à fait tenables.",
-      finale_en:"Solid endgame for Black — the pawn structure is sound.",
-      stats:"Ouverture populaire et directe à tous niveaux.",
-      stats_en:"Popular at all levels. Often used as a surprise weapon.",
-      piege:"Éviter de laisser la Dame se faire enfermer en périphérie.",
-      piege_en:"After 3...Qa5 4.d4 Nf6 5.Nf3 Bg4?! 6.h3 Bh5 7.g4! White chases the Bishop with tempo.",
-      moves:[{from:"e2",to:"e4"},{from:"d7",to:"d5"},{from:"e4",to:"d5"},{from:"d8",to:"d5"},{from:"b1",to:"c3"},{from:"d5",to:"a5"}]
     }
   },
   10: {
@@ -2236,6 +2192,54 @@ var DB = {
       piege:"Après 1...d5 2.Fg2 Fxg4? 3.c4! les Blancs frappent d5 et ouvrent des lignes ; mais 2...c6 est solide.",
       piege_en:"After 1...d5 2.Bg2 Bxg4? 3.c4! White hits d5 and opens lines; but 2...c6 is solid.",
       moves:[{from:"g2",to:"g4"}]
+    }
+  },
+  54: {
+    pirc: {
+      line:"1.e4 d6 2.d4 Cf6 3.Cc3 g6 4.f4 Fg7",
+      fondement:"Les Noirs laissent le centre aux Blancs pour organiser une contre-attaque explosive via le Fou fianchetté en g7.",
+      fondement_en:"The Pirc Defense lets White build a big center and then attacks it with ...g6, ...Bg7, and ...c5 or ...e5.",
+      avantages:"Jeu hyper-dynamique asymétrique. Pas de lignes simplifiées.",
+      avantages_en:"Flexible and solid. Black avoids early contact and fights back from the flanks.",
+      inconvenients:"Avantage d'espace blanc redoutable si mal défendu.",
+      inconvenients_en:"White has a comfortable space advantage in the early game.",
+      blancs:"Lancer f4-f5 au moment de la rupture pour enfoncer le roque noir.",
+      blancs_en:"Attack the kingside after castling with f4-f5 or the Austrian Attack (4.f4).",
+      noirs:"Pousser ...c5 ou ...e5 pour ébranler l'emprise centrale blanche.",
+      noirs_en:"Counter in the center with ...c5 or ...e5 once the pieces are developed.",
+      cases:"Blancs : e6, f5. Noirs : d4, e4.",
+      cases_en:"g7 (Dragon Bishop), d5 (Black's central break), f5 (White's attack).",
+      finale:"Peu fréquentes : le Fou g7 reste la pièce maîtresse.",
+      finale_en:"Balanced endgame — Black's solid structure resists White's space advantage.",
+      stats:"Ligne tranchante moderne de contre-attaque.",
+      stats_en:"Popular at club level, less common at elite level.",
+      piege:"Dans l'Autrichienne, roquer trop tôt permet l'assaut destructeur 6.f5!",
+      piege_en:"After 4.f4 Bg7 5.Nf3 0-0 6.e5! White gains immediate space.",
+      moves:[{from:"e2",to:"e4"},{from:"d7",to:"d6"},{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"g7",to:"g6"},{from:"f2",to:"f4"},{from:"f8",to:"g7"}]
+    }
+  },
+  55: {
+    scandinave: {
+      line:"1.e4 d5 2.exd5 Dxd5 3.Cc3 Da5",
+      fondement:"La Scandinave attaque e4 immédiatement. La Dame noire doit bouger tôt (Da5) ce qui offre des tempos aux Blancs.",
+      fondement_en:"The Scandinavian (1...d5) immediately challenges e4. After 2.exd5 Qxd5 3.Nc3 Qa5, the Queen is misplaced but Black has solid development.",
+      avantages:"Structure noire saine style Caro-Kann, développement limpide.",
+      avantages_en:"No pawn concessions. Simple, solid development for Black.",
+      inconvenients:"Pression blanche initiale due aux gains de temps sur la Dame.",
+      inconvenients_en:"The Queen is temporarily misplaced after 2...Qxd5. White gains tempo with Nc3.",
+      blancs:"Profiter du harcèlement de la Dame pour occuper le centre.",
+      blancs_en:"Attack the Queen with Nc3 and Nf3, gaining tempos for rapid development.",
+      noirs:"Construire un rempart de pions solide et roquer en sécurité.",
+      noirs_en:"Develop solidly with ...Nf6, ...c6, ...Bg4, and castle quickly.",
+      cases:"d4, a5.",
+      cases_en:"d5 (the contested pawn), a5 (Queen's post), e5 (White's space).",
+      finale:"Structure saine garantissant des finales tout à fait tenables.",
+      finale_en:"Solid endgame for Black — the pawn structure is sound.",
+      stats:"Ouverture populaire et directe à tous niveaux.",
+      stats_en:"Popular at all levels. Often used as a surprise weapon.",
+      piege:"Éviter de laisser la Dame se faire enfermer en périphérie.",
+      piege_en:"After 3...Qa5 4.d4 Nf6 5.Nf3 Bg4?! 6.h3 Bh5 7.g4! White chases the Bishop with tempo.",
+      moves:[{from:"e2",to:"e4"},{from:"d7",to:"d5"},{from:"e4",to:"d5"},{from:"d8",to:"d5"},{from:"b1",to:"c3"},{from:"d5",to:"a5"}]
     }
   }
 };
