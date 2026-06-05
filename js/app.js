@@ -1,4 +1,4 @@
-/* ══════════════════════════════════════════════
+﻿/* ══════════════════════════════════════════════
    app.js — Controllers, keyboard nav, Stockfish UI, PWA init
    Depends on: engine.js, pieces.js, i18n.js, data/openings.js, board.js, stockfish-engine.js
    ══════════════════════════════════════════════ */
@@ -330,3 +330,87 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
+
+/* ══════════════════════════════════════════════
+   TAB NAVIGATION
+   ══════════════════════════════════════════════ */
+var _activeSection = 1;
+
+function showSection(n) {
+  document.querySelectorAll('.tab-section').forEach(function(s) {
+    s.classList.add('hidden');
+  });
+  var sec = document.getElementById('section-' + n);
+  if (sec) sec.classList.remove('hidden');
+  document.querySelectorAll('.tab-btn').forEach(function(b) {
+    b.classList.toggle('active', parseInt(b.dataset.section) === n);
+  });
+  _activeSection = n;
+  var nav = document.getElementById('tab-nav');
+  if (nav) window.scrollTo({ top: nav.getBoundingClientRect().top + window.pageYOffset - 10, behavior: 'smooth' });
+}
+
+/* ══════════════════════════════════════════════
+   SEARCH
+   ══════════════════════════════════════════════ */
+var CHAP_INDEX = [
+  {id:1,  section:1}, {id:2,  section:1}, {id:3,  section:1}, {id:4,  section:1}, {id:5,  section:1},
+  {id:15, section:1}, {id:16, section:1}, {id:17, section:1}, {id:18, section:1}, {id:19, section:1},
+  {id:20, section:1}, {id:21, section:1}, {id:22, section:1}, {id:23, section:1},
+  {id:46, section:1}, {id:47, section:1}, {id:48, section:1}, {id:49, section:1},
+  {id:6,  section:2}, {id:7,  section:2}, {id:8,  section:2}, {id:9,  section:2},
+  {id:54, section:2}, {id:55, section:2}, {id:24, section:2}, {id:25, section:2}, {id:26, section:2},
+  {id:10, section:3}, {id:50, section:3}, {id:51, section:3},
+  {id:11, section:4}, {id:29, section:4}, {id:12, section:4}, {id:13, section:4},
+  {id:27, section:4}, {id:28, section:4}, {id:30, section:4}, {id:31, section:4},
+  {id:32, section:4}, {id:33, section:4}, {id:34, section:4}, {id:35, section:4},
+  {id:36, section:5}, {id:37, section:5}, {id:38, section:5}, {id:39, section:5}, {id:40, section:5}, {id:41, section:5},
+  {id:14, section:6}, {id:42, section:6}, {id:43, section:6}, {id:44, section:6},
+  {id:45, section:6}, {id:52, section:6}, {id:53, section:6}
+];
+
+document.addEventListener('DOMContentLoaded', function() {
+  var inp  = document.getElementById('search-input');
+  var drop = document.getElementById('search-dropdown');
+  if (!inp || !drop) return;
+
+  inp.addEventListener('input', function() {
+    var q = inp.value.trim().toLowerCase();
+    drop.innerHTML = '';
+    if (q.length < 2) { drop.classList.add('hidden'); return; }
+
+    var results = CHAP_INDEX.filter(function(c) {
+      var title = (t('ch' + c.id) || '').toLowerCase();
+      return title.indexOf(q) >= 0;
+    });
+
+    if (!results.length) { drop.classList.add('hidden'); return; }
+
+    results.forEach(function(c) {
+      var li = document.createElement('li');
+      li.innerHTML = '<span class="sd-title">' + t('ch' + c.id) + '</span>' +
+                     '<span class="sd-section">' + t('tab' + c.section + '_label') + '</span>';
+      li.addEventListener('click', function() {
+        showSection(c.section);
+        var card = document.getElementById('chap-' + c.id);
+        if (card) {
+          setTimeout(function() {
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            card.classList.add('chap-highlight');
+            setTimeout(function() { card.classList.remove('chap-highlight'); }, 1800);
+          }, 150);
+        }
+        drop.classList.add('hidden');
+        inp.value = '';
+      });
+      drop.appendChild(li);
+    });
+    drop.classList.remove('hidden');
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!inp.contains(e.target) && !drop.contains(e.target)) {
+      drop.classList.add('hidden');
+    }
+  });
+});
