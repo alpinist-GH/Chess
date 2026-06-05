@@ -114,6 +114,39 @@ var DB = {
       piege:"Forcer le gain de manière artificielle contre cette structure se retourne souvent contre les Blancs.",
       piege_en:"Trying to force a win artificially against this structure often backfires on White.",
       moves:[{from:"e2",to:"e4"},{from:"e7",to:"e5"},{from:"g1",to:"f3"},{from:"b8",to:"c6"},{from:"f1",to:"b5"},{from:"g8",to:"f6"},{from:"e1",to:"g1"},{from:"f6",to:"e4"},{from:"d2",to:"d4"},{from:"e4",to:"d6"},{from:"b5",to:"c6"},{from:"d7",to:"c6"},{from:"d4",to:"e5"},{from:"d6",to:"f5"}]
+    },
+    zaitsev: {
+      line:"1.e4 e5 2.Cf3 Cc6 3.Fb5 a6 4.Fa4 Cf6 5.0-0 Fe7 6.Te1 b5 7.Fb3 d6 8.c3 0-0 9.h3 Fb7 10.d4 Te8",
+      fondement:"La variante Zaïtsev (9...Fb7) est l'arme secrète de Karpov contre Kasparov. Le Fou en fianchetto sur b7 exerce une pression latente sur le pion e4, tout en préparant la rupture centrale ...c5 et une domination à l'aile dame.",
+      fondement_en:"The Zaitsev Variation (9...Bb7) was Karpov's secret weapon against Kasparov. The fianchettoed Bishop on b7 puts latent pressure on the e4 pawn, while preparing the central break ...c5 and queenside domination.",
+      avantages:"Pression continue sur e4. Supériorité à l'aile dame si les Noirs tiennent. Parties dynamiques et complexes.",
+      avantages_en:"Continuous pressure on e4. Queenside superiority if Black holds. Dynamic and complex positions.",
+      inconvenients:"Les Blancs obtiennent une initiative immédiate à l'aile roi. Les Noirs doivent différer ...h6, affaiblissant leur roi.",
+      inconvenients_en:"White obtains immediate kingside initiative. Black must delay ...h6, weakening their king.",
+      blancs:"Attaque à l'aile roi par la manœuvre 17.Ta3-g3. Profiter du retard de consolidation noir.",
+      blancs_en:"Kingside attack via the 17.Ra3-g3 maneuver. Exploit Black's delay in consolidating.",
+      noirs:"Contre-attaque à l'aile dame avec ...c4 ou ...f5. Si la position tient, les Noirs dominent la finale.",
+      noirs_en:"Queenside counterattack with ...c4 or ...f5. If the position holds, Black dominates the endgame.",
+      cases:"b7 (Fou fianchetto), e4 (pion cible), d5 (avance blanche critique), c4 (rupture noire).",
+      cases_en:"b7 (fianchetto Bishop), e4 (target pawn), d5 (critical White advance), c4 (Black's break).",
+      finale:"Si les Noirs survivent aux complications, leur structure à l'aile dame est supérieure.",
+      finale_en:"If Black survives the complications, their queenside structure is superior.",
+      stats:"ECO C92 · Karpov–Kasparov 1985-1990 · Parties violentes et compliquées.",
+      stats_en:"ECO C92 · Karpov–Kasparov 1985–1990 · Violent and complicated positions.",
+      piege:"11.Cg5 Tf8 12.Cf3 — répétition de position que les Blancs peuvent imposer pour forcer la nulle.",
+      piege_en:"11.Ng5 Rf8 12.Nf3 — draw by repetition that White can impose to force a draw.",
+      moves:[
+        {from:"e2",to:"e4"},{from:"e7",to:"e5"},
+        {from:"g1",to:"f3"},{from:"b8",to:"c6"},
+        {from:"f1",to:"b5"},{from:"a7",to:"a6"},
+        {from:"b5",to:"a4"},{from:"g8",to:"f6"},
+        {from:"e1",to:"g1"},{from:"f8",to:"e7"},
+        {from:"f1",to:"e1"},{from:"b7",to:"b5"},
+        {from:"a4",to:"b3"},{from:"d7",to:"d6"},
+        {from:"c2",to:"c3"},{from:"e8",to:"g8"},
+        {from:"h2",to:"h3"},{from:"c8",to:"b7"},
+        {from:"d2",to:"d4"},{from:"f8",to:"e8"}
+      ]
     }
   },
   2: {
@@ -2346,6 +2379,25 @@ var ENRICH = {
      result_en:"1-0 — Kasparov wins in 41 moves — Berlin Wall broken",
      analysis_en:"9.h3 then 11.b3! breaches the Berlin structure. The maneuver 16.e6 Nxe6 17.Nd4! creates irresistible pressure. Kasparov wins in 41 moves."
     }
+  },
+  zaitsev:{
+   histoire:"La variante Zaïtsev doit son nom à Igor Zaïtsev, entraîneur d'Anatoli Karpov. Elle fut l'arme de prédilection de Karpov lors de ses cinq matchs de championnat du monde contre Kasparov (1984-1990). La ligne 9...Fb7 joue le fianchetto du Fou dame plutôt que la manœuvre classique 9...Ca5 de Chigorin. Les deux adversaires analysèrent cette variante en profondeur — la position après 17.Ta3 devint l'un des champs de bataille théoriques les plus étudiés de l'histoire des échecs.",
+   histoire_en:"The Zaitsev Variation is named after Igor Zaitsev, Anatoly Karpov's trainer. It was Karpov's preferred weapon across his five World Championship matches against Kasparov (1984–1990). The move 9...Bb7 fianchettos the queen's bishop rather than Chigorin's classical maneuver 9...Na5. Both players analyzed this line to extraordinary depth — the position after 17.Ra3 became one of the most studied theoretical battlegrounds in chess history.",
+   annotations:[
+    {move:"9...Fb7",move_en:"9...Bb7",comment:"Le coup Zaïtsev ! Au lieu de 9...Ca5 (Chigorin), le Fou se place en fianchetto sur b7, visant discrètement le pion e4 tout en préparant ...c5 et la domination à l'aile dame.",comment_en:"The Zaitsev move! Instead of 9...Na5 (Chigorin), the Bishop fianchettos to b7, quietly targeting the e4 pawn while preparing ...c5 and queenside domination."},
+    {move:"10.d4",move_en:"10.d4",comment:"Les Blancs ouvrent le centre avant que le Fou b7 ne soit actif. Réponse principielle — 10.d3 serait trop passif face au plan Zaïtsev.",comment_en:"White strikes in the center before the Bb7 becomes active. The principled response — 10.d3 would be too passive against the Zaitsev plan."},
+    {move:"10...Te8",move_en:"10...Re8",comment:"Coup clé de la variante Zaïtsev : la Tour centralise et renforce e5, préparant ...exd4 puis ...Cb4. C'est ce coup qui distingue la Zaïtsev de la Chigorin.",comment_en:"Key move of the Zaitsev: the Rook centralizes and supports e5, preparing ...exd4 then ...Nb4. This is what distinguishes Zaitsev from Chigorin."},
+    {move:"16.d5",move_en:"16.d5",comment:"Avance critique ! Les Blancs ferment le centre et déclenchent l'attaque à l'aile roi. La tension monte des deux côtés — chaque camp cherche à frapper en premier.",comment_en:"Critical advance! White closes the center and launches the kingside attack. Tension rises on both sides — each camp races to strike first."},
+    {move:"17.Ta3",move_en:"17.Ra3",comment:"La manœuvre emblématique de la variante Zaïtsev. La Tour se transfère vers l'aile roi (a3-g3) pour appuyer l'attaque blanche — une idée profonde et pratique à la fois.",comment_en:"The emblematic maneuver of the Zaitsev Variation. The Rook transfers to the kingside via a3-g3 to support White's attack — both a deep and practical idea."}
+   ],
+   game:{
+    header:"Kasparov, G. vs Karpov, A. &middot; Ch. du Monde 1990 (Lyon), 22e partie &middot; Ruy Lopez Zaïtsev (C92)",
+    moves:"1.e4 e5 2.Cf3 Cc6 3.Fb5 a6 4.Fa4 Cf6 5.0-0 Fe7 6.Te1 b5 7.Fb3 d6 8.c3 0-0 9.h3 Fb7 10.d4 Te8 11.Cbd2 Ff8 12.a4 h6 13.Fc2 exd4 14.cxd4 Cb4 15.Fb1 c5 16.d5 Cd7 17.Ta3 f5 18.exf5 Fxd5 19.Ce4 Ff7 20.axb5 d5 21.Cc3 Txe1+ 22.Cxe1 d4 23.Ca2 Cxa2 24.Fxa2 c4 25.Txa6 Cc5 26.Txa8 Dxa8 27.Fb1 d3 28.Fe3 Da5 29.b3 Cxb3 30.Cxd3 cxd3 31.Fxd3 Cc5 32.Ff1 Dc7 33.Dg4 Rh7 34.Fc4 Fxc4 35.Dxc4 De5 36.Df7 Fd6 37.g3 De7 38.Dg6+ Rh8 39.Fd4 Fe5 40.Fxc5 Dxc5 41.De8+ Rh7 42.Dg6+ Rh8 43.De8+",
+    result:"½-½ — Nulle par répétition — Kasparov ne peut convertir",
+    analysis:"17.Ta3! est la manœuvre emblématique de la Zaïtsev. Après 21...Txe1+! les Noirs simplifient et tiennent la nulle. La partie démontre la robustesse de la Zaïtsev — même sous la pression maximale de Kasparov.",
+    result_en:"½-½ — Draw by repetition — Kasparov cannot convert",
+    analysis_en:"17.Ra3! is the emblematic maneuver of the Zaitsev. After 21...Rxe1+! Black simplifies and holds the draw. The game demonstrates the Zaitsev's resilience — even under maximum Kasparov pressure."
+   }
   }
  },
  2:{
