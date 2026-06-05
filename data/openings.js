@@ -928,7 +928,28 @@ var DB = {
       piege_en:"In the Meran (5...Nbd7 6.Bd3 dxc4 7.Bxc4 b5), Black must know precise move orders.",
       moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"c7",to:"c6"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"d5",to:"c4"}]
     },
-    meran: {
+  semi_slave: {
+      line:"1.d4 d5 2.c4 c6 3.Cf3 Cf6 4.Cc3 e6 5.Fg5 dxc4 6.e4 b5 7.e5 h6 8.Fh4 g5",
+      fondement:"La Défense Semi-Slave combine ...c6 (Slave) et ...e6 (QGD), retardant le développement du Fou de dame. Le Système Botvinnik (5.Fg5 dxc4 6.e4 b5) est la ligne la plus explosive du répertoire 1.d4 : chaque camp attaque simultanément sans relâche.",
+      fondement_en:"The Semi-Slav combines ...c6 (Slav) and ...e6 (QGD), delaying the development of the light-squared Bishop. The Botvinnik System (5.Bg5 dxc4 6.e4 b5) is the most explosive line in the 1.d4 repertoire: both sides attack simultaneously without let-up.",
+      avantages:"Contre-jeu immédiat à l'aile dame, richesse tactique maximale, possibilité de déséquilibre total favorable aux Noirs.",
+      avantages_en:"Immediate active queenside counterplay, maximum tactical richness, and potential for total imbalance favorable to Black.",
+      inconvenients:"Le Roi noir reste longtemps au centre ; exige une théorie très précise coup par coup.",
+      inconvenients_en:"Black's King remains in the center for a long time; requires very precise theoretical knowledge move by move.",
+      blancs:"Lancer l'attaque centrale e4-e5, ouvrir des lignes pour exploiter le Roi noir coincé au centre.",
+      blancs_en:"Launch the central attack e4-e5, open lines to exploit Black's King stuck in the center.",
+      noirs:"Capturer en c4 et avancer b5 pour sécuriser le gain de matériel, puis contre-attaquer à l'aile roi.",
+      noirs_en:"Capture on c4 and advance b5 to secure the material gain, then counterattack on the kingside.",
+      cases:"c4 (pion sacrifié), b5 (ancre noire), e5 (coin blanc), g5 (levier noir).",
+      cases_en:"c4 (sacrificed pawn), b5 (Black's anchor), e5 (White's wedge), g5 (Black's kingside lever).",
+      finale:"Les finales sont rarissimes ; cette variante mène presque toujours à des attaques simultanées sans retour.",
+      finale_en:"Endgames are extremely rare; this variation almost always leads to mutual all-out attacks.",
+      stats:"ECO D43-D44 · Popularisé par Botvinnik et Kasparov. Voir aussi : Variante de Moscou (5.Fg5 h6 6.Fxf6) et Anti-Moscou (5.Fg5 h6 6.Fh4).",
+      stats_en:"ECO D43-D44 · Popularized by Botvinnik and Kasparov. See also: Moscow Variation (5.Bg5 h6 6.Bxf6) and Anti-Moscow (5.Bg5 h6 6.Bh4).",
+      piege:"Dans la Variante de Moscou (5.Fg5 h6 6.Fxf6 Dxf6), les Noirs obtiennent la paire de fous mais accusent un retard de développement dangereux qu'il faut compenser par un jeu très actif.",
+      piege_en:"In the Moscow Variation (5.Bg5 h6 6.Bxf6 Qxf6), Black gets the bishop pair but suffers a dangerous development lag that must be compensated with very active play.",
+      moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"c7",to:"c6"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"e7",to:"e6"},{from:"c1",to:"g5"},{from:"d5",to:"c4"},{from:"e2",to:"e4"},{from:"b7",to:"b5"},{from:"e4",to:"e5"},{from:"h7",to:"h6"},{from:"g5",to:"h4"},{from:"g7",to:"g5"}]
+    },  meran: {
       line:"1.d4 d5 2.c4 c6 3.Cf3 Cf6 4.Cc3 e6 5.e3 Cbd7 6.Fd3 dxc4 7.Fxc4 b5",
       fondement:"La variante Meran de la Semi-Slave est l'une des lignes les plus dynamiques contre 1.d4. Les Noirs jouent ...dxc4 puis ...b5 pour gagner l'aile dame et un contre-jeu actif.",
       fondement_en:"The Meran Variation of the Semi-Slav is one of the most dynamic lines against 1.d4. Black plays ...dxc4 then ...b5 to seize the queenside and active counterplay.",
