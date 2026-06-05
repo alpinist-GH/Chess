@@ -948,8 +948,17 @@ var DB = {
       stats_en:"ECO D43-D44 · Popularized by Botvinnik and Kasparov. See also: Moscow Variation (5.Bg5 h6 6.Bxf6) and Anti-Moscow (5.Bg5 h6 6.Bh4).",
       piege:"Dans la Variante de Moscou (5.Fg5 h6 6.Fxf6 Dxf6), les Noirs obtiennent la paire de fous mais accusent un retard de développement dangereux qu'il faut compenser par un jeu très actif.",
       piege_en:"In the Moscow Variation (5.Bg5 h6 6.Bxf6 Qxf6), Black gets the bishop pair but suffers a dangerous development lag that must be compensated with very active play.",
-      moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"c7",to:"c6"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"e7",to:"e6"},{from:"c1",to:"g5"},{from:"d5",to:"c4"},{from:"e2",to:"e4"},{from:"b7",to:"b5"},{from:"e4",to:"e5"},{from:"h7",to:"h6"},{from:"g5",to:"h4"},{from:"g7",to:"g5"}]
-    },  meran: {
+      moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"c7",to:"c6"},{from:"g1",to:"f3"},{from:"g8",to:"f6"},{from:"b1",to:"c3"},{from:"e7",to:"e6"},{from:"c1",to:"g5"},{from:"d5",to:"c4"},{from:"e2",to:"e4"},{from:"b7",to:"b5"},{from:"e4",to:"e5"},{from:"h7",to:"h6"},{from:"g5",to:"h4"},{from:"g7",to:"g5"}],
+      game:{
+           header:"Kramnik, V. vs Anand, V. &middot; Championnat du Monde Bonn 2008, Partie 5 &middot; D&eacute;fense Semi-Slave, Variante Meran Accept&eacute;e (D49)",
+           moves:"1.d4 d5 2.c4 c6 3.Cf3 Cf6 4.Cc3 e6 5.e3 Cbd7 6.Fd3 dxc4 7.Fxc4 b5 8.Fd3 a6 9.e4 c5 10.e5 cxd4 11.Cxb5 axb5 12.exf6 gxf6 13.0-0 Db6 14.De2 Fb7 15.Fxb5 Tg8 16.Ff4 Fd6 17.Fg3 f5 18.Tfc1 f4 19.Fh4 Fe7 20.a4 Fxh4 21.Cxh4 Re7 22.Ta3 Tac8 23.Txc8 Txc8 24.Ta1 Dc5 25.Dg4 De5 26.Cf3 Df6 27.Te1 Tc5 28.b4 Tc3 29.Cxd4 Dxd4 30.Td1 Cf6 31.Txd4 Cxg4 32.Td7+ Rf6 33.Txb7 Tc1+ 34.Ff1 Ce3 35.fxe3 fxe3 0-1",
+           result:"0-1 &mdash; Anand (Noirs) gagne en 35 coups &mdash; sacrifice g&eacute;nial 34...Ce3!",
+           analysis:"Partie 5 du Championnat du Monde Bonn 2008. Dans la variante Meran accept&eacute;e, Anand cr&eacute;e un chaos tactique d&egrave;s l'ouverture. Le sacrifice 34...Ce3! offre un cavalier pour cr&eacute;er un pion e pass&eacute; imparable. Kramnik abandonne car 35.fxe3 fxe3 suivi de ...e2 est fatal.",
+           result_en:"0-1 &mdash; Anand (Black) wins in 35 moves &mdash; brilliant 34...Ne3! sacrifice",
+           analysis_en:"Game 5 of the 2008 World Championship in Bonn. In the accepted Meran variation, Anand creates tactical chaos from the opening. The sacrifice 34...Ne3! offers a knight to create an unstoppable passed e-pawn. Kramnik resigned as 35.fxe3 fxe3 followed by ...e2 is fatal."
+          }
+    },
+  meran: {
       line:"1.d4 d5 2.c4 c6 3.Cf3 Cf6 4.Cc3 e6 5.e3 Cbd7 6.Fd3 dxc4 7.Fxc4 b5",
       fondement:"La variante Meran de la Semi-Slave est l'une des lignes les plus dynamiques contre 1.d4. Les Noirs jouent ...dxc4 puis ...b5 pour gagner l'aile dame et un contre-jeu actif.",
       fondement_en:"The Meran Variation of the Semi-Slav is one of the most dynamic lines against 1.d4. Black plays ...dxc4 then ...b5 to seize the queenside and active counterplay.",
