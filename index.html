@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -45,14 +45,30 @@
   <p style="margin-top:0.9rem;font-size:0.85rem;color:var(--border);opacity:0.75;letter-spacing:0.08em;font-style:normal;font-family:'JetBrains Mono',monospace;"><span data-i18n="by">par</span> &nbsp;Vu-Hung Quan</p>
 </header>
 
+
+<div class="search-bar-wrap">
+  <input id="search-input" type="text" autocomplete="off"
+         data-i18n-placeholder="search_placeholder"
+         placeholder="Rechercher une ouverture…">
+  <ul id="search-dropdown" class="search-dropdown hidden"></ul>
+</div>
+
+<nav class="tab-nav" id="tab-nav">
+  <button class="tab-btn active" data-section="1" data-i18n="tab1_label" onclick="showSection(1)">I · Parties Ouvertes</button>
+  <button class="tab-btn" data-section="2" data-i18n="tab2_label" onclick="showSection(2)">II · Semi-Ouvertes</button>
+  <button class="tab-btn" data-section="3" data-i18n="tab3_label" onclick="showSection(3)">III · Parties Fermées</button>
+  <button class="tab-btn" data-section="4" data-i18n="tab4_label" onclick="showSection(4)">IV · Semi-Fermées</button>
+  <button class="tab-btn" data-section="5" data-i18n="tab5_label" onclick="showSection(5)">V · Systèmes 1.d4</button>
+  <button class="tab-btn" data-section="6" data-i18n="tab6_label" onclick="showSection(6)">VI · Flanc</button>
+</nav>
 <div class="container">
 
-<!-- PARTIE I -->
+<section class="tab-section" id="section-1">
 <div class="part-title" data-i18n="part1_title">PARTIE I — Les Parties Ouvertes (1.e4 e5)</div>
-<div class="part-desc" data-i18n="part1_desc">Lorsque les deux camps jouent leur pion du roi d'emblée, la partie s'ouvre symétriquement. Le centre est disputé de façon directe et le jeu devient immédiatement tactique.</div>
+<div class="part-desc" data-i18n="part1_desc">Lorsque les deux camps jouent leur pion du roi d'emblée, la partie s'ouvre symétriquement.</div>
 
 <!-- Ch.1 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-1">
   <div class="chapter-header"><h3 data-i18n="ch1">1. La Partie Espagnole (Ruy Lopez)</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -101,7 +117,7 @@
 </div>
 
 <!-- Ch.2 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-2">
   <div class="chapter-header"><h3 data-i18n="ch2">2. La Partie Italienne</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -149,7 +165,7 @@
 </div>
 
 <!-- Ch.3 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-3">
   <div class="chapter-header"><h3 data-i18n="ch3">3. Le Gambit du Roi</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -197,7 +213,7 @@
 </div>
 
 <!-- Ch.4 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-4">
   <div class="chapter-header"><h3 data-i18n="ch4">4. La Défense Philidor</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -243,7 +259,7 @@
 </div>
 
 <!-- Ch.5 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-5">
   <div class="chapter-header"><h3 data-i18n="ch5">5. La Défense Petroff</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -297,8 +313,603 @@
 <div class="part-title" data-i18n="part2_title">PARTIE II — Les Parties Semi-Ouvertes (1.e4 …)</div>
 <div class="part-desc" data-i18n="part2_desc">Les Noirs rompent la symétrie dès le premier coup, acceptant un léger retard d'espace pour une structure asymétrique dynamique et combative.</div>
 
+<!-- Ch.15 -->
+<div class="chapter-card" id="chap-15">
+  <div class="chapter-header"><h3 data-i18n="ch15">15. La Partie Écossaise</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board15" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(15)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(15)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc15"></div>
+      <div class="variant-selector" id="vs15">
+        <button class="btn-var active" onclick="switchVariant(15,'scotch',event)">Partie Écossaise</button>
+      </div>
+      <div class="engine-panel" id="ep15">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(15)">
+            <div class="engine-switch" id="esw15"></div>
+            <div class="engine-status-dot" id="esd15"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb15">
+          <div class="engine-loading" id="el15">Chargement du moteur...</div>
+          <div id="er15" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf15"></div></div>
+              <div class="eval-score" id="esc15">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm15"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp15">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content15"></div>
+  </div>
+</div>
+
+<!-- Ch.16 -->
+<div class="chapter-card" id="chap-16">
+  <div class="chapter-header"><h3 data-i18n="ch16">16. L'Ouverture Ponziani</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board16" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(16)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(16)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc16"></div>
+      <div class="variant-selector" id="vs16">
+        <button class="btn-var active" onclick="switchVariant(16,'ponziani',event)">Ponziani</button>
+      </div>
+      <div class="engine-panel" id="ep16">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(16)">
+            <div class="engine-switch" id="esw16"></div>
+            <div class="engine-status-dot" id="esd16"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb16">
+          <div class="engine-loading" id="el16">Chargement du moteur...</div>
+          <div id="er16" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf16"></div></div>
+              <div class="eval-score" id="esc16">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm16"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp16">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content16"></div>
+  </div>
+</div>
+
+<!-- Ch.17 -->
+<div class="chapter-card" id="chap-17">
+  <div class="chapter-header"><h3 data-i18n="ch17">17. La Partie des Quatre Cavaliers</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board17" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(17)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(17)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc17"></div>
+      <div class="variant-selector" id="vs17">
+        <button class="btn-var active" onclick="switchVariant(17,'quatre_cavaliers',event)">Quatre Cavaliers</button>
+      </div>
+      <div class="engine-panel" id="ep17">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(17)">
+            <div class="engine-switch" id="esw17"></div>
+            <div class="engine-status-dot" id="esd17"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb17">
+          <div class="engine-loading" id="el17">Chargement du moteur...</div>
+          <div id="er17" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf17"></div></div>
+              <div class="eval-score" id="esc17">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm17"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp17">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content17"></div>
+  </div>
+</div>
+
+<!-- Ch.18 -->
+<div class="chapter-card" id="chap-18">
+  <div class="chapter-header"><h3 data-i18n="ch18">18. Le Gambit Éléphant</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board18" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(18)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(18)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc18"></div>
+      <div class="variant-selector" id="vs18">
+        <button class="btn-var active" onclick="switchVariant(18,'elephant',event)">Gambit Éléphant</button>
+      </div>
+      <div class="engine-panel" id="ep18">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(18)">
+            <div class="engine-switch" id="esw18"></div>
+            <div class="engine-status-dot" id="esd18"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb18">
+          <div class="engine-loading" id="el18">Chargement du moteur...</div>
+          <div id="er18" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf18"></div></div>
+              <div class="eval-score" id="esc18">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm18"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp18">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content18"></div>
+  </div>
+</div>
+
+<!-- Ch.19 -->
+<div class="chapter-card" id="chap-19">
+  <div class="chapter-header"><h3 data-i18n="ch19">19. Le Gambit Letton</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board19" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(19)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(19)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc19"></div>
+      <div class="variant-selector" id="vs19">
+        <button class="btn-var active" onclick="switchVariant(19,'letton',event)">Gambit Letton</button>
+      </div>
+      <div class="engine-panel" id="ep19">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(19)">
+            <div class="engine-switch" id="esw19"></div>
+            <div class="engine-status-dot" id="esd19"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb19">
+          <div class="engine-loading" id="el19">Chargement du moteur...</div>
+          <div id="er19" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf19"></div></div>
+              <div class="eval-score" id="esc19">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm19"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp19">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content19"></div>
+  </div>
+</div>
+
+<!-- Ch.20 -->
+<div class="chapter-card" id="chap-20">
+  <div class="chapter-header"><h3 data-i18n="ch20">20. La Partie du Centre</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board20" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(20)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(20)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc20"></div>
+      <div class="variant-selector" id="vs20">
+        <button class="btn-var active" onclick="switchVariant(20,'centre',event)">Partie du Centre</button>
+      </div>
+      <div class="engine-panel" id="ep20">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(20)">
+            <div class="engine-switch" id="esw20"></div>
+            <div class="engine-status-dot" id="esd20"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb20">
+          <div class="engine-loading" id="el20">Chargement du moteur...</div>
+          <div id="er20" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf20"></div></div>
+              <div class="eval-score" id="esc20">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm20"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp20">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content20"></div>
+  </div>
+</div>
+
+<!-- Ch.21 -->
+<div class="chapter-card" id="chap-21">
+  <div class="chapter-header"><h3 data-i18n="ch21">21. Le Gambit Danois</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board21" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(21)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(21)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc21"></div>
+      <div class="variant-selector" id="vs21">
+        <button class="btn-var active" onclick="switchVariant(21,'danois',event)">Gambit Danois</button>
+      </div>
+      <div class="engine-panel" id="ep21">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(21)">
+            <div class="engine-switch" id="esw21"></div>
+            <div class="engine-status-dot" id="esd21"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb21">
+          <div class="engine-loading" id="el21">Chargement du moteur...</div>
+          <div id="er21" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf21"></div></div>
+              <div class="eval-score" id="esc21">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm21"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp21">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content21"></div>
+  </div>
+</div>
+
+<!-- Ch.22 -->
+<div class="chapter-card" id="chap-22">
+  <div class="chapter-header"><h3 data-i18n="ch22">22. La Partie Viennoise</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board22" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(22)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(22)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc22"></div>
+      <div class="variant-selector" id="vs22">
+        <button class="btn-var active" onclick="switchVariant(22,'viennoise',event)">Partie Viennoise</button>
+      </div>
+      <div class="engine-panel" id="ep22">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(22)">
+            <div class="engine-switch" id="esw22"></div>
+            <div class="engine-status-dot" id="esd22"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb22">
+          <div class="engine-loading" id="el22">Chargement du moteur...</div>
+          <div id="er22" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf22"></div></div>
+              <div class="eval-score" id="esc22">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm22"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp22">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content22"></div>
+  </div>
+</div>
+
+<!-- Ch.23 -->
+<div class="chapter-card" id="chap-23">
+  <div class="chapter-header"><h3 data-i18n="ch23">23. L'Ouverture du Fou</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board23" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(23)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(23)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc23"></div>
+      <div class="variant-selector" id="vs23">
+        <button class="btn-var active" onclick="switchVariant(23,'fou',event)">Ouverture du Fou</button>
+      </div>
+      <div class="engine-panel" id="ep23">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(23)">
+            <div class="engine-switch" id="esw23"></div>
+            <div class="engine-status-dot" id="esd23"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb23">
+          <div class="engine-loading" id="el23">Chargement du moteur...</div>
+          <div id="er23" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf23"></div></div>
+              <div class="eval-score" id="esc23">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm23"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp23">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content23"></div>
+  </div>
+</div>
+
+<!-- PARTIE II — Autres Défenses contre 1.e4 -->
+<div class="part-title" data-i18n="part2_title">PARTIE II — Autres Défenses contre 1.e4</div>
+<div class="part-desc" data-i18n="part2_desc">Ouvertures moins fréquentes mais redoutables contre 1.e4 : défenses irrégulières, gambits noirs et systèmes hypermodernes.</div>
+
+<!-- Ch.46 -->
+<div class="chapter-card" id="chap-46">
+  <div class="chapter-header"><h3 data-i18n="ch46">46. La Partie des Trois Cavaliers</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board46" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(46)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(46)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc46"></div>
+      <div class="variant-selector" id="vs46">
+        <button class="btn-var active" data-i18n="var_trois_cavaliers" onclick="switchVariant(46,'trois_cavaliers',event)">Trois Cavaliers</button>
+      </div>
+      <div class="engine-panel" id="ep46">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(46)">
+            <div class="engine-switch" id="esw46"></div>
+            <div class="engine-status-dot" id="esd46"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb46">
+          <div class="engine-loading" id="el46">Chargement du moteur...</div>
+          <div id="er46" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf46"></div></div>
+              <div class="eval-score" id="esc46">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm46"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp46">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content46"></div>
+  </div>
+</div>
+
+<!-- Ch.47 -->
+<div class="chapter-card" id="chap-47">
+  <div class="chapter-header"><h3 data-i18n="ch47">47. La Défense Damiano</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board47" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(47)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(47)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc47"></div>
+      <div class="variant-selector" id="vs47">
+        <button class="btn-var active" data-i18n="var_damiano" onclick="switchVariant(47,'damiano',event)">Défense Damiano</button>
+      </div>
+      <div class="engine-panel" id="ep47">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(47)">
+            <div class="engine-switch" id="esw47"></div>
+            <div class="engine-status-dot" id="esd47"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb47">
+          <div class="engine-loading" id="el47">Chargement du moteur...</div>
+          <div id="er47" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf47"></div></div>
+              <div class="eval-score" id="esc47">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm47"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp47">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content47"></div>
+  </div>
+</div>
+
+<!-- Ch.48 -->
+<div class="chapter-card" id="chap-48">
+  <div class="chapter-header"><h3 data-i18n="ch48">48. L'Attaque Bongcloud</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board48" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(48)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(48)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc48"></div>
+      <div class="variant-selector" id="vs48">
+        <button class="btn-var active" data-i18n="var_bongcloud" onclick="switchVariant(48,'bongcloud',event)">Attaque Bongcloud</button>
+      </div>
+      <div class="engine-panel" id="ep48">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(48)">
+            <div class="engine-switch" id="esw48"></div>
+            <div class="engine-status-dot" id="esd48"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb48">
+          <div class="engine-loading" id="el48">Chargement du moteur...</div>
+          <div id="er48" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf48"></div></div>
+              <div class="eval-score" id="esc48">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm48"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp48">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content48"></div>
+  </div>
+</div>
+
+<!-- Ch.49 -->
+<div class="chapter-card" id="chap-49">
+  <div class="chapter-header"><h3 data-i18n="ch49">49. La Défense Barnes</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board49" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(49)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(49)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc49"></div>
+      <div class="variant-selector" id="vs49">
+        <button class="btn-var active" data-i18n="var_barnes" onclick="switchVariant(49,'barnes',event)">Défense Barnes</button>
+      </div>
+      <div class="engine-panel" id="ep49">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(49)">
+            <div class="engine-switch" id="esw49"></div>
+            <div class="engine-status-dot" id="esd49"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb49">
+          <div class="engine-loading" id="el49">Chargement du moteur...</div>
+          <div id="er49" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf49"></div></div>
+              <div class="eval-score" id="esc49">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm49"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp49">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content49"></div>
+  </div>
+</div>
+
+</section>
+
+<section class="tab-section hidden" id="section-2">
+<div class="part-title" data-i18n="part2_title">PARTIE II — Les Parties Semi-Ouvertes (1.e4 …)</div>
+<div class="part-desc" data-i18n="part2_desc">Les Noirs rompent la symétrie dès le premier coup.</div>
+
 <!-- Ch.6 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-6">
   <div class="chapter-header"><h3 data-i18n="ch6">6. La Défense Sicilienne</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -356,7 +967,7 @@
 </div>
 
 <!-- Ch.7 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-7">
   <div class="chapter-header"><h3 data-i18n="ch7">7. La Défense Française</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -405,7 +1016,7 @@
 </div>
 
 <!-- Ch.8 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-8">
   <div class="chapter-header"><h3 data-i18n="ch8">8. La Défense Caro-Kann</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -452,7 +1063,7 @@
 </div>
 
 <!-- Ch.9 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-9">
   <div class="chapter-header"><h3 data-i18n="ch9">9. La Défense Alekhine, Pirc &amp; Scandinave</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -470,8 +1081,6 @@
       <div class="move-counter" id="mc9"></div>
       <div class="variant-selector" id="vs9">
         <button class="btn-var active" data-i18n="var_alekhine" onclick="switchVariant(9,'alekhine',event)">Attaque des 4 Pions</button>
-        <button class="btn-var" data-i18n="var_pirc" onclick="switchVariant(9,'pirc',event)">Défense Pirc</button>
-        <button class="btn-var" data-i18n="var_scandinave" onclick="switchVariant(9,'scandinave',event)">Défense Scandinave</button>
       </div>
       <div class="engine-panel" id="ep9">
         <div class="engine-header">
@@ -502,649 +1111,98 @@
 <div class="part-title" data-i18n="part3_title">PARTIE III — Les Parties Fermées &amp; Semi-Fermées (1.d4)</div>
 <div class="part-desc" data-i18n="part3_desc">Guerres d'usure positionnelles sous 1.d4 ou 1.c4. Le centre reste verrouillé, déplaçant le combat sur la maîtrise géométrique des flancs et les structures de pions à long terme.</div>
 
-<!-- Ch.10 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch10">10. Le Gambit de la Dame Décliné (QGD) &amp; Slave</h3></div>
+<!-- Ch.54 -->
+<div class="chapter-card" id="chap-54">
+  <div class="chapter-header"><h3 data-i18n="ch54">23. La Défense Pirc</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
         <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
         <div class="board-and-alpha">
-          <table id="board10" class="chess-table"></table>
+          <table id="board54" class="chess-table"></table>
           <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
         </div>
       </div>
       <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(10)">◀ Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(10)">Avancer ▶</button>
+        <button class="btn" data-i18n="prev" onclick="prevMove(54)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(54)">Avancer &#9654;</button>
       </div>
-      <div class="move-counter" id="mc10"></div>
-      <div class="variant-selector" id="vs10">
-        <button class="btn-var active" data-i18n="var_qgd_exch" onclick="switchVariant(10,'exchange',event)">QGD — Variante de l'Échange</button>
-        <button class="btn-var" data-i18n="var_slave" onclick="switchVariant(10,'slave',event)">Défense Slave</button>
-        <button class="btn-var" data-i18n="var_meran" onclick="switchVariant(10,'meran',event)">Variante Meran</button>
-        <button class="btn-var" data-i18n="var_carlsbad" onclick="switchVariant(10,'carlsbad',event)">Structure Carlsbad</button>
+      <div class="move-counter" id="mc54"></div>
+      <div class="variant-selector" id="vs54">
+        <button class="btn-var active" data-i18n="var_pirc" onclick="switchVariant(54,'pirc',event)">23. La Défense Pirc</button>
       </div>
-      <div class="engine-panel" id="ep10">
+      <div class="engine-panel" id="ep54">
         <div class="engine-header">
           <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(10)">
-            <div class="engine-switch" id="esw10"></div>
-            <div class="engine-status-dot" id="esd10"></div>
+          <div class="engine-toggle" onclick="toggleEngine(54)">
+            <div class="engine-switch" id="esw54"></div>
+            <div class="engine-status-dot" id="esd54"></div>
           </div>
         </div>
-        <div class="engine-body" id="eb10">
-          <div class="engine-loading" id="el10">Chargement du moteur...</div>
-          <div id="er10" style="display:none">
+        <div class="engine-body" id="eb54">
+          <div class="engine-loading" id="el54">Chargement du moteur...</div>
+          <div id="er54" style="display:none">
             <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf10"></div></div>
-              <div class="eval-score" id="esc10">&#8212;</div>
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf54"></div></div>
+              <div class="eval-score" id="esc54">&#8212;</div>
             </div>
-            <div class="engine-bestmove" id="ebm10"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp10">prof. &#8212;</span><span>Stockfish 16</span></div>
+            <div class="engine-bestmove" id="ebm54"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp54">prof. &#8212;</span><span>Stockfish 16</span></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="content-container" id="content10"></div>
+    <div class="content-container" id="content54"></div>
   </div>
 </div>
 
-<!-- Ch.11 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch11">11. La Défense Nimzo-Indienne</h3></div>
+<!-- Ch.55 -->
+<div class="chapter-card" id="chap-55">
+  <div class="chapter-header"><h3 data-i18n="ch55">24. La Défense Scandinave</h3></div>
   <div class="flex-layout">
     <div class="board-container">
       <div class="board-frame">
         <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
         <div class="board-and-alpha">
-          <table id="board11" class="chess-table"></table>
+          <table id="board55" class="chess-table"></table>
           <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
         </div>
       </div>
       <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(11)">◀ Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(11)">Avancer ▶</button>
+        <button class="btn" data-i18n="prev" onclick="prevMove(55)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(55)">Avancer &#9654;</button>
       </div>
-      <div class="move-counter" id="mc11"></div>
-      <div class="variant-selector" id="vs11">
-        <button class="btn-var active" data-i18n="var_rubinstein" onclick="switchVariant(11,'rubinstein',event)">Variante Rubinstein</button>
-        <button class="btn-var" data-i18n="var_samisch" onclick="switchVariant(11,'samisch',event)">Variante Sämisch</button>
+      <div class="move-counter" id="mc55"></div>
+      <div class="variant-selector" id="vs55">
+        <button class="btn-var active" data-i18n="var_scandinave" onclick="switchVariant(55,'scandinave',event)">24. La Défense Scandinave</button>
       </div>
-      <div class="engine-panel" id="ep11">
+      <div class="engine-panel" id="ep55">
         <div class="engine-header">
           <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(11)">
-            <div class="engine-switch" id="esw11"></div>
-            <div class="engine-status-dot" id="esd11"></div>
+          <div class="engine-toggle" onclick="toggleEngine(55)">
+            <div class="engine-switch" id="esw55"></div>
+            <div class="engine-status-dot" id="esd55"></div>
           </div>
         </div>
-        <div class="engine-body" id="eb11">
-          <div class="engine-loading" id="el11">Chargement du moteur...</div>
-          <div id="er11" style="display:none">
+        <div class="engine-body" id="eb55">
+          <div class="engine-loading" id="el55">Chargement du moteur...</div>
+          <div id="er55" style="display:none">
             <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf11"></div></div>
-              <div class="eval-score" id="esc11">&#8212;</div>
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf55"></div></div>
+              <div class="eval-score" id="esc55">&#8212;</div>
             </div>
-            <div class="engine-bestmove" id="ebm11"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp11">prof. &#8212;</span><span>Stockfish 16</span></div>
+            <div class="engine-bestmove" id="ebm55"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp55">prof. &#8212;</span><span>Stockfish 16</span></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="content-container" id="content11"></div>
+    <div class="content-container" id="content55"></div>
   </div>
 </div>
-
-<!-- Ch.12 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch12">12. La Défense Indienne du Roi (KID)</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board12" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(12)">◀ Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(12)">Avancer ▶</button>
-      </div>
-      <div class="move-counter" id="mc12"></div>
-      <div class="variant-selector" id="vs12">
-        <button class="btn-var active" data-i18n="var_kid_class" onclick="switchVariant(12,'classique',event)">Variante Classique</button>
-        <button class="btn-var" data-i18n="var_samisch_kid" onclick="switchVariant(12,'samisch_kid',event)">Variante Sämisch KID</button>
-      </div>
-      <div class="engine-panel" id="ep12">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(12)">
-            <div class="engine-switch" id="esw12"></div>
-            <div class="engine-status-dot" id="esd12"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb12">
-          <div class="engine-loading" id="el12">Chargement du moteur...</div>
-          <div id="er12" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf12"></div></div>
-              <div class="eval-score" id="esc12">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm12"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp12">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content12"></div>
-  </div>
-</div>
-
-<!-- Ch.13 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch13">13. La Défense Grünfeld</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board13" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(13)">◀ Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(13)">Avancer ▶</button>
-      </div>
-      <div class="move-counter" id="mc13"></div>
-      <div class="variant-selector" id="vs13">
-        <button class="btn-var active" data-i18n="var_exchange_gru" onclick="switchVariant(13,'exchange_gru',event)">Variante d'Échange</button>
-        <button class="btn-var" data-i18n="var_russe_gru" onclick="switchVariant(13,'russe_gru',event)">Système Russe</button>
-      </div>
-      <div class="engine-panel" id="ep13">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(13)">
-            <div class="engine-switch" id="esw13"></div>
-            <div class="engine-status-dot" id="esd13"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb13">
-          <div class="engine-loading" id="el13">Chargement du moteur...</div>
-          <div id="er13" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf13"></div></div>
-              <div class="eval-score" id="esc13">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm13"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp13">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content13"></div>
-  </div>
-</div>
-
-<!-- Ch.14 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch14">14. L'Ouverture Anglaise</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board14" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(14)">◀ Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(14)">Avancer ▶</button>
-      </div>
-      <div class="move-counter" id="mc14"></div>
-      <div class="variant-selector" id="vs14">
-        <button class="btn-var active" data-i18n="var_reversed" onclick="switchVariant(14,'reversed',event)">Sicilienne Renversée</button>
-        <button class="btn-var" data-i18n="var_symmetric" onclick="switchVariant(14,'symmetric',event)">Anglaise Symétrique</button>
-      </div>
-      <div class="engine-panel" id="ep14">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(14)">
-            <div class="engine-switch" id="esw14"></div>
-            <div class="engine-status-dot" id="esd14"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb14">
-          <div class="engine-loading" id="el14">Chargement du moteur...</div>
-          <div id="er14" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf14"></div></div>
-              <div class="eval-score" id="esc14">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm14"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp14">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content14"></div>
-  </div>
-</div>
-
-<!-- Ch.15 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch15">15. La Partie Écossaise</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board15" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(15)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(15)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc15"></div>
-      <div class="variant-selector" id="vs15">
-        <button class="btn-var active" onclick="switchVariant(15,'scotch',event)">Partie Écossaise</button>
-      </div>
-      <div class="engine-panel" id="ep15">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(15)">
-            <div class="engine-switch" id="esw15"></div>
-            <div class="engine-status-dot" id="esd15"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb15">
-          <div class="engine-loading" id="el15">Chargement du moteur...</div>
-          <div id="er15" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf15"></div></div>
-              <div class="eval-score" id="esc15">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm15"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp15">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content15"></div>
-  </div>
-</div>
-
-<!-- Ch.16 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch16">16. L'Ouverture Ponziani</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board16" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(16)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(16)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc16"></div>
-      <div class="variant-selector" id="vs16">
-        <button class="btn-var active" onclick="switchVariant(16,'ponziani',event)">Ponziani</button>
-      </div>
-      <div class="engine-panel" id="ep16">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(16)">
-            <div class="engine-switch" id="esw16"></div>
-            <div class="engine-status-dot" id="esd16"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb16">
-          <div class="engine-loading" id="el16">Chargement du moteur...</div>
-          <div id="er16" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf16"></div></div>
-              <div class="eval-score" id="esc16">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm16"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp16">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content16"></div>
-  </div>
-</div>
-
-<!-- Ch.17 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch17">17. La Partie des Quatre Cavaliers</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board17" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(17)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(17)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc17"></div>
-      <div class="variant-selector" id="vs17">
-        <button class="btn-var active" onclick="switchVariant(17,'quatre_cavaliers',event)">Quatre Cavaliers</button>
-      </div>
-      <div class="engine-panel" id="ep17">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(17)">
-            <div class="engine-switch" id="esw17"></div>
-            <div class="engine-status-dot" id="esd17"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb17">
-          <div class="engine-loading" id="el17">Chargement du moteur...</div>
-          <div id="er17" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf17"></div></div>
-              <div class="eval-score" id="esc17">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm17"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp17">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content17"></div>
-  </div>
-</div>
-
-<!-- Ch.18 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch18">18. Le Gambit Éléphant</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board18" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(18)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(18)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc18"></div>
-      <div class="variant-selector" id="vs18">
-        <button class="btn-var active" onclick="switchVariant(18,'elephant',event)">Gambit Éléphant</button>
-      </div>
-      <div class="engine-panel" id="ep18">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(18)">
-            <div class="engine-switch" id="esw18"></div>
-            <div class="engine-status-dot" id="esd18"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb18">
-          <div class="engine-loading" id="el18">Chargement du moteur...</div>
-          <div id="er18" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf18"></div></div>
-              <div class="eval-score" id="esc18">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm18"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp18">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content18"></div>
-  </div>
-</div>
-
-<!-- Ch.19 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch19">19. Le Gambit Letton</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board19" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(19)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(19)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc19"></div>
-      <div class="variant-selector" id="vs19">
-        <button class="btn-var active" onclick="switchVariant(19,'letton',event)">Gambit Letton</button>
-      </div>
-      <div class="engine-panel" id="ep19">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(19)">
-            <div class="engine-switch" id="esw19"></div>
-            <div class="engine-status-dot" id="esd19"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb19">
-          <div class="engine-loading" id="el19">Chargement du moteur...</div>
-          <div id="er19" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf19"></div></div>
-              <div class="eval-score" id="esc19">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm19"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp19">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content19"></div>
-  </div>
-</div>
-
-<!-- Ch.20 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch20">20. La Partie du Centre</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board20" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(20)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(20)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc20"></div>
-      <div class="variant-selector" id="vs20">
-        <button class="btn-var active" onclick="switchVariant(20,'centre',event)">Partie du Centre</button>
-      </div>
-      <div class="engine-panel" id="ep20">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(20)">
-            <div class="engine-switch" id="esw20"></div>
-            <div class="engine-status-dot" id="esd20"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb20">
-          <div class="engine-loading" id="el20">Chargement du moteur...</div>
-          <div id="er20" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf20"></div></div>
-              <div class="eval-score" id="esc20">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm20"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp20">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content20"></div>
-  </div>
-</div>
-
-<!-- Ch.21 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch21">21. Le Gambit Danois</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board21" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(21)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(21)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc21"></div>
-      <div class="variant-selector" id="vs21">
-        <button class="btn-var active" onclick="switchVariant(21,'danois',event)">Gambit Danois</button>
-      </div>
-      <div class="engine-panel" id="ep21">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(21)">
-            <div class="engine-switch" id="esw21"></div>
-            <div class="engine-status-dot" id="esd21"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb21">
-          <div class="engine-loading" id="el21">Chargement du moteur...</div>
-          <div id="er21" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf21"></div></div>
-              <div class="eval-score" id="esc21">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm21"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp21">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content21"></div>
-  </div>
-</div>
-
-<!-- Ch.22 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch22">22. La Partie Viennoise</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board22" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(22)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(22)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc22"></div>
-      <div class="variant-selector" id="vs22">
-        <button class="btn-var active" onclick="switchVariant(22,'viennoise',event)">Partie Viennoise</button>
-      </div>
-      <div class="engine-panel" id="ep22">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(22)">
-            <div class="engine-switch" id="esw22"></div>
-            <div class="engine-status-dot" id="esd22"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb22">
-          <div class="engine-loading" id="el22">Chargement du moteur...</div>
-          <div id="er22" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf22"></div></div>
-              <div class="eval-score" id="esc22">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm22"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp22">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content22"></div>
-  </div>
-</div>
-
-<!-- Ch.23 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch23">23. L'Ouverture du Fou</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board23" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(23)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(23)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc23"></div>
-      <div class="variant-selector" id="vs23">
-        <button class="btn-var active" onclick="switchVariant(23,'fou',event)">Ouverture du Fou</button>
-      </div>
-      <div class="engine-panel" id="ep23">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(23)">
-            <div class="engine-switch" id="esw23"></div>
-            <div class="engine-status-dot" id="esd23"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb23">
-          <div class="engine-loading" id="el23">Chargement du moteur...</div>
-          <div id="er23" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf23"></div></div>
-              <div class="eval-score" id="esc23">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm23"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp23">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content23"></div>
-  </div>
-</div>
-
-<!-- PARTIE II — Autres Défenses contre 1.e4 -->
-<div class="part-title" data-i18n="part2_title">PARTIE II — Autres Défenses contre 1.e4</div>
-<div class="part-desc" data-i18n="part2_desc">Ouvertures moins fréquentes mais redoutables contre 1.e4 : défenses irrégulières, gambits noirs et systèmes hypermodernes.</div>
 
 <!-- Ch.24 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-24">
   <div class="chapter-header"><h3 data-i18n="ch24">24. La Défense Nimzowitsch</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1189,7 +1247,7 @@
 </div>
 
 <!-- Ch.25 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-25">
   <div class="chapter-header"><h3 data-i18n="ch25">25. La Défense Moderne</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1234,7 +1292,7 @@
 </div>
 
 <!-- Ch.26 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-26">
   <div class="chapter-header"><h3 data-i18n="ch26">26. La Défense Owen / Hippopotame</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1282,8 +1340,341 @@
 <div class="part-title" data-i18n="part3_title">PARTIE III — Le Jeu Fermé (1.d4)</div>
 <div class="part-desc" data-i18n="part3_desc">Lorsque les Blancs jouent 1.d4, les parties s'ouvrent de façon plus positionnel et stratégique. Les structures de pions et les plans à long terme prennent le dessus sur les tactiques immédiates.</div>
 
+</section>
+
+<section class="tab-section hidden" id="section-3">
+<div class="part-title" data-i18n="part3_title">PARTIE III — Les Parties Fermées (1.d4 d5)</div>
+<div class="part-desc" data-i18n="part3_desc">Gambit Dame, Défense Slave, Gambit Dame Accepté.</div>
+
+<!-- Ch.10 -->
+<div class="chapter-card" id="chap-10">
+  <div class="chapter-header"><h3 data-i18n="ch10">10. Le Gambit de la Dame Décliné (QGD) &amp; Slave</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board10" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(10)">◀ Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(10)">Avancer ▶</button>
+      </div>
+      <div class="move-counter" id="mc10"></div>
+      <div class="variant-selector" id="vs10">
+        <button class="btn-var active" data-i18n="var_qgd_exch" onclick="switchVariant(10,'exchange',event)">QGD — Variante de l'Échange</button>
+        <button class="btn-var" data-i18n="var_slave" onclick="switchVariant(10,'slave',event)">Défense Slave</button>
+        <button class="btn-var" data-i18n="var_meran" onclick="switchVariant(10,'meran',event)">Variante Meran</button>
+        <button class="btn-var" data-i18n="var_carlsbad" onclick="switchVariant(10,'carlsbad',event)">Structure Carlsbad</button>
+      </div>
+      <div class="engine-panel" id="ep10">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(10)">
+            <div class="engine-switch" id="esw10"></div>
+            <div class="engine-status-dot" id="esd10"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb10">
+          <div class="engine-loading" id="el10">Chargement du moteur...</div>
+          <div id="er10" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf10"></div></div>
+              <div class="eval-score" id="esc10">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm10"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp10">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content10"></div>
+  </div>
+</div>
+
+<!-- Ch.50 -->
+<div class="chapter-card" id="chap-50">
+  <div class="chapter-header"><h3 data-i18n="ch50">50. Le Gambit de la Dame Accepté</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board50" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(50)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(50)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc50"></div>
+      <div class="variant-selector" id="vs50">
+        <button class="btn-var active" data-i18n="var_gda" onclick="switchVariant(50,'gda',event)">Gambit Dame Accepté</button>
+      </div>
+      <div class="engine-panel" id="ep50">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(50)">
+            <div class="engine-switch" id="esw50"></div>
+            <div class="engine-status-dot" id="esd50"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb50">
+          <div class="engine-loading" id="el50">Chargement du moteur...</div>
+          <div id="er50" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf50"></div></div>
+              <div class="eval-score" id="esc50">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm50"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp50">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content50"></div>
+  </div>
+</div>
+
+<!-- Ch.51 -->
+<div class="chapter-card" id="chap-51">
+  <div class="chapter-header"><h3 data-i18n="ch51">51. La Défense Tchigorine</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board51" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(51)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(51)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc51"></div>
+      <div class="variant-selector" id="vs51">
+        <button class="btn-var active" data-i18n="var_tchigorine" onclick="switchVariant(51,'tchigorine',event)">Défense Tchigorine</button>
+      </div>
+      <div class="engine-panel" id="ep51">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(51)">
+            <div class="engine-switch" id="esw51"></div>
+            <div class="engine-status-dot" id="esd51"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb51">
+          <div class="engine-loading" id="el51">Chargement du moteur...</div>
+          <div id="er51" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf51"></div></div>
+              <div class="eval-score" id="esc51">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm51"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp51">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content51"></div>
+  </div>
+</div>
+
+</section>
+
+<section class="tab-section hidden" id="section-4">
+<div class="part-title" data-i18n="part4_title">PARTIE IV — Les Parties Semi-Fermées</div>
+<div class="part-desc" data-i18n="part4_desc">Indiennes et autres défenses asymétriques contre 1.d4.</div>
+
+<!-- Ch.11 -->
+<div class="chapter-card" id="chap-11">
+  <div class="chapter-header"><h3 data-i18n="ch11">11. La Défense Nimzo-Indienne</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board11" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(11)">◀ Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(11)">Avancer ▶</button>
+      </div>
+      <div class="move-counter" id="mc11"></div>
+      <div class="variant-selector" id="vs11">
+        <button class="btn-var active" data-i18n="var_rubinstein" onclick="switchVariant(11,'rubinstein',event)">Variante Rubinstein</button>
+        <button class="btn-var" data-i18n="var_samisch" onclick="switchVariant(11,'samisch',event)">Variante Sämisch</button>
+      </div>
+      <div class="engine-panel" id="ep11">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(11)">
+            <div class="engine-switch" id="esw11"></div>
+            <div class="engine-status-dot" id="esd11"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb11">
+          <div class="engine-loading" id="el11">Chargement du moteur...</div>
+          <div id="er11" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf11"></div></div>
+              <div class="eval-score" id="esc11">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm11"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp11">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content11"></div>
+  </div>
+</div>
+
+<!-- Ch.29 -->
+<div class="chapter-card" id="chap-29">
+  <div class="chapter-header"><h3 data-i18n="ch29">29. La Défense Nimzo-Indienne</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board29" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(29)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(29)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc29"></div>
+      <div class="variant-selector" id="vs29">
+        <button class="btn-var active" onclick="switchVariant(29,'nimzo_indienne',event)">Nimzo-Indienne</button>
+      </div>
+      <div class="engine-panel" id="ep29">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(29)">
+            <div class="engine-switch" id="esw29"></div>
+            <div class="engine-status-dot" id="esd29"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb29">
+          <div class="engine-loading" id="el29">Chargement du moteur...</div>
+          <div id="er29" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf29"></div></div>
+              <div class="eval-score" id="esc29">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm29"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp29">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content29"></div>
+  </div>
+</div>
+
+<!-- Ch.12 -->
+<div class="chapter-card" id="chap-12">
+  <div class="chapter-header"><h3 data-i18n="ch12">12. La Défense Indienne du Roi (KID)</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board12" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(12)">◀ Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(12)">Avancer ▶</button>
+      </div>
+      <div class="move-counter" id="mc12"></div>
+      <div class="variant-selector" id="vs12">
+        <button class="btn-var active" data-i18n="var_kid_class" onclick="switchVariant(12,'classique',event)">Variante Classique</button>
+        <button class="btn-var" data-i18n="var_samisch_kid" onclick="switchVariant(12,'samisch_kid',event)">Variante Sämisch KID</button>
+      </div>
+      <div class="engine-panel" id="ep12">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(12)">
+            <div class="engine-switch" id="esw12"></div>
+            <div class="engine-status-dot" id="esd12"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb12">
+          <div class="engine-loading" id="el12">Chargement du moteur...</div>
+          <div id="er12" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf12"></div></div>
+              <div class="eval-score" id="esc12">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm12"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp12">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content12"></div>
+  </div>
+</div>
+
+<!-- Ch.13 -->
+<div class="chapter-card" id="chap-13">
+  <div class="chapter-header"><h3 data-i18n="ch13">13. La Défense Grünfeld</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board13" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(13)">◀ Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(13)">Avancer ▶</button>
+      </div>
+      <div class="move-counter" id="mc13"></div>
+      <div class="variant-selector" id="vs13">
+        <button class="btn-var active" data-i18n="var_exchange_gru" onclick="switchVariant(13,'exchange_gru',event)">Variante d'Échange</button>
+        <button class="btn-var" data-i18n="var_russe_gru" onclick="switchVariant(13,'russe_gru',event)">Système Russe</button>
+      </div>
+      <div class="engine-panel" id="ep13">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(13)">
+            <div class="engine-switch" id="esw13"></div>
+            <div class="engine-status-dot" id="esd13"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb13">
+          <div class="engine-loading" id="el13">Chargement du moteur...</div>
+          <div id="er13" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf13"></div></div>
+              <div class="eval-score" id="esc13">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm13"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp13">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content13"></div>
+  </div>
+</div>
+
 <!-- Ch.27 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-27">
   <div class="chapter-header"><h3 data-i18n="ch27">27. La Défense Hollandaise</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1328,7 +1719,7 @@
 </div>
 
 <!-- Ch.28 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-28">
   <div class="chapter-header"><h3 data-i18n="ch28">28. Le Gambit Englund</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1372,53 +1763,8 @@
   </div>
 </div>
 
-<!-- Ch.29 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch29">29. La Défense Nimzo-Indienne</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board29" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(29)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(29)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc29"></div>
-      <div class="variant-selector" id="vs29">
-        <button class="btn-var active" onclick="switchVariant(29,'nimzo_indienne',event)">Nimzo-Indienne</button>
-      </div>
-      <div class="engine-panel" id="ep29">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(29)">
-            <div class="engine-switch" id="esw29"></div>
-            <div class="engine-status-dot" id="esd29"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb29">
-          <div class="engine-loading" id="el29">Chargement du moteur...</div>
-          <div id="er29" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf29"></div></div>
-              <div class="eval-score" id="esc29">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm29"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp29">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content29"></div>
-  </div>
-</div>
-
 <!-- Ch.30 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-30">
   <div class="chapter-header"><h3 data-i18n="ch30">30. La Défense Indienne Dame</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1463,7 +1809,7 @@
 </div>
 
 <!-- Ch.31 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-31">
   <div class="chapter-header"><h3 data-i18n="ch31">31. La Défense Bogo-Indienne</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1508,7 +1854,7 @@
 </div>
 
 <!-- Ch.32 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-32">
   <div class="chapter-header"><h3 data-i18n="ch32">32. L'Ouverture Catalane</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1553,7 +1899,7 @@
 </div>
 
 <!-- Ch.33 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-33">
   <div class="chapter-header"><h3 data-i18n="ch33">33. La Défense Benoni</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1598,7 +1944,7 @@
 </div>
 
 <!-- Ch.34 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-34">
   <div class="chapter-header"><h3 data-i18n="ch34">34. Le Gambit Budapest</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1647,7 +1993,7 @@
 <div class="part-desc" data-i18n="part4_desc">Systèmes où les Blancs jouent 1.d4 sans engager directement la théorie des Indiennes ou du Gambit Dame : Trompowsky, London, Colle, Torre, Stonewall.</div>
 
 <!-- Ch.35 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-35">
   <div class="chapter-header"><h3 data-i18n="ch35">35. L'Attaque Trompowsky</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1691,8 +2037,14 @@
   </div>
 </div>
 
+</section>
+
+<section class="tab-section hidden" id="section-5">
+<div class="part-title" data-i18n="part5_title">PARTIE V — Systèmes avec 1.d4 (Attaques)</div>
+<div class="part-desc" data-i18n="part5_desc">London, Colle, Torre, Stonewall, Jobava-London.</div>
+
 <!-- Ch.36 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-36">
   <div class="chapter-header"><h3 data-i18n="ch36">36. Le Système Londonien</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1737,7 +2089,7 @@
 </div>
 
 <!-- Ch.37 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-37">
   <div class="chapter-header"><h3 data-i18n="ch37">37. Le Système Jobava-London</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1782,7 +2134,7 @@
 </div>
 
 <!-- Ch.38 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-38">
   <div class="chapter-header"><h3 data-i18n="ch38">38. Le Système Colle</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1827,7 +2179,7 @@
 </div>
 
 <!-- Ch.39 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-39">
   <div class="chapter-header"><h3 data-i18n="ch39">39. Le Système Colle-Zukertort</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1872,7 +2224,7 @@
 </div>
 
 <!-- Ch.40 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-40">
   <div class="chapter-header"><h3 data-i18n="ch40">40. L'Attaque Torre</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1917,7 +2269,7 @@
 </div>
 
 <!-- Ch.41 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-41">
   <div class="chapter-header"><h3 data-i18n="ch41">41. L'Attaque Stonewall</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -1965,8 +2317,60 @@
 <div class="part-title" data-i18n="part5_title">PARTIE V — Ouvertures de Flanc</div>
 <div class="part-desc" data-i18n="part5_desc">Ouvertures hypermodernes où les Blancs contrôlent le centre à distance : Anglaise, Bird, Réti, KIA, Nimzo-Larsen.</div>
 
+</section>
+
+<section class="tab-section hidden" id="section-6">
+<div class="part-title" data-i18n="part6_title">PARTIE VI — Ouvertures de Flanc</div>
+<div class="part-desc" data-i18n="part6_desc">Anglaise, Bird, Réti, KIA, Nimzo-Larsen.</div>
+
+<!-- Ch.14 -->
+<div class="chapter-card" id="chap-14">
+  <div class="chapter-header"><h3 data-i18n="ch14">14. L'Ouverture Anglaise</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board14" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(14)">◀ Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(14)">Avancer ▶</button>
+      </div>
+      <div class="move-counter" id="mc14"></div>
+      <div class="variant-selector" id="vs14">
+        <button class="btn-var active" data-i18n="var_reversed" onclick="switchVariant(14,'reversed',event)">Sicilienne Renversée</button>
+        <button class="btn-var" data-i18n="var_symmetric" onclick="switchVariant(14,'symmetric',event)">Anglaise Symétrique</button>
+      </div>
+      <div class="engine-panel" id="ep14">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(14)">
+            <div class="engine-switch" id="esw14"></div>
+            <div class="engine-status-dot" id="esd14"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb14">
+          <div class="engine-loading" id="el14">Chargement du moteur...</div>
+          <div id="er14" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf14"></div></div>
+              <div class="eval-score" id="esc14">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm14"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp14">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content14"></div>
+  </div>
+</div>
+
 <!-- Ch.42 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-42">
   <div class="chapter-header"><h3 data-i18n="ch42">42. L'Ouverture Bird</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -2011,7 +2415,7 @@
 </div>
 
 <!-- Ch.43 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-43">
   <div class="chapter-header"><h3 data-i18n="ch43">43. L'Ouverture Réti</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -2056,7 +2460,7 @@
 </div>
 
 <!-- Ch.44 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-44">
   <div class="chapter-header"><h3 data-i18n="ch44">44. Le King's Indian Attack (KIA)</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -2101,7 +2505,7 @@
 </div>
 
 <!-- Ch.45 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-45">
   <div class="chapter-header"><h3 data-i18n="ch45">45. L'Attaque Nimzo-Larsen</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -2145,278 +2549,8 @@
   </div>
 </div>
 
-<!-- Ch.46 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch46">46. La Partie des Trois Cavaliers</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board46" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(46)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(46)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc46"></div>
-      <div class="variant-selector" id="vs46">
-        <button class="btn-var active" data-i18n="var_trois_cavaliers" onclick="switchVariant(46,'trois_cavaliers',event)">Trois Cavaliers</button>
-      </div>
-      <div class="engine-panel" id="ep46">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(46)">
-            <div class="engine-switch" id="esw46"></div>
-            <div class="engine-status-dot" id="esd46"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb46">
-          <div class="engine-loading" id="el46">Chargement du moteur...</div>
-          <div id="er46" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf46"></div></div>
-              <div class="eval-score" id="esc46">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm46"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp46">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content46"></div>
-  </div>
-</div>
-
-<!-- Ch.47 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch47">47. La Défense Damiano</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board47" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(47)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(47)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc47"></div>
-      <div class="variant-selector" id="vs47">
-        <button class="btn-var active" data-i18n="var_damiano" onclick="switchVariant(47,'damiano',event)">Défense Damiano</button>
-      </div>
-      <div class="engine-panel" id="ep47">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(47)">
-            <div class="engine-switch" id="esw47"></div>
-            <div class="engine-status-dot" id="esd47"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb47">
-          <div class="engine-loading" id="el47">Chargement du moteur...</div>
-          <div id="er47" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf47"></div></div>
-              <div class="eval-score" id="esc47">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm47"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp47">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content47"></div>
-  </div>
-</div>
-
-<!-- Ch.48 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch48">48. L'Attaque Bongcloud</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board48" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(48)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(48)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc48"></div>
-      <div class="variant-selector" id="vs48">
-        <button class="btn-var active" data-i18n="var_bongcloud" onclick="switchVariant(48,'bongcloud',event)">Attaque Bongcloud</button>
-      </div>
-      <div class="engine-panel" id="ep48">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(48)">
-            <div class="engine-switch" id="esw48"></div>
-            <div class="engine-status-dot" id="esd48"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb48">
-          <div class="engine-loading" id="el48">Chargement du moteur...</div>
-          <div id="er48" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf48"></div></div>
-              <div class="eval-score" id="esc48">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm48"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp48">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content48"></div>
-  </div>
-</div>
-
-<!-- Ch.49 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch49">49. La Défense Barnes</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board49" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(49)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(49)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc49"></div>
-      <div class="variant-selector" id="vs49">
-        <button class="btn-var active" data-i18n="var_barnes" onclick="switchVariant(49,'barnes',event)">Défense Barnes</button>
-      </div>
-      <div class="engine-panel" id="ep49">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(49)">
-            <div class="engine-switch" id="esw49"></div>
-            <div class="engine-status-dot" id="esd49"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb49">
-          <div class="engine-loading" id="el49">Chargement du moteur...</div>
-          <div id="er49" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf49"></div></div>
-              <div class="eval-score" id="esc49">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm49"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp49">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content49"></div>
-  </div>
-</div>
-
-<!-- Ch.50 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch50">50. Le Gambit de la Dame Accepté</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board50" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(50)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(50)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc50"></div>
-      <div class="variant-selector" id="vs50">
-        <button class="btn-var active" data-i18n="var_gda" onclick="switchVariant(50,'gda',event)">Gambit Dame Accepté</button>
-      </div>
-      <div class="engine-panel" id="ep50">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(50)">
-            <div class="engine-switch" id="esw50"></div>
-            <div class="engine-status-dot" id="esd50"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb50">
-          <div class="engine-loading" id="el50">Chargement du moteur...</div>
-          <div id="er50" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf50"></div></div>
-              <div class="eval-score" id="esc50">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm50"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp50">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content50"></div>
-  </div>
-</div>
-
-<!-- Ch.51 -->
-<div class="chapter-card">
-  <div class="chapter-header"><h3 data-i18n="ch51">51. La Défense Tchigorine</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board51" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(51)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(51)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc51"></div>
-      <div class="variant-selector" id="vs51">
-        <button class="btn-var active" data-i18n="var_tchigorine" onclick="switchVariant(51,'tchigorine',event)">Défense Tchigorine</button>
-      </div>
-      <div class="engine-panel" id="ep51">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(51)">
-            <div class="engine-switch" id="esw51"></div>
-            <div class="engine-status-dot" id="esd51"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb51">
-          <div class="engine-loading" id="el51">Chargement du moteur...</div>
-          <div id="er51" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf51"></div></div>
-              <div class="eval-score" id="esc51">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm51"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp51">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content51"></div>
-  </div>
-</div>
-
 <!-- Ch.52 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-52">
   <div class="chapter-header"><h3 data-i18n="ch52">52. L'Ouverture Sokolski (Orang-Outan)</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -2461,7 +2595,7 @@
 </div>
 
 <!-- Ch.53 -->
-<div class="chapter-card">
+<div class="chapter-card" id="chap-53">
   <div class="chapter-header"><h3 data-i18n="ch53">53. L'Attaque Grob</h3></div>
   <div class="flex-layout">
     <div class="board-container">
@@ -2504,6 +2638,8 @@
     <div class="content-container" id="content53"></div>
   </div>
 </div>
+
+</section>
 
 <!-- CONCLUSION -->
 <div class="conclusion-card">
