@@ -1009,7 +1009,37 @@ var DB = {
       piege:"Les Noirs doivent éviter ...c6 passif sans contre-jeu, sous peine de subir une attaque minoritaire mortelle.",
       piege_en:"Black must avoid passive ...c6 play without counterplay, or suffer a deadly minority attack.",
       moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"e7",to:"e6"},{from:"b1",to:"c3"},{from:"g8",to:"f6"},{from:"c4",to:"d5"},{from:"e6",to:"d5"},{from:"c1",to:"g5"}]
-    }
+    },
+  tarrasch: {
+      line:"1.d4 d5 2.c4 e6 3.Cc3 c5 4.cxd5 exd5 5.Cf3 Cc6 6.g3 Cf6 7.Fg2 Fe7 8.0-0 0-0",
+      fondement:"La D&eacute;fense Tarrasch (3...c5) accepte le pion isol&eacute; en d5 apr&egrave;s 4.cxd5 exd5. Concept de Siegbert Tarrasch : la mobilit&eacute; et l'activit&eacute; des pi&egrave;ces compensent la faiblesse structurelle.",
+      fondement_en:"The Tarrasch Defense (3...c5) accepts an isolated d5 pawn after 4.cxd5 exd5. Tarrasch's concept: piece activity and mobility compensate for the structural weakness.",
+      avantages:"Jeu de pi&egrave;ces tr&egrave;s actif, initiative centrale, espace et mobilit&eacute; sup&eacute;rieurs d&egrave;s l'ouverture.",
+      avantages_en:"Very active piece play, central initiative, and superior space and mobility from the opening.",
+      inconvenients:"Le pion d5 est une cible durable ; les pi&egrave;ces blanches trouvent un avant-poste id&eacute;al en d4 pour le bloquer.",
+      inconvenients_en:"The d5 pawn is a lasting target; White's pieces find an ideal outpost on d4 to blockade it.",
+      blancs:"Occuper d4 pour bloquer le pion isol&eacute;, puis &eacute;changer les pi&egrave;ces actives noires pour atteindre une finale technique favorable.",
+      blancs_en:"Occupy d4 to blockade the isolated pawn, then exchange Black's active pieces to reach a technically favorable endgame.",
+      noirs:"Activer toutes les pi&egrave;ces rapidement, exercer une pression sur les colonnes c et e, pr&eacute;parer ...d4 pour lib&eacute;rer le pion.",
+      noirs_en:"Activate all pieces quickly, press on the c and e files, prepare ...d4 to free the pawn.",
+      cases:"d5 (pion isol&eacute; noir), d4 (avant-poste blanc id&eacute;al), colonnes c et e (activit&eacute; noire).",
+      cases_en:"d5 (Black's isolated pawn), d4 (White's ideal outpost), c and e files (Black's activity).",
+      finale:"Finales favorables aux Blancs si le pion d5 est bloqu&eacute; ; les Noirs doivent chercher l'activit&eacute; en milieu de partie.",
+      finale_en:"Endgames favor White if the d5 pawn is blockaded; Black must seek middlegame activity.",
+      stats:"ECO D32-D34 &middot; Popularisée par Siegbert Tarrasch. Employ&eacute;e par Spassky, Kasparov et Fischer.",
+      stats_en:"ECO D32-D34 &middot; Popularized by Siegbert Tarrasch. Used by Spassky, Kasparov and Fischer.",
+      piege:"La Variante Su&eacute;doise (6...c4) cr&eacute;e une majorit&eacute; &agrave; l'aile dame mais est insuffisante ; le contre-jeu blanc au centre est trop fort.",
+      piege_en:"The Swedish Variation (6...c4) creates a queenside majority but is insufficient; White's central counterplay is too strong.",
+      moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"e7",to:"e6"},{from:"b1",to:"c3"},{from:"c7",to:"c5"},{from:"c4",to:"d5"},{from:"e6",to:"d5"},{from:"g1",to:"f3"},{from:"b8",to:"c6"},{from:"g2",to:"g3"},{from:"g8",to:"f6"},{from:"f1",to:"g2"},{from:"f8",to:"e7"},{from:"e1",to:"g1"},{from:"e8",to:"g8"}],
+      game:{
+           header:"P&eacute;trossian, T. vs Spassky, B. &middot; Championnat du Monde Moscou 1969, Partie 4 &middot; D&eacute;fense Tarrasch (D34)",
+           moves:"1.c4 e6 2.d4 d5 3.Cc3 c5 4.cxd5 exd5 5.Cf3 Cc6 6.g3 Cf6 7.Fg2 Fe7 8.0-0 0-0 9.Fg5 cxd4 10.Cxd4 h6 11.Fe3 Fg4 12.Cb3 Fe6 13.Tc1 Te8 14.Te1 Dd7 15.Fc5 Tac8 16.Fxe7 Dxe7 17.e3 Ted8 18.De2 Fg4 19.f3 Ff5 20.Tcd1 Ce5 21.Cd4 Fg6 22.Fh3 Tc4 23.g4 Tb4 24.b3 Cc6 25.Dd2 Tb6 26.Cce2 Fh7 27.Fg2 Te8 28.Cg3 Cxd4 29.exd4 Te6 30.Txe6 Dxe6 31.Tc1 Fg6 32.Ff1 Ch7 33.Df4 Cf8 34.Tc5 Fb1 35.a4 Cg6 36.Dd2 Df6 37.Rf2 Cf4 38.a5 Fd3 39.Cf5 Dg5 40.Ce3 Dh4+ 41.Rg1 Fxf1 0-1",
+           result:"0-1 &mdash; Spassky (Noirs) gagne en 41 coups &mdash; sacrifice final 41...Fxf1!",
+           analysis:"Partie 4 du Championnat du Monde Moscou 1969. Spassky adopte la D&eacute;fense Tarrasch et g&egrave;re magistralement le pion isol&eacute;. Apr&egrave;s une phase strat&eacute;gique tendue, il couronne son jeu par 41...Fxf1!, capturant le fou et rendant le mat in&eacute;vitable. P&eacute;trossian abandonne.",
+           result_en:"0-1 &mdash; Spassky (Black) wins in 41 moves &mdash; final sacrifice 41...Bxf1!",
+           analysis_en:"Game 4 of the 1969 World Championship in Moscow. Spassky adopts the Tarrasch Defense and masterfully manages the isolated pawn. After a tense strategic phase, he crowns his play with 41...Bxf1!, capturing the bishop and making mate inevitable. Petrosian resigned."
+          }
+  }
   },
   11: {
     rubinstein: {
