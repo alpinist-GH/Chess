@@ -1039,6 +1039,66 @@ var DB = {
            result_en:"0-1 &mdash; Spassky (Black) wins in 41 moves &mdash; final sacrifice 41...Bxf1!",
            analysis_en:"Game 4 of the 1969 World Championship in Moscow. Spassky adopts the Tarrasch Defense and masterfully manages the isolated pawn. After a tense strategic phase, he crowns his play with 41...Bxf1!, capturing the bishop and making mate inevitable. Petrosian resigned."
           }
+  },
+  orthodox: {
+      line:"1.d4 d5 2.c4 e6 3.Cc3 Cf6 4.Fg5 Fe7 5.Cf3 Cbd7 6.e3 0-0",
+      fondement:"La D&eacute;fense Orthodoxe est la r&eacute;ponse classique au Gambit Dame : les Noirs d&eacute;veloppent harmonieusement toutes leurs pi&egrave;ces (...Fe7, ...0-0, ...Cbd7) sans cr&eacute;er de faiblesse structurelle. Lasker et Capablanca en ont fait la pierre angulaire de la th&eacute;orie du milieu de partie.",
+      fondement_en:"The Orthodox Defense is the classical response to the Queen's Gambit: Black develops all pieces harmoniously (...Be7, ...O-O, ...Nbd7) without creating structural weaknesses. Lasker and Capablanca made it the cornerstone of middlegame theory.",
+      avantages:"Structure solide et &eacute;quilibr&eacute;e, d&eacute;veloppement harmonieux, bonnes chances en finale apr&egrave;s ...dxc4 et la paire de fous.",
+      avantages_en:"Solid and balanced structure, harmonious development, good endgame chances after ...dxc4 and the bishop pair.",
+      inconvenients:"Jeu passif au d&eacute;but ; les Blancs maintiennent une pression constante avec la majorit&eacute; centrale et l'Attaque Minoritaire.",
+      inconvenients_en:"Passive play initially; White maintains constant pressure with the central majority and the Minority Attack.",
+      blancs:"Avancer e4 pour dominer le centre, ou jouer l'Attaque Minoritaire (b4-b5xc6) pour cr&eacute;er une faiblesse durable en c6.",
+      blancs_en:"Advance e4 to dominate the center, or play the Minority Attack (b4-b5xc6) to create a lasting weakness on c6.",
+      noirs:"Chercher la lib&eacute;ration par ...c5 ou ...dxc4, d&eacute;velopper le Fou dame via ...b6 et contre-attaquer sur les colonnes c et e.",
+      noirs_en:"Seek liberation with ...c5 or ...dxc4, develop the dark-squared bishop via ...b6, and counterattack on the c and e files.",
+      cases:"d5 (pivot noir), e5 (avant-poste blanc potentiel), c6 (cible de l'Attaque Minoritaire).",
+      cases_en:"d5 (Black's pivot), e5 (potential White outpost), c6 (Minority Attack target).",
+      finale:"Les finales favorisent souvent les Blancs si les Noirs ne lib&egrave;rent pas leur Fou dame ; la paire de fous noire est d&eacute;cisive si elle est activ&eacute;e.",
+      finale_en:"Endgames often favor White if Black cannot free their dark-squared bishop; Black's bishop pair is decisive if activated.",
+      stats:"ECO D60-D69 &middot; Pratiqu&eacute;e par Lasker, Capablanca, Botvinnik, Fischer et Karpov. Ligne fondatrice de la th&eacute;orie 1.d4.",
+      stats_en:"ECO D60-D69 &middot; Played by Lasker, Capablanca, Botvinnik, Fischer and Karpov. The founding line of 1.d4 theory.",
+      piege:"La Variante de Cambridge Springs (7...Dd7 mena&ccedil;ant ...Ca4) surprend les Blancs non pr&eacute;par&eacute;s ; apr&egrave;s 8.Db3?! Cb4 les Noirs gagnent du mat&eacute;riel.",
+      piege_en:"The Cambridge Springs Variation (7...Qd7 threatening ...Na4) catches unprepared White players; after 8.Qb3?! Nb4 Black wins material.",
+      moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"e7",to:"e6"},{from:"b1",to:"c3"},{from:"g8",to:"f6"},{from:"c1",to:"g5"},{from:"f8",to:"e7"},{from:"g1",to:"f3"},{from:"b8",to:"d7"},{from:"e2",to:"e3"},{from:"e8",to:"g8"}],
+      game:{
+           header:"Steinitz, W. vs Lasker, E. &middot; Championnat du Monde Montr&eacute;al 1894, Partie 16 &middot; D&eacute;fense Orthodoxe (D60)",
+           moves:"1.d4 d5 2.c4 e6 3.Cc3 Cf6 4.Fg5 Fe7 5.Cf3 Cbd7 6.e3 0-0 7.c5 Ce4 8.Cxe4 dxe4 9.Fxe7 Dxe7 10.Cd2 Cf6 11.Cc4 b6 12.b4 Cd5 13.Db1 f5 14.Ce5 a5 15.Cc6 Dg5 16.h4 Df6 17.cxb6 f4 18.Dxe4 fxe3 19.f3 Fb7 20.b5 Fxc6 21.bxc6 cxb6 22.Fd3 Dh6 23.g3 Tac8 24.Tc1 Tc7 25.0-0 Td8 26.f4 Dg6 27.Dxg6 hxg6 28.Fxg6 Ce7 29.Fe4 Txd4 30.Ff3 Cf5 31.Tfe1 Rf7 32.Tb1 Cxg3 33.Txb6 Cf5 34.Tb7 Txb7 35.cxb7 Tb4 36.Tc1 Cd4 37.Rg2 Tb2+ 38.Rg3 Txb7 39.Fxb7 Ce2+ 40.Rf3 Cxc1 41.Rxe3 Cxa2 42.Rd4 Rf6 43.Rc5 Cc3 44.Rc4 Ce2 45.Rb5 Cxf4 46.Rxa5 Cg6 47.h5 Cf4 48.Ff3 Rf5 49.Rb4 e5 50.Rc3 e4 51.Fd1 e3 52.Ff3 Rg5 53.Rc2 Rh4 54.Rd1 Rg3 0-1",
+           result:"0-1 &mdash; Lasker (Noirs) gagne en 54 coups",
+           analysis:"Partie 16 du Championnat du Monde 1894 &agrave; Montr&eacute;al. Steinitz joue le syst&egrave;me c5 pour contenir l'aile dame noire, mais Lasker d&eacute;mantibule progressivement la structure blanche. Une magistrale finale de cavalier contre fou couronne la victoire de Lasker, fondateur de la th&eacute;orie moderne.",
+           result_en:"0-1 &mdash; Lasker (Black) wins in 54 moves",
+           analysis_en:"Game 16 of the 1894 World Championship in Montreal. Steinitz plays the c5 system to clamp Black's queenside, but Lasker progressively dismantles the White structure. A masterful knight vs. bishop endgame crowns Lasker's victory, establishing him as the founder of modern chess theory."
+          }
+  },
+  albin: {
+      line:"1.d4 d5 2.c4 e5 3.dxe5 d4 4.Cf3 Cc6 5.Cbd2",
+      fondement:"Le Contre-Gambit Albin (2...e5) est un coup-surprise agressif : les Noirs sacrifient un pion pour obtenir un pion pass&eacute; en d4 et d&eacute;s&eacute;quilibrer imm&eacute;diatement la partie. Morozevich, le grand sp&eacute;cialiste moderne, a ressuscit&eacute; ce gambit oubli&eacute; avec ses victoires spectaculaires.",
+      fondement_en:"The Albin Counter-Gambit (2...e5) is an aggressive surprise weapon: Black sacrifices a pawn to obtain a passed d4 pawn and immediately unbalance the game. Morozevich, the great modern specialist, has revived this forgotten gambit with his spectacular victories.",
+      avantages:"D&eacute;s&eacute;quilibre imm&eacute;diat, pion pass&eacute; en d4 qui g&ecirc;ne les Blancs, &eacute;l&eacute;ment de surprise et jeu d'attaque actif.",
+      avantages_en:"Immediate imbalance, a passed d4 pawn that hinders White, surprise element and active attacking play.",
+      inconvenients:"Sacrifice de pion objectivement insuffisant ; les Blancs consolident avec un jeu pr&eacute;cis et restent un pion de mieux.",
+      inconvenients_en:"Objectively insufficient pawn sacrifice; White consolidates with precise play and remains a pawn ahead.",
+      blancs:"Restituer ou conserver le pion sacrifi&eacute; selon la position, d&eacute;velopper rapidement et neutraliser le pion d4 en le bloquant.",
+      blancs_en:"Return or keep the sacrificed pawn depending on the position, develop quickly and neutralize the d4 pawn by blockading it.",
+      noirs:"Activer toutes les pi&egrave;ces gr&acirc;ce &agrave; l'&eacute;nergie du pion d4, lancer une attaque sur le roi blanc avant que les Blancs consolident.",
+      noirs_en:"Activate all pieces thanks to the energy of the d4 pawn, launch an attack on the White king before White consolidates.",
+      cases:"d4 (pion pass&eacute; agressif), e5 (pion blanc avanc&eacute;), d5 (&eacute;ventuel avant-poste).",
+      cases_en:"d4 (aggressive passed pawn), e5 (White's advanced pawn), d5 (potential outpost).",
+      finale:"Objectivement favorables aux Blancs ; le contre-gambit vise le milieu de partie et &eacute;vite les finales.",
+      finale_en:"Objectively favorable to White; the counter-gambit targets the middlegame and avoids endgames.",
+      stats:"ECO D08-D09 &middot; Invent&eacute; par Adolf Albin (1893). Repopularis&eacute; par Alexandre Morozevich au XXIe si&egrave;cle.",
+      stats_en:"ECO D08-D09 &middot; Invented by Adolf Albin (1893). Repopularized by Alexander Morozevich in the 21st century.",
+      piege:"Le pi&egrave;ge Lasker-Albin : apr&egrave;s 5.e3? dxe3 6.Fxe3?? Fb4+! 7.Cd2 Dh4+ 8.g3 De4+ les Noirs gagnent la Tour en a1 &mdash; les Blancs ne doivent jamais jouer e3 sans pr&eacute;cautions.",
+      piege_en:"The Lasker-Albin trap: after 5.e3? dxe3 6.Bxe3?? Bb4+! 7.Nd2 Qh4+ 8.g3 Qe4+ Black wins the a1 Rook &mdash; White must never play e3 carelessly.",
+      moves:[{from:"d2",to:"d4"},{from:"d7",to:"d5"},{from:"c2",to:"c4"},{from:"e7",to:"e5"},{from:"d4",to:"e5"},{from:"d5",to:"d4"},{from:"g1",to:"f3"},{from:"b8",to:"c6"},{from:"b1",to:"d2"},{from:"g8",to:"e7"}],
+      game:{
+           header:"Van Wely, L. vs Morozevich, A. &middot; Tournoi Amber (Aveugle) Nice 2008, Ronde 6 &middot; Contre-Gambit Albin (D08)",
+           moves:"1.d4 d5 2.c4 e5 3.dxe5 d4 4.Cf3 Cc6 5.Cbd2 Cge7 6.a3 Fe6 7.g3 Dd7 8.Fg2 Fh3 9.0-0 Fxg2 10.Rxg2 0-0-0 11.b4 Cg6 12.Fb2 h5 13.b5 Ccxe5 14.Fxd4 Cxf3 15.Cxf3 h4 16.Fxa7 Dg4 17.Dc2 hxg3 18.fxg3 b6 19.a4 Fd6 20.e3 Th3 21.Rh1 Tdh8 22.Tf2 Fxg3 23.Tg1 Dxf3+ 0-1",
+           result:"0-1 &mdash; Morozevich (Noirs) gagne en 23 coups &mdash; 23...Dxf3+ fatal",
+           analysis:"Tournoi Amber en aveugle, Nice 2008. Morozevich joue le Contre-Gambit Albin avec audace. Il sacrifie son pion d4, d&eacute;veloppe toutes ses pi&egrave;ces avec &eacute;nergie et construit une attaque d&eacute;vastatrice : 22...Fxg3 brise le rempart blanc, puis 23...Dxf3+ est sans r&eacute;ponse car 24.Txf3 Th1# est mat.",
+           result_en:"0-1 &mdash; Morozevich (Black) wins in 23 moves &mdash; 23...Qxf3+ is fatal",
+           analysis_en:"Amber Blindfold Tournament, Nice 2008. Morozevich plays the Albin Counter-Gambit boldly. He sacrifices his d4 pawn, develops all pieces with energy and builds a devastating attack: 22...Bxg3 breaks White's defensive wall, then 23...Qxf3+ is unanswerable since 24.Rxf3 Rh1# is checkmate."
+          }
   }
   },
   11: {
