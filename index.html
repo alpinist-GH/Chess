@@ -309,10 +309,6 @@
   </div>
 </div>
 
-<!-- PARTIE II -->
-<div class="part-title" data-i18n="part2_title">PARTIE II — Les Parties Semi-Ouvertes (1.e4 …)</div>
-<div class="part-desc" data-i18n="part2_desc">Les Noirs rompent la symétrie dès le premier coup, acceptant un léger retard d'espace pour une structure asymétrique dynamique et combative.</div>
-
 <!-- Ch.15 -->
 <div class="chapter-card" id="chap-15">
   <div class="chapter-header"><h3 data-i18n="ch15">15. La Partie Écossaise</h3></div>
@@ -718,10 +714,6 @@
   </div>
 </div>
 
-<!-- PARTIE II — Autres Défenses contre 1.e4 -->
-<div class="part-title" data-i18n="part2_title">PARTIE II — Autres Défenses contre 1.e4</div>
-<div class="part-desc" data-i18n="part2_desc">Ouvertures moins fréquentes mais redoutables contre 1.e4 : défenses irrégulières, gambits noirs et systèmes hypermodernes.</div>
-
 <!-- Ch.46 -->
 <div class="chapter-card" id="chap-46">
   <div class="chapter-header"><h3 data-i18n="ch46">46. La Partie des Trois Cavaliers</h3></div>
@@ -854,51 +846,6 @@
       </div>
     </div>
     <div class="content-container" id="content48"></div>
-  </div>
-</div>
-
-<!-- Ch.49 -->
-<div class="chapter-card" id="chap-49">
-  <div class="chapter-header"><h3 data-i18n="ch49">49. La Défense Barnes</h3></div>
-  <div class="flex-layout">
-    <div class="board-container">
-      <div class="board-frame">
-        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
-        <div class="board-and-alpha">
-          <table id="board49" class="chess-table"></table>
-          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
-        </div>
-      </div>
-      <div class="board-controls">
-        <button class="btn" data-i18n="prev" onclick="prevMove(49)">&#9664; Reculer</button>
-        <button class="btn" data-i18n="next" onclick="nextMove(49)">Avancer &#9654;</button>
-      </div>
-      <div class="move-counter" id="mc49"></div>
-      <div class="variant-selector" id="vs49">
-        <button class="btn-var active" data-i18n="var_barnes" onclick="switchVariant(49,'barnes',event)">Défense Barnes</button>
-      </div>
-      <div class="engine-panel" id="ep49">
-        <div class="engine-header">
-          <span class="engine-label">&#9881; Stockfish</span>
-          <div class="engine-toggle" onclick="toggleEngine(49)">
-            <div class="engine-switch" id="esw49"></div>
-            <div class="engine-status-dot" id="esd49"></div>
-          </div>
-        </div>
-        <div class="engine-body" id="eb49">
-          <div class="engine-loading" id="el49">Chargement du moteur...</div>
-          <div id="er49" style="display:none">
-            <div class="eval-bar-wrap">
-              <div class="eval-bar"><div class="eval-bar-fill" id="ebf49"></div></div>
-              <div class="eval-score" id="esc49">&#8212;</div>
-            </div>
-            <div class="engine-bestmove" id="ebm49"><span>Meilleur coup :</span> &#8212;</div>
-            <div class="engine-info"><span id="edp49">prof. &#8212;</span><span>Stockfish 16</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-container" id="content49"></div>
   </div>
 </div>
 
@@ -1106,10 +1053,6 @@
     <div class="content-container" id="content9"></div>
   </div>
 </div>
-
-<!-- PARTIE III -->
-<div class="part-title" data-i18n="part3_title">PARTIE III — Les Parties Fermées &amp; Semi-Fermées (1.d4)</div>
-<div class="part-desc" data-i18n="part3_desc">Guerres d'usure positionnelles sous 1.d4 ou 1.c4. Le centre reste verrouillé, déplaçant le combat sur la maîtrise géométrique des flancs et les structures de pions à long terme.</div>
 
 <!-- Ch.54 -->
 <div class="chapter-card" id="chap-54">
@@ -1336,9 +1279,50 @@
   </div>
 </div>
 
-<!-- PARTIE III — Le Jeu Fermé (1.d4) -->
-<div class="part-title" data-i18n="part3_title">PARTIE III — Le Jeu Fermé (1.d4)</div>
-<div class="part-desc" data-i18n="part3_desc">Lorsque les Blancs jouent 1.d4, les parties s'ouvrent de façon plus positionnel et stratégique. Les structures de pions et les plans à long terme prennent le dessus sur les tactiques immédiates.</div>
+<!-- Ch.49 -->
+<div class="chapter-card" id="chap-49">
+  <div class="chapter-header"><h3 data-i18n="ch49">27. La Défense Barnes</h3></div>
+  <div class="flex-layout">
+    <div class="board-container">
+      <div class="board-frame">
+        <div class="row-labels"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+        <div class="board-and-alpha">
+          <table id="board49" class="chess-table"></table>
+          <div class="col-labels"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span></div>
+        </div>
+      </div>
+      <div class="board-controls">
+        <button class="btn" data-i18n="prev" onclick="prevMove(49)">&#9664; Reculer</button>
+        <button class="btn" data-i18n="next" onclick="nextMove(49)">Avancer &#9654;</button>
+      </div>
+      <div class="move-counter" id="mc49"></div>
+      <div class="variant-selector" id="vs49">
+        <button class="btn-var active" data-i18n="var_barnes" onclick="switchVariant(49,'barnes',event)">Défense Barnes</button>
+      </div>
+      <div class="engine-panel" id="ep49">
+        <div class="engine-header">
+          <span class="engine-label">&#9881; Stockfish</span>
+          <div class="engine-toggle" onclick="toggleEngine(49)">
+            <div class="engine-switch" id="esw49"></div>
+            <div class="engine-status-dot" id="esd49"></div>
+          </div>
+        </div>
+        <div class="engine-body" id="eb49">
+          <div class="engine-loading" id="el49">Chargement du moteur...</div>
+          <div id="er49" style="display:none">
+            <div class="eval-bar-wrap">
+              <div class="eval-bar"><div class="eval-bar-fill" id="ebf49"></div></div>
+              <div class="eval-score" id="esc49">&#8212;</div>
+            </div>
+            <div class="engine-bestmove" id="ebm49"><span>Meilleur coup :</span> &#8212;</div>
+            <div class="engine-info"><span id="edp49">prof. &#8212;</span><span>Stockfish 16</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container" id="content49"></div>
+  </div>
+</div>
 
 </section>
 
@@ -1988,10 +1972,6 @@
   </div>
 </div>
 
-<!-- PARTIE IV — Systèmes avec 1.d4 (Attaques) -->
-<div class="part-title" data-i18n="part4_title">PARTIE IV — Systèmes avec 1.d4 (Attaques)</div>
-<div class="part-desc" data-i18n="part4_desc">Systèmes où les Blancs jouent 1.d4 sans engager directement la théorie des Indiennes ou du Gambit Dame : Trompowsky, London, Colle, Torre, Stonewall.</div>
-
 <!-- Ch.35 -->
 <div class="chapter-card" id="chap-35">
   <div class="chapter-header"><h3 data-i18n="ch35">35. L'Attaque Trompowsky</h3></div>
@@ -2313,9 +2293,6 @@
   </div>
 </div>
 
-<!-- PARTIE V — Ouvertures de Flanc -->
-<div class="part-title" data-i18n="part5_title">PARTIE V — Ouvertures de Flanc</div>
-<div class="part-desc" data-i18n="part5_desc">Ouvertures hypermodernes où les Blancs contrôlent le centre à distance : Anglaise, Bird, Réti, KIA, Nimzo-Larsen.</div>
 
 </section>
 
