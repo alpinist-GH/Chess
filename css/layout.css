@@ -286,9 +286,58 @@ header p {
 /* ── BOARD CONTAINER sticky offset with sticky tab nav ── */
 .board-container { top: 3.5rem; }
 
+/* Toggle button is desktop-hidden; shown only inside the mobile media query below */
+.content-toggle { display: none; }
+
 @media (max-width: 700px) {
   .tab-btn { padding: 0.55rem 0.65rem; font-size: 0.75rem; }
   .search-dropdown { width: calc(100vw - 2.4rem); }
   .flex-layout { flex-direction: column; }
-  .board-container { flex: none; width: 100%; position: static; }
+
+  /* Restore sticky so board stays visible while reading content below */
+  .board-container {
+    flex: none;
+    width: 100%;
+    position: sticky;
+    top: 3.5rem;
+    z-index: 20;
+    background: var(--cream);
+    padding-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Content collapsed by default on mobile; page scrolls naturally when open */
+  .content-container {
+    display: none;
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+  .content-container.mobile-open { display: block; }
+
+  /* Toggle button between board and content */
+  .content-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.65rem 1rem;
+    margin-top: 0.5rem;
+    background: var(--ink);
+    color: var(--parchment);
+    border: none;
+    border-radius: 4px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+  }
+  .content-toggle .toggle-arrow {
+    transition: transform 0.25s;
+    font-size: 0.75rem;
+  }
+  .content-toggle.open .toggle-arrow { transform: rotate(180deg); }
 }

@@ -206,6 +206,22 @@ document.addEventListener('click', function(e){
 /* ══════════════════════════════════════════════
    INIT
    ══════════════════════════════════════════════ */
+function initMobileToggles() {
+  document.querySelectorAll('.flex-layout').forEach(function(layout) {
+    var content = layout.querySelector('.content-container');
+    if (!content) return;
+    var btn = document.createElement('button');
+    btn.className = 'content-toggle';
+    btn.innerHTML = '<span class="toggle-label">Analysis &amp; Moves</span>' +
+                    '<span class="toggle-arrow">&#9660;</span>';
+    btn.addEventListener('click', function() {
+      var isOpen = content.classList.toggle('mobile-open');
+      btn.classList.toggle('open', isOpen);
+    });
+    layout.insertBefore(btn, content);
+  });
+}
+
 window.addEventListener('DOMContentLoaded', function() {
 
 maxChap = Math.max.apply(null, Object.keys(DB).map(Number));
@@ -217,6 +233,7 @@ maxChap = Math.max.apply(null, Object.keys(DB).map(Number));
     renderText(id, activeVariants[id]);
     updateCounter(id);
   }
+  initMobileToggles();
 });
 
 /* ══════════════════════════════════════════════
