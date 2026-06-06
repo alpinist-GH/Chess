@@ -1717,6 +1717,36 @@ var DB = {
       piege:"La variante Taimanov (4.e4) est l'une des plus agressives pour les Blancs.",
       piege_en:"The Taimanov variation (4.e4) is one of the most aggressive for White.",
       moves:[{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"c2",to:"c4"},{from:"c7",to:"c5"},{from:"d4",to:"d5"},{from:"e7",to:"e6"},{from:"b1",to:"c3"},{from:"e6",to:"d5"},{from:"c4",to:"d5"},{from:"d7",to:"d6"}]
+    },
+    moderne: {
+      line:"1.d4 Cf6 2.c4 c5 3.d5 e6 4.Cc3 exd5 5.cxd5 d6 6.e4 g6 7.Cf3 Fg7 8.Fe2 0-0",
+      fondement:"Le Benoni Moderne (A60-A79) est la version la plus ambitieuse du Benoni. Les Noirs construisent un fianchetto en g7 et organisent un contre-jeu dynamique sur l'aile Roi, tandis que les Blancs d&eacute;veloppent une pression centrale massive avec le pion d5.",
+      fondement_en:"The Modern Benoni (A60-A79) is the most ambitious version of the Benoni. Black builds a fianchetto on g7 and organizes dynamic kingside counterplay, while White develops massive central pressure with the d5 pawn.",
+      avantages:"Contre-jeu riche sur les deux ailes ; le Fou g7 appuie toutes les ruptures (...e5, ...b5, ...f5). D&eacute;s&eacute;quilibre garanti.",
+      avantages_en:"Rich counterplay on both flanks; the g7 bishop supports all breaks (...e5, ...b5, ...f5). Imbalance guaranteed.",
+      inconvenients:"Les Blancs disposent d'un avantage spatial durable ; la structure noire est r&eacute;guli&egrave;rement sous pression et exige une pr&eacute;cision th&eacute;orique &eacute;lev&eacute;e.",
+      inconvenients_en:"White has a lasting space advantage; Black's structure is regularly under pressure and demands high theoretical precision.",
+      blancs:"Exploiter la majorit&eacute; centrale, avancer e5 pour &eacute;touffer les pi&egrave;ces noires, et occuper d5 comme avant-poste id&eacute;al.",
+      blancs_en:"Exploit the central majority, advance e5 to stifle Black's pieces, and occupy d5 as an ideal outpost.",
+      noirs:"Activer le Fou g7, pr&eacute;parer ...b5 ou ...e5 comme rupteur central et cr&eacute;er un contre-jeu sur les colonnes c et e.",
+      noirs_en:"Activate the g7 bishop, prepare ...b5 or ...e5 as central breakers, and create counterplay on the c and e files.",
+      cases:"d5 (avant-poste blanc), e5/b5 (ruptures noires), colonne c (activit&eacute; des Tours noires).",
+      cases_en:"d5 (White's outpost), e5/b5 (Black's breaks), c-file (Black Rook activity).",
+      finale:"Souvent favorables aux Blancs gr&acirc;ce au pion pass&eacute; d5 ; les Noirs doivent trouver un contre-jeu actif avant la finale.",
+      finale_en:"Often favorable to White thanks to the passed d5 pawn; Black must find active counterplay before the endgame.",
+      stats:"ECO A60-A79 &middot; Utilis&eacute; par Fischer, Tal, Kasparov, Geller. L'une des d&eacute;fenses les plus complexes face &agrave; 1.d4.",
+      stats_en:"ECO A60-A79 &middot; Used by Fischer, Tal, Kasparov, Geller. One of the most complex defenses against 1.d4.",
+      piege:"L'Attaque des Quatre Pions (5.f4) &eacute;tait jadis r&eacute;put&eacute;e d&eacute;cisive ; Tal et Fischer ont montr&eacute; que les Noirs obtiennent un contre-jeu suffisant apr&egrave;s 5...Fg7 6.Cf3 0-0.",
+      piege_en:"The Four Pawns Attack (5.f4) was once considered decisive; Tal and Fischer showed Black gets sufficient counterplay after 5...Bg7 6.Nf3 O-O.",
+      moves:[{from:"d2",to:"d4"},{from:"g8",to:"f6"},{from:"c2",to:"c4"},{from:"c7",to:"c5"},{from:"d4",to:"d5"},{from:"e7",to:"e6"},{from:"b1",to:"c3"},{from:"e6",to:"d5"},{from:"c4",to:"d5"},{from:"d7",to:"d6"},{from:"e2",to:"e4"},{from:"g7",to:"g6"},{from:"g1",to:"f3"},{from:"f8",to:"g7"},{from:"f1",to:"e2"},{from:"e8",to:"g8"}],
+      game:{
+           header:"Spassky, B. vs Fischer, R.J. &middot; Match revanche Sveti Stefan/Belgrade 1992, Partie 16 &middot; Benoni (A56)",
+           moves:"1.d4 Cf6 2.c4 c5 3.d5 d6 4.Cc3 g6 5.e4 Fg7 6.Fg5 h6 7.Fh4 g5 8.Fg3 Da5 9.Fd3 Cxe4 10.Fxe4 Fxc3+ 11.bxc3 Dxc3+ 12.Rf1 f5 13.Tc1 Df6 14.h4 g4 15.Fd3 f4 16.Ce2 fxg3 17.Cxg3 Tf8 18.Tc2 Cd7 19.Dxg4 Ce5 20.De4 Fd7 21.Rg1 0-0-0 22.Ff1 Tg8 23.f4 Cxc4 24.Ch5 Df7 25.Dxc4 Dxh5 26.Tb2 Tg3 27.Fe2 Df7 28.Ff3 Tdg8 29.Db3 b6 30.De3 Df6 31.Te2 Fb5 32.Td2 e5 33.dxe6 Fc6 34.Rf1 Fxf3 0-1",
+           result:"0-1 &mdash; Fischer (Noirs) gagne en 34 coups &mdash; 34...Fxf3! d&eacute;cisif",
+           analysis:"Partie 16 du match revanche Fischer–Spassky, Sveti Stefan 1992. Fischer ressuscite le Benoni fianchetto et saisit un pion d&egrave;s la phase d'ouverture par 9...Cxe4! puis 10...Fxc3+. La pression continue et le mat&eacute;riel gagn&eacute; m&egrave;nent &agrave; 34...Fxf3 sans r&eacute;ponse. Spassky abandonne.",
+           result_en:"0-1 &mdash; Fischer (Black) wins in 34 moves &mdash; 34...Bxf3! decisive",
+           analysis_en:"Game 16 of the Fischer–Spassky rematch, Sveti Stefan 1992. Fischer revives the Benoni fianchetto and grabs a pawn in the opening with 9...Nxe4! then 10...Bxc3+. Continuous pressure and material gain lead to 34...Bxf3 with no answer. Spassky resigned."
+          }
     }
   },
   34: {
