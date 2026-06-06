@@ -34,6 +34,34 @@
   letter-spacing: 0.03em;
   vertical-align: middle;
 }
+/* ── LICHESS STATS ── */
+.lstats-box { margin-bottom: 0.6rem; }
+.lstat-header {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 4px;
+}
+.lstar { color: #c8b89a; font-size: 0.88rem; }
+.lstar-on { color: var(--gold); }
+.lstat-count {
+  font-size: 0.72rem; color: #7a6a50;
+  font-family: 'JetBrains Mono', monospace;
+}
+.lstat-bar {
+  display: flex; height: 7px; border-radius: 3px; overflow: hidden;
+  margin-bottom: 4px; background: #e0d8cc;
+}
+.lstat-seg { display: inline-block; height: 100%; }
+.lstat-w { background: #e8dcc8; }
+.lstat-d { background: #a09070; }
+.lstat-b { background: #4a3520; }
+.lstat-legend {
+  display: flex; gap: 10px;
+  font-size: 0.70rem; font-family: 'JetBrains Mono', monospace;
+}
+.lstat-w-txt { color: #8a7a60; }
+.lstat-d-txt { color: #6a5a40; }
+.lstat-b-txt { color: #3a2e1a; }
+
 .subtitle-h4 {
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem; font-weight: 700;

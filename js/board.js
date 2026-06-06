@@ -545,6 +545,7 @@ function renderText(chapId, varKey) {
     lineHtml
     +ecoHtml
     +'<div class="stat-badge">'+(dField(d,'stats')||t('render_stats_default'))+'</div>'
+    +'<div id="lstats-'+chapId+'" class="lstats-box"></div>'
     +histHtml
     +'<div class="subtitle-h4">'+t('render_idea')+'</div>'
     +'<p class="text-p">'+dField(d,'fondement')+'</p>'
@@ -565,5 +566,7 @@ function renderText(chapId, varKey) {
     +'<p class="text-p">'+(dField(d,'piege')||t('render_trap_default'))+'</p>'
     +'</div>'
     +gameHtml;
+
+  if (typeof fetchLichessStats === 'function') fetchLichessStats(chapId, varKey);
 }
 

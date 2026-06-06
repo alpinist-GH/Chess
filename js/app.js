@@ -115,6 +115,70 @@ function openOnLichess(id) {
   window.open('https://lichess.org/analysis/' + encodeURIComponent(fen), '_blank');
 }
 
+/* ══════════════════════════════════════════════
+   LICHESS STATS — win/draw/loss + popularité
+   ══════════════════════════════════════════════ */
+var lichessStatsCache = {};
+
+function fetchLichessStats(chapId, varKey) {
+  var cacheKey = chapId + ':' + varKey;
+  if (lichessStatsCache[cacheKey] !== undefined) {
+    renderLichessStats(chapId, lichessStatsCache[cacheKey]);
+    return;
+  }
+  var moves = DB[chapId] && DB[chapId][varKey] && DB[chapId][varKey].moves;
+  if (!moves || !moves.length) return;
+  var uci = moves.map(function(m) { return m.from + m.to; }).join(',');
+  fetch('https://explorer.lichess.ovh/lichess?play=' + uci + '&topGames=0&recentGames=0')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      lichessStatsCache[cacheKey] = data;
+      renderLichessStats(chapId, data);
+    })
+    .catch(function() {
+      lichessStatsCache[cacheKey] = null;
+    });
+}
+
+function renderLichessStats(chapId, data) {
+  var el = document.getElementById('lstats-' + chapId);
+  if (!el) return;
+  if (!data) { el.innerHTML = ''; return; }
+  var w = data.white || 0, d = data.draws || 0, b = data.black || 0;
+  var total = w + d + b;
+  if (!total) { el.innerHTML = ''; return; }
+  var wp = Math.round(w * 100 / total);
+  var dp = Math.round(d * 100 / total);
+  var bp = 100 - wp - dp;
+  var stars = total > 50e6 ? 5 : total > 10e6 ? 4 : total > 2e6 ? 3 : total > 500e3 ? 2 : total > 100e3 ? 1 : 0;
+  var starsHtml = '';
+  for (var i = 1; i <= 5; i++) {
+    starsHtml += '<span class="lstar' + (i <= stars ? ' lstar-on' : '') + '">&#9733;</span>';
+  }
+  var totalStr = total > 1e6 ? (total / 1e6).toFixed(1) + 'M'
+               : total > 1000 ? Math.round(total / 1000) + 'K'
+               : String(total);
+  var gamesLbl = LANG === 'en' ? 'games' : 'parties';
+  var wLbl = LANG === 'en' ? 'White' : 'Blancs';
+  var dLbl = LANG === 'en' ? 'Draw'  : 'Nulle';
+  var bLbl = LANG === 'en' ? 'Black' : 'Noirs';
+  el.innerHTML =
+    '<div class="lstat-header">'
+    + '<span class="lstat-stars">' + starsHtml + '</span>'
+    + '<span class="lstat-count">' + totalStr + ' ' + gamesLbl + '</span>'
+    + '</div>'
+    + '<div class="lstat-bar">'
+    + '<span class="lstat-seg lstat-w" style="width:' + wp + '%"></span>'
+    + '<span class="lstat-seg lstat-d" style="width:' + dp + '%"></span>'
+    + '<span class="lstat-seg lstat-b" style="width:' + bp + '%"></span>'
+    + '</div>'
+    + '<div class="lstat-legend">'
+    + '<span class="lstat-w-txt">&#9633; ' + wLbl + ' ' + wp + '%</span>'
+    + '<span class="lstat-d-txt">&#9632; ' + dLbl + ' ' + dp + '%</span>'
+    + '<span class="lstat-b-txt">&#9632; ' + bLbl + ' ' + bp + '%</span>'
+    + '</div>';
+}
+
 // Navigation clavier ← →
 document.addEventListener('keydown', function(e){
   if(e.key === 'ArrowRight') nextMove(lastActiveChap);
