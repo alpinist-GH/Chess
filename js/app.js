@@ -112,7 +112,7 @@ function flipBoard(id) {
 
 function openOnLichess(id) {
   var fen = getCurrentFen(id);
-  window.open('https://lichess.org/analysis/' + encodeURIComponent(fen), '_blank');
+  window.open('https://lichess.org/analysis/' + fen.replace(/ /g, '_'), '_blank');
 }
 
 /* ══════════════════════════════════════════════
@@ -126,7 +126,8 @@ function fetchLichessStats(chapId, varKey) {
     renderLichessStats(chapId, lichessStatsCache[cacheKey]);
     return;
   }
-  var moves = DB[chapId] && DB[chapId][varKey] && DB[chapId][varKey].moves;
+  var moves = (varMoves && varMoves[chapId])
+           || (DB[chapId] && DB[chapId][varKey] && DB[chapId][varKey].moves);
   if (!moves || !moves.length) return;
   var uci = moves.map(function(m) { return m.from + m.to; }).join(',');
   fetch('https://explorer.lichess.ovh/lichess?play=' + uci + '&topGames=0&recentGames=0')

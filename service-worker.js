@@ -5,7 +5,7 @@
  */
 
 /* ─── Version du cache — incrémenter à chaque déploiement ─── */
-var CACHE_NAME = 'chessbook-v4';
+var CACHE_NAME = 'chessbook-v5';
 
 /* ─── Fichiers à mettre en cache lors de l'installation ─── */
 var PRECACHE_URLS = [
@@ -72,7 +72,7 @@ self.addEventListener('activate', function (event) {
 function addCrossOriginHeaders(response) {
   var headers = new Headers(response.headers);
   headers.set('Cross-Origin-Opener-Policy',   'same-origin');
-  headers.set('Cross-Origin-Embedder-Policy', 'require-corp');
+  headers.set('Cross-Origin-Embedder-Policy', 'credentialless');
   return new Response(response.body, {
     status:     response.status,
     statusText: response.statusText,
