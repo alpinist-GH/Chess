@@ -96,6 +96,25 @@ function switchVariant(chapId, varKey, evt) {
   }
 }
 
+function flipBoard(id) {
+  if (boardRenderers[id]) boardRenderers[id].flip();
+  var card = document.getElementById('chap-' + id);
+  if (!card) return;
+  ['row-labels', 'col-labels'].forEach(function(cls) {
+    var el = card.querySelector('.' + cls);
+    if (!el) return;
+    var spans = [].slice.call(el.querySelectorAll('span'));
+    var texts = spans.map(function(s) { return s.textContent; });
+    texts.reverse();
+    spans.forEach(function(s, i) { s.textContent = texts[i]; });
+  });
+}
+
+function openOnLichess(id) {
+  var fen = getCurrentFen(id);
+  window.open('https://lichess.org/analysis/' + encodeURIComponent(fen), '_blank');
+}
+
 // Navigation clavier ← →
 document.addEventListener('keydown', function(e){
   if(e.key === 'ArrowRight') nextMove(lastActiveChap);

@@ -9,11 +9,12 @@
 function ChessboardRenderer(boardId, engine) {
   var table = document.getElementById(boardId);
   if (!table) return null;
-  var cols = ['a','b','c','d','e','f','g','h'];
-  var rows = ['8','7','6','5','4','3','2','1'];
   var fns = makePieceSVGs(boardId);
+  var flipped = false;
 
   function render() {
+    var cols = flipped ? ['h','g','f','e','d','c','b','a'] : ['a','b','c','d','e','f','g','h'];
+    var rows = flipped ? ['1','2','3','4','5','6','7','8'] : ['8','7','6','5','4','3','2','1'];
     var html = '';
     for (var i = 0; i < 8; i++) {
       html += '<tr>';
@@ -34,7 +35,10 @@ function ChessboardRenderer(boardId, engine) {
     table.innerHTML = html;
   }
   render();
-  return { update: render };
+  return {
+    update: render,
+    flip: function() { flipped = !flipped; render(); }
+  };
 }
 
 /* ══════════════════════════════════════════════

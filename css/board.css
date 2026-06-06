@@ -99,6 +99,9 @@
 }
 .btn:hover { background: var(--gold); color: var(--ink); }
 .btn:active { transform: translateY(1px); }
+.btn-flip    { padding: 0.55rem 0.7rem; font-size: 1rem; letter-spacing: 0; }
+.btn-lichess { font-size: 0.82rem; border-color: #629924; color: #c8e6a0; }
+.btn-lichess:hover { background: #629924; color: var(--ink); border-color: #629924; }
 
 .variant-selector {
   display: flex; flex-wrap: wrap; gap: 6px;
