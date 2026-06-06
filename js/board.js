@@ -467,6 +467,13 @@ function renderText(chapId, varKey) {
   var el = document.getElementById('content' + chapId);
   if (!el || !d) return;
 
+  // ── Code ECO ──
+  var ecoHtml = (function() {
+    var s = dField(d, 'stats') || '';
+    var m = s.match(/ECO ([A-E]\d{2,3}(?:[–\-][A-E]?\d{2,3})?)/);
+    return m ? '<span class="eco-badge">ECO ' + m[1] + '</span>' : '';
+  })();
+
   // ── Ligne de variante interactive ──
   var lineHtml = buildVarLineHtml(chapId, getLine(d.line), d.line);
 
@@ -536,6 +543,7 @@ function renderText(chapId, varKey) {
 
   el.innerHTML =
     lineHtml
+    +ecoHtml
     +'<div class="stat-badge">'+(dField(d,'stats')||t('render_stats_default'))+'</div>'
     +histHtml
     +'<div class="subtitle-h4">'+t('render_idea')+'</div>'
