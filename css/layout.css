@@ -317,12 +317,12 @@ header p {
   }
   .content-container.mobile-open { display: block; }
 
-  /* Toggle button between board and content */
+  /* Toggle button — lives inside sticky .board-container so it stays visible while scrolling */
   .content-toggle {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    align-self: stretch;
     padding: 0.65rem 1rem;
     margin-top: 0.5rem;
     background: var(--ink);

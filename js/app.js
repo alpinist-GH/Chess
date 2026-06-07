@@ -209,16 +209,17 @@ document.addEventListener('click', function(e){
 function initMobileToggles() {
   document.querySelectorAll('.flex-layout').forEach(function(layout) {
     var content = layout.querySelector('.content-container');
-    if (!content) return;
+    var board   = layout.querySelector('.board-container');
+    if (!content || !board) return;
     var btn = document.createElement('button');
     btn.className = 'content-toggle';
-    btn.innerHTML = '<span class="toggle-label">Analysis &amp; Moves</span>' +
+    btn.innerHTML = '<span class="toggle-label" data-i18n="mobile_toggle">' + t('mobile_toggle') + '</span>' +
                     '<span class="toggle-arrow">&#9660;</span>';
     btn.addEventListener('click', function() {
       var isOpen = content.classList.toggle('mobile-open');
       btn.classList.toggle('open', isOpen);
     });
-    layout.insertBefore(btn, content);
+    board.appendChild(btn);
   });
 }
 
