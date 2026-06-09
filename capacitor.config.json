@@ -1,0 +1,8 @@
+{
+  "appId": "com.alpinistgh.chess",
+  "appName": "Chess Openings",
+  "webDir": "Chess",
+  "server": {
+    "androidScheme": "https"
+  }
+}
