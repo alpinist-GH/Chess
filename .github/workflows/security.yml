@@ -22,7 +22,7 @@ jobs:
         dir: [ '.', 'verify_chess' ]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: '20'
       # Fails the build only on high/critical advisories; moderate/low are reported but non-blocking.
