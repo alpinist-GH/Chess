@@ -1,0 +1,10 @@
+name: "CodeQL config — chess openings site"
+
+# Skip vendored engine, generated data, and native scaffolds so CodeQL focuses
+# on our hand-written application JavaScript (js/, service-worker.js, etc.).
+paths-ignore:
+  - stockfish.js          # vendored Stockfish engine (minified)
+  - data/openings.js      # large generated opening database (authored content)
+  - android               # Capacitor native scaffold
+  - ios                   # Capacitor native scaffold
+  - chess-desktop         # Tauri desktop scaffold

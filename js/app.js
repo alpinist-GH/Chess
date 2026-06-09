@@ -112,7 +112,8 @@ function flipBoard(id) {
 
 function openOnLichess(id) {
   var fen = getCurrentFen(id);
-  window.open('https://lichess.org/analysis/' + fen.replace(/ /g, '_'), '_blank');
+  /* 'noopener' : empêche l'onglet ouvert d'accéder à window.opener (reverse tabnabbing) */
+  window.open('https://lichess.org/analysis/' + fen.replace(/ /g, '_'), '_blank', 'noopener');
 }
 
 /* ══════════════════════════════════════════════
@@ -223,17 +224,28 @@ function initMobileToggles() {
   });
 }
 
-window.addEventListener('DOMContentLoaded', function() {
+/* Initialise un chapitre à la demande (engine, échiquier, texte). Idempotent. */
+var chapInitialized = {};
+function initChapter(id) {
+  if (chapInitialized[id] || !DB[id]) return;
+  chapInitialized[id] = true;
+  engines[id]        = ChessEngine();
+  boardRenderers[id] = ChessboardRenderer('board' + id, engines[id]);
+  activeVariants[id] = Object.keys(DB[id])[0];
+  renderText(id, activeVariants[id]);
+  updateCounter(id);
+}
 
-maxChap = Math.max.apply(null, Object.keys(DB).map(Number));
-  for (var id = 1; id <= maxChap; id++) {
-    if (!DB[id]) continue;
-    engines[id]        = ChessEngine();
-    boardRenderers[id] = ChessboardRenderer('board' + id, engines[id]);
-    activeVariants[id] = Object.keys(DB[id])[0];
-    renderText(id, activeVariants[id]);
-    updateCounter(id);
+/* Initialise tous les chapitres d'une section (CHAP_INDEX mappe chapitre → section) */
+function initSection(n) {
+  for (var i = 0; i < CHAP_INDEX.length; i++) {
+    if (CHAP_INDEX[i].section === n) initChapter(CHAP_INDEX[i].id);
   }
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+  maxChap = Math.max.apply(null, Object.keys(DB).map(Number));
+  initSection(1); // seule la section 1 est visible au chargement ; le reste à l'activation de l'onglet
   initMobileToggles();
 });
 
@@ -273,47 +285,61 @@ function formatScore(res) {
   };
 }
 
+/* Cache des éléments du panneau engine par chapitre (évite les getElementById répétés) */
+var engineEls = {};
+function getEngineEls(chapId) {
+  var c = engineEls[chapId];
+  if (c) return c;
+  c = {
+    sw:      document.getElementById('esw' + chapId),
+    body:    document.getElementById('eb' + chapId),
+    loading: document.getElementById('el' + chapId),
+    result:  document.getElementById('er' + chapId),
+    barFill: document.getElementById('ebf' + chapId),
+    scoreEl: document.getElementById('esc' + chapId),
+    bmEl:    document.getElementById('ebm' + chapId),
+    dpEl:    document.getElementById('edp' + chapId),
+    dot:     document.getElementById('esd' + chapId)
+  };
+  if (c.result) engineEls[chapId] = c; // ne met en cache qu'une fois le DOM présent
+  return c;
+}
+
 /* Met à jour l'affichage du panneau engine pour chapId */
 function updateEngineDisplay(chapId, res) {
-  var loading = document.getElementById('el' + chapId);
-  var result  = document.getElementById('er' + chapId);
-  var barFill = document.getElementById('ebf' + chapId);
-  var scoreEl = document.getElementById('esc' + chapId);
-  var bmEl    = document.getElementById('ebm' + chapId);
-  var dpEl    = document.getElementById('edp' + chapId);
-  var dot     = document.getElementById('esd' + chapId);
+  var els = getEngineEls(chapId);
+  if (!els.result) return;
 
-  if (!result) return;
-
-  if (loading) loading.style.display = 'none';
-  result.style.display = 'block';
+  if (els.loading) els.loading.style.display = 'none';
+  els.result.style.display = 'block';
 
   /* Score */
   var fmt = formatScore(res);
-  if (scoreEl) {
-    scoreEl.textContent = fmt.text;
-    scoreEl.className   = 'eval-score ' + fmt.cls;
+  if (els.scoreEl) {
+    els.scoreEl.textContent = fmt.text;
+    els.scoreEl.className   = 'eval-score ' + fmt.cls;
   }
 
   /* Barre d'évaluation (0% = noirs gagnent tout, 100% = blancs gagnent tout) */
-  if (barFill && res.score !== null) {
+  if (els.barFill && res.score !== null) {
     var pct = 50 + Math.max(-50, Math.min(50, res.score / 20));
-    barFill.style.width = pct + '%';
-  } else if (barFill && res.mate !== null) {
-    barFill.style.width = res.mate > 0 ? '95%' : '5%';
+    els.barFill.style.width = pct + '%';
+  } else if (els.barFill && res.mate !== null) {
+    els.barFill.style.width = res.mate > 0 ? '95%' : '5%';
   }
 
-  /* Meilleur coup */
-  if (bmEl) {
+  /* Meilleur coup — le coup vient du moteur ; on l'insère en tant que texte (pas d'HTML) */
+  if (els.bmEl) {
     var bm = res.bestMove || '—';
-    bmEl.innerHTML = '<span>' + (window.LANG === 'en' ? 'Best move:' : 'Meilleur coup :') + '</span> ' + bm;
+    els.bmEl.innerHTML = '<span>' + (window.LANG === 'en' ? 'Best move:' : 'Meilleur coup :') + '</span> ';
+    els.bmEl.appendChild(document.createTextNode(bm));
   }
 
   /* Profondeur */
-  if (dpEl) dpEl.textContent = 'prof. ' + (res.depth || '—');
+  if (els.dpEl) els.dpEl.textContent = 'prof. ' + (res.depth || '—');
 
   /* Dot → vert (actif) */
-  if (dot) { dot.className = 'engine-status-dot active'; }
+  if (els.dot) els.dot.className = 'engine-status-dot active';
 }
 
 /* Lance l'analyse pour un chapitre */
@@ -321,7 +347,7 @@ function analyzeChapter(chapId) {
   if (!engineOn[chapId]) return;
   if (!StockfishEngine.isReady()) return;
 
-  var dot = document.getElementById('esd' + chapId);
+  var dot = getEngineEls(chapId).dot;
   if (dot) dot.className = 'engine-status-dot thinking';
 
   var fen = getCurrentFen(chapId);
@@ -332,58 +358,41 @@ function analyzeChapter(chapId) {
 
 /* Active/désactive l'engine pour un chapitre */
 function toggleEngine(chapId) {
-  console.log('[Chessbook] toggleEngine appelé pour chapitre', chapId);
-  console.log('[Chessbook] StockfishEngine disponible ?', typeof StockfishEngine !== 'undefined');
-
-  var sw   = document.getElementById('esw' + chapId);
-  var body = document.getElementById('eb' + chapId);
-  var dot  = document.getElementById('esd' + chapId);
+  var els = getEngineEls(chapId);
 
   engineOn[chapId] = !engineOn[chapId];
 
-  if (sw)   sw.classList.toggle('on', engineOn[chapId]);
-  if (body) body.classList.toggle('visible', engineOn[chapId]);
+  if (els.sw)   els.sw.classList.toggle('on', engineOn[chapId]);
+  if (els.body) els.body.classList.toggle('visible', engineOn[chapId]);
 
   if (engineOn[chapId]) {
     /* Charger Stockfish si pas encore fait */
     if (!engineLoaded && !engineLoading) {
       engineLoading = true;
+      if (els.loading) els.loading.textContent = 'Chargement de stockfish.js...';
       StockfishEngine.init(function() {
         engineLoaded  = true;
         engineLoading = false;
-        console.log('[Chessbook] Stockfish prêt !');
-        /* Analyser tous les chapitres qui attendent */
+        /* Analyser tous les chapitres qui attendent (y compris ceux activés pendant le chargement) */
         for (var id = 1; id <= maxChap; id++) {
           if (engineOn[id]) {
-            var el = document.getElementById('el' + id);
-            if (el) el.textContent = 'Analyse en cours...';
+            var l = getEngineEls(id).loading;
+            if (l) l.textContent = 'Analyse en cours...';
             analyzeChapter(id);
           }
         }
       });
     } else if (engineLoaded) {
-      var el = document.getElementById('el' + chapId);
-      if (el) el.textContent = 'Analyse en cours...';
+      if (els.loading) els.loading.textContent = 'Analyse en cours...';
       analyzeChapter(chapId);
     } else {
-      /* En cours de chargement — on poll jusqu'à ce que ce soit prêt */
-      var el = document.getElementById('el' + chapId);
-      if (el) el.textContent = 'Chargement de stockfish.js...';
-      var pollId = setInterval(function() {
-        if (StockfishEngine.isReady()) {
-          clearInterval(pollId);
-          if (engineOn[chapId]) {
-            var el2 = document.getElementById('el' + chapId);
-            if (el2) el2.textContent = 'Analyse en cours...';
-            analyzeChapter(chapId);
-          }
-        }
-      }, 200);
+      /* Chargement déjà en cours — le callback de init() analysera ce chapitre */
+      if (els.loading) els.loading.textContent = 'Chargement de stockfish.js...';
     }
   } else {
     /* Désactivé */
     StockfishEngine.stop();
-    if (dot) dot.className = 'engine-status-dot';
+    if (els.dot) els.dot.className = 'engine-status-dot';
   }
 }
 
@@ -444,6 +453,7 @@ function showSection(n) {
   });
   var sec = document.getElementById('section-' + n);
   if (sec) sec.classList.remove('hidden');
+  initSection(n); // initialise les chapitres de cette section au premier affichage
   document.querySelectorAll('.tab-btn').forEach(function(b) {
     b.classList.toggle('active', parseInt(b.dataset.section) === n);
   });

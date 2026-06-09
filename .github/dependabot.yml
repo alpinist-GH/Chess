@@ -1,0 +1,24 @@
+version: 2
+updates:
+  # Root npm project (Capacitor)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels: [ "dependencies" ]
+
+  # Playwright verification project
+  - package-ecosystem: "npm"
+    directory: "/verify_chess"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels: [ "dependencies" ]
+
+  # Keep GitHub Actions pinned versions up to date
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels: [ "dependencies", "github-actions" ]

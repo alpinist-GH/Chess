@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Content-Security-Policy (défense en profondeur). frame-ancestors est injecté par le
+     service worker (ignoré dans une balise meta). Doit autoriser Stockfish : worker local,
+     script local, WASM, et le CDN jsdelivr de secours. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://explorer.lichess.ovh https://cdn.jsdelivr.net; worker-src 'self' blob:; child-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title id="page-title">Traité des Ouvertures d'Échecs — Vu-Hung Quan</title>
 <meta name="author" content="Vu-Hung Quan">
 <meta id="meta-desc" name="description" content="Traité interactif des ouvertures d'échecs — ouvertures, variantes, parties annotées. Par Vu-Hung Quan.">
@@ -17,6 +21,9 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='15' fill='%231a1208'/%3E%3Ctext y='.9em' font-size='80' x='10'%3E%26%2311822%3B%3C/text%3E%3C/svg%3E">
 
 <link rel="manifest" href="manifest.json">
+
+<!-- Précharge le plus gros fichier (base de données 495 Ko) pendant le parsing du HTML -->
+<link rel="preload" href="data/openings.js" as="script">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 

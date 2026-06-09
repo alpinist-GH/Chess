@@ -11,8 +11,18 @@ function ChessboardRenderer(boardId, engine) {
   if (!table) return null;
   var fns = makePieceSVGs(boardId);
   var flipped = false;
+  var cellBySquare  = {}; // 'e4' → <td>
+  var pieceBySquare = {}; // 'e4' → 'wP' | null (last rendered piece)
 
-  function render() {
+  function pieceHtml(pc) {
+    if (!pc) return '';
+    var color = pc[0] === 'w' ? fns.W : fns.B_;
+    var type  = pc[1];
+    return fns[type] ? '<span class="chess-piece">' + fns[type](color) + '</span>' : '';
+  }
+
+  /* Reconstruction complète : initialisation et retournement uniquement */
+  function fullRender() {
     var cols = flipped ? ['h','g','f','e','d','c','b','a'] : ['a','b','c','d','e','f','g','h'];
     var rows = flipped ? ['1','2','3','4','5','6','7','8'] : ['8','7','6','5','4','3','2','1'];
     var html = '';
@@ -21,23 +31,39 @@ function ChessboardRenderer(boardId, engine) {
       for (var j = 0; j < 8; j++) {
         var sq = cols[j] + rows[i];
         var cls = (i + j) % 2 === 0 ? 'light' : 'dark';
-        var pc = engine.getPiece(sq);
-        html += '<td class="' + cls + '">';
-        if (pc) {
-          var color = pc[0] === 'w' ? fns.W : fns.B_;
-          var type  = pc[1];
-          if (fns[type]) html += '<span class="chess-piece">' + fns[type](color) + '</span>';
-        }
-        html += '</td>';
+        html += '<td class="' + cls + '">' + pieceHtml(engine.getPiece(sq)) + '</td>';
       }
       html += '</tr>';
     }
     table.innerHTML = html;
+    // Indexe les cases pour les mises à jour incrémentales ultérieures
+    cellBySquare = {};
+    pieceBySquare = {};
+    for (var r = 0; r < 8; r++) {
+      for (var c = 0; c < 8; c++) {
+        var s = cols[c] + rows[r];
+        cellBySquare[s]  = table.rows[r].cells[c];
+        pieceBySquare[s] = engine.getPiece(s) || null;
+      }
+    }
   }
-  render();
+
+  /* Mise à jour incrémentale : ne réécrit que les cases qui ont changé */
+  function update() {
+    if (!table.firstChild) { fullRender(); return; }
+    for (var sq in cellBySquare) {
+      var pc = engine.getPiece(sq) || null;
+      if (pc !== pieceBySquare[sq]) {
+        cellBySquare[sq].innerHTML = pieceHtml(pc);
+        pieceBySquare[sq] = pc;
+      }
+    }
+  }
+
+  fullRender();
   return {
-    update: render,
-    flip: function() { flipped = !flipped; render(); }
+    update: update,
+    flip: function() { flipped = !flipped; fullRender(); }
   };
 }
 
@@ -318,12 +344,14 @@ var boardMode      = {}; // chapId → 'var' | 'game'
 /* ──────────────────────────────────────────────
    Joue la partie exemple jusqu'au coup N (0-based)
    ────────────────────────────────────────────── */
-function playGameTo(chapId, stepIdx){
-  var moves = gameMoves[chapId];
+/* Joue la ligne (mode 'game' = partie exemple, 'var' = variante d.line) jusqu'au coup N */
+function _playTo(chapId, stepIdx, mode){
+  var isGame = mode === 'game';
+  var moves  = (isGame ? gameMoves : varMoves)[chapId];
   if(!moves) return;
-  boardMode[chapId] = 'game';
-  gameStepIndex[chapId] = stepIdx;
-  varStepIndex[chapId]  = -1;
+  boardMode[chapId]     = mode;
+  gameStepIndex[chapId] = isGame ? stepIdx : -1;
+  varStepIndex[chapId]  = isGame ? -1 : stepIdx;
 
   engines[chapId].reset();
   for(var i=0; i<=stepIdx && i<moves.length; i++)
@@ -331,33 +359,21 @@ function playGameTo(chapId, stepIdx){
   if(boardRenderers[chapId]) boardRenderers[chapId].update();
 
   var mcEl = document.getElementById('mc'+chapId);
-  if(mcEl) mcEl.textContent = t('render_move_counter_game')+(stepIdx+1)+t('render_move_sep')+moves.length;
+  if(mcEl){
+    var label = isGame ? t('render_move_counter_game') : t('render_move_counter_var');
+    mcEl.textContent = label+(stepIdx+1)+t('render_move_sep')+moves.length;
+  }
 
-  _highlightGameToken(chapId, stepIdx);
-  _highlightVarToken(chapId, -1);
+  _highlightGameToken(chapId, isGame ? stepIdx : -1);
+  _highlightVarToken(chapId,  isGame ? -1 : stepIdx);
 }
+
+function playGameTo(chapId, stepIdx){ _playTo(chapId, stepIdx, 'game'); }
 
 /* ──────────────────────────────────────────────
    Joue la variante (d.line) jusqu'au coup N (0-based)
    ────────────────────────────────────────────── */
-function playVarTo(chapId, stepIdx){
-  var moves = varMoves[chapId];
-  if(!moves) return;
-  boardMode[chapId] = 'var';
-  varStepIndex[chapId]  = stepIdx;
-  gameStepIndex[chapId] = -1;
-
-  engines[chapId].reset();
-  for(var i=0; i<=stepIdx && i<moves.length; i++)
-    engines[chapId].move({from:moves[i].from, to:moves[i].to});
-  if(boardRenderers[chapId]) boardRenderers[chapId].update();
-
-  var mcEl = document.getElementById('mc'+chapId);
-  if(mcEl) mcEl.textContent = t('render_move_counter_var')+(stepIdx+1)+t('render_move_sep')+moves.length;
-
-  _highlightVarToken(chapId, stepIdx);
-  _highlightGameToken(chapId, -1);
-}
+function playVarTo(chapId, stepIdx){ _playTo(chapId, stepIdx, 'var'); }
 
 /* ──────────────────────────────────────────────
    Quitter le mode partie → retour variante

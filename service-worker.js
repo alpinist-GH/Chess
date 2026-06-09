@@ -5,7 +5,20 @@
  */
 
 /* ─── Version du cache — incrémenter à chaque déploiement ─── */
-var CACHE_NAME = 'chessbook-v5';
+var CACHE_NAME = 'chessbook-v6';
+
+/* ─── Content-Security-Policy injectée dans chaque réponse ───
+   Identique à la balise meta de index.html mais avec frame-ancestors
+   (anti-clickjacking), qui n'est pris en compte que via un en-tête HTTP. */
+var CSP_HEADER =
+  "default-src 'self'; " +
+  "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.jsdelivr.net; " +
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+  "img-src 'self' data:; " +
+  "font-src 'self' https://fonts.gstatic.com; " +
+  "connect-src 'self' https://explorer.lichess.ovh https://cdn.jsdelivr.net; " +
+  "worker-src 'self' blob:; child-src 'self' blob:; " +
+  "object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'";
 
 /* ─── Fichiers à mettre en cache lors de l'installation ─── */
 var PRECACHE_URLS = [
@@ -73,6 +86,7 @@ function addCrossOriginHeaders(response) {
   var headers = new Headers(response.headers);
   headers.set('Cross-Origin-Opener-Policy',   'same-origin');
   headers.set('Cross-Origin-Embedder-Policy', 'credentialless');
+  headers.set('Content-Security-Policy',       CSP_HEADER);
   return new Response(response.body, {
     status:     response.status,
     statusText: response.statusText,
