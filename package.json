@@ -1,0 +1,30 @@
+{
+  "name": "claude-chess",
+  "version": "1.0.0",
+  "description": "An interactive bilingual (FR/EN) reference for 55 chess openings, playable in the browser with Stockfish analysis.",
+  "main": "db46_new.js",
+  "scripts": {
+    "sync": "npx cap sync",
+    "android": "npx cap open android",
+    "ios": "npx cap open ios",
+    "test": "cd verify_chess && node verify.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alpinist-GH/Chess.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alpinist-GH/Chess/issues"
+  },
+  "homepage": "https://github.com/alpinist-GH/Chess#readme",
+  "dependencies": {
+    "@capacitor/android": "^8.4.0",
+    "@capacitor/cli": "^8.4.0",
+    "@capacitor/core": "^8.4.0",
+    "@capacitor/ios": "^8.4.0"
+  }
+}

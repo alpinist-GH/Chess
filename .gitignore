@@ -1,0 +1,27 @@
+# Node
+node_modules/
+chess-desktop/node_modules/
+
+# Tauri build output
+chess-desktop/src-tauri/target/
+
+# Android — generated files (keep source, ignore build)
+android/.gradle/
+android/app/build/
+android/build/
+
+# iOS — generated files
+ios/App/Pods/
+ios/App/App.xcworkspace/xcuserdata/
+ios/DerivedData/
+
+# Misc scratch files
+*.new.js
+payload_*.json
+push_index.json
+openings_decoded.js
+openings_final.js
+db46_new.js
+enrich46_new.js
+index_new.html
+index_patched.html
