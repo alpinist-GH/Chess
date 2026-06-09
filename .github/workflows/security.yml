@@ -21,7 +21,7 @@ jobs:
       matrix:
         dir: [ '.', 'verify_chess' ]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -38,7 +38,7 @@ jobs:
       contents: read
       security-events: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
