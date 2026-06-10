@@ -20,20 +20,27 @@ An interactive bilingual (FR/EN) reference for 55 chess openings, playable in th
 - **Interactive board** — play through the main line and all variants move by move
 - **Stockfish analysis** — built-in engine panel per chapter (evaluation bar + best move)
 - **Bilingual** — toggle between French and English at any time
+- **Installable PWA** — offline-capable via a service worker (which also injects the COOP/COEP headers Stockfish needs)
+- **Native apps** — packaged for Android, iOS, and desktop from the same web code
 
 ## Structure
 
 ```
-Chess/
+.                       # repo root = website source (served by GitHub Pages)
 ├── index.html          # Main page (55 chapter cards in 6 tab sections)
+├── manifest.json       # PWA manifest
+├── service-worker.js   # Offline cache + COOP/COEP header injection
+├── stockfish.js        # Stockfish engine (asm.js/WASM)
+├── stockfish-engine.js # Engine wrapper / worker bootstrap
 ├── data/
 │   └── openings.js     # Opening database: DB[1]–DB[55], PGN games, comments
-├── js/
-│   ├── app.js          # Board controller, keyboard nav, Stockfish, tab/search logic
-│   └── i18n.js         # FR/EN strings, refreshAllContent()
-├── css/
-│   └── layout.css      # Styles including tab nav, search dropdown, responsive layout
-└── stockfish/          # Stockfish WASM engine files
+├── js/                 # app.js, board.js, engine.js, pieces.js, i18n.js
+├── css/                # variables, layout, board, components
+├── fonts/              # Local TTFs (bundled into the native apps)
+├── scripts/
+│   └── build-app-web.ps1   # Generates the www/ bundle for the native apps
+├── android/  ios/      # Capacitor projects (webDir → generated www/)
+└── chess-desktop/      # Tauri desktop project (frontendDist → generated www/)
 ```
 
 ## Opening Taxonomy
@@ -51,9 +58,44 @@ Based on standard ECO classification, extended with:
 
 ## Tech Stack
 
-- Vanilla JS + HTML/CSS — no framework dependencies
+- Vanilla JS + HTML/CSS — no framework, no build step for the website
 - [Stockfish.js](https://github.com/nmrugg/stockfish.js) (WASM) for engine analysis
-- Hosted on GitHub Pages
+- PWA (service worker) hosted on GitHub Pages
+- [Capacitor](https://capacitorjs.com/) (Android/iOS) and [Tauri](https://tauri.app/) (desktop) for native packaging
+
+## Development
+
+The website is the **single source of truth** at the repo root — no build step:
+
+```bash
+python -m http.server 8000   # from repo root (Stockfish needs HTTP, not file://)
+# then open http://localhost:8000
+```
+
+Verification (Playwright):
+
+```bash
+cd verify_chess && npm install && node verify.js
+```
+
+### Building the native apps
+
+The native apps bundle a generated, web-only `www/` (gitignored), built from
+the root by `scripts/build-app-web.ps1` — it copies the web assets and patches
+`index.html` for offline use (bundled local fonts + a tightened CSP).
+
+```bash
+npm install
+npm run sync                              # regenerate www/ + capacitor sync
+cd android && ./gradlew assembleDebug     # Android APK (JAVA_HOME → Android Studio JBR)
+cd chess-desktop && npm run tauri build   # desktop .exe/.msi (requires Rust)
+# iOS binary build requires macOS + Xcode
+```
+
+## Security
+
+- **Content-Security-Policy** — meta tag + a stricter service-worker-injected header (`frame-ancestors 'none'`)
+- **Automated scanning** — GitHub Actions run `npm audit` + CodeQL on every push/PR and weekly; Dependabot keeps dependencies and Actions current
 
 ## License
 
