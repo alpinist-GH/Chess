@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "identifier": "com.alpinistgh.chess",
   "build": {
-    "frontendDist": "../../Chess"
+    "beforeBuildCommand": "powershell -ExecutionPolicy Bypass -File ../scripts/build-app-web.ps1",
+    "frontendDist": "../../www"
   },
   "app": {
     "withGlobalTauri": true,

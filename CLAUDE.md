@@ -8,11 +8,11 @@ An interactive bilingual (French/English) chess opening encyclopedia with 55 cha
 
 ## Running the Site
 
-Stockfish WASM requires HTTP (not `file://`):
+The website source lives at the **repo root** (`index.html`, `js/`, `css/`,
+`data/`, `service-worker.js`). Stockfish WASM requires HTTP (not `file://`):
 
 ```bash
-cd Chess
-python -m http.server 8000
+python -m http.server 8000   # from repo root
 # or: npx serve .
 ```
 
@@ -29,16 +29,16 @@ Tests use Playwright (`^1.60.0`). The verify scripts take screenshots and check 
 
 ## Updating an Opening
 
-The PowerShell build scripts (e.g., `build_petroff.ps1`) show the canonical pattern for replacing a chapter's data block in `Chess/data/openings.js`:
+The PowerShell build scripts (e.g., `build_petroff.ps1`) show the canonical pattern for replacing a chapter's data block in `data/openings.js`:
 
 1. Edit the script with new `DB[N]` and `ENRICH[N]` content.
 2. Run: `powershell -ExecutionPolicy Bypass -File build_petroff.ps1`
 3. Output: `openings_new.js` (validated for brace balance).
-4. Copy result into `Chess/data/openings.js` and test.
+4. Copy result into `data/openings.js` and test.
 
 ## Architecture
 
-### Data Layer (`Chess/data/openings.js`)
+### Data Layer (`data/openings.js`)
 
 Two parallel global arrays indexed by chapter ID (1–55):
 
@@ -47,7 +47,7 @@ Two parallel global arrays indexed by chapter ID (1–55):
 
 Each chapter can have 1–7+ variants (e.g., Sicilian has Najdorf, Dragon, Scheveningen…). Variant keys are short strings matching the selector buttons in HTML.
 
-### HTML (`Chess/index.html`)
+### HTML (`index.html`)
 
 Single ~2800-line file. Chapters are 55 `<section>` elements organized under 6 tab sections. Each section contains:
 - A chessboard `<canvas>` or board `<div>`
@@ -57,7 +57,7 @@ Single ~2800-line file. Chapters are 55 `<section>` elements organized under 6 t
 
 **Do not auto-format or restructure `index.html`** — its chapter blocks are generated/patched by scripts.
 
-### JS Modules (`Chess/js/`)
+### JS Modules (`js/`)
 
 | File | Responsibility |
 |------|---------------|
@@ -73,9 +73,9 @@ All user-visible strings use `data-i18n="key"` attributes. Language toggle calls
 
 ### Stockfish
 
-Runs entirely in-browser via WASM (`Chess/stockfish/`). No backend. Each chapter's Stockfish instance is toggled independently. The engine evaluates positions from the current board state via `postMessage` / `onmessage`.
+Runs entirely in-browser (`stockfish.js` + `stockfish-engine.js`). No backend. Each chapter's Stockfish instance is toggled independently. The engine evaluates positions from the current board state via `postMessage` / `onmessage`.
 
-### CSS Architecture (`Chess/css/`)
+### CSS Architecture (`css/`)
 
 - `variables.css` — color tokens and typography (edit here for theming)
 - `layout.css` — tab nav, search bar, responsive breakpoints
@@ -84,6 +84,32 @@ Runs entirely in-browser via WASM (`Chess/stockfish/`). No backend. Each chapter
 
 Mobile layout stacks board above content panel; desktop shows them side-by-side. Board sizing constraints are controlled in `board.css` and `variables.css`.
 
+## Native Apps (Android / iOS / Desktop)
+
+The repo root is the **single source of truth** for the web layer. The native
+apps bundle a generated, web-only copy in `www/` (gitignored), produced by
+`scripts/build-app-web.ps1`. That script copies the web asset allowlist from
+root and patches `index.html` for the packaged/offline app: swaps the Google
+Fonts CDN `<link>` for the bundled local `fonts/fonts.css` and tightens the CSP
+to drop the Google font origins. **Never edit `www/` by hand** — it is
+regenerated on every build.
+
+- **Capacitor** (`android/`, `ios/`) — `webDir: "www"`. Sync with
+  `npm run sync` (runs `build:app-web` then `npx cap sync`).
+- **Tauri** (`chess-desktop/`) — `frontendDist: "../../www"`, regenerated via
+  the `beforeBuildCommand` in `tauri.conf.json`.
+
+Build commands:
+
+```bash
+npm run sync                                   # regenerate www/ + cap sync
+cd android && ./gradlew assembleDebug          # APK (JAVA_HOME → Android Studio JBR)
+cd chess-desktop && npm run tauri build        # desktop .exe/.msi (needs Rust)
+# iOS binary build requires macOS + Xcode
+```
+
 ## Deployment
 
-GitHub Pages serves from the `main` branch, `Chess/` directory. Push to `main` → live. GitHub Actions workflow: `.github/workflows/claude-review.yml`.
+GitHub Pages serves the website from the `main` branch **root** directory. Push
+to `main` → live. GitHub Actions workflows live in `.github/workflows/`
+(`claude-review.yml`, `security.yml`).

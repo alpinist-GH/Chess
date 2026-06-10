@@ -2,6 +2,9 @@
 node_modules/
 chess-desktop/node_modules/
 
+# Generated app web bundle (built from root by scripts/build-app-web.ps1)
+www/
+
 # Tauri build output
 chess-desktop/src-tauri/target/
 
